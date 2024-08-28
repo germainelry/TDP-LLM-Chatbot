@@ -1,0 +1,9 @@
+gpt4all==2.0.2
+python-telegram-bot==13.7
+chromadb==0.5.5
+fastapi==0.112.2
+langchain==0.2.14
+openai==1.42.0
+py3langid==0.3.0
+tiktoken==0.7.0
+transformers==4.44.2
