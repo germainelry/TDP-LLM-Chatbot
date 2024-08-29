@@ -11,7 +11,9 @@ from langchain_community.embeddings.openai import OpenAIEmbeddings
 load_dotenv()
 
 # Template for the chatbot
-model = OllamaLLM(model="llama3")
+# model = OllamaLLM(model="llama3")
+model = OllamaLLM(model="stablelm2")
+
 prompt = ChatPromptTemplate.from_messages([
     ('system', 'You are a helpful assistant. Answer the question asked by the user in maximum 30 words.'),
     ('user', 'Question : {input}'),
