@@ -29,9 +29,6 @@ chain = ConversationChain(
   memory = window_memory
 )
 
-
-
-
 # Template for the chatbot
 # template = """
 # Answer the question below.
@@ -52,25 +49,20 @@ chain = ConversationChain(
 
 
 # Write to json file to log the conversation
-def log_conversation(update, result: str) -> None:
+def log_conversation(update, result) -> None:
   try:
     with open("history.json", "r") as file:
       data = json.load(file)
   except json.decoder.JSONDecodeError:
-    data = {}
-
-  data.update(
+    data = []
+  data.append(
     {
-      update.message.message_id: {
-        "chat_id": update.message.chat.id,
-        "timestamp": (update.message.date).strftime('%Y-%m-%d %H:%M:%S'),
-        "username": update.message.chat.username,
-        "language_code": detect_language_with_langid(update.message.text),
-        "conversation": {
-          "question": update.message.text,
-          "answer": result
-        }
-      }
+      "chat_id": update.message.chat.id,
+      "timestamp": (update.message.date).strftime('%Y-%m-%d %H:%M:%S'),
+      "username": update.message.chat.username,
+      "language_code": detect_language_with_langid(update.message.text),
+      "input": update.message.text,
+      "output": result.get("response")
     }
   )
   with open("history.json", 'w') as file:
