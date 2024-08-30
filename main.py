@@ -80,6 +80,17 @@ async def echo(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     chat_id = update.effective_chat.id, 
     text = user_conversation(update)
  )
+  
+# Level 2 functionality: Resolving Conversations Initiated by Users
+async def responseUsefulness(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+  await context.bot.send_message(
+    chat_id = update.effective_chat.id, 
+    text = "Is this content helpful or answered your question?\n\n"
+    "/start - Start the bot\n"
+    "/caps - Convert text to uppercase\n"
+    "/inline - Inline mode\n\n"
+    "... or simply enter your queries into the chat box!"
+  )
 
 
 if __name__ == '__main__':

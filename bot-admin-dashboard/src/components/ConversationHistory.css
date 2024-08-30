@@ -1,0 +1,19 @@
+.conversation-container {
+	max-height: 700px;
+	overflow-y: auto;
+	border-color: black;
+  border-width: 2px;
+  border-style: solid;
+	width: 100;
+}
+
+.conversation-box {
+	display: flex;
+	flex-direction: column;
+	margin: 10px;
+	padding: 10px;
+	border: 1px solid #515151;
+	border-radius: 5px;
+	background-color: #f9f9f9;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

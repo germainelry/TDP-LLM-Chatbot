@@ -83,7 +83,7 @@ def handle_conversation() -> None:
 
 def user_conversation(update) -> str:
   detected_lang = detect_language_with_langid(update.message.text)
-  result = chain.invoke({'input' : f"{update.message.text}. Reply in {detected_lang} language id."})
+  result = chain.invoke({'input' : f"{update.message.text}"})
   log_conversation(update, result)
   return result.get("response")
 

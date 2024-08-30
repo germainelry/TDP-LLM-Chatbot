@@ -1,0 +1,63 @@
+body {
+  background:#eee;
+  margin-top: 20px;
+}
+
+.rounded {
+  -webkit-border-radius: 3px !important;
+  -moz-border-radius: 3px !important;
+  border-radius: 3px !important;
+}
+
+.mini-stat {
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.mini-stat-info {
+  font-size: 15px;
+  padding-left: 10px;
+}
+
+p {
+  color: black;
+}
+
+.mini-stat-info span {
+  display: block;
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  margin-top: 7px;
+}
+
+.charts-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.charts-container > div {
+  flex: 1; /* Ensures both charts take equal width */
+  min-width: 300px; /* Optional: Sets a minimum width for each chart */
+}
+/* ================ colors =====================*/
+.bg-usersCount {
+  background-color: #3b5998 !important;
+  border: 1px solid #3b5998;
+  color: white;
+  border-radius: 15px;
+}
+
+.bg-conversations {
+  background-color: #00a0d1 !important;
+  border: 1px solid #00a0d1;
+  color: white;
+  border-radius: 15px;
+}
+
+.bg-languages {
+  background-color: #db4a39 !important;
+  border: 1px solid #db4a39;
+  color: white;
+  border-radius: 15px;
+}
