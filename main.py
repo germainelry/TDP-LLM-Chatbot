@@ -1,7 +1,10 @@
-import logging
 import os
+import logging
+import telebot
 
-from telegram import Update, InlineQueryResultArticle, InputTextMessageContent
+from telebot import types
+from telegram import InputTextMessageContent
+from telegram import Update, InlineQueryResultArticle
 from telegram.ext import filters, \
   ApplicationBuilder, ContextTypes, \
     CommandHandler, MessageHandler, InlineQueryHandler
@@ -32,13 +35,13 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     chat_id = update.effective_chat.id, 
     text = f.read()
   )
-
+  
 # Level 1 functionality: Respond with the user's message in uppercase
 async def caps(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None: 
-    text_caps = ' '.join(context.args).upper()
-    await context.bot.send_message(
-      chat_id = update.effective_chat.id, 
-      text = text_caps
+  text_caps = ' '.join(context.args).upper()
+  await context.bot.send_message(
+    chat_id = update.effective_chat.id, 
+    text = text_caps
   )
 
 # Level 1 functionality
@@ -79,17 +82,34 @@ async def echo(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
   await context.bot.send_message(
     chat_id = update.effective_chat.id, 
     text = user_conversation(update)
- )
+  )
   
-# Level 2 functionality: Resolving Conversations Initiated by Users
-async def responseUsefulness(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+# Level 2 functionality: Presenting Options for Users to Choose From
+async def responseOptions(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+  markup = types.ReplyKeyboardMarkup(row_width = 2)
+
+  bankingQueries = types.InlineKeyboardButton(text = "Banking Queries", call_back_data = "bankingQueries")
+  creditCardQueries = types.InlineKeyboardButton(text = "Credit Card Queries", call_back_data = "creditCardQueries")
+  generalQueries = types.InlineKeyboardButton(text = "General Queries", call_back_data = "generalQueries")
+  markup.add(bankingQueries, creditCardQueries, generalQueries)
+
   await context.bot.send_message(
     chat_id = update.effective_chat.id, 
-    text = "Is this content helpful or answered your question?\n\n"
-    "/start - Start the bot\n"
-    "/caps - Convert text to uppercase\n"
-    "/inline - Inline mode\n\n"
-    "... or simply enter your queries into the chat box!"
+    reply_markup = markup,
+  )
+
+# Level 2 functionality: Resolving Conversations Initiated by Users
+async def responseUsefulness(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+  markup = types.ReplyKeyboardMarkup(row_width = 2)
+
+  yesOption = types.InlineKeyboardButton(text = "Yes", call_back_data = "yes")
+  noOption = types.InlineKeyboardButton(text = "No", call_back_data = "no")
+  markup.add(yesOption, noOption)
+
+  await context.bot.send_message(
+    chat_id = update.effective_chat.id, 
+    text = "Was this content helpful? Did it answered your questions?",
+    reply_markup = markup
   )
 
 

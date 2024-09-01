@@ -1,0 +1,71 @@
+[
+  {
+    "Unresolved": [
+      {
+        "id": "1",
+        "conversation": "Hello",
+        "response": "Hi there! How can I help you today?"
+      },
+      {
+        "id": "2",
+        "conversation": "How are you?",
+        "response": "I'm doing great! How can I help you today?"
+      },
+      {
+        "id": "3",
+        "conversation": "What is your name?",
+        "response": "I'm a bot. You can call me TeleBot."
+      },
+      {
+        "id": "4",
+        "conversation": "What can you do?",
+        "response": "I can help you with your telecommunication needs. Just ask me anything!"
+      },
+      {
+        "id": "5",
+        "conversation": "Goodbye",
+        "response": "Goodbye! Have a great day!"
+      }
+    ]
+  },
+  {
+    "Resolved": [
+      {
+        "id": "1",
+        "conversation": "I want"
+      },
+      {
+        "id": "2",
+        "conversation": "I need"
+      }
+    ]
+  },
+  {
+    "Escalated": [
+      {
+        "id": "1",
+        "conversation": "I want"
+      },
+      {
+        "id": "2",
+        "conversation": "I need"
+      },
+      {
+        "id": "3",
+        "conversation": "I am looking for"
+      },
+      {
+        "id": "4",
+        "conversation": "I am"
+      },
+      {
+        "id": "5",
+        "conversation": "I need"
+      },
+      {
+        "id": "6",
+        "conversation": "I want"
+      }
+    ]
+  }
+]

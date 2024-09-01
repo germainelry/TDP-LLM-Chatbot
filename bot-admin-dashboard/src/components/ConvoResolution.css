@@ -1,0 +1,63 @@
+#resolution-title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-left: 15px;
+}
+
+.widget-card {
+  margin-bottom: 20px; /* Adjust margin as necessary */
+}
+
+.metrics-container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+#metrics-container {
+  display: flex;
+  padding-bottom: 10px;
+  margin-top: -40px;
+}
+
+#unresolved-metric {
+  font-size: 20px;
+  font-weight: bold;
+  color: red;
+}
+
+#resolved-metric {
+  font-size: 20px;
+  font-weight: bold;
+  color: green;
+}
+
+#escalated-metric {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(210, 131, 5);
+}
+
+.red-icon {
+  color: red;
+  margin-right: 10px;
+}
+
+.green-icon {
+  color: green;
+  margin-right: 10px;
+}
+
+#metric-card {
+  margin-top: -22px;
+  border-radius: 15px;
+}
+
+.bi-headset {
+  color: rgb(210, 131, 5);
+  border: solid 2px rgb(210, 131, 5);
+  border-radius: 10px;
+}

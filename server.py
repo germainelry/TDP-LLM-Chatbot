@@ -2,8 +2,13 @@ from flask import Flask
 from collections import defaultdict
 from datetime import datetime
 import json
+import math
+import spacy
+import en_core_web_sm
+from deep_translator import GoogleTranslator
+import re
 
-
+nlp = en_core_web_sm.load()
 app = Flask(__name__)
 
 # Conversation Logs in Table Form
@@ -40,10 +45,19 @@ def compute_chat_statistics():
 	uniqueUsers = len(set([log["username"] for log in data]))
 	languagesDetected = len(set([log["language_code"] for log in data]))
 
+	responseCount = 0
+	totalResponseTime = 0
+
+	for entry in data:
+		if "response_time_seconds" in entry:
+			responseCount += 1
+			totalResponseTime += entry["response_time_seconds"]
+
 	return {
 		"total_conversations": totalLogs,
 		"unique_users": uniqueUsers,
-		"languages_detected": languagesDetected
+		"languages_detected": languagesDetected,
+		"average_response_time": round(totalResponseTime / responseCount, 6)
 	}
 
 # Language Distribution
@@ -62,8 +76,41 @@ def compute_language_distribution():
 
 	return dict(languagesDetected)
 
+# Conversation Resolution Metrics
+@app.route('/conversation_resolution_metrics')
+def resolution_metrics():
+	try:
+		with open("conversationResolution.json", "r") as file:
+			data = json.load(file)
+	except json.decoder.JSONDecodeError:
+		data = {}
+
+	metrics = defaultdict(int)
+
+	for entry in data:
+		if "Unresolved" in entry:
+			metrics['Unresolved'] += len(entry["Unresolved"])
+		if "Resolved" in entry:
+			metrics['Resolved'] += len(entry["Resolved"])
+		if "Escalated" in entry:
+			metrics['Escalated'] += len(entry["Escalated"])
+
+	return dict(metrics)
+
 
 # Word Cloud for Most Searched Terms
+@app.route('/most_searched_terms')
+def most_searched_terms():
+	try:
+		with open("keywords.json", "r") as file:
+			data = json.load(file)
+	except json.decoder.JSONDecodeError:
+		data = {}
+
+	# Only select the top 20 terms
+	top_20 = dict(sorted(data.items(), key=lambda item: item[1], reverse=True)[:20])
+	return top_20
+
 
 
 # User Frequency Across Time
@@ -84,7 +131,6 @@ def user_frequency():
 		frequency[date_str] += 1
 
 	return dict(frequency)
-
 
 # Most searched questions
 

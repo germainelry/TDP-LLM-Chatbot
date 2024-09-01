@@ -1,5 +1,7 @@
 import json
 import os
+import time
+import math
 
 from dotenv import load_dotenv
 from langchain_ollama import OllamaLLM
@@ -51,7 +53,7 @@ chain = ConversationChain(
 
 
 # Write to json file to log the conversation
-def log_conversation(update, result) -> None:
+def log_conversation(update, result, execution_time) -> None:
   try:
     with open("history.json", "r") as file:
       data = json.load(file)
@@ -63,6 +65,7 @@ def log_conversation(update, result) -> None:
       "timestamp": (update.message.date).strftime('%Y-%m-%d %H:%M:%S'),
       "username": update.message.chat.username,
       "language_code": detect_language_with_langid(update.message.text),
+      "response_time_seconds": round(execution_time, 6),
       "input": update.message.text,
       "output": result.get("response")
     }
@@ -83,8 +86,13 @@ def handle_conversation() -> None:
 
 def user_conversation(update) -> str:
   detected_lang = detect_language_with_langid(update.message.text)
+  start_time = time.time()
   result = chain.invoke({'input' : f"{update.message.text}"})
-  log_conversation(update, result)
+  end_time = time.time()
+
+  # Calculate the execution time
+  execution_time = end_time - start_time  
+  log_conversation(update, result, execution_time)
   return result.get("response")
 
 if __name__ == '__main__':

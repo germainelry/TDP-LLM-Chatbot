@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./UserFrequencyChart.css";
-import ApexCharts from "apexcharts";
 import ReactApexChart from "react-apexcharts";
 
 function UserFrequencyChart() {
@@ -24,11 +23,16 @@ function UserFrequencyChart() {
     },
     series: [
       {
-        name: "series-1",
+        name: "User Interactions",
         data: Object.values(data),
       },
     ],
+    stroke: {
+      width: [0, 2, 5],
+      curve: "smooth",
+    },
   };
+
   return (
     <div>
       <span id="user-freq-title">User Interactions Across Time</span>
@@ -36,7 +40,7 @@ function UserFrequencyChart() {
         <ReactApexChart
           options={state.options}
           series={state.series}
-          type="bar"
+          type="area"
           height={350}
         />
       </div>

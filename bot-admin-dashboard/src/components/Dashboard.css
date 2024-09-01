@@ -1,6 +1,7 @@
 body {
   background:#eee;
   margin-top: 20px;
+  width: 100%;
 }
 
 .rounded {
@@ -42,22 +43,22 @@ p {
 }
 /* ================ colors =====================*/
 .bg-usersCount {
-  background-color: #3b5998 !important;
-  border: 1px solid #3b5998;
+  background-color: #233253 !important;
+  border: 1px solid #233253;
   color: white;
   border-radius: 15px;
 }
 
 .bg-conversations {
-  background-color: #00a0d1 !important;
-  border: 1px solid #00a0d1;
+  background-color: #233253 !important;
+  border: 1px solid #233253;
   color: white;
   border-radius: 15px;
 }
 
 .bg-languages {
-  background-color: #db4a39 !important;
-  border: 1px solid #db4a39;
+  background-color: #233253 !important;
+  border: 1px solid #233253;
   color: white;
   border-radius: 15px;
 }

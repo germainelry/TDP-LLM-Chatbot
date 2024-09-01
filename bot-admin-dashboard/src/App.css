@@ -1,10 +1,20 @@
 .main-header {
-  background-color: #334a7b;
+  background-color: #2a3d67;
   color: white;
   padding-left: 10px;
-  margin-top: auto;
+  margin-top: -20px;
+  border-radius: 5px;
 }
+
 .dashboard {
   background-color: rgba(230, 236, 240, 0.919);
+  padding-left: 10px;
+  padding-right: 12px;
 }
+
+
+.bi-robot, .bi-telegram {
+  padding-left: 10px;
+}
+
 
