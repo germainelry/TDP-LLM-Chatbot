@@ -62,12 +62,14 @@ function Dashboard() {
           </div>
         </div>
       </div>
-      <div className="charts-container">
+      <div className="charts-container-1">
         <UserFrequencyChart />
         <LanguagesDistribution />
       </div>
-      <div className="charts-container">
+      <div className="charts-container-2">
         <ConvoResolution />
+      </div>
+      <div className="charts-container-3">
         <WordCloudDisplay />
       </div>
     </>

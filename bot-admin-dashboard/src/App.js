@@ -1,22 +1,35 @@
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./App.css";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Link,
+  useNavigate,
+  Outlet,
+} from "react-router-dom";
 
 import ConversationHistory from "./components/ConversationHistory";
 import Dashboard from "./components/Dashboard";
-import WordCloudDisplay from "./components/WordCloudDisplay";
+import Navigation from "./components/Navigation";
 
 function App() {
   return (
     <div className="dashboard">
-      <h1 className="main-header">
-        LLM Bot Admin Dashboard
-        <i className="bi bi-telegram"></i>
-        <i className="bi bi-robot"></i>
-      </h1>
-      <Dashboard />
-      {/* <WordCloudDisplay /> */}
-      <ConversationHistory />
+      <Router>
+        <Navigation />
+        <Routes>
+          <Route path="/" exact element={<Dashboard />} />
+          <Route
+            path="/Conversation_history"
+            element={<ConversationHistory />}
+          />
+          {/* Add other routes as needed */}
+        </Routes>
+      </Router>
+      {/* <Dashboard /> */}
+      {/* <ConversationHistory /> */}
     </div>
   );
 }

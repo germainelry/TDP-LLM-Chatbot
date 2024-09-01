@@ -1,0 +1,85 @@
+.navbar {
+  background-color: #2a3d67;
+  margin-bottom: 5px;
+  margin-top: -15px;
+  border-radius: 10px;
+}
+
+.main-header {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-right: 3rem;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.main-header i {
+  margin-left: 0.5rem;
+  font-size: 2.5rem;
+}
+
+/* Navbar brand (LLM Bot Admin Dashboard) */
+.navbar .navbar-brand {
+  color: #fff;
+  font-weight: bold;
+  font-size: 2.0rem;
+}
+
+.navbar .navbar-brand:hover {
+  color: #d4e2ff;
+}
+
+/* Navbar links */
+.navbar .nav-link {
+  color: #f8f9fa;
+  margin-right: 1rem;
+  font-size: 1.3rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar .nav-link:hover {
+  color: #d4e2ff;
+  text-decoration: underline;
+  transition: color 1s ease-in-out;
+}
+
+.navbar .nav-item.active .nav-link {
+  color: #d4e2ff;
+}
+
+/* Dropdown menu */
+.navbar .dropdown-menu {
+  background-color: #2a3d67;
+  border: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .dropdown-item {
+  color: #f8f9fa;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navbar .dropdown-item:hover {
+  background-color: #0056b3;
+  color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background-color: #2a3d67;
+    padding: 1rem;
+  }
+  
+  .navbar .nav-link {
+    margin-right: 0;
+    padding: 0.5rem 1rem;
+  }
+  
+  .navbar .main-header {
+    margin-bottom: 1rem;
+  }
+}

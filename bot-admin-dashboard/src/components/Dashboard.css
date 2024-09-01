@@ -28,19 +28,31 @@ p {
   display: block;
   font-size: 30px;
   font-weight: 600;
-  margin-bottom: 5px;
-  margin-top: 7px;
+  margin-bottom: 0px;
+  margin-top: 0px;
 }
 
-.charts-container {
+.charts-container-1 {
   display: flex;
   justify-content: space-between;
 }
 
-.charts-container > div {
+.charts-container-1 > div {
   flex: 1; /* Ensures both charts take equal width */
   min-width: 300px; /* Optional: Sets a minimum width for each chart */
 }
+
+.charts-container-2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.charts-container-2 > div {
+  flex: 0; /* Ensures both charts take equal width */
+  min-width: 870px; /* Optional: Sets a minimum width for each chart */
+}
+
+
 /* ================ colors =====================*/
 .bg-usersCount {
   background-color: #233253 !important;

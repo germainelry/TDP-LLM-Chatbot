@@ -7,7 +7,7 @@
 }
 
 .widget-card {
-  margin-bottom: 20px; /* Adjust margin as necessary */
+  margin-bottom: 10px; /* Adjust margin as necessary */
 }
 
 .metrics-container {
@@ -52,8 +52,11 @@
 }
 
 #metric-card {
-  margin-top: -22px;
+  margin-top: -30px;
   border-radius: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 25px;
 }
 
 .bi-headset {

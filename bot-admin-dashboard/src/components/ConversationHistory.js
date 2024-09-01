@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./ConversationHistory.css";
+import { Link } from "react-router-dom";
 
 function ConversationHistory() {
   const [data, setData] = useState([]);
@@ -27,8 +28,10 @@ function ConversationHistory() {
 
   return (
     <>
-      <h2>Conversation History</h2>
+      <span id="conversation-history-title">Conversation History</span>
+      <br />
       <input
+        id="filter-input"
         type="text"
         placeholder="Filter information..."
         value={filterText}
