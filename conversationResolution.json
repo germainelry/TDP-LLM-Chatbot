@@ -2,27 +2,27 @@
   {
     "Unresolved": [
       {
-        "id": "1",
+        "user_id": "1",
         "conversation": "Hello",
         "response": "Hi there! How can I help you today?"
       },
       {
-        "id": "2",
+        "user_id": "2",
         "conversation": "How are you?",
         "response": "I'm doing great! How can I help you today?"
       },
       {
-        "id": "3",
+        "user_id": "3",
         "conversation": "What is your name?",
         "response": "I'm a bot. You can call me TeleBot."
       },
       {
-        "id": "4",
+        "user_id": "4",
         "conversation": "What can you do?",
         "response": "I can help you with your telecommunication needs. Just ask me anything!"
       },
       {
-        "id": "5",
+        "user_id": "5",
         "conversation": "Goodbye",
         "response": "Goodbye! Have a great day!"
       }
@@ -31,39 +31,39 @@
   {
     "Resolved": [
       {
-        "id": "1",
-        "conversation": "I want"
+        "user_id": "1",
+        "conversation": "I want to work at UOB"
       },
       {
-        "id": "2",
-        "conversation": "I need"
+        "user_id": "2",
+        "conversation": "I need to open a savings account at UOB"
       }
     ]
   },
   {
     "Escalated": [
       {
-        "id": "1",
-        "conversation": "I want"
+        "user_id": "1",
+        "conversation": "I want to talk to a real human!"
       },
       {
-        "id": "2",
+        "user_id": "2",
         "conversation": "I need"
       },
       {
-        "id": "3",
+        "user_id": "3",
         "conversation": "I am looking for"
       },
       {
-        "id": "4",
+        "user_id": "4",
         "conversation": "I am"
       },
       {
-        "id": "5",
+        "user_id": "5",
         "conversation": "I need"
       },
       {
-        "id": "6",
+        "user_id": "6",
         "conversation": "I want"
       }
     ]

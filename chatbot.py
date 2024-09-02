@@ -33,25 +33,6 @@ chain = ConversationChain(
   memory = window_memory
 )
 
-# Template for the chatbot
-# template = """
-# Answer the question below.
-
-# Here is the conversation history: {context}
-
-# Question: {question}
-
-# Answer: 
-# """
-
-# model = OllamaLLM(model="llama3")
-# result = model.invoke(input="Hello, how are you? What is the weather like?")
-# prompt = ChatPromptTemplate.from_template(template)
-# chain = prompt | model
-
-
-
-
 # Write to json file to log the conversation
 def log_conversation(update, result, execution_time) -> None:
   try:

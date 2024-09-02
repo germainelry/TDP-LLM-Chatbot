@@ -54,7 +54,7 @@ function ConversationHistory() {
   const [filterText, setFilterText] = useState("");
   const [modalShow, setModalShow] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
-
+  const [sortOrder, setSortOrder] = useState("oldest");
   useEffect(() => {
     fetch("/conversation_history")
       .then((res) => res.json())
@@ -62,25 +62,32 @@ function ConversationHistory() {
         setData(data);
       });
   }, []);
-
   // Function to handle chat filter
   const handleFilterChange = (e) => {
     setFilterText(e.target.value);
   };
-
   // Filtered info data
   const filteredData = data.filter(
     (info) =>
       info.input.toLowerCase().includes(filterText.toLowerCase()) ||
       info.output.toLowerCase().includes(filterText.toLowerCase())
   );
-
   // Function to handle when a conversation box is clicked
   const handleConversationClick = (item) => {
     setSelectedItem(item);
     setModalShow(true);
   };
-
+  const handleSortChange = (order) => {
+    setSortOrder(order);
+  };
+  const sortedData = filteredData.sort((a, b) => {
+    if (sortOrder === "oldest") {
+      return new Date(a.timestamp) - new Date(b.timestamp);
+    } else if (sortOrder === "newest") {
+      return new Date(b.timestamp) - new Date(a.timestamp);
+    }
+    return 0; // Default case
+  });
   return (
     <>
       <span id="conversation-history-title">Conversation History</span>
@@ -99,32 +106,29 @@ function ConversationHistory() {
             Sort by ...
           </Dropdown.Toggle>
           <Dropdown.Menu>
-            <Dropdown.Item href="#/action-1">
+            <Dropdown.Item onClick={() => handleSortChange("oldest")}>
               Date (Oldest to Newest)
             </Dropdown.Item>
-            <Dropdown.Item href="#/action-2">
+            <Dropdown.Item onClick={() => handleSortChange("newest")}>
               Date (Newest to Oldest)
             </Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
-
         <div className="results-count">
           <span className="results-count-title">
             Results found: {filteredData.length}
           </span>
         </div>
       </div>
-
       <UserInformation
         show={modalShow}
         onHide={() => setModalShow(false)}
         selectedItem={selectedItem}
       />
-
       <div className="conversation-container">
         <div>
-          {filteredData.length > 0 ? (
-            filteredData.map((item, index) => (
+          {sortedData.length > 0 ? (
+            sortedData.map((item, index) => (
               <div
                 key={index}
                 className="conversation-box"

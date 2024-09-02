@@ -64,3 +64,8 @@
   border: solid 2px rgb(210, 131, 5);
   border-radius: 10px;
 }
+
+.modal-body {
+  max-height: 400px; /* Adjust as needed */
+  overflow-y: auto;
+}
