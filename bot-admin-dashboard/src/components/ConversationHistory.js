@@ -1,10 +1,59 @@
 import React, { useEffect, useState } from "react";
 import "./ConversationHistory.css";
-import { Link } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
+import Dropdown from "react-bootstrap/Dropdown";
+
+function UserInformation(props) {
+  const { show, onHide, selectedItem } = props;
+
+  return (
+    <Modal
+      show={show}
+      onHide={onHide}
+      size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
+      <Modal.Header closeButton>
+        <Modal.Title id="contained-modal-title-vcenter">
+          User Information <i className="bi bi-person"></i>
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+        {selectedItem ? (
+          <>
+            <div className="d-flex align-items-center mb-2">
+              <i className="bi bi-person-badge-fill me-2"></i>
+              <p className="mb-0">
+                <b>Username:</b> {selectedItem.username}
+              </p>
+            </div>
+            <div className="d-flex align-items-center mb-2">
+              <i className="bi bi-translate me-2"></i>
+              <p className="mb-0">
+                <b>Language Code of Message:</b> {selectedItem.language_code}
+              </p>
+            </div>
+          </>
+        ) : (
+          <p>No user information available.</p>
+        )}
+      </Modal.Body>
+      <Modal.Footer>
+        <Button onClick={onHide}>Close</Button>
+      </Modal.Footer>
+    </Modal>
+  );
+}
 
 function ConversationHistory() {
   const [data, setData] = useState([]);
   const [filterText, setFilterText] = useState("");
+  const [modalShow, setModalShow] = useState(false);
+  const [selectedItem, setSelectedItem] = useState(null);
 
   useEffect(() => {
     fetch("/conversation_history")
@@ -21,28 +70,68 @@ function ConversationHistory() {
 
   // Filtered info data
   const filteredData = data.filter(
-    (info, index) =>
+    (info) =>
       info.input.toLowerCase().includes(filterText.toLowerCase()) ||
       info.output.toLowerCase().includes(filterText.toLowerCase())
   );
+
+  // Function to handle when a conversation box is clicked
+  const handleConversationClick = (item) => {
+    setSelectedItem(item);
+    setModalShow(true);
+  };
 
   return (
     <>
       <span id="conversation-history-title">Conversation History</span>
       <br />
-      <input
-        id="filter-input"
-        type="text"
-        placeholder="Filter information..."
-        value={filterText}
-        onChange={handleFilterChange}
+      <div id="content-modification" className="d-flex align-items-center mb-3">
+        <input
+          id="filter-input"
+          type="text"
+          placeholder="Search ..."
+          value={filterText}
+          onChange={handleFilterChange}
+          className="mr-3"
+        />
+        <Dropdown id="dropdown-button" className="mr-3">
+          <Dropdown.Toggle variant="success" id="dropdown-basic">
+            Sort by ...
+          </Dropdown.Toggle>
+          <Dropdown.Menu>
+            <Dropdown.Item href="#/action-1">
+              Date (Oldest to Newest)
+            </Dropdown.Item>
+            <Dropdown.Item href="#/action-2">
+              Date (Newest to Oldest)
+            </Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
+
+        <div className="results-count">
+          <span className="results-count-title">
+            Results found: {filteredData.length}
+          </span>
+        </div>
+      </div>
+
+      <UserInformation
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+        selectedItem={selectedItem}
       />
+
       <div className="conversation-container">
         <div>
           {filteredData.length > 0 ? (
             filteredData.map((item, index) => (
-              <div className="conversation-box">
-                <p key={index}>
+              <div
+                key={index}
+                className="conversation-box"
+                onClick={() => handleConversationClick(item)}
+                style={{ cursor: "pointer", marginBottom: "10px" }}
+              >
+                <p>
                   {Object.entries(item).map(([key, value]) => (
                     <span key={key}>
                       <strong>{key}:</strong> {value}

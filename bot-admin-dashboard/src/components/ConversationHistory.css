@@ -1,5 +1,5 @@
 .conversation-container {
-	max-height: 800px;
+	max-height: 780px;
 	overflow-y: auto;
 	border-color: black;
   border-width: 2px;
@@ -29,4 +29,35 @@
 #filter-input {
 	margin-left: 0px;
 	width: 20%;
+}
+
+#content-modification {
+	margin-left: 10px;
+	border-radius: 5px;
+}
+
+#dropdown-basic {
+	margin-left: 10px;
+	height: 30px;
+	color: white;
+	background-color: #233253;
+	border-color: #233253;
+	font-family: Helvetica, sans-serif;
+	font-weight: bold;
+	text-align: center;
+	border-radius: 5px;
+	padding-bottom: 20px;
+	font-size: 12px;
+	width: 100px;
+}
+
+.results-count {
+  width: 80%; /* Ensure the container takes full width */
+}
+
+.results-count-title {
+  text-align: right;      /* Aligns text to the right */
+  font-size: 15px;
+  font-weight: bold;
+  display: block;         /* Ensures the span takes the full width */
 }
