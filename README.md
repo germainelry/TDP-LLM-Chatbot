@@ -1,4 +1,4 @@
-<!-- Image Section (To-Do) -->
+![UOB AI Chatbot](img/UOB-AI-Chatbot.png)
 
 # Cross-Regional Customer Service Chatbot
 
