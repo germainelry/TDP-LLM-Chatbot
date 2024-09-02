@@ -85,18 +85,7 @@ def resolution_metrics():
 	except json.decoder.JSONDecodeError:
 		data = {}
 
-	metrics = defaultdict(int)
-
-	for entry in data:
-		if "Unresolved" in entry:
-			metrics['Unresolved'] += len(entry["Unresolved"])
-		if "Resolved" in entry:
-			metrics['Resolved'] += len(entry["Resolved"])
-		if "Escalated" in entry:
-			metrics['Escalated'] += len(entry["Escalated"])
-
-	return dict(metrics)
-
+	return data
 
 # Word Cloud for Most Searched Terms
 @app.route('/most_searched_terms')
@@ -132,7 +121,7 @@ def user_frequency():
 
 	return dict(frequency)
 
-# Most searched questions
+# Most asked questions
 
 
 

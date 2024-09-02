@@ -30,7 +30,13 @@ function ResolutionModal(props) {
         {props.conversations && props.conversations.length > 0 ? (
           <ul>
             {props.conversations.map((convo, index) => (
-              <li key={index}>{convo}</li>
+              <li key={index}>
+                <span key={index}>
+                  <b>User ID: </b>
+                  {convo[0]} ---- <b>User Message: </b>
+                  {convo[1]}
+                </span>
+              </li>
             ))}
           </ul>
         ) : (
@@ -45,52 +51,10 @@ function ResolutionModal(props) {
 }
 
 function ConvoResolution() {
-  const [data, setData] = useState({
-    Resolved: 10,
-    Unresolved: 5,
-    Escalated: 3,
-  });
-
+  const [data, setData] = useState([]);
   const [modalShow, setModalShow] = useState(false);
   const [selectedMetric, setSelectedMetric] = useState("");
   const [conversations, setConversations] = useState([]);
-
-  const dummyData = {
-    Resolved: [
-      "Resolved Convo 1",
-      "Resolved Convo 2",
-      "Resolved Convo 3",
-      "Resolved Convo 4",
-      "Resolved Convo 5",
-      "Resolved Convo 6",
-      "Resolved Convo 7",
-      "Resolved Convo 8",
-      "Resolved Convo 9",
-      "Resolved Convo 10",
-      "Resolved Convo 11",
-      "Resolved Convo 12",
-      "Resolved Convo 13",
-      "Resolved Convo 14",
-      "Resolved Convo 15",
-      "Resolved Convo 16",
-      "Resolved Convo 17",
-      "Resolved Convo 18",
-      "Resolved Convo 19",
-      "Resolved Convo 20",
-      "Resolved Convo 21",
-      "Resolved Convo 22",
-      "Resolved Convo 23",
-      "Resolved Convo 24",
-      "Resolved Convo 25",
-      "Resolved Convo 26",
-      "Resolved Convo 27",
-      "Resolved Convo 28",
-      "Resolved Convo 29",
-      "Resolved Convo 30",
-    ],
-    Unresolved: ["Unresolved Convo 1", "Unresolved Convo 2"],
-    Escalated: ["Escalated Convo 1", "Escalated Convo 2", "Escalated Convo 3"],
-  };
 
   const handleCardClick = (metric) => {
     setSelectedMetric(metric);
@@ -99,13 +63,49 @@ function ConvoResolution() {
   };
 
   useEffect(() => {
-    // Fetch actual data from API
     fetch("/conversation_resolution_metrics")
       .then((res) => res.json())
       .then((data) => {
         setData(data);
       });
   }, []);
+
+  const unresolvedSet = new Set();
+  const resolvedSet = new Set();
+  const escalatedSet = new Set();
+
+  data.forEach((category) => {
+    for (const [status, chats] of Object.entries(category)) {
+      chats.forEach((chat) => {
+        if (status === "Unresolved") {
+          unresolvedSet.add(JSON.stringify(chat));
+        } else if (status === "Resolved") {
+          resolvedSet.add(JSON.stringify(chat));
+        } else if (status === "Escalated") {
+          escalatedSet.add(JSON.stringify(chat));
+        }
+      });
+    }
+  });
+
+  const unresolvedArray = Array.from(unresolvedSet).map(JSON.parse);
+  const resolvedArray = Array.from(resolvedSet).map(JSON.parse);
+  const escalatedArray = Array.from(escalatedSet).map(JSON.parse);
+
+  const dummyData = {
+    Resolved: resolvedArray.map((item) => [item.user_id, item.conversation]),
+    Unresolved: unresolvedArray.map((item) => [
+      item.user_id,
+      item.conversation,
+    ]),
+    Escalated: escalatedArray.map((item) => [item.user_id, item.conversation]),
+  };
+
+  const statusCounts = {
+    Unresolved: unresolvedArray.length,
+    Resolved: resolvedArray.length,
+    Escalated: escalatedArray.length,
+  };
 
   return (
     <>
@@ -135,7 +135,7 @@ function ConvoResolution() {
                         Resolved
                       </h5>
                       <h4 className="card-subtitle text-body-secondary m-0">
-                        {data.Resolved}
+                        {statusCounts.Resolved}
                       </h4>
                     </div>
                     <div className="col-4">
@@ -161,7 +161,7 @@ function ConvoResolution() {
                         Unresolved
                       </h5>
                       <h4 className="card-subtitle text-body-secondary m-0">
-                        {data.Unresolved}
+                        {statusCounts.Unresolved}
                       </h4>
                     </div>
                     <div className="col-4">
@@ -187,7 +187,7 @@ function ConvoResolution() {
                         Escalated
                       </h5>
                       <h4 className="card-subtitle text-body-secondary m-0">
-                        {data.Escalated}
+                        {statusCounts.Escalated}
                       </h4>
                     </div>
                     <div className="col-4">

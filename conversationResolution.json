@@ -32,11 +32,14 @@
     "Resolved": [
       {
         "user_id": "1",
-        "conversation": "I want to work at UOB"
+        "conversation": "I want to work at UOB",
+        "response": "Great! You can apply for a job at UOB by visiting their website."
       },
       {
         "user_id": "2",
-        "conversation": "I need to open a savings account at UOB"
+        "conversation": "I need to open a savings account at UOB",
+        "response": "You can open a savings account at UOB by visiting their website or going to one of their branches."
+
       }
     ]
   },
@@ -44,27 +47,33 @@
     "Escalated": [
       {
         "user_id": "1",
-        "conversation": "I want to talk to a real human!"
+        "conversation": "I want to talk to a real human!",
+        "response": "I'm sorry, I'm just a bot. Let me connect you to a customer service representative."
       },
       {
         "user_id": "2",
-        "conversation": "I need"
+        "conversation": "I need to buy my family some dinner, any recommendations?",
+        "response": "I'm sorry, I'm just a bot. Let me connect you to a customer service representative."
       },
       {
         "user_id": "3",
-        "conversation": "I am looking for"
+        "conversation": "I am looking for way to travel overseas for free",
+        "response": "I'm sorry, I'm just a bot. Let me connect you to a customer service representative."
       },
       {
         "user_id": "4",
-        "conversation": "I am"
+        "conversation": "I am a very confused person :(",
+        "response": "I'm sorry, I'm just a bot. Let me connect you to a customer service representative."
       },
       {
         "user_id": "5",
-        "conversation": "I need"
+        "conversation": "I need a therapist!!!",
+        "response": "I'm sorry, I'm just a bot. Let me connect you to a customer service representative."
       },
       {
         "user_id": "6",
-        "conversation": "I want"
+        "conversation": "I want to know if you are smart or dumb!",
+        "response": "I'm sorry, I'm just a bot. Let me connect you to a customer service representative."
       }
     ]
   }
