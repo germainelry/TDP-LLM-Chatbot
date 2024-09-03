@@ -39,6 +39,22 @@ In addition to its core functionality, a comprehensive dashboard has been develo
 - **[ReactJS](https://react.dev)**: Preferred for its efficient rendering and component-based architecture, which simplifies the development of dynamic and interactive user interfaces.
 - **[Bootstrap](https://getbootstrap.com)**: Used for its responsive design framework, allowing quick and easy styling of the application with a consistent look and feel.
 
+| Technology | Purpose              |
+| ---------- | -------------------- |
+| **React**  | Frontend development |
+| **Flask**  | Backend development  |
+
+## Project Overview
+
+The following table highlights some of the key features in our project. While some of the following features have not been implemented yet, they do not impact the integrity of the existing program.
+
+| Feature                 | Description                               | Status           |
+| ----------------------- | ----------------------------------------- | ---------------- |
+| **User Authentication** | Handles user login and registration       | Future Iteration |
+| **Dashboard**           | Displays user data and analytics          | Completed        |
+| **API Integration**     | Connects to third-party services          | Completed        |
+| **Notification System** | Sends notifications based on user actions | Future Iteration |
+
 ## Features
 
 ### Multilingual Support
