@@ -59,9 +59,43 @@ The following table highlights some of the key features in our project. While so
 
 ### Multilingual Support
 
-### Personalized Customer Service
+The AI-powered chatbot is designed to provide seamless and efficient communication across a wide range of languages, ensuring inclusivity and accessibility for users from different linguistic backgrounds.
 
-### Dashboard for Monitoring
+#### Language Detection
+
+- The chatbot automatically detects the language in which a user is communicating. This is achieved using natural language processing (NLP) algorithms that analyze the input text and identify the language.
+
+#### Language Switching
+
+- Users can switch languages during a conversation without restarting the session. The chatbot seamlessly transitions to the new language, maintaining the context of the conversation.
+- This is particularly useful in multilingual regions or for users who are comfortable using multiple languages.
+
+#### Fallback Mechanism
+
+In cases where the chatbot encounters text in a language that is not supported or poorly understood, it will provide a fallback response in a default language (e.g., English), and suggest ways for the user to continue the conversation (e.g., using a different language or contacting support).
+
+However, we do acknowledge that inaccurate response and language outputs may occur at times due to limited model training.
+
+## Dashboard for Monitoring
+
+### General Analytics
+
+| Feature                           | Description                                                                                              | Purpose                                                                                     |
+| --------------------------------- | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| **Conversation History**          | Provides access to past conversations between customers and the chatbot.                                 | Enables agents to review previous interactions for context and follow-up.                   |
+| **Multilingual Interaction Logs** | Logs and categorizes conversations based on the language used by the customer.                           | Facilitates analysis of language preferences and ensures multilingual support is effective. |
+| **Data Export**                   | Provides options to export conversation logs and performance data in various formats (CSV, Excel, etc.). | Facilitates external analysis and reporting.                                                |
+| **Alerts & Notifications**        | Sends real-time alerts for specific triggers (e.g., high-priority customers, unresolved issues).         | Ensures timely response to critical situations.                                             |
+
+### Performance analytics
+
+| Feature                             | Description                                                                        | Purpose                                                                                   |
+| ----------------------------------- | ---------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| **Conversation-Resolution Metrics** | Displays ongoing customer conversations in real-time.                              | Allows customer service agents to monitor and intervene if needed.                        |
+| **Sentiment Analysis**              | Analyzes the sentiment of customer messages (positive, neutral, negative).         | Helps agents understand customer emotions and prioritize responses.                       |
+| **Performance Metrics**             | Shows key performance indicators (KPIs) such as response time and resolution rate. | Allows management to track chatbot efficiency and customer satisfaction.                  |
+| **User Feedback Collection**        | Displays customer feedback and ratings on chatbot interactions.                    | Helps in evaluating customer satisfaction and refining the chatbot experience.            |
+| **Issue Escalation Tracking**       | Tracks cases where conversations were escalated to human agents.                   | Monitors the chatbot's ability to handle queries and when human intervention is required. |
 
 ## Installation
 
