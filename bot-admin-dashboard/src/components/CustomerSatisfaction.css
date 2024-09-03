@@ -1,0 +1,16 @@
+#customer-satisfaction-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.speedometer {
+  background-color: white;
+  border-radius: 5px;
+}
+
+.customer-satisfaction {
+  background: #eee;
+  margin-right: 25px;
+}

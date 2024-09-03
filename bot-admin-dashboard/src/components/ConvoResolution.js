@@ -58,7 +58,7 @@ function ConvoResolution() {
 
   const handleCardClick = (metric) => {
     setSelectedMetric(metric);
-    setConversations(dummyData[metric]);
+    setConversations(resolutionData[metric]);
     setModalShow(true);
   };
 
@@ -67,6 +67,7 @@ function ConvoResolution() {
       .then((res) => res.json())
       .then((data) => {
         setData(data);
+        // console.log(data);
       });
   }, []);
 
@@ -92,7 +93,7 @@ function ConvoResolution() {
   const resolvedArray = Array.from(resolvedSet).map(JSON.parse);
   const escalatedArray = Array.from(escalatedSet).map(JSON.parse);
 
-  const dummyData = {
+  const resolutionData = {
     Resolved: resolvedArray.map((item) => [item.user_id, item.conversation]),
     Unresolved: unresolvedArray.map((item) => [
       item.user_id,

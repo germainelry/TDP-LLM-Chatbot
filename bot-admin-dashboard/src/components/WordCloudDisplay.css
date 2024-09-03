@@ -5,8 +5,18 @@
   margin-left: 15px;
 }
 
-#word-cloud {
+.word-cloud {
+  margin-right: 0px;
+  width: 500px;
+}
+
+#word-cloud-display {
   margin-left: 15px;
   margin-bottom: 15px;
   border-radius: 5px;
+}
+
+.customer-metrics {
+  display: flex;
+  justify-content: space-between;
 }

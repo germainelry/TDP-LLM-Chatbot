@@ -100,8 +100,6 @@ def most_searched_terms():
 	top_20 = dict(sorted(data.items(), key=lambda item: item[1], reverse=True)[:20])
 	return top_20
 
-
-
 # User Frequency Across Time
 @app.route('/user_frequency_across_time')
 def user_frequency():
@@ -121,6 +119,67 @@ def user_frequency():
 
 	return dict(frequency)
 
+# Chat Duration Log Per User
+@app.route('/chat_duration_per_user')
+def chat_duration_per_user():
+	try:
+		with open("history.json", "r") as file:
+			data = json.load(file)
+	except json.decoder.JSONDecodeError:
+		data = {}
+
+	duration = defaultdict(list)
+	
+	for entry in data:
+		username = entry["username"]
+		timestamp = datetime.strptime(entry["timestamp"], "%Y-%m-%d %H:%M:%S")
+		duration[username].append(timestamp)
+
+	# Compute the time interval between each chat session
+	chat_duration_interval = defaultdict(list)
+	for user, times in duration.items():
+		# Sort the timestamps to ensure they are in order
+		times.sort()
+		# Calculate the duration (seconds) between consecutive timestamps
+		for i in range(1, len(times)):
+			duration = (times[i] - times[i - 1]).total_seconds()
+			chat_duration_interval[user].append(duration)
+
+	# We will now segment out the chat duration to identify chat sessions
+	# To do so, we will assume that a chat session is over if the duration between two chat sessions is greater than 1 hr (3600s)
+	# We will then sum up the chat duration for each chat session
+	print(chat_duration_interval)
+
+	criteria = 3600
+
+	def split_values(values, criteria):
+		result = []
+		current_sublist = []
+
+		for value in values:
+			if value > criteria:
+				if current_sublist:  # If there's already a sublist, save it
+					result.append(current_sublist)
+					current_sublist = []  # Reset for a new sublist
+			else:
+				current_sublist.append(int(value))  # Add to the current sublist
+						
+		if current_sublist:  # Add any remaining sublist
+			result.append(current_sublist)
+				
+		return result
+	split_data = {key: split_values(values, criteria) for key, values in chat_duration_interval.items()}
+	
+	
+	# Now that we have the intervals for each session, we will sum up the chat duration for each session
+	for user, intervals in split_data.items():
+		for i, interval in enumerate(intervals):
+			split_data[user][i] = sum(interval)
+
+	# React histogram to show the distribution of chat duration
+	return dict(split_data)
+
+
 # Most asked questions
 
 
@@ -128,4 +187,5 @@ def user_frequency():
 
 
 if __name__ == '__main__':
-    app.run(debug = True)
+	app.run(debug = True)
+		

@@ -6,6 +6,7 @@ import UserFrequencyChart from "./UserFrequencyChart";
 import LanguagesDistribution from "./LanguagesDistribution";
 import ConvoResolution from "./ConvoResolution";
 import WordCloudDisplay from "./WordCloudDisplay";
+import CustomerSatisfaction from "./CustomerSatisfaction";
 
 function Dashboard() {
   const [data, setData] = useState({
