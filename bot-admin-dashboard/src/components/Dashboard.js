@@ -6,7 +6,7 @@ import UserFrequencyChart from "./UserFrequencyChart";
 import LanguagesDistribution from "./LanguagesDistribution";
 import ConvoResolution from "./ConvoResolution";
 import WordCloudDisplay from "./WordCloudDisplay";
-import CustomerSatisfaction from "./CustomerSatisfaction";
+import ChatDuration from "./ChatDuration";
 
 function Dashboard() {
   const [data, setData] = useState({
@@ -67,11 +67,18 @@ function Dashboard() {
         <UserFrequencyChart />
         <LanguagesDistribution />
       </div>
-      <div className="charts-container-2">
-        <ConvoResolution />
-      </div>
-      <div className="charts-container-3">
-        <WordCloudDisplay />
+      <div className="charts-container-second">
+        <div className="charts-container-second-1">
+          <div className="charts-container-2">
+            <ConvoResolution />
+          </div>
+          <div className="charts-container-3">
+            <WordCloudDisplay />
+          </div>
+        </div>
+        <div className="charts-container-second-2">
+          <ChatDuration />
+        </div>
       </div>
     </>
   );

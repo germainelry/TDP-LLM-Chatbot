@@ -1,12 +1,10 @@
-from flask import Flask
+from flask import Flask, jsonify
 from collections import defaultdict
 from datetime import datetime
 import json
-import math
-import spacy
 import en_core_web_sm
 from deep_translator import GoogleTranslator
-import re
+
 
 nlp = en_core_web_sm.load()
 app = Flask(__name__)
@@ -132,11 +130,14 @@ def chat_duration_per_user():
 	
 	for entry in data:
 		username = entry["username"]
+		if username == None:
+			username = "Unknown"
 		timestamp = datetime.strptime(entry["timestamp"], "%Y-%m-%d %H:%M:%S")
 		duration[username].append(timestamp)
 
 	# Compute the time interval between each chat session
 	chat_duration_interval = defaultdict(list)
+
 	for user, times in duration.items():
 		# Sort the timestamps to ensure they are in order
 		times.sort()
@@ -144,14 +145,13 @@ def chat_duration_per_user():
 		for i in range(1, len(times)):
 			duration = (times[i] - times[i - 1]).total_seconds()
 			chat_duration_interval[user].append(duration)
-
+	
 	# We will now segment out the chat duration to identify chat sessions
 	# To do so, we will assume that a chat session is over if the duration between two chat sessions is greater than 1 hr (3600s)
 	# We will then sum up the chat duration for each chat session
-	print(chat_duration_interval)
-
 	criteria = 3600
 
+	# Inner function for splitting our time intervals
 	def split_values(values, criteria):
 		result = []
 		current_sublist = []
@@ -175,8 +175,12 @@ def chat_duration_per_user():
 	for user, intervals in split_data.items():
 		for i, interval in enumerate(intervals):
 			split_data[user][i] = sum(interval)
+	
+	# Convert results to minutes
+	for user, intervals in split_data.items():
+		for i, interval in enumerate(intervals):
+			split_data[user][i] = round(interval / 60, 3)
 
-	# React histogram to show the distribution of chat duration
 	return dict(split_data)
 
 
@@ -184,8 +188,6 @@ def chat_duration_per_user():
 
 
 
-
-
 if __name__ == '__main__':
 	app.run(debug = True)
-		
+	

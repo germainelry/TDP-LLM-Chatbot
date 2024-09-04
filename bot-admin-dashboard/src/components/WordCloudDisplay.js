@@ -95,9 +95,6 @@ function WordCloudDisplay() {
           <CustomerSatisfaction />
         </div>
       </div>
-      <div>
-        <ChatDuration />
-      </div>
     </>
   );
 }

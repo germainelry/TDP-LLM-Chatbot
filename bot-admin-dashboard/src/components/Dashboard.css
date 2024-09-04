@@ -62,6 +62,16 @@ p {
   min-width: 870px; /* Optional: Sets a minimum width for each chart */
 }
 
+.charts-container-second {
+  display: flex;
+  justify-content: space-between;
+}
+
+.charts-container-second > div {
+  flex: 0; /* Ensures both charts take equal width */
+  min-width: 870px; /* Optional: Sets a minimum width for each chart */
+}
+
 /* ================ colors =====================*/
 .bg-usersCount {
   background-color: #233253 !important;
