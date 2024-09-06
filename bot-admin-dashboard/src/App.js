@@ -13,6 +13,7 @@ import {
 import ConversationHistory from "./components/ConversationHistory";
 import Dashboard from "./components/Dashboard";
 import Navigation from "./components/Navigation";
+import ChatInterface from "./components/ChatInterface";
 
 function App() {
   return (
@@ -25,11 +26,9 @@ function App() {
             path="/Conversation_history"
             element={<ConversationHistory />}
           />
-          {/* Add other routes as needed */}
+          <Route path="/Chat_Interface" element={<ChatInterface />} />
         </Routes>
       </Router>
-      {/* <Dashboard /> */}
-      {/* <ConversationHistory /> */}
     </div>
   );
 }

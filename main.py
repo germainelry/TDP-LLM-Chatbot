@@ -30,7 +30,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
   )
 
   # Return a welcome message to the user too when they start the bot with /start
-  f = open("introductory_message.txt", "r")
+  f = open("data/introductory_message.txt", "r")
   await context.bot.send_message(
     chat_id = update.effective_chat.id, 
     text = f.read()

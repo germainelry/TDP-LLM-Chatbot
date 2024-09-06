@@ -36,8 +36,8 @@ function Navigation() {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/Analytics">
-                Analytics
+              <a className="nav-link" href="/Chat_Interface">
+                Chatbot Interface
               </a>
             </li>
           </ul>

@@ -11,7 +11,7 @@ from langchain.memory import ConversationBufferMemory, ConversationBufferWindowM
 from langchain.chains import ConversationChain
 from langchain.vectorstores import Chroma
 from langchain_community.embeddings.openai import OpenAIEmbeddings
-from language_detection import detect_language_with_langid
+from py3langid.langid import LanguageIdentifier, MODEL_FILE
 
 
 load_dotenv()
@@ -33,10 +33,16 @@ chain = ConversationChain(
   memory = window_memory
 )
 
+# Detect the language of the input text
+def detect_language_with_langid(line) -> str:     
+    identifier = LanguageIdentifier.from_pickled_model(MODEL_FILE, norm_probs=True) 
+    lang, prob = identifier.classify(line)
+    return lang
+
 # Write to json file to log the conversation
 def log_conversation(update, result, execution_time) -> None:
   try:
-    with open("history.json", "r") as file:
+    with open("data/history.json", "r") as file:
       data = json.load(file)
   except json.decoder.JSONDecodeError:
     data = []

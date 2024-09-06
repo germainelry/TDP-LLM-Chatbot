@@ -135,13 +135,13 @@ function ConversationHistory() {
                 onClick={() => handleConversationClick(item)}
                 style={{ cursor: "pointer", marginBottom: "10px" }}
               >
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">{item.input}</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">
+                <div className="card">
+                  <div className="card-body">
+                    <h5 className="card-title">{item.input}</h5>
+                    <h6 className="card-subtitle mb-2 text-muted">
                       {item.timestamp}
                     </h6>
-                    <p class="card-text">{item.output}</p>
+                    <p className="card-text">{item.output}</p>
                   </div>
                 </div>
               </div>

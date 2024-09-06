@@ -1,19 +1,20 @@
-from flask import Flask, jsonify
+from flask import Flask, request, jsonify
+from flask_cors import CORS
 from collections import defaultdict
 from datetime import datetime
 import json
 import en_core_web_sm
-from deep_translator import GoogleTranslator
 
 
 nlp = en_core_web_sm.load()
 app = Flask(__name__)
+CORS(app)  # Enable CORS for all routes
 
 # Conversation Logs in Table Form
 @app.route('/conversation_history')
 def conversation_history():
 	try:
-		with open("history.json", "r") as file:
+		with open("data/history.json", "r") as file:
 			data = json.load(file)
 	except json.decoder.JSONDecodeError:
 		data = {}
@@ -33,7 +34,7 @@ def conversation_history():
 @app.route('/basic_chat_information')
 def compute_chat_statistics():
 	try:
-			with open("history.json", "r") as file:
+			with open("data/history.json", "r") as file:
 					data = json.load(file)
 	except json.decoder.JSONDecodeError:
 			data = {}
@@ -62,7 +63,7 @@ def compute_chat_statistics():
 @app.route('/languages_distribution')
 def compute_language_distribution():
 	try:
-		with open("history.json", "r") as file:
+		with open("data/history.json", "r") as file:
 			data = json.load(file)
 	except json.decoder.JSONDecodeError:
 		data = {}
@@ -78,7 +79,7 @@ def compute_language_distribution():
 @app.route('/conversation_resolution_metrics')
 def resolution_metrics():
 	try:
-		with open("conversationResolution.json", "r") as file:
+		with open("data/conversationResolution.json", "r") as file:
 			data = json.load(file)
 	except json.decoder.JSONDecodeError:
 		data = {}
@@ -89,7 +90,7 @@ def resolution_metrics():
 @app.route('/most_searched_terms')
 def most_searched_terms():
 	try:
-		with open("keywords.json", "r") as file:
+		with open("data/keywords.json", "r") as file:
 			data = json.load(file)
 	except json.decoder.JSONDecodeError:
 		data = {}
@@ -102,7 +103,7 @@ def most_searched_terms():
 @app.route('/user_frequency_across_time')
 def user_frequency():
 	try:
-		with open("history.json", "r") as file:
+		with open("data/history.json", "r") as file:
 			data = json.load(file)
 	except json.decoder.JSONDecodeError:
 		data = {}
@@ -121,7 +122,7 @@ def user_frequency():
 @app.route('/chat_duration_per_user')
 def chat_duration_per_user():
 	try:
-		with open("history.json", "r") as file:
+		with open("data/history.json", "r") as file:
 			data = json.load(file)
 	except json.decoder.JSONDecodeError:
 		data = {}
@@ -187,6 +188,16 @@ def chat_duration_per_user():
 # Most asked questions
 
 
+
+
+# Pass user input to the chatbot from frontend
+@app.route('/chatbot', methods = ['POST'])
+def interface_to_chatbot():
+	data = request.json[0]
+	message = data.get("message")
+	result = f"Hello World from Python! {message}"
+	return jsonify({'result': result})
+	# return user_conversation(user_input)
 
 if __name__ == '__main__':
 	app.run(debug = True)
