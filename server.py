@@ -1,15 +1,108 @@
+#  Core libraries for API and Data Processing
+import json
+import en_core_web_sm
+import os
+import time
+import math
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from collections import defaultdict
 from datetime import datetime
-import json
-import en_core_web_sm
+from dotenv import load_dotenv
 
+# Core libraries for the chatbot LLM Model
+from langchain_ollama import OllamaLLM
+from langchain_core.prompts import ChatPromptTemplate
+from langchain_core.output_parsers import StrOutputParser
+from langchain.memory import ConversationBufferMemory, ConversationBufferWindowMemory, ConversationSummaryMemory, VectorStoreRetrieverMemory
+from langchain.chains import ConversationChain
+from langchain.vectorstores import Chroma
+from langchain_community.embeddings.openai import OpenAIEmbeddings
+from py3langid.langid import LanguageIdentifier, MODEL_FILE
+
+
+# ---------- Start of Initialising Environment Variables ----------
+load_dotenv()
 
 nlp = en_core_web_sm.load()
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
+# ---------- End of Initialising Environment Variables ----------
 
+
+# ---------- Start of Building the Chatbot Model ----------
+# LLM Model to be used for chatbot
+model = OllamaLLM(model="stablelm2")
+
+prompt = ChatPromptTemplate.from_messages([
+    ('system', 'You are a helpful assistant. Answer the question asked by the user in maximum 30 words.'),
+    ('user', 'Question : {input}'),
+])
+chain = prompt | model | StrOutputParser() # Pipeline for initialising the chatbot
+
+# Used for storing the conversation history
+window_memory = ConversationBufferWindowMemory(k = 20) # Remember the last k conversations
+chain = ConversationChain(
+  llm = model, 
+  memory = window_memory
+)
+# ---------- End of Building the Chatbot Model ----------
+
+
+# ---------- Start of Chatbot Functions ----------
+# Detect the language of the input text
+def detect_language_with_langid(line) -> str:     
+	identifier = LanguageIdentifier.from_pickled_model(MODEL_FILE, norm_probs=True) 
+	lang, prob = identifier.classify(line)
+	return lang
+
+# Write to json file to log the conversation
+def log_conversation(userInputMessage, botResponse, execution_time, userInfo) -> None:
+	try:
+		with open("data/history.json", "r") as file:
+			data = json.load(file)
+	except json.decoder.JSONDecodeError:
+		data = []
+
+	data.append(
+		{
+			"chat_id": int(userInfo.get("phone")),
+			"timestamp": datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+			"username": userInfo.get("name"),
+			"language_code": detect_language_with_langid(userInputMessage),
+			"response_time_seconds": round(execution_time, 6),
+			"input": userInputMessage,
+			"output": botResponse.get("response")
+		}
+	)
+	with open("data/history.json", 'w') as file:
+			json.dump(data, file, indent = 2)
+
+# def handle_conversation() -> None:
+#   context = ""
+#   print("Welcome to the chatbot! Type 'exit' to end the conversation.")
+#   while True:
+#     user_input = input("You: ")
+#     if user_input == "exit":
+#       break
+#     result = chain.invoke({"context": context, "question": user_input})
+#     print("Bot:", result)
+#     context += f"User: {user_input}\nBot: {result}\n"
+
+def user_conversation(userInputMessage, userInfo) -> str:
+	start_time = time.time()
+	botResponse = chain.invoke({'input' : f"{userInputMessage}"})
+	end_time = time.time()
+
+	# Calculate the execution time
+	execution_time = end_time - start_time  
+	log_conversation(userInputMessage, botResponse, execution_time, userInfo)
+
+	return botResponse.get("response")
+# ---------- End of Chatbot Functions ----------
+
+
+# ---------- Start of API Functions ----------
 # Conversation Logs in Table Form
 @app.route('/conversation_history')
 def conversation_history():
@@ -171,7 +264,6 @@ def chat_duration_per_user():
 		return result
 	split_data = {key: split_values(values, criteria) for key, values in chat_duration_interval.items()}
 	
-	
 	# Now that we have the intervals for each session, we will sum up the chat duration for each session
 	for user, intervals in split_data.items():
 		for i, interval in enumerate(intervals):
@@ -184,21 +276,18 @@ def chat_duration_per_user():
 
 	return dict(split_data)
 
-
-# Most asked questions
-
-
-
-
 # Pass user input to the chatbot from frontend
 @app.route('/chatbot', methods = ['POST'])
 def interface_to_chatbot():
-	data = request.json[0]
-	message = data.get("message")
-	result = f"Hello World from Python! {message}"
+	data = request.json
+	message = data[0].get("message")
+	userInfo = data[0].get("userInfo")
+	result = user_conversation(message, userInfo) # Feed the user input into the chatbot
 	return jsonify({'result': result})
-	# return user_conversation(user_input)
+# ---------- End of API Functions ----------
 
+
+#  If the script is run directly, start the Flask app
 if __name__ == '__main__':
 	app.run(debug = True)
 	
