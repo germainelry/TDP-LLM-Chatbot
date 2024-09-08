@@ -2,12 +2,17 @@ import React, { useState, useEffect, useRef } from "react";
 import WordCloud from "wordcloud";
 import "./WordCloudDisplay.css";
 import CustomerSatisfaction from "./CustomerSatisfaction";
-import ChatDuration from "./ChatDuration";
 
 function WordCloudDisplay() {
-  const [data, setData] = useState({
-    words: {},
-  });
+  const [data, setData] = useState({});
+
+  useEffect(() => {
+    fetch("/most_searched_terms")
+      .then((res) => res.json())
+      .then((data) => {
+        setData(data);
+      });
+  }, []);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -23,43 +28,11 @@ function WordCloudDisplay() {
     fetchData(); // Call the async function
   }, []);
 
-  useEffect(() => {
-    console.log(data); // Log the updated data whenever it changes
-  }, [data]); // Depend on data to log whenever it updates
+  const replacement = [];
 
-  const replacementWordList = [
-    ["uob", 27],
-    ["banking", 19],
-    ["products", 18],
-    ["привет", 14],
-    ["menabung", 13],
-    ["préstamo", 13],
-    ["借款", 13],
-    ["überweisen", 13],
-    ["offer", 13],
-    ["ceo", 11],
-    ["savings", 11],
-    ["account", 11],
-    ["singapore", 6],
-    ["set", 6],
-    ["indonesian", 5],
-    ["spanish", 5],
-    ["bank", 5],
-    ["loan", 7],
-    ["customer", 8],
-    ["service", 9],
-    ["currency", 4],
-    ["investment", 7],
-    ["信用", 6],
-    ["تحويل", 5],
-    ["kredit", 17],
-    ["monnaie", 14],
-    ["クレジット", 6],
-  ];
-  const wordList = replacementWordList;
   // Ensure words is an object and has entries
-  // const wordList =
-  //   typeof data === "object" ? Object.entries(data) : replacementWordList;
+  const wordList =
+    typeof data === "object" ? Object.entries(data) : replacement;
 
   const canvasRef = useRef(null);
   useEffect(() => {

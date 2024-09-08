@@ -1,14 +1,17 @@
 #  Core libraries for API and Data Processing
+import re
 import json
 import en_core_web_sm
 import os
 import time
 import math
+import nltk
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from collections import defaultdict
 from datetime import datetime
 from dotenv import load_dotenv
+from nltk.corpus import stopwords
 
 # Core libraries for the chatbot LLM Model
 from langchain_ollama import OllamaLLM
@@ -16,13 +19,23 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from langchain.memory import ConversationBufferMemory, ConversationBufferWindowMemory, ConversationSummaryMemory, VectorStoreRetrieverMemory
 from langchain.chains import ConversationChain
-from langchain.vectorstores import Chroma
+from langchain_community.vectorstores import Chroma
 from langchain_community.embeddings.openai import OpenAIEmbeddings
 from py3langid.langid import LanguageIdentifier, MODEL_FILE
 
 
 # ---------- Start of Initialising Environment Variables ----------
 load_dotenv()
+nltk.download('stopwords')
+
+# Define stopwords in all possible languages
+# Define stopwords for multiple languages
+languages = ['english', 'spanish', 'russian', 'french', 'german', 'chinese', 'arabic']
+stop_words = set()
+
+# Combine stopwords from multiple languages
+for lang in languages:
+    stop_words.update(stopwords.words(lang))
 
 nlp = en_core_web_sm.load()
 app = Flask(__name__)
@@ -78,18 +91,23 @@ def log_conversation(userInputMessage, botResponse, execution_time, userInfo) ->
 	with open("data/history.json", 'w') as file:
 			json.dump(data, file, indent = 2)
 
-# def handle_conversation() -> None:
-#   context = ""
-#   print("Welcome to the chatbot! Type 'exit' to end the conversation.")
-#   while True:
-#     user_input = input("You: ")
-#     if user_input == "exit":
-#       break
-#     result = chain.invoke({"context": context, "question": user_input})
-#     print("Bot:", result)
-#     context += f"User: {user_input}\nBot: {result}\n"
-
 def user_conversation(userInputMessage, userInfo) -> str:
+	with open("data/keywords.json", 'r') as file:
+		data = json.load(file)
+
+	# Log the user input into our keywords file
+	words = re.findall(r'\b\w+\b', userInputMessage)
+	for word in words:
+		word = word.lower()  # Optional: Convert to lowercase for case-insensitive matching
+		if word not in stop_words:
+			if word in data:
+				data[word] += 1
+			else:
+				data[word] = 1
+
+	with open("data/keywords.json", 'w') as file:
+		json.dump(data, file, indent = 2)
+
 	start_time = time.time()
 	botResponse = chain.invoke({'input' : f"{userInputMessage}"})
 	end_time = time.time()
@@ -290,4 +308,3 @@ def interface_to_chatbot():
 #  If the script is run directly, start the Flask app
 if __name__ == '__main__':
 	app.run(debug = True)
-	

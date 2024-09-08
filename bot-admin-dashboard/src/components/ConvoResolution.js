@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
+import Table from "react-bootstrap/Table";
 import "./ConvoResolution.css";
 
 const resolutionDescriptions = {
@@ -28,17 +29,22 @@ function ResolutionModal(props) {
       <Modal.Body>
         <p>{resolutionDescriptions[props.title]}</p>
         {props.conversations && props.conversations.length > 0 ? (
-          <ul>
-            {props.conversations.map((convo, index) => (
-              <li key={index}>
-                <span key={index}>
-                  <b>User ID: </b>
-                  {convo[0]} ---- <b>User Message: </b>
-                  {convo[1]}
-                </span>
-              </li>
-            ))}
-          </ul>
+          <Table striped bordered hover>
+            <thead>
+              <tr>
+                <th>User ID</th>
+                <th>User Message</th>
+              </tr>
+            </thead>
+            <tbody>
+              {props.conversations.map((convo, index) => (
+                <tr key={index}>
+                  <td>{convo[0]}</td>
+                  <td>{convo[1]}</td>
+                </tr>
+              ))}
+            </tbody>
+          </Table>
         ) : (
           <p>No conversations available.</p>
         )}
@@ -67,7 +73,6 @@ function ConvoResolution() {
       .then((res) => res.json())
       .then((data) => {
         setData(data);
-        // console.log(data);
       });
   }, []);
 
