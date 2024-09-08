@@ -1,2 +1,5 @@
 .env
 .DS_Store
+data/history.json
+data/keywords.json
+data/conversationResolution.json
