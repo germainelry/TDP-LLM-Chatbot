@@ -23,10 +23,10 @@ function Dashboard() {
   }, []);
   return (
     <>
-      <div className="row align-items-center ">
+      <div id="metrics-top" className="row align-items-center">
         <div className="row">
-          <div className="col-md-3 col-sm-6 col-xs-12">
-            <div className="mini-stat clearfix bg-usersCount">
+          <div id="metric-container" className="col-md-3 col-sm-6 col-xs-12">
+            <div className="mini-stat clearfix bg-metrics">
               <div className="mini-stat-info">
                 <span id="userCount">{data.unique_users}</span>
                 Number of Users
@@ -34,8 +34,8 @@ function Dashboard() {
               </div>
             </div>
           </div>
-          <div className="col-md-3 col-sm-6 col-xs-12">
-            <div className="mini-stat clearfix bg-conversations">
+          <div id="metric-container" className="col-md-3 col-sm-6 col-xs-12">
+            <div className="mini-stat clearfix bg-metrics">
               <div className="mini-stat-info">
                 <span id="interactionCount">{data.total_conversations}</span>
                 Number of Interactions Logged
@@ -43,8 +43,8 @@ function Dashboard() {
               </div>
             </div>
           </div>
-          <div className="col-md-3 col-sm-6 col-xs-12">
-            <div className="mini-stat clearfix bg-languages">
+          <div id="metric-container" className="col-md-3 col-sm-6 col-xs-12">
+            <div className="mini-stat clearfix bg-metrics">
               <div className="mini-stat-info">
                 <span id="languageCount">{data.languages_detected}</span>
                 Languages Detected
@@ -52,8 +52,8 @@ function Dashboard() {
               </div>
             </div>
           </div>
-          <div className="col-md-3 col-sm-6 col-xs-12">
-            <div className="mini-stat clearfix bg-languages">
+          <div id="metric-container" className="col-md-3 col-sm-6 col-xs-12">
+            <div className="mini-stat clearfix bg-metrics">
               <div className="mini-stat-info">
                 <span id="languageCount">{data.average_response_time}</span>
                 Average Response Time (seconds)

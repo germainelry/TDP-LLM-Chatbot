@@ -41,13 +41,14 @@ function LanguagesDistribution() {
   const series = useMemo(() => Object.values(data), [data]);
 
   return (
-    <div>
+    <div className="language-distribution-container">
       <span id="language-distribution-title">
         Language ID Code Distribution
       </span>
-      <div id="language-distribution-chart">
+      <div id="language-distribution-chart-container">
         {series.length > 0 ? (
           <ReactApexChart
+            className="language-distribution"
             options={options}
             series={series}
             type="polarArea"

@@ -1,6 +1,24 @@
-#user-freq-chart {
-  width: 100%;
+.user-interactions-container {
+  margin-bottom: 10px;
+}
+
+.user-freq-chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  padding-bottom: 0px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+#user-freq-chart-container {
+  width: 98%;
   height: 100%;
+  padding-bottom: 10px;
+  margin-top: -10px;
+  margin-left: 4px;
 }
 
 #user-freq-title {

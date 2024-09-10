@@ -34,10 +34,11 @@ function UserFrequencyChart() {
   };
 
   return (
-    <div>
+    <div className="user-interactions-container">
       <span id="user-freq-title">User Interactions Across Time</span>
-      <div id="user-freq-chart">
+      <div id="user-freq-chart-container">
         <ReactApexChart
+          className="user-freq-chart"
           options={state.options}
           series={state.series}
           type="area"

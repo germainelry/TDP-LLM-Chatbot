@@ -109,7 +109,13 @@ function ChatDuration() {
   return (
     <>
       <span id="chat-duration-title">Chat Duration Distribution</span>
-      <Chart options={options} series={series} type="bar" height={300} />
+      <Chart
+        className="chat-duration-chart"
+        options={options}
+        series={series}
+        type="bar"
+        height={270}
+      />
     </>
   );
 }

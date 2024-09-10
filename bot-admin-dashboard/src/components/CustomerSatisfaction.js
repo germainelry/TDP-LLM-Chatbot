@@ -1,10 +1,21 @@
 import React from "react";
-import "./CustomerSatisfaction.css";
+import { useState, useEffect } from "react";
 import ReactSpeedometer from "react-d3-speedometer";
+import "./CustomerSatisfaction.css";
 
 function CustomerSatisfaction() {
-  // To retrieve from customer data
-  const rating = 2.25;
+  const [data, setData] = useState({});
+
+  useEffect(() => {
+    fetch("/user_ratings")
+      .then((res) => res.json())
+      .then((data) => {
+        setData(data);
+        console.log(data);
+      });
+  }, []);
+
+  const rating = data.ratings ? parseFloat(data.ratings.toFixed(2)) : 0;
 
   return (
     <>

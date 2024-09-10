@@ -2,11 +2,14 @@ import React, { useState } from "react";
 import { FaStar } from "react-icons/fa";
 import "./UserRatings.css"; // Import the external CSS file
 
-function UserRatings() {
+function UserRatings(props) {
   const colors = {
     orange: "#FFBA5A",
     grey: "#a9a9a9",
   };
+
+  const username = props.userData.name; // Retrieve username from the form
+  const userPhone = props.userData.phone; // Retrieve user phone number from the form
 
   const [currentValue, setCurrentValue] = useState(0); // To track rating
   const [hoverValue, setHoverValue] = useState(undefined); // For hover effect on stars
@@ -37,7 +40,7 @@ function UserRatings() {
   // Handle submit button click
   const handleSubmit = async () => {
     if (currentValue > 0 && feedback.trim()) {
-      await sendDataToBackend(currentValue, feedback);
+      await sendDataToBackend(currentValue, feedback, username, userPhone);
       setIsSubmitted(true);
 
       // Optionally clear the form after submission
@@ -51,14 +54,14 @@ function UserRatings() {
     }
   };
 
-  const sendDataToBackend = async (ratings, feedback) => {
+  const sendDataToBackend = async (ratings, feedback, username, userPhone) => {
     try {
       const response = await fetch("http://localhost:3000/ratings", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify([{ ratings, feedback }]), // Send user info along with message
+        body: JSON.stringify([{ ratings, feedback, username, userPhone }]), // Send user info along with message
       });
 
       if (!response.ok) {

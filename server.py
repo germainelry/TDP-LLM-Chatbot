@@ -13,11 +13,18 @@ from datetime import datetime
 from dotenv import load_dotenv
 from nltk.corpus import stopwords
 
+# Core libraries for MongoDB
+import atexit
+from pymongo import MongoClient
+
 # Core libraries for the chatbot LLM Model
 from langchain_ollama import OllamaLLM
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
-from langchain.memory import ConversationBufferMemory, ConversationBufferWindowMemory, ConversationSummaryMemory, VectorStoreRetrieverMemory
+from langchain.memory import ConversationBufferMemory, \
+	ConversationBufferWindowMemory, ConversationSummaryMemory, \
+		VectorStoreRetrieverMemory
+from langchain_core.runnables.history import RunnableWithMessageHistory
 from langchain.chains import ConversationChain
 from langchain_community.vectorstores import Chroma
 from langchain_community.embeddings.openai import OpenAIEmbeddings
@@ -27,6 +34,13 @@ from py3langid.langid import LanguageIdentifier, MODEL_FILE
 # ---------- Start of Initialising Environment Variables ----------
 load_dotenv()
 nltk.download('stopwords')
+
+# MongoDB connection
+client = MongoClient("mongodb+srv://germainelry:makeachatbot@uob-chatbot-database.6q6z5.mongodb.net/")
+db = client["chatbot-database"]
+history_collection = db["history"]
+keywords_collection = db["keywords"]
+conversationResolution_collection = db["conversation-resolution"]
 
 # Define stopwords in all possible languages
 # Define stopwords for multiple languages
@@ -55,9 +69,14 @@ chain = prompt | model | StrOutputParser() # Pipeline for initialising the chatb
 
 # Used for storing the conversation history
 window_memory = ConversationBufferWindowMemory(k = 20) # Remember the last k conversations
+
+# Define a function to get the session history (this would pull from the memory)
+def get_session_history():
+    return window_memory.load_memory_variables({})["history"]
+
 chain = ConversationChain(
-  llm = model, 
-  memory = window_memory
+  llm = model,
+	memory = window_memory
 )
 # ---------- End of Building the Chatbot Model ----------
 
@@ -91,6 +110,18 @@ def log_conversation(userInputMessage, botResponse, execution_time, userInfo) ->
 	with open("data/history.json", 'w') as file:
 			json.dump(data, file, indent = 2)
 
+	# Insert into MongoDB
+	history_collection.insert_one({
+			"chat_id": int(userInfo.get("phone")),
+			"timestamp": datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+			"username": userInfo.get("name"),
+			"language_code": detect_language_with_langid(userInputMessage),
+			"response_time_seconds": round(execution_time, 6),
+			"input": userInputMessage,
+			"output": botResponse.get("response")
+	})
+	# End of Insertion
+
 def user_conversation(userInputMessage, userInfo) -> str:
 	with open("data/keywords.json", 'r') as file:
 		data = json.load(file)
@@ -105,11 +136,28 @@ def user_conversation(userInputMessage, userInfo) -> str:
 			else:
 				data[word] = 1
 
+			# Update MongoDB keyword collection
+			existing_keyword = keywords_collection.find_one({"keyword": word})
+			if existing_keyword:
+					keywords_collection.update_one({"keyword": word}, {"$inc": {"count": 1}})
+			else:
+					keywords_collection.insert_one({"keyword": word, "count": 1})
+
 	with open("data/keywords.json", 'w') as file:
 		json.dump(data, file, indent = 2)
 
+	# Create a list of messages with proper role and content
+	# messages = [
+	# 		{"role": "system", "content": "You are a helpful assistant."},
+	# 		{"role": "user", "content": userInputMessage}
+	# ]
+
 	start_time = time.time()
 	botResponse = chain.invoke({'input' : f"{userInputMessage}"})
+	
+	# Germaine's code
+	# botResponse = chain_with_history.invoke({"messages": messages})
+	
 	end_time = time.time()
 
 	# Calculate the execution time
@@ -304,17 +352,46 @@ def interface_to_chatbot():
 	return jsonify({'result': result})
 
 
-# Pass user input to the chatbot from frontend
+# Retrieve user ratings from frontend
 @app.route('/ratings', methods = ['POST'])
 def user_chat_ratings():
-	data = request.json
-	print(data)
+	res = request.json
+	try:
+		with open("data/ratings.json", "r") as file:
+			data = json.load(file)
+	except json.decoder.JSONDecodeError:
+		data = []
+
+	data.append(res[0])
+	
+	with open("data/ratings.json", 'w') as file:
+		json.dump(data, file, indent = 2)
+	
 	return {"status": "success"}
+
+# Compute the user ratings for speedometer display
+@app.route('/user_ratings')
+def customer_ratings():
+	try:
+		with open("data/ratings.json", "r") as file:
+			data = json.load(file)
+	except json.decoder.JSONDecodeError:
+		data = {}
+
+	ratings = 0
+	
+	for entry in data:
+		ratings += entry["ratings"]
+	
+	return jsonify({'ratings': ratings / len(data)})
+
 # ---------- End of API Functions ----------
 
+# Ensure MongoDB connection closes when the app exits
+def close_mongo_connection():
+    client.close()
 
-
-
+atexit.register(close_mongo_connection)
 
 #  If the script is run directly, start the Flask app
 if __name__ == '__main__':

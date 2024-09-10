@@ -1,6 +1,23 @@
-#language-distribution-chart {
-  width: 99%;
+.language-distribution-container {
+  padding-top: 0px;
+}
+
+.language-distribution {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+#language-distribution-chart-container {
+  width: 101%;
   height: 100%;
+  margin-top: -9px;
+  margin-left: -10px;
 }
 
 #language-distribution-title {
@@ -8,5 +25,4 @@
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 20px;
-  margin-left: 15px;
 }

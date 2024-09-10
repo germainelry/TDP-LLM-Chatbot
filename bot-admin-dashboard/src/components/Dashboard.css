@@ -35,6 +35,9 @@ p {
 .charts-container-1 {
   display: flex;
   justify-content: space-between;
+  margin: -10px;
+  margin-bottom: 0px;
+  margin-top: -20px;
 }
 
 .charts-container-1 > div {
@@ -73,23 +76,9 @@ p {
 }
 
 /* ================ colors =====================*/
-.bg-usersCount {
+.bg-metrics {
   background-color: #233253 !important;
   border: 1px solid #233253;
   color: white;
-  border-radius: 15px;
-}
-
-.bg-conversations {
-  background-color: #233253 !important;
-  border: 1px solid #233253;
-  color: white;
-  border-radius: 15px;
-}
-
-.bg-languages {
-  background-color: #233253 !important;
-  border: 1px solid #233253;
-  color: white;
-  border-radius: 15px;
+  border-radius: 5px;
 }
