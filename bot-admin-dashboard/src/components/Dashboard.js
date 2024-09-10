@@ -67,7 +67,7 @@ function Dashboard() {
         <UserFrequencyChart />
         <LanguagesDistribution />
       </div>
-      <div className="charts-container-second">
+      <div className="charts-container-1">
         <div className="charts-container-second-1">
           <div className="charts-container-2">
             <ConvoResolution />

@@ -48,7 +48,7 @@ p {
 }
 
 .charts-container-2 > div {
-  flex: 0; /* Ensures both charts take equal width */
+  flex: 1; /* Ensures both charts take equal width */
   min-width: 870px; /* Optional: Sets a minimum width for each chart */
 }
 
@@ -58,7 +58,7 @@ p {
 }
 
 .charts-container-3 > div {
-  flex: 0; /* Ensures both charts take equal width */
+  flex: 1; /* Ensures both charts take equal width */
   min-width: 870px; /* Optional: Sets a minimum width for each chart */
 }
 

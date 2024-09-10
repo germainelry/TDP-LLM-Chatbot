@@ -1,12 +1,24 @@
+.chatbot-interface-main {
+  background-image: url('../img/Chatbot-Background.png');
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  height: 90vh;
+  margin: 0;
+}
+
 .chatbot-container {
   display: fixed;
   flex-direction: column;
   justify-content: flex-end;
   position: fixed;
   right: 0;
+  margin-right: 10px;
+  margin-bottom: 10px;
   bottom: 0;
   width: 800px;
-  height: 850px;
+  height: 855px;
   border: 1px solid #ccc;
   padding: 10px;
   background-color: #fff;
@@ -212,4 +224,39 @@
 .voice-btn.listening {
   color: red;
   font-weight: bold;
+}
+
+
+/* User Ratings Styling */
+.modal-user-feedback {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content-feedback {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.close-modal-btn-feedback {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }

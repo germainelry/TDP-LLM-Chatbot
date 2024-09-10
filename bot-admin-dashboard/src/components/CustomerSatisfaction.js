@@ -4,7 +4,7 @@ import ReactSpeedometer from "react-d3-speedometer";
 
 function CustomerSatisfaction() {
   // To retrieve from customer data
-  const rating = 3.25;
+  const rating = 2.25;
 
   return (
     <>

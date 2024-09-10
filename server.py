@@ -302,7 +302,18 @@ def interface_to_chatbot():
 	userInfo = data[0].get("userInfo")
 	result = user_conversation(message, userInfo) # Feed the user input into the chatbot
 	return jsonify({'result': result})
+
+
+# Pass user input to the chatbot from frontend
+@app.route('/ratings', methods = ['POST'])
+def user_chat_ratings():
+	data = request.json
+	print(data)
+	return {"status": "success"}
 # ---------- End of API Functions ----------
+
+
+
 
 
 #  If the script is run directly, start the Flask app
