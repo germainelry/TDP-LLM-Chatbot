@@ -14,13 +14,21 @@ function Dashboard() {
     total_conversations: 0,
     languages_detected: [],
   });
+
   useEffect(() => {
-    fetch("/basic_chat_information")
-      .then((res) => res.json())
-      .then((data) => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("/basic_chat_information");
+        const data = await response.json();
         setData(data);
-      });
+      } catch (error) {
+        console.error("Error fetching basic chat information:", error);
+      }
+    };
+
+    fetchData();
   }, []);
+
   return (
     <>
       <div id="metrics-top" className="row align-items-center">

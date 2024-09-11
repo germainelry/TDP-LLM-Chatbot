@@ -7,12 +7,18 @@ function CustomerSatisfaction() {
   const [data, setData] = useState({});
 
   useEffect(() => {
-    fetch("/user_ratings")
-      .then((res) => res.json())
-      .then((data) => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("/user_ratings");
+        const data = await response.json();
         setData(data);
         console.log(data);
-      });
+      } catch (error) {
+        console.error("Error fetching user ratings data:", error);
+      }
+    };
+
+    fetchData();
   }, []);
 
   const rating = data.ratings ? parseFloat(data.ratings.toFixed(2)) : 0;

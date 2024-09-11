@@ -5,11 +5,17 @@ import ReactApexChart from "react-apexcharts";
 function UserFrequencyChart() {
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch("/user_frequency_across_time")
-      .then((res) => res.json())
-      .then((data) => {
-        setData(data);
-      });
+    const fetchData = async () => {
+      try {
+        const response = await fetch("/user_frequency_across_time");
+        const result = await response.json();
+        setData(result);
+      } catch (error) {
+        console.error("Error fetching user frequency data:", error);
+      }
+    };
+
+    fetchData();
   }, []);
 
   const state = {

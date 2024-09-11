@@ -69,11 +69,17 @@ function ConvoResolution() {
   };
 
   useEffect(() => {
-    fetch("/conversation_resolution_metrics")
-      .then((res) => res.json())
-      .then((data) => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("/conversation_resolution_metrics");
+        const data = await response.json();
         setData(data);
-      });
+      } catch (error) {
+        console.error("Error fetching conversation resolution metrics:", error);
+      }
+    };
+
+    fetchData();
   }, []);
 
   const unresolvedSet = new Set();

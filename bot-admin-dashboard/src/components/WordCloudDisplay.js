@@ -7,11 +7,17 @@ function WordCloudDisplay() {
   const [data, setData] = useState({});
 
   useEffect(() => {
-    fetch("/most_searched_terms")
-      .then((res) => res.json())
-      .then((data) => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("/most_searched_terms");
+        const data = await response.json();
         setData(data);
-      });
+      } catch (error) {
+        console.error("Error fetching most searched terms data:", error);
+      }
+    };
+
+    fetchData();
   }, []);
 
   useEffect(() => {

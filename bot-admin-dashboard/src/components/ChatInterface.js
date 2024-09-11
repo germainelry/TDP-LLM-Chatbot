@@ -1,11 +1,11 @@
 import React, { useState, useRef, useEffect } from "react";
-import UserRatings from "./UserRatings"; // Import the UserRatings component
+import UserRatings from "./UserRatings"; // Keep the import for UserRatings
 import "./ChatInterface.css";
 
 const ChatInterface = () => {
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState([]);
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true); // Set to true to display chat interface on load
   const [loading, setLoading] = useState(false);
   const [userInfo, setUserInfo] = useState({ name: "", phone: "" });
   const [userSubmitted, setUserSubmitted] = useState(false);
@@ -102,134 +102,121 @@ const ChatInterface = () => {
     }
   };
 
-  // Handle closing the chat and opening the ratings modal
-  const handleCloseChat = () => {
-    setIsOpen(false); // Close the chat window
-    setIsRatingsModalOpen(true); // Open the Ratings modal
-  };
-
-  const handleRatingsClose = () => {
-    setIsRatingsModalOpen(false); // Close the ratings modal
+  // Handle ratings modal toggle
+  const handleRatingsToggle = () => {
+    setIsRatingsModalOpen((prev) => !prev); // Toggle the ratings modal
   };
 
   return (
     <div className="chatbot-interface-main">
-      <button
-        id="chatbot-btn"
-        className="btn btn-primary float-right"
-        onClick={() => setIsOpen(!isOpen)}
-        style={{
-          position: "fixed",
-          bottom: "20px",
-          right: "20px",
-          zIndex: 1000,
-        }}
-      >
-        <i className="bi bi-chat"></i>
-      </button>
+      <div className="chatbot-container">
+        <div className="chatbot-header">
+          <h4 className="chatbot-title">
+            Interact with our Custom AI Chatbot <i className="bi bi-robot"></i>
+          </h4>
 
-      {isOpen && (
-        <div className="chatbot-container">
-          <div className="chatbot-header">
-            <h4 className="chatbot-title">
-              Interact with our Custom AI Chatbot{" "}
-              <i className="bi bi-robot"></i>
-            </h4>
-
-            <button
-              className="close-btn"
-              onClick={handleCloseChat} // Change to open the ratings modal
-              aria-label="Close Chat"
-            >
-              &times;
-            </button>
-          </div>
-
-          {!userSubmitted ? (
-            <form className="user-info-form" onSubmit={handleUserInfoSubmit}>
-              <h6>Please provide your details to continue:</h6>
-              <div className="input-group">
-                <i className="bi bi-info-square"></i>
-                <input
-                  type="text"
-                  value={userInfo.name}
-                  onChange={(e) =>
-                    setUserInfo({ ...userInfo, name: e.target.value })
-                  }
-                  placeholder="Enter your name"
-                  required
-                />
-              </div>
-              <div className="input-group">
-                <i className="bi bi-telephone-plus"></i>
-                <input
-                  type="tel"
-                  value={userInfo.phone}
-                  onChange={(e) =>
-                    setUserInfo({ ...userInfo, phone: e.target.value })
-                  }
-                  placeholder="Enter your phone number"
-                  required
-                />
-              </div>
-
-              <button type="submit">Submit</button>
-            </form>
-          ) : (
-            <>
-              <div className="chatbot-messages">
-                {messages.map((message, index) => (
-                  <div
-                    key={index}
-                    className={`message ${
-                      message.user ? "user-message" : "ai-message"
-                    }`}
-                  >
-                    <div className="message-header">
-                      {message.user ? (
-                        <i className="bi bi-person-fill"></i>
-                      ) : (
-                        <i id="chatbox-bot" className="bi bi-robot"></i>
-                      )}
-                      {message.user ? " You" : " Bot"}
-                    </div>
-                    <div className="message-text">{message.text}</div>
-                  </div>
-                ))}
-                <div ref={messagesEndRef} />
-              </div>
-
-              <form className="chatbot-input-form" onSubmit={handleSubmit}>
-                <input
-                  ref={inputRef}
-                  type="text"
-                  value={input}
-                  onChange={(e) => setInput(e.target.value)}
-                  placeholder="Type your message..."
-                  className="chat-input"
-                />
-                <button
-                  type="button"
-                  onClick={handleSpeechToText}
-                  className={`voice-btn ${isListening ? "listening" : ""}`}
-                >
-                  {isListening ? "Listening..." : <i className="bi bi-mic"></i>}
-                </button>
-                <button type="submit" disabled={loading}>
-                  {loading ? "Sending..." : "Send"}
-                </button>
-              </form>
-            </>
-          )}
+          <button
+            className="rate-bot-btn"
+            onClick={handleRatingsToggle}
+            aria-label="Rate Bot"
+          >
+            <i className="bi bi-star"></i> Rate the Bot!
+          </button>
         </div>
-      )}
+
+        {!userSubmitted ? (
+          <form className="user-info-form" onSubmit={handleUserInfoSubmit}>
+            <h6>Please provide your details to continue:</h6>
+            <div className="input-group">
+              <i className="bi bi-info-square"></i>
+              <input
+                type="text"
+                value={userInfo.name}
+                onChange={(e) =>
+                  setUserInfo({ ...userInfo, name: e.target.value })
+                }
+                placeholder="Enter your name"
+                required
+              />
+            </div>
+            <div className="input-group">
+              <i className="bi bi-telephone-plus"></i>
+              <input
+                type="tel"
+                value={userInfo.phone}
+                onChange={(e) =>
+                  setUserInfo({ ...userInfo, phone: e.target.value })
+                }
+                placeholder="Enter your phone number"
+                required
+              />
+            </div>
+
+            <button type="submit">Submit</button>
+          </form>
+        ) : (
+          <>
+            <div className="chatbot-messages">
+              {messages.map((message, index) => (
+                <div
+                  key={index}
+                  className={`message ${
+                    message.user ? "user-message" : "ai-message"
+                  }`}
+                >
+                  <div className="message-header">
+                    {message.user ? (
+                      <i className="bi bi-person-fill"></i>
+                    ) : (
+                      <i id="chatbox-bot" className="bi bi-robot"></i>
+                    )}
+                    {message.user ? " You" : " Bot"}
+                  </div>
+                  <div className="message-text">{message.text}</div>
+                </div>
+              ))}
+              <div ref={messagesEndRef} />
+            </div>
+
+            <form className="chatbot-input-form" onSubmit={handleSubmit}>
+              <input
+                ref={inputRef}
+                type="text"
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                placeholder="Type your message..."
+                className="chat-input"
+              />
+              <button
+                type="button"
+                onClick={handleSpeechToText}
+                className={`voice-btn ${isListening ? "listening" : ""}`}
+              >
+                {isListening ? "Listening..." : <i className="bi bi-mic"></i>}
+              </button>
+              <button type="submit" disabled={loading}>
+                {loading ? "Sending..." : "Send"}
+              </button>
+            </form>
+
+            {/* Button to toggle Ratings modal */}
+            <button
+              onClick={handleRatingsToggle}
+              className="btn btn-secondary"
+              style={{ marginTop: "10px" }}
+            >
+              Rate your experience
+            </button>
+          </>
+        )}
+      </div>
 
       {isRatingsModalOpen && (
         <div className="modal-user-feedback">
           <div className="modal-content-feedback">
             <UserRatings userData={userInfo} />
             <button
-              onClick={handleRatingsClose}
+              onClick={handleRatingsToggle}
               className="close-modal-btn-feedback"
             >
               Close

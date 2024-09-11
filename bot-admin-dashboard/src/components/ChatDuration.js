@@ -7,11 +7,17 @@ function ChatDuration() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("/chat_duration_per_user")
-      .then((res) => res.json())
-      .then((data) => {
-        setData(data);
-      });
+    const fetchData = async () => {
+      try {
+        const response = await fetch("/chat_duration_per_user");
+        const result = await response.json();
+        setData(result);
+      } catch (error) {
+        console.error("Error fetching chat duration data:", error);
+      }
+    };
+
+    fetchData();
   }, []);
 
   // Function to bin data in intervals of 5 minutes

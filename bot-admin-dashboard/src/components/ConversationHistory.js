@@ -55,13 +55,21 @@ function ConversationHistory() {
   const [modalShow, setModalShow] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
   const [sortOrder, setSortOrder] = useState("oldest");
+
   useEffect(() => {
-    fetch("/conversation_history")
-      .then((res) => res.json())
-      .then((data) => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("/conversation_history");
+        const data = await response.json();
         setData(data);
-      });
+      } catch (error) {
+        console.error("Error fetching conversation history:", error);
+      }
+    };
+
+    fetchData();
   }, []);
+
   // Function to handle chat filter
   const handleFilterChange = (e) => {
     setFilterText(e.target.value);

@@ -7,11 +7,17 @@ function LanguagesDistribution() {
   const [data, setData] = useState({});
 
   useEffect(() => {
-    fetch("/languages_distribution")
-      .then((res) => res.json())
-      .then((data) => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("/languages_distribution");
+        const data = await response.json();
         setData(data);
-      });
+      } catch (error) {
+        console.error("Error fetching languages distribution data:", error);
+      }
+    };
+
+    fetchData();
   }, []);
 
   const options = useMemo(
