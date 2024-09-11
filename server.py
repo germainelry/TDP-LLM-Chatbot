@@ -36,7 +36,7 @@ load_dotenv()
 nltk.download('stopwords')
 
 # MongoDB connection
-client = MongoClient("mongodb+srv://germainelry:makeachatbot@uob-chatbot-database.6q6z5.mongodb.net/")
+client = MongoClient(os.getenv("CONNECTION_STRING"))
 db = client["chatbot-database"]
 history_collection = db["history"]
 keywords_collection = db["keywords"]
