@@ -66,7 +66,7 @@ function WordCloudDisplay() {
           <canvas
             id="word-cloud-display"
             ref={canvasRef}
-            width={540}
+            width={580}
             height={150}
           />
         </div>

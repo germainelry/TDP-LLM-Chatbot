@@ -5,7 +5,6 @@ import "./ChatInterface.css";
 const ChatInterface = () => {
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState([]);
-  const [isOpen, setIsOpen] = useState(true); // Set to true to display chat interface on load
   const [loading, setLoading] = useState(false);
   const [userInfo, setUserInfo] = useState({ name: "", phone: "" });
   const [userSubmitted, setUserSubmitted] = useState(false);
@@ -198,15 +197,6 @@ const ChatInterface = () => {
                 {loading ? "Sending..." : "Send"}
               </button>
             </form>
-
-            {/* Button to toggle Ratings modal */}
-            <button
-              onClick={handleRatingsToggle}
-              className="btn btn-secondary"
-              style={{ marginTop: "10px" }}
-            >
-              Rate your experience
-            </button>
           </>
         )}
       </div>

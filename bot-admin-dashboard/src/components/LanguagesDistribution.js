@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useMemo } from "react";
 import ReactApexChart from "react-apexcharts";
 import "./LanguagesDistribution.css";
-import { Link } from "react-router-dom";
 
 function LanguagesDistribution() {
   const [data, setData] = useState({});
