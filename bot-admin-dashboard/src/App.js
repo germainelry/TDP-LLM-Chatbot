@@ -9,11 +9,13 @@ import {
   useNavigate,
   Outlet,
 } from "react-router-dom";
+import { AuthProvider } from "./components/AuthContext";
 
 import ConversationHistory from "./components/ConversationHistory";
 import Dashboard from "./components/Dashboard";
 import Navigation from "./components/Navigation";
 import ChatInterface from "./components/ChatInterface";
+import Login from "./components/Login";
 
 function App() {
   return (
@@ -27,6 +29,7 @@ function App() {
             element={<ConversationHistory />}
           />
           <Route path="/Chat_Interface" element={<ChatInterface />} />
+          <Route path="/Login" element={<Login />} />
         </Routes>
       </Router>
     </div>

@@ -131,10 +131,10 @@ const ChatInterface = () => {
       {isOpen && (
         <div className="chatbot-container">
           <div className="chatbot-header">
-            <h5>
+            <h4 className="chatbot-title">
               Interact with our Custom AI Chatbot{" "}
               <i className="bi bi-robot"></i>
-            </h5>
+            </h4>
 
             <button
               className="close-btn"
@@ -213,7 +213,7 @@ const ChatInterface = () => {
                   onClick={handleSpeechToText}
                   className={`voice-btn ${isListening ? "listening" : ""}`}
                 >
-                  {isListening ? "Listening..." : "🎤"}
+                  {isListening ? "Listening..." : <i className="bi bi-mic"></i>}
                 </button>
                 <button type="submit" disabled={loading}>
                   {loading ? "Sending..." : "Send"}

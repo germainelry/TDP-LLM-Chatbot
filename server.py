@@ -24,6 +24,7 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain.memory import ConversationBufferMemory, \
 	ConversationBufferWindowMemory, ConversationSummaryMemory, \
 		VectorStoreRetrieverMemory
+from langchain_core.runnables.history import RunnableWithMessageHistory
 from langchain.chains import ConversationChain
 from langchain_community.vectorstores import Chroma
 from langchain_community.embeddings.openai import OpenAIEmbeddings
