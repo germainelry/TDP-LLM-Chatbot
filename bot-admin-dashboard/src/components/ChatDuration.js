@@ -120,7 +120,7 @@ function ChatDuration() {
         options={options}
         series={series}
         type="bar"
-        height={270}
+        height={335}
       />
     </>
   );
