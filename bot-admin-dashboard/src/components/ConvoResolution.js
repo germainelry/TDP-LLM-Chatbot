@@ -49,9 +49,6 @@ function ResolutionModal(props) {
           <p>No conversations available.</p>
         )}
       </Modal.Body>
-      <Modal.Footer>
-        <Button onClick={props.onHide}>Close</Button>
-      </Modal.Footer>
     </Modal>
   );
 }

@@ -1,15 +1,7 @@
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./App.css";
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  Link,
-  useNavigate,
-  Outlet,
-} from "react-router-dom";
-import { AuthProvider } from "./components/AuthContext";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import ConversationHistory from "./components/ConversationHistory";
 import Dashboard from "./components/Dashboard";

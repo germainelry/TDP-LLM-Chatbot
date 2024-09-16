@@ -9,7 +9,7 @@ import nltk
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from collections import defaultdict
-from datetime import datetime
+from datetime import datetime, timedelta
 from dotenv import load_dotenv
 from nltk.corpus import stopwords
 
@@ -214,6 +214,22 @@ def user_frequency():
 		date_str = entry["timestamp"].split(" ")[0] # Extract the date from the timestamp
 		frequency[date_str] += 1 # Count the user occurrence on that date
 
+	date_freq = dict(frequency)
+	dates = sorted([datetime.strptime(date, '%Y-%m-%d').date() for date in date_freq.keys()])
+	# Find the range of dates (from min date to today)
+	min_date = dates[0]
+	max_date = datetime.now().date()  # Set max date to today's date
+
+	# Initialize a new dictionary with all dates from min date to today's date
+	complete_date_freq = {}
+	current_date = min_date
+
+	while current_date <= max_date:
+		date_str = current_date.strftime('%Y-%m-%d')
+		# Use frequency from the original dictionary or 0 if the date is missing
+		complete_date_freq[date_str] = date_freq.get(date_str, 0)
+		current_date += timedelta(days=1)
+
 	return dict(frequency)
 
 # Chat Duration Log Per User
@@ -300,6 +316,32 @@ def user_chat_ratings():
 	
 	return {"status": "success"}
 
+# Log user feedbacks and resolutions to DB
+@app.route('/feedbacks', methods = ['POST'])
+def user_feedbacks_resolution():
+	res = request.json
+	responseData = res[0]
+	convoRes = list(conversationResolution_collection.find())[0]
+	if responseData.get("actionType") == "Report":
+		convoRes.get("Unresolved").insert_one({
+			"user_id": responseData.get("username"),
+			"conversation": responseData.get("userPhone"),
+			"response": int(responseData.get("userInput")),
+			"conversation": responseData.get("botResponse"),
+			"response": int(responseData.get("feedback"))
+		})
+	elif responseData.get("actionType") == "Escalate":
+		convoRes.get("Escalated").insert_one({
+			"user_id": responseData.get("username"),
+			"conversation": responseData.get("userPhone"),
+			"response": int(responseData.get("userInput")),
+			"conversation": responseData.get("botResponse"),
+			"response": int(responseData.get("feedback"))
+		})
+	
+	return {"status": "success"}
+
+
 # Compute the user ratings for speedometer display
 @app.route('/user_ratings')
 def customer_ratings():
@@ -309,7 +351,6 @@ def customer_ratings():
 		ratings += entry["ratings"]
 	
 	return jsonify({'ratings': ratings / ratings_collection.count_documents({})})
-
 # ---------- End of API Functions ----------
 
 # Ensure MongoDB connection closes when the app exits
@@ -321,5 +362,3 @@ atexit.register(close_mongo_connection)
 #  If the script is run directly, start the Flask app
 if __name__ == '__main__':
 	app.run(debug = True)
-
-	
