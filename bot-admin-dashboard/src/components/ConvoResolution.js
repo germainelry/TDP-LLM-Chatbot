@@ -1,57 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
-import Modal from "react-bootstrap/Modal";
-import Table from "react-bootstrap/Table";
 import "./ConvoResolution.css";
-
-const resolutionDescriptions = {
-  Resolved:
-    "These conversations have been successfully resolved by human intervention.",
-  Unresolved:
-    "These conversations are still pending resolution. AI unable to satisfy user queries and users were not able to get the desired response.",
-  Escalated:
-    "These conversations have been escalated to higher support. AI unable to satisfy user queries, and requested for human interaction.",
-};
-
-function ResolutionModal(props) {
-  return (
-    <Modal
-      {...props}
-      size="lg"
-      aria-labelledby="contained-modal-title-vcenter"
-      centered
-    >
-      <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">
-          {props.title} Conversations
-        </Modal.Title>
-      </Modal.Header>
-      <Modal.Body>
-        <p>{resolutionDescriptions[props.title]}</p>
-        {props.conversations && props.conversations.length > 0 ? (
-          <Table striped bordered hover>
-            <thead>
-              <tr>
-                <th>User ID</th>
-                <th>User Message</th>
-              </tr>
-            </thead>
-            <tbody>
-              {props.conversations.map((convo, index) => (
-                <tr key={index}>
-                  <td>{convo[0]}</td>
-                  <td>{convo[1]}</td>
-                </tr>
-              ))}
-            </tbody>
-          </Table>
-        ) : (
-          <p>No conversations available.</p>
-        )}
-      </Modal.Body>
-    </Modal>
-  );
-}
+import ResolutionModal from "./ResolutionModal"; // Assuming ResolutionModal is in the same folder
 
 function ConvoResolution() {
   const [data, setData] = useState([]);
@@ -63,6 +13,40 @@ function ConvoResolution() {
     setSelectedMetric(metric);
     setConversations(resolutionData[metric]);
     setModalShow(true);
+  };
+
+  const handleResolve = async (index) => {
+    const resolvedConversation = conversations[index];
+
+    if (selectedMetric === "Unresolved" || selectedMetric === "Escalated") {
+      const updatedConversations = conversations.filter((_, i) => i !== index);
+      setConversations(updatedConversations);
+
+      resolutionData["Resolved"].push(resolvedConversation);
+      resolutionData[selectedMetric] = updatedConversations;
+
+      try {
+        const response = await fetch("/update_conversation_status", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            userId: resolvedConversation[0],
+            conversation: resolvedConversation[1],
+            status: selectedMetric,
+          }),
+        });
+
+        if (!response.ok) {
+          throw new Error("Failed to update conversation status.");
+        }
+
+        console.log("Conversation status updated successfully.");
+      } catch (error) {
+        console.error("Error updating conversation status:", error);
+      }
+    }
   };
 
   useEffect(() => {
@@ -123,6 +107,7 @@ function ConvoResolution() {
         onHide={() => setModalShow(false)}
         title={selectedMetric}
         conversations={conversations}
+        onResolve={handleResolve} // Pass the resolve handler to the modal
       />
       <div>
         <span id="resolution-title">Resolution Metrics</span>

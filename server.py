@@ -17,7 +17,10 @@ from nltk.corpus import stopwords
 import atexit
 from pymongo import MongoClient
 
+# TODO
 # Core libraries for the chatbot LLM Model
+# All these libraries will be transferred to the LLM Training Folder
+
 from langchain_ollama import OllamaLLM
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
@@ -30,10 +33,9 @@ from langchain_community.vectorstores import Chroma
 from langchain_community.embeddings.openai import OpenAIEmbeddings
 from py3langid.langid import LanguageIdentifier, MODEL_FILE
 
-
 # ---------- Start of Initialising Environment Variables ----------
-load_dotenv()
-nltk.download('stopwords')
+load_dotenv() # Load the environment for retrieval of private / secret keys
+nltk.download('stopwords') # NLTK's stopword corpus
 
 # MongoDB connection
 client = MongoClient(os.getenv("CONNECTION_STRING"))
@@ -43,7 +45,6 @@ keywords_collection = db["keywords"]
 conversationResolution_collection = db["conversation-resolution"]
 ratings_collection = db["ratings"]
 
-# Define stopwords in all possible languages
 # Define stopwords for multiple languages
 languages = ['english', 'spanish', 'russian', 'french', 'german', 'chinese', 'arabic']
 stop_words = set()
@@ -52,15 +53,14 @@ stop_words = set()
 for lang in languages:
 	stop_words.update(stopwords.words(lang))
 
-nlp = en_core_web_sm.load()
-app = Flask(__name__)
-CORS(app)  # Enable CORS for all routes
+nlp = en_core_web_sm.load() # TO BE TRANSFERRED TO LLM TRAINING FOLDER
+app = Flask(__name__) # Initialise the Flask app
+CORS(app)  # Enable CORS (Cross-Origin Resource Sharing) for all routes in react app 
 # ---------- End of Initialising Environment Variables ----------
 
 
 # ---------- Start of Building the Chatbot Model ----------
-# LLM Model to be used for chatbot
-model = OllamaLLM(model="stablelm2")
+model = OllamaLLM(model="stablelm2") # LLM Model to be used for chatbot
 
 prompt = ChatPromptTemplate.from_messages([
 	('system', 'You are a helpful assistant. Answer the question asked by the user in maximum 30 words.'),
@@ -116,14 +116,11 @@ def user_conversation(userInputMessage, userInfo) -> str:
 			else:
 				keywords_collection.insert_one({"keyword": word, "count": 1})
 
-
 	start_time = time.time()
 	botResponse = chain.invoke({'input' : f"{userInputMessage}"})
-	
 	end_time = time.time()
 
-	# Calculate the execution time
-	execution_time = end_time - start_time  
+	execution_time = end_time - start_time  # Calculate the execution time
 	log_conversation(userInputMessage, botResponse, execution_time, userInfo)
 
 	return botResponse.get("response")
@@ -131,12 +128,49 @@ def user_conversation(userInputMessage, userInfo) -> str:
 	
 
 # ---------- Start of API Functions ----------
+# Update Conversation Resolution Metrics in DB when Admin change an unresolved or escalated conversation
+@app.route("/update_conversation_status", methods = ['POST'])
+def update_conversation_status():
+  data = request.json
+  
+  status = data.get("status")
+  user_id = data.get("userId")
+  conversation = data.get("conversation")
+  
+  if not all([status, user_id, conversation]):
+    return {"status": "error", "message": "Missing required fields"}
+
+  convoRes = list(conversationResolution_collection.find())
+  
+  for document in convoRes:
+    if status in document:
+      conversationResolution_collection.update_one(
+        {"_id": document["_id"]},
+				{
+					"$pull": {
+						status: {"user_id": user_id, "conversation": conversation}
+					}
+				}
+			)
+      break
+    
+  conversationResolution_collection.update_one(
+    {"_id": document["_id"] for document in convoRes if "Resolved" in document},
+		{
+			"$push": {
+				"Resolved": {"user_id": user_id, "conversation": conversation}
+			}
+		}
+	)
+  
+  return {"status": "success"}
+	
+
 # Conversation Logs in Table Form
 @app.route('/conversation_history')
 def conversation_history():
-	# Retrieve the data from our History Table in DB
 	conversation_log = []
-	for entry in history_collection.find():
+	for entry in history_collection.find(): # Retrieve the data from our History Table in DB
 		conversation_log.append({
 			"username": entry["username"],
 			"language_code": entry["language_code"],
@@ -149,8 +183,7 @@ def conversation_history():
 # Basic Numerical Information
 @app.route('/basic_chat_information')
 def compute_chat_statistics():
-	# Total Chat Logs
-	totalLogs = history_collection.count_documents({})
+	totalLogs = history_collection.count_documents({}) # Total Chat Logs
 	uniqueUsers = len(set([log["username"] for log in history_collection.find()]))
 	languagesDetected = len(set([log["language_code"] for log in history_collection.find()]))
 
@@ -183,16 +216,15 @@ def compute_language_distribution():
 @app.route('/conversation_resolution_metrics')
 def resolution_metrics():	
 	data = []
+
 	for document in conversationResolution_collection.find():
 		if 'Unresolved' in document:
 			data.append({"Unresolved": document['Unresolved']})
-
 		if 'Resolved' in document:
 			data.append({"Resolved": document['Resolved']})
-
 		if 'Escalated' in document:
 			data.append({"Escalated": document['Escalated']})
-
+			
 	return data
 
 # Word Cloud for Most Searched Terms
@@ -277,6 +309,7 @@ def chat_duration_per_user():
 			result.append(current_sublist)
 				
 		return result
+	
 	split_data = {key: split_values(values, criteria) for key, values in chat_duration_interval.items()}
 	
 	# Now that we have the intervals for each session, we will sum up the chat duration for each session
@@ -322,6 +355,7 @@ def user_feedbacks_resolution():
 	res = request.json
 	responseData = res[0]
 	convoRes = list(conversationResolution_collection.find())[0]
+	
 	if responseData.get("actionType") == "Report":
 		convoRes.get("Unresolved").insert_one({
 			"user_id": responseData.get("username"),
