@@ -1,5 +1,6 @@
 #  Core libraries for API and Data Processing
 import re
+import uuid
 import json
 import en_core_web_sm
 import os
@@ -128,16 +129,22 @@ def user_conversation(userInputMessage, userInfo) -> str:
 	
 
 # ---------- Start of API Functions ----------
+# Find similar questions (sentences) in the chat history
+
+
 # Update Conversation Resolution Metrics in DB when Admin change an unresolved or escalated conversation
 @app.route("/update_conversation_status", methods = ['POST'])
 def update_conversation_status():
   data = request.json
   
   status = data.get("status")
-  user_id = data.get("userId")
-  conversation = data.get("conversation")
-  
-  if not all([status, user_id, conversation]):
+  user_name = data.get("user_name")
+  contact_no = data.get("contact_no")
+  user_input = data.get("user_input")
+  bot_response = data.get("bot_response")
+  user_feedback = data.get("user_feedback")
+    
+  if not all([status, user_name, contact_no, user_input, bot_response, user_feedback]):
     return {"status": "error", "message": "Missing required fields"}
 
   convoRes = list(conversationResolution_collection.find())
@@ -148,7 +155,13 @@ def update_conversation_status():
         {"_id": document["_id"]},
 				{
 					"$pull": {
-						status: {"user_id": user_id, "conversation": conversation}
+						status: {
+						"user_name": user_name, 
+						"contact_no": contact_no,
+						"user_input": user_input,
+						"bot_response": bot_response,
+						"user_feedback": user_feedback
+						}
 					}
 				}
 			)
@@ -158,7 +171,13 @@ def update_conversation_status():
     {"_id": document["_id"] for document in convoRes if "Resolved" in document},
 		{
 			"$push": {
-				"Resolved": {"user_id": user_id, "conversation": conversation}
+				"Resolved": {
+      		"user_name": user_name, 
+        	"contact_no": contact_no,
+					"user_input": user_input,
+					"bot_response": bot_response,	
+					"user_feedback": user_feedback
+        }
 			}
 		}
 	)
@@ -224,18 +243,22 @@ def resolution_metrics():
 			data.append({"Resolved": document['Resolved']})
 		if 'Escalated' in document:
 			data.append({"Escalated": document['Escalated']})
-			
+	
 	return data
 
 # Word Cloud for Most Searched Terms
 @app.route('/most_searched_terms')
 def most_searched_terms():
-	keywordDict = list(keywords_collection.find())[0]
-	del keywordDict['_id']
-
-	# Only select the top 20 terms
-	top_20 = dict(sorted(keywordDict.items(), key=lambda item: item[1], reverse=True)[:20])
-	return top_20
+  keywordCollection = list(keywords_collection.find())
+  keywordDict = defaultdict(int)
+  
+  for keyword in keywordCollection:
+    if keyword["keyword"] not in keywordDict:
+      keywordDict[keyword["keyword"]] = keyword["count"]
+  
+	# Only select the top 25 terms
+  top_25 = dict(sorted(keywordDict.items(), key=lambda item: item[1], reverse=True)[:25])
+  return top_25
 
 # User Frequency Across Time
 @app.route('/user_frequency_across_time')
@@ -353,20 +376,21 @@ def user_chat_ratings():
 @app.route('/feedbacks', methods = ['POST'])
 def user_feedbacks_resolution():
   res = request.json
-  responseData = res[0]
-    
+  responseData = res[0]    
   convoRes = list(conversationResolution_collection.find())
-    
+
+	# Unique ID will by default be generated in the database
   if responseData.get("actionType") == "Report":
     conversationResolution_collection.update_one(
 			{"_id": document["_id"] for document in convoRes if "Unresolved" in document},
 			{
 				"$push": {
 					"Unresolved": {
-       			"user_id": responseData.get("username"),
+       			"user_name": responseData.get("username"),
           	"contact_no": int(responseData.get("userPhone")),
-						"conversation": responseData.get("userInput"),
-						"feedback": responseData.get("feedback"),
+						"user_input": responseData.get("userInput"),
+						"bot_response": responseData.get("botResponse"),
+						"user_feedback": responseData.get("feedback"),
            }
 				}
 			}
@@ -377,10 +401,11 @@ def user_feedbacks_resolution():
 			{
 				"$push": {
 					"Escalated": {
-       			"user_id": responseData.get("username"), 
+       			"user_name": responseData.get("username"), 
           	"contact_no": int(responseData.get("userPhone")),
-						"conversation": responseData.get("userInput"),
-						"feedback": responseData.get("feedback")
+						"user_input": responseData.get("userInput"),
+      			"bot_response": responseData.get("botResponse"),
+						"user_feedback": responseData.get("feedback")
           }
 				}
 			}

@@ -17,13 +17,11 @@ function ConvoResolution() {
 
   const handleResolve = async (index) => {
     const resolvedConversation = conversations[index];
+    console.log("Resolving conversation:", resolvedConversation);
 
     if (selectedMetric === "Unresolved" || selectedMetric === "Escalated") {
       const updatedConversations = conversations.filter((_, i) => i !== index);
       setConversations(updatedConversations);
-
-      resolutionData["Resolved"].push(resolvedConversation);
-      resolutionData[selectedMetric] = updatedConversations;
 
       try {
         const response = await fetch("/update_conversation_status", {
@@ -32,8 +30,11 @@ function ConvoResolution() {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            userId: resolvedConversation[0],
-            conversation: resolvedConversation[1],
+            user_name: resolvedConversation[0],
+            contact_no: resolvedConversation[1],
+            user_input: resolvedConversation[2],
+            bot_response: resolvedConversation[3],
+            user_feedback: resolvedConversation[4],
             status: selectedMetric,
           }),
         });
@@ -86,12 +87,27 @@ function ConvoResolution() {
   const escalatedArray = Array.from(escalatedSet).map(JSON.parse);
 
   const resolutionData = {
-    Resolved: resolvedArray.map((item) => [item.user_id, item.conversation]),
-    Unresolved: unresolvedArray.map((item) => [
-      item.user_id,
-      item.conversation,
+    Resolved: resolvedArray.map((item) => [
+      item.user_name,
+      item.contact_no,
+      item.user_input,
+      item.bot_response,
+      item.user_feedback,
     ]),
-    Escalated: escalatedArray.map((item) => [item.user_id, item.conversation]),
+    Unresolved: unresolvedArray.map((item) => [
+      item.user_name,
+      item.contact_no,
+      item.user_input,
+      item.bot_response,
+      item.user_feedback,
+    ]),
+    Escalated: escalatedArray.map((item) => [
+      item.user_name,
+      item.contact_no,
+      item.user_input,
+      item.bot_response,
+      item.user_feedback,
+    ]),
   };
 
   const statusCounts = {

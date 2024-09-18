@@ -71,7 +71,20 @@
   border-radius: 10px;
 }
 
+.resolution-modal-pop-up {
+  max-width: 60%;
+}
+
+.sub-modal-pop-up .modal-dialog {
+  max-width: 100%;
+}
+
 .modal-body {
-  max-height: 400px; /* Adjust as needed */
+  max-height: 500px; /* Adjust as needed */
+  width: 100%;
   overflow-y: auto;
+}
+
+.icon-header {
+  margin-left: 5px;
 }
