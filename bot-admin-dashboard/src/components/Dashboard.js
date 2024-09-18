@@ -12,7 +12,8 @@ function Dashboard() {
   const [data, setData] = useState({
     unique_users: 0,
     total_conversations: 0,
-    languages_detected: [],
+    languages_detected: 0,
+    average_response_time: 0,
   });
 
   useEffect(() => {

@@ -121,7 +121,7 @@
 .chatbot-input-form {
   display: flex;
   justify-content: flex-end;
-  margin-top: 10px;
+  margin-top: 0px;
   gap: 5px;
 }
 

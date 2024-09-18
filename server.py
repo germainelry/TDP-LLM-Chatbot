@@ -241,7 +241,7 @@ def most_searched_terms():
 @app.route('/user_frequency_across_time')
 def user_frequency():
 	frequency = defaultdict(int)
-	
+
 	for entry in history_collection.find():
 		date_str = entry["timestamp"].split(" ")[0] # Extract the date from the timestamp
 		frequency[date_str] += 1 # Count the user occurrence on that date
@@ -261,8 +261,8 @@ def user_frequency():
 		# Use frequency from the original dictionary or 0 if the date is missing
 		complete_date_freq[date_str] = date_freq.get(date_str, 0)
 		current_date += timedelta(days=1)
-
-	return dict(frequency)
+  
+	return dict(complete_date_freq)
 
 # Chat Duration Log Per User
 @app.route('/chat_duration_per_user')
@@ -352,28 +352,41 @@ def user_chat_ratings():
 # Log user feedbacks and resolutions to DB
 @app.route('/feedbacks', methods = ['POST'])
 def user_feedbacks_resolution():
-	res = request.json
-	responseData = res[0]
-	convoRes = list(conversationResolution_collection.find())[0]
-	
-	if responseData.get("actionType") == "Report":
-		convoRes.get("Unresolved").insert_one({
-			"user_id": responseData.get("username"),
-			"conversation": responseData.get("userPhone"),
-			"response": int(responseData.get("userInput")),
-			"conversation": responseData.get("botResponse"),
-			"response": int(responseData.get("feedback"))
-		})
-	elif responseData.get("actionType") == "Escalate":
-		convoRes.get("Escalated").insert_one({
-			"user_id": responseData.get("username"),
-			"conversation": responseData.get("userPhone"),
-			"response": int(responseData.get("userInput")),
-			"conversation": responseData.get("botResponse"),
-			"response": int(responseData.get("feedback"))
-		})
-	
-	return {"status": "success"}
+  res = request.json
+  responseData = res[0]
+    
+  convoRes = list(conversationResolution_collection.find())
+    
+  if responseData.get("actionType") == "Report":
+    conversationResolution_collection.update_one(
+			{"_id": document["_id"] for document in convoRes if "Unresolved" in document},
+			{
+				"$push": {
+					"Unresolved": {
+       			"user_id": responseData.get("username"),
+          	"contact_no": int(responseData.get("userPhone")),
+						"conversation": responseData.get("userInput"),
+						"feedback": responseData.get("feedback"),
+           }
+				}
+			}
+		)
+  elif responseData.get("actionType") == "Escalate":
+    conversationResolution_collection.update_one(
+			{"_id": document["_id"] for document in convoRes if "Escalated" in document},
+			{
+				"$push": {
+					"Escalated": {
+       			"user_id": responseData.get("username"), 
+          	"contact_no": int(responseData.get("userPhone")),
+						"conversation": responseData.get("userInput"),
+						"feedback": responseData.get("feedback")
+          }
+				}
+			}
+		)
+   
+  return {"status": "success"}
 
 
 # Compute the user ratings for speedometer display
