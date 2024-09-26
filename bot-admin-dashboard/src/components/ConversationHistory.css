@@ -1,5 +1,5 @@
 .conversation-container {
-	max-height: 820px;
+	max-height: 800px;
 	overflow-y: auto;
 	border-color: black;
   border-width: 1px;

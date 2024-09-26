@@ -10,6 +10,11 @@ body {
   border-radius: 3px !important;
 }
 
+#metric-container {
+  padding-bottom: 15px;
+  height: auto;
+}
+
 .mini-stat {
   padding: 15px;
   margin-bottom: 20px;
@@ -36,8 +41,8 @@ p {
   display: flex;
   justify-content: space-between;
   margin: -10px;
-  margin-bottom: 0px;
-  margin-top: -20px;
+  margin-bottom: 5px;
+  margin-top: -35px;
 }
 
 .charts-container-1 > div {
@@ -52,7 +57,7 @@ p {
 
 .charts-container-2 > div {
   flex: 1; /* Ensures both charts take equal width */
-  min-width: 870px; /* Optional: Sets a minimum width for each chart */
+  min-width: 300px; /* Optional: Sets a minimum width for each chart */
 }
 
 .charts-container-3 {
@@ -62,7 +67,7 @@ p {
 
 .charts-container-3 > div {
   flex: 1; /* Ensures both charts take equal width */
-  min-width: 870px; /* Optional: Sets a minimum width for each chart */
+  min-width: 300px; /* Optional: Sets a minimum width for each chart */
 }
 
 .charts-container-second {
@@ -81,4 +86,6 @@ p {
   border: 1px solid #233253;
   color: white;
   border-radius: 5px;
+  padding-bottom: 5px;
+  padding-top: 5px;
 }

@@ -1,29 +1,50 @@
-.login-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 20px;
+.auth-form {
+  margin-top: -50px;
+}
+
+.email-icon, .key-icon, .code-icon {
+  position: relative;
+  margin-left: 10px;
+  top: 2px;
+  color: #6c757d;
 }
 
 .login-form-container {
-  width: 100%;
-  max-width: 400px;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  background-color: #fff;
+  max-width: 600px;
+  margin: auto;
 }
 
-.login-title {
-  text-align: center;
-  margin-bottom: 20px;
+.forgot-password-link {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: #007bff;
 }
 
-.login-form {
-  margin-bottom: 15px;
+.forgot-password-link:hover {
+  text-decoration: underline;
+  color: #0056b3;
 }
 
-.login-button {
-  width: 100%;
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-visibility-toggle {
+  position: absolute;
+  right: 35px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }

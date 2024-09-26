@@ -129,6 +129,21 @@ def user_conversation(userInputMessage, userInfo) -> str:
 	
 
 # ---------- Start of API Functions ----------
+@app.route('/userLoginAuth', methods = ['POST'])
+def userLoginAuth():
+	data = request.json
+	print("login")
+	print(data)
+	return {"status": "success"}
+
+@app.route('/userSignUpAuth', methods = ['POST'])
+def userSignUpAuth():
+	data = request.json
+	print("signup")	
+	print(data)
+	return {"status": "success"}
+
+
 # Find similar questions (sentences) in the chat history
 
 
@@ -229,7 +244,10 @@ def compute_language_distribution():
 	for entry in history_collection.find():
 		languagesDetected[entry.get("language_code")] += 1
 
-	return dict(languagesDetected)
+	# Return the top 8 languages
+	sortedDict = dict(sorted(languagesDetected.items(), key=lambda item: item[1], reverse=True)[:8])
+
+	return dict(sortedDict)
 
 # Conversation Resolution Metrics
 @app.route('/conversation_resolution_metrics')

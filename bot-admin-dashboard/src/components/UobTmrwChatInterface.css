@@ -1,46 +1,45 @@
-.chatbot-interface-main {
-  background-image: url('../img/Chatbot-Background.png');
+.chatbot-interface-main-tmrw-app {
   background-size: cover;
-  background-position: center; 
-  background-repeat: no-repeat;
   border-radius: 5px;
   height: 90vh;
-  margin: 0;
+  position: fixed;
 }
 
-.chatbot-container {
+.chatbot-container-tmrw-app {
   display: fixed;
   flex-direction: column;
   justify-content: flex-end;
   position: fixed;
   right: 0;
-  margin-right: 10px;
-  margin-bottom: 5px;
+  margin-right: 250px;
+  margin-bottom: 70px;
   bottom: 0;
-  width: 800px;
-  height: 91%; 
+  width: 430px;
+  height: 82%; 
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 50px;
   background-color: #fcf9f9;
+  background: linear-gradient(#0e42c6,#0e42c6, #34bbd2, #ffffff);
+  border: 15px solid rgb(49, 49, 49);
   box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.1);
   z-index: 1000;
 }
 
-.chatbot-header {
+.chatbot-header-tmrw-app {
   display: flex; 
   justify-content: space-between; 
   align-items: center; 
-  padding: 10px;
+  padding: 5px;
 }
 
-.chatbot-title {
+.chatbot-title-tmrw-app {
   margin: 0;
-  color: black;
-  font-size: 30px;
+  color: rgb(254, 253, 253);
+  font-size: 25px;
 }
 
-.rate-bot-btn {
-  background-color: #335ca3; 
+.rate-bot-btn-tmrw-app {
+  background-color: #0a3379; 
   color: white; 
   border: none; 
   border-radius: 5px; 
@@ -52,26 +51,26 @@
   transition: background-color 0.3s; 
 }
 
-.rate-bot-btn:hover {
-  background-color: #0056b3; 
+.rate-bot-btn-tmrw-app:hover {
+  background-color: #054e9c; 
 }
 
-.rate-bot-btn i {
+.rate-bot-btn-tmrw-app i {
   margin-right: 5px; 
 }
 
-.chatbot-messages {
+.chatbot-messages-tmrw-app {
   flex-grow: 1;
   overflow-y: auto;
   padding: 10px;
-  height: 770px;
+  height: 650px;
   max-height: 800px;
   margin-bottom: 0px;
   background-color: rgba(255, 251, 251, 0.01);
   border-radius: 5px;
 }
 
-.message {
+.message-tmrw-app {
   margin-bottom: 10px;
   padding: 8px 12px;
   border-radius: 5px;
@@ -80,7 +79,7 @@
   word-wrap: break-word;
 }
 
-.user-message {
+.user-message-tmrw-app {
   background-color: #2a3d67;
   color: white;
   align-self: flex-end;
@@ -91,7 +90,7 @@
   white-space: pre-wrap;
 }
 
-.ai-message {
+.ai-message-tmrw-app {
   background-color: #e5e5ea;
   color: black;
   align-self: flex-start;
@@ -100,39 +99,47 @@
 }
 
 /* Icon for bot and user */
-.message-header i {
+.message-header-tmrw-app i {
   margin-right: 5px;
 }
 
 /* Bot icon flush to the left */
-.ai-message .message-header {
+.ai-message-tmrw-app .message-header-tmrw-app {
   justify-content: flex-start;
 }
 
 /* User icon flush to the right */
-.user-message .message-header {
+.user-message-tmrw-app .message-header-tmrw-app {
   justify-content: flex-end;
 }
 
-#chatbox-bot {
+.feedback-modal-tmrw-app {
+  border-radius: 5px;
+  padding: 20px;
+  margin-right: 235px;
+  max-width: 430px;
+  margin-top: 40px;
+  height: 200px;
+}
+
+#chatbox-bot-tmrw-app {
   padding-left: 0px;;
 }
 
-.chatbot-input-form {
+.chatbot-input-form-tmrw-app {
   display: flex;
-  justify-content: flex-end;
-  margin-top: 0px;
+  margin-top: 10px;
   gap: 5px;
 }
 
-.chatbot-input-form input {
+.chatbot-input-form-tmrw-app input {
   flex-grow: 1;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
-.chatbot-input-form button {
+.chatbot-input-form-tmrw-app button {
   padding: 8px;
   background-color: #2a3d67;
   color: white;
@@ -141,11 +148,11 @@
   cursor: pointer;
 }
 
-.chatbot-input-form button:hover {
+.chatbot-input-form-tmrw-app button:hover {
   background-color: #0056b3;
 }
 
-.user-info-form {
+.user-info-form-tmrw-app {
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -158,14 +165,14 @@
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.user-info-form h6 {
+.user-info-form-tmrw-app h6 {
   font-size: 16px;
   color: #333;
   margin-bottom: 10px;
   text-align: center;
 }
 
-.input-group {
+.input-group-tmrw-app {
   display: flex;
   align-items: center;
   border: 1px solid #ccc;
@@ -174,13 +181,13 @@
   background-color: #fff;
 }
 
-.input-group i {
+.input-group-tmrw-app i {
   color: #2a3d67;
   font-size: 18px;
   margin-right: 10px;
 }
 
-.input-group input {
+.input-group-tmrw-app input {
   flex: 1;
   padding: 10px;
   font-size: 14px;
@@ -190,12 +197,12 @@
   background-color: transparent; 
 }
 
-.input-group input:focus {
+.input-group-tmrw-app input:focus {
   outline: none;
   box-shadow: none;
 }
 
-.user-info-form button {
+.user-info-form-tmrw-app button {
   padding: 10px;
   font-size: 14px;
   background-color: #2a3d67;
@@ -206,15 +213,15 @@
   transition: background-color 0.3s ease;
 }
 
-.user-info-form button:hover {
+.user-info-form-tmrw-app button:hover {
   background-color: #2a3d67;
 }
 
-.user-info-form button:active {
+.user-info-form-tmrw-app button:active {
   background-color: #2a3d67;
 }
 
-#chatbot-btn {
+#chatbot-btn-tmrw-app {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -232,21 +239,21 @@
   }
 }
 
-.voice-btn {
+.voice-btn-tmrw-app {
   background: none;
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
 }
 
-.voice-btn.listening {
+.voice-btn-tmrw-app.listening {
   color: red;
   font-weight: bold;
 }
 
 
 /* User Ratings Styling */
-.modal-user-feedback {
+.modal-user-feedback-tmrw-app {
   position: fixed;
   left: 0;
   top: 0;
@@ -260,7 +267,7 @@
   z-index: 1050;
 }
 
-.modal-content-feedback {
+.modal-content-feedback-tmrw-app {
   background-color: #fff;
   padding: 20px;
   border-radius: 5px;
@@ -269,7 +276,7 @@
   text-align: center;
 }
 
-.close-modal-btn-feedback {
+.close-modal-btn-feedback-tmrw-app {
   margin-top: 20px;
   padding: 10px;
   background-color: #f44336;
@@ -280,12 +287,12 @@
   cursor: pointer;
 }
 
-.blur-background {
+.blur-background-tmrw-app {
   /* filter: blur(5px); */
   z-index: 1000;
 }
 
-.modal.fade.show {
+.modal-tmrw-app.fade.show {
   position: fixed;
   top: 0;
   left: 0;
@@ -297,68 +304,47 @@
   z-index: 1050; /* Ensure it is on top of other content */
 }
 
-.modal-header {
+.modal-header-tmrw-app {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 15px;
 }
 
-.modal-footer {
+.modal-footer-tmrw-app {
   display: flex;
   justify-content: space-between;
   padding: 10px 15px;
 }
 
-/* Reason Modal Styles */
-/* Slide Left Effect */
-.slide-left {
-  animation: slideLeft 1s forwards; /* Apply slide-left animation */
-}
-
-@keyframes slideLeft {
-  0% {
-    transform: translateX(0); /* Start position */
-  }
-  100% {
-    transform: translateX(-20%); /* Slide to the left, adjust as needed */
-  }
-}
-
-.reason-modal {
-  position: fixed;
-  top: 50%;
-  left: 60%; /* Adjusted position beside the message modal */
-  transform: translate(-50%, -50%);
+.reason-modal-tmrw-app {
+  margin-left: 255px;
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  width: 500px; /* Adjust as needed */
+  width: 380px; /* Adjust as needed */
   z-index: 1060; /* Ensure it appears above other content */
 }
 
-.reason-modal.show {
-  opacity: 1; /* Fade in */
-}
-
-.reason-modal-title h5 {
+.reason-modal-title-tmrw-app h5 {
   margin-bottom: 0px;
+  margin-right: 100px;
 }
 
 /* Modal Content Styles */
-.reason-modal-content {
+.reason-modal-content-tmrw-app {
   padding: 20px;
 }
 
 /* Heading Styles */
-.reason-modal-content h5 {
+.reason-modal-content-tmrw-app h5 {
   font-size: 1.25rem;
   padding-right: 10px;
   margin-left: -10px;
 }
 
 /* Textarea Styles */
-.reason-modal-content textarea {
+.reason-modal-content-tmrw-app textarea {
   width: 100%;
   border: 1px solid #ced4da;
   border-radius: 4px;
@@ -368,7 +354,7 @@
 }
 
 /* Button Styles */
-.reason-modal-content button {
+.reason-modal-content-tmrw-app button {
   background-color: #007bff; /* Bootstrap primary color */
   color: white;
   border: none;
@@ -380,11 +366,11 @@
   transition: background-color 0.3s ease;
 }
 
-.reason-modal-content button:hover {
+.reason-modal-content-tmrw-app button:hover {
   background-color: #0056b3; /* Darker shade on hover */
 }
 
-.reason-modal-close {
+.reason-modal-close-tmrw-app {
   background-color: transparent; /* No background */
   border: none;
   font-size: 2rem; /* Increased size of the "X" */
@@ -395,7 +381,7 @@
   line-height: 1;
 }
 
-.reason-modal-submit {
+.reason-modal-submit-tmrw-app {
   margin-top: 10px; /* Space above the button */
   padding: 10px 15px; /* Padding for the button */
   color: #fff; /* White text color */
@@ -405,6 +391,6 @@
   cursor: pointer; /* Pointer cursor */
 }
 
-.reason-modal-submit:hover {
+.reason-modal-submit-tmrw-app:hover {
   background-color: #0056b3; /* Darker shade on hover */
 }

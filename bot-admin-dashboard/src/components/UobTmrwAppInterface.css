@@ -1,0 +1,43 @@
+.tmrw-app-main {
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  margin-top: -15px;
+}
+
+.tmrw-app {
+  height: 900px; /* Reduced size of the logo */
+  width: auto; /* Maintain aspect ratio */
+}
+
+.robot-icon-app {
+  font-size: 35px; 
+  color: rgb(0, 119, 255);
+}
+
+.pulsing-background {
+  position: absolute;
+  bottom: 12.5%; /* Adjust to position the icon */
+  left: 27%;
+  transform: translateX(-50%); /* Center the background */
+  width: 80px; /* Width of the circular background */
+  height: 80px; /* Height of the circular background */
+  background-color: rgba(255, 255, 255, 0); /* Light blue background */
+  border-radius: 80%; /* Make it round */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: pulse 2s infinite; /* Pulsing effect */
+}
+
+@keyframes pulse {
+  0% {
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.05); /* Slightly increase size */
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+  }
+}

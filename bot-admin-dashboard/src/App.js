@@ -8,6 +8,7 @@ import Dashboard from "./components/Dashboard";
 import Navigation from "./components/Navigation";
 import ChatInterface from "./components/ChatInterface";
 import Login from "./components/Login";
+import UobTmrwAppInterface from "./components/UobTmrwAppInterface";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             element={<ConversationHistory />}
           />
           <Route path="/Chat_Interface" element={<ChatInterface />} />
+          <Route path="/TMRW_Interface" element={<UobTmrwAppInterface />} />
           <Route path="/Login" element={<Login />} />
         </Routes>
       </Router>
