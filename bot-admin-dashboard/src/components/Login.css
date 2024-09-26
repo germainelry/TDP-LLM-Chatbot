@@ -1,8 +1,8 @@
 .auth-form {
-  margin-top: -50px;
+  margin-top: -100px;
 }
 
-.email-icon, .key-icon, .code-icon {
+.user-icon, .email-icon, .key-icon, .code-icon {
   position: relative;
   margin-left: 10px;
   top: 2px;

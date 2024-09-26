@@ -9,6 +9,7 @@ import Navigation from "./components/Navigation";
 import ChatInterface from "./components/ChatInterface";
 import Login from "./components/Login";
 import UobTmrwAppInterface from "./components/UobTmrwAppInterface";
+import PrivateRoute from "./components/PrivateRoute";
 
 function App() {
   return (
@@ -16,14 +17,39 @@ function App() {
       <Router>
         <Navigation />
         <Routes>
-          <Route path="/" exact element={<Dashboard />} />
+          <Route path="/" exact element={<Login />} />
+          <Route
+            path="/Analytics"
+            element={
+              <PrivateRoute>
+                <Dashboard />
+              </PrivateRoute>
+            }
+          />
           <Route
             path="/Conversation_history"
-            element={<ConversationHistory />}
+            element={
+              <PrivateRoute>
+                <ConversationHistory />
+              </PrivateRoute>
+            }
           />
-          <Route path="/Chat_Interface" element={<ChatInterface />} />
-          <Route path="/TMRW_Interface" element={<UobTmrwAppInterface />} />
-          <Route path="/Login" element={<Login />} />
+          <Route
+            path="/Chat_Interface"
+            element={
+              <PrivateRoute>
+                <ChatInterface />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/TMRW_Interface"
+            element={
+              <PrivateRoute>
+                <UobTmrwAppInterface />
+              </PrivateRoute>
+            }
+          />
         </Routes>
       </Router>
     </div>

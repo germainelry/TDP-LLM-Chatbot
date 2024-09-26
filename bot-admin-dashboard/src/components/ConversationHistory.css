@@ -35,7 +35,22 @@
 	border-radius: 5px;
 }
 
-#dropdown-basic {
+#dropdown-basic-1 {
+	margin-left: 10px;
+	height: 30px;
+	color: white;
+	background-color: #233253;
+	border-color: #233253;
+	font-family: Helvetica, sans-serif;
+	font-weight: bold;
+	text-align: center;
+	border-radius: 5px;
+	padding-bottom: 20px;
+	font-size: 12px;
+	width: 150px;
+}
+
+#dropdown-basic-2 {
 	margin-left: 10px;
 	height: 30px;
 	color: white;

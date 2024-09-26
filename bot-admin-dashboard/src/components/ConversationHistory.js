@@ -55,6 +55,7 @@ function ConversationHistory() {
   const [modalShow, setModalShow] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
   const [sortOrder, setSortOrder] = useState("oldest");
+  const [selectedLanguage, setSelectedLanguage] = useState("All");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -70,24 +71,43 @@ function ConversationHistory() {
     fetchData();
   }, []);
 
+  // Get unique language codes from the data
+  const languageCodes = Array.from(
+    new Set(data.map((item) => item.language_code))
+  );
+
   // Function to handle chat filter
   const handleFilterChange = (e) => {
     setFilterText(e.target.value);
   };
+
+  // Function to handle language code filter
+  const handleLanguageFilter = (language) => {
+    setSelectedLanguage(language);
+  };
+
   // Filtered info data
-  const filteredData = data.filter(
-    (info) =>
+  const filteredData = data.filter((info) => {
+    const matchesText =
       info.input.toLowerCase().includes(filterText.toLowerCase()) ||
-      info.output.toLowerCase().includes(filterText.toLowerCase())
-  );
+      info.output.toLowerCase().includes(filterText.toLowerCase());
+
+    const matchesLanguage =
+      selectedLanguage === "All" || info.language_code === selectedLanguage;
+
+    return matchesText && matchesLanguage;
+  });
+
   // Function to handle when a conversation box is clicked
   const handleConversationClick = (item) => {
     setSelectedItem(item);
     setModalShow(true);
   };
+
   const handleSortChange = (order) => {
     setSortOrder(order);
   };
+
   const sortedData = filteredData.sort((a, b) => {
     if (sortOrder === "oldest") {
       return new Date(a.timestamp) - new Date(b.timestamp);
@@ -96,6 +116,7 @@ function ConversationHistory() {
     }
     return 0; // Default case
   });
+
   return (
     <>
       <span id="conversation-history-title">Conversation History</span>
@@ -110,7 +131,25 @@ function ConversationHistory() {
           className="mr-3"
         />
         <Dropdown id="dropdown-button" className="mr-3">
-          <Dropdown.Toggle variant="success" id="dropdown-basic">
+          <Dropdown.Toggle variant="primary" id="dropdown-basic-1">
+            Language Code: {selectedLanguage}
+          </Dropdown.Toggle>
+          <Dropdown.Menu>
+            <Dropdown.Item onClick={() => handleLanguageFilter("All")}>
+              All Languages
+            </Dropdown.Item>
+            {languageCodes.map((code) => (
+              <Dropdown.Item
+                key={code}
+                onClick={() => handleLanguageFilter(code)}
+              >
+                {code}
+              </Dropdown.Item>
+            ))}
+          </Dropdown.Menu>
+        </Dropdown>
+        <Dropdown id="dropdown-button" className="mr-3">
+          <Dropdown.Toggle variant="success" id="dropdown-basic-2">
             Sort by ...
           </Dropdown.Toggle>
           <Dropdown.Menu>

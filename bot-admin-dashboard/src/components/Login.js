@@ -1,22 +1,20 @@
 import React, { useState } from "react";
 import { Button, Form, Container, Row, Col } from "react-bootstrap";
 import { Eye, EyeSlash } from "react-bootstrap-icons";
+import { useNavigate } from "react-router-dom";
 import "./Login.css";
-import bcrypt from "bcryptjs";
-import axios from "axios";
-
-// SALT should be created ONE TIME upon sign up
-const salt = bcrypt.genSaltSync(10);
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [adminCode, setAdminCode] = useState("");
   const [retypePassword, setRetypePassword] = useState("");
+  const [username, setUsername] = useState("");
   const [errors, setErrors] = useState("");
   const [isSignUp, setIsSignUp] = useState(false); // State to track Sign Up form visibility
   const [passwordVisible, setPasswordVisible] = useState(false); // State for password visibility
   const [retypePasswordVisible, setRetypePasswordVisible] = useState(false); // State for retype password visibility
+  const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -27,35 +25,45 @@ function Login() {
       setErrors({});
       if (isSignUp) {
         try {
-          const signUpResult = await signUpAuth(email, password, adminCode);
+          const signUpResult = await signUpAuth(
+            username,
+            email,
+            password,
+            adminCode
+          );
           console.log("Sign Up successful:", signUpResult);
           resetForm();
           // Handle successful sign-up (e.g., redirect or show a success message)
         } catch (error) {
+          window.alert("Sign up failed: " + error.message);
           setErrors({ form: "Sign Up failed. Please try again." });
         }
       } else {
         try {
-          const loginResult = await loginAuth(email, password, adminCode);
+          const loginResult = await loginAuth(
+            username,
+            email,
+            password,
+            adminCode
+          );
           console.log("Login successful:", loginResult);
           resetForm();
-          // Handle successful login (e.g., redirect or store user data)
         } catch (error) {
+          window.alert("Login failed: " + error.message);
           setErrors({ form: "Login failed. Please try again." });
         }
       }
     }
   };
 
-  const loginAuth = async (email, password, adminCode) => {
+  const loginAuth = async (username, email, password, adminCode) => {
     try {
-      const hashedPassword = bcrypt.hashSync(password, salt);
       const response = await fetch("http://localhost:3000/userLoginAuth", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify([{ email, hashedPassword, adminCode }]),
+        body: JSON.stringify({ username, email, password, adminCode }),
       });
 
       if (!response.ok) {
@@ -63,22 +71,28 @@ function Login() {
       }
 
       const result = await response.json();
+      window.alert(`Sign in successful! Welcome ${username}.`);
+      // Store the token (or use a simple flag) to indicate login status
+      console.log("Token:", result.token);
+      localStorage.setItem("authToken", result.token); // Store token or flag in localStorage
+      localStorage.setItem("username", username);
+      navigate("/Analytics");
       return result.result;
     } catch (error) {
       console.error("Error:", error);
+      window.alert("Login failed: " + error.message);
       return "Error: Could not login";
     }
   };
 
-  const signUpAuth = async (email, password, adminCode) => {
+  const signUpAuth = async (username, email, password, adminCode) => {
     try {
-      const hashedPassword = bcrypt.hashSync(password, salt);
       const response = await fetch("http://localhost:3000/userSignUpAuth", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify([{ email, hashedPassword, adminCode }]),
+        body: JSON.stringify({ username, email, password, adminCode }),
       });
 
       if (!response.ok) {
@@ -86,15 +100,19 @@ function Login() {
       }
 
       const result = await response.json();
+      window.alert("Sign up successful! Please login to continue.");
+      navigate("/");
       return result.result;
     } catch (error) {
       console.error("Error:", error);
+      window.alert("Sign up failed: " + error.message);
       return "Error: Could not sign up";
     }
   };
 
   const validateForm = () => {
     const newErrors = {};
+    if (!username) newErrors.username = "User name is required";
     if (!email) newErrors.email = "Email is required";
     else if (!/\S+@\S+\.\S+/.test(email)) newErrors.email = "Email is invalid";
     if (!password) newErrors.password = "Password is required";
@@ -109,6 +127,7 @@ function Login() {
   };
 
   const resetForm = () => {
+    setUsername("");
     setEmail("");
     setPassword("");
     setAdminCode("");
@@ -129,6 +148,23 @@ function Login() {
             </h2>
             <hr />
             <Form onSubmit={handleSubmit} className="login-form">
+              <Form.Group className="mb-3" controlId="formBasicUsername">
+                <Form.Label>
+                  <strong>User Name</strong>
+                </Form.Label>
+                <i className="bi bi-person-circle user-icon"></i>
+                <Form.Control
+                  type="username"
+                  placeholder="Enter user name"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                  isInvalid={!!errors.username}
+                />
+                <Form.Control.Feedback type="invalid">
+                  {errors.username}
+                </Form.Control.Feedback>
+              </Form.Group>
+
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>
                   <strong>Email address</strong>

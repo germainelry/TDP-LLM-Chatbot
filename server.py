@@ -7,6 +7,7 @@ import os
 import time
 import math
 import nltk
+import bcrypt
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from collections import defaultdict
@@ -45,6 +46,7 @@ history_collection = db["history"]
 keywords_collection = db["keywords"]
 conversationResolution_collection = db["conversation-resolution"]
 ratings_collection = db["ratings"]
+admin_users_collection = db["admin-users"]
 
 # Define stopwords for multiple languages
 languages = ['english', 'spanish', 'russian', 'french', 'german', 'chinese', 'arabic']
@@ -132,17 +134,48 @@ def user_conversation(userInputMessage, userInfo) -> str:
 @app.route('/userLoginAuth', methods = ['POST'])
 def userLoginAuth():
 	data = request.json
-	print("login")
-	print(data)
-	return {"status": "success"}
+	username = data.get("username")
+	email = data.get("email")
+	password = data.get("password")
+	adminCode = data.get("adminCode")
+ 
+	if adminCode != "admin":
+		raise ValueError("Incorrect Admin Code Provided")
+
+	# Fetch and cross check with existing users in the database
+	user = admin_users_collection.find_one({"email": email, "username": username})
+	if user == None:
+		raise ValueError("Invalid Credentials or User does not exist")
+	
+	else:
+		if bcrypt.checkpw(password.encode('utf-8'), user["password"]):
+			print("Password Matched")
+			return {"status": "Successful Login"}
+
 
 @app.route('/userSignUpAuth', methods = ['POST'])
 def userSignUpAuth():
 	data = request.json
-	print("signup")	
-	print(data)
-	return {"status": "success"}
-
+	username = data.get("username")
+	email = data.get("email")
+	password = data.get("password")
+	adminCode = data.get("adminCode")
+ 
+	print(username, email, password, adminCode)
+ 	
+	if adminCode != "admin":
+		raise ValueError("Incorrect Admin Code Provided")
+	else:
+   	# Generate salt
+		salt = bcrypt.gensalt()
+		hashed_password = bcrypt.hashpw(password.encode('utf-8'), salt)
+		admin_users_collection.insert_one({
+			"username": username,
+			"email": email,
+			"password": hashed_password,
+		})
+		return {"status": "Successful Signup"}
+	
 
 # Find similar questions (sentences) in the chat history
 
