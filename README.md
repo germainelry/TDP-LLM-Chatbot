@@ -62,8 +62,6 @@ The following table highlights some of the key features in our project.
 
 ## UML Diagram
 
-You can render UML diagrams using [Mermaid](https://mermaidjs.github.io/). For example, this will produce a sequence diagram:
-
 ```mermaid
 sequenceDiagram
 TMRW App / UOB Website ->> Python Backend System: Submits user query and data

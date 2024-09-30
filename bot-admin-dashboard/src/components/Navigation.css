@@ -92,6 +92,7 @@
   color: white; /* Text color */
   background-color: transparent; /* Background color */
   transition: background-color 0.3s; /* Smooth transition */
+  font-size: 1.25rem;
 }
 
 .dropdown-toggle:hover {
@@ -113,3 +114,4 @@
   background-color: rgba(0, 123, 255, 0.1); /* Highlight on hover */
   color: #007bff; /* Text color on hover */
 }
+

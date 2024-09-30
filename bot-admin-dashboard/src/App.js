@@ -34,22 +34,8 @@ function App() {
               </PrivateRoute>
             }
           />
-          <Route
-            path="/Chat_Interface"
-            element={
-              <PrivateRoute>
-                <ChatInterface />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path="/TMRW_Interface"
-            element={
-              <PrivateRoute>
-                <UobTmrwAppInterface />
-              </PrivateRoute>
-            }
-          />
+          <Route path="/Chat_Interface" element={<ChatInterface />} />
+          <Route path="/TMRW_Interface" element={<UobTmrwAppInterface />} />
         </Routes>
       </Router>
     </div>
