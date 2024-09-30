@@ -2,7 +2,7 @@
 
 # Cross-Regional Customer Service Chatbot
 
-A multilingual AI Chatbot that incorporates NLP to offer personalised customer service for banking clients across various regions. This chatbot, once deployed, will be able to operate 24/7 and service clients from anywhere around the globe. It is capable of handling matters ranging from routine inquiries to transaction assistance.
+A multilingual AI Chatbot that incorporates NLP to offer personalised customer service for banking clients across various regions. Once deployed, this chatbot will be able to operate 24/7 and service clients from anywhere around the globe. It is capable of handling matters ranging from routine inquiries to transaction assistance.
 
 ## Problem Statement
 
@@ -10,13 +10,26 @@ In today's globalized economy, banks face the challenge of providing consistent,
 
 ## Project Description
 
-The Cross-Regional Customer Service Chatbot will be hosted on Telegram to provide personalized banking support to clients worldwide. Developed using Python, Flask, and React, the chatbot is accessible 24/7, ensuring that customers receive immediate, high-quality service regardless of their location or time zone.
+The Cross-Regional Customer Service Chatbot can be deployed and hosted on platforms such as UOB's TMRW mobile banking application and official website to provide personalized banking support to customers. Our chatbot incorporates an open-source large language model (LLM) that is capable of conversing in various languages. This enhances the overall user experience and opens up the possibility for more meaningful quality interactions.
 
-In addition to its core functionality, a comprehensive dashboard has been developed to monitor and log the chatbot's performance and overall customer experience. This dashboard enables real-time insights into customer interactions, helping banks optimize service delivery and continually improve the chatbot's effectiveness.
+In addition to its core functionality, a comprehensive dashboard has been developed to monitor and log the chatbot's performance that shapes the customer experience. Developed for administrative users, this dashboard enables real-time insights into customer interactions, helping banks optimize service delivery and continuous developments to the chatbot's effectiveness in delivering quality customer service.
+
+## Project Overview
+
+The following table highlights some of the key features in our project.
+
+| Feature                      | Description                                                       | Status           |
+| ---------------------------- | ----------------------------------------------------------------- | ---------------- |
+| **User Authentication**      | Handles admin login and registration                              | Completed        |
+| **Dashboard**                | Displays user data and analytics                                  | Completed        |
+| **API Integration**          | Connects to third-party services                                  | Completed        |
+| **Push Notification System** | Sends notifications based on user actions (e.g report / escalate) | Future Iteration |
+| **Large Language Model**     | Improvement from traditional dialog flow interaction              | Completed        |
 
 ## Table of Contents
 
 - [Technology Stack](#technology-stack)
+- [UML Diagram](#uml-diagram)
 - [Features](#features)
   - [Multilingual Support](#multilingual-support)
   - [Personalized Customer Service](#personalized-customer-service)
@@ -38,22 +51,27 @@ In addition to its core functionality, a comprehensive dashboard has been develo
 - **[Ollama LLM](https://ollama.com)**: Utilized for its advanced natural language processing capabilities, enabling sophisticated language understanding and generation.
 - **[ReactJS](https://react.dev)**: Preferred for its efficient rendering and component-based architecture, which simplifies the development of dynamic and interactive user interfaces.
 - **[Bootstrap](https://getbootstrap.com)**: Used for its responsive design framework, allowing quick and easy styling of the application with a consistent look and feel.
+- **[GitHub](https://pages.github.com)**: For hosting our web application and dashboard. GitHub's built-in version control system allows for collaborative development and tracking of changes, which is crucial as the project scales up in future use case.
 
-| Technology | Purpose              |
-| ---------- | -------------------- |
-| **React**  | Frontend development |
-| **Flask**  | Backend development  |
+| Technology  | Purpose                               |
+| ----------- | ------------------------------------- |
+| **React**   | Frontend Application                  |
+| **Python**  | Backend System, LLM Model Fine-tuning |
+| **Flask**   | API Calls                             |
+| **MongoDB** | Database Management                   |
 
-## Project Overview
+## UML Diagram
 
-The following table highlights some of the key features in our project. While some of the following features have not been implemented yet, they do not impact the integrity of the existing program.
+You can render UML diagrams using [Mermaid](https://mermaidjs.github.io/). For example, this will produce a sequence diagram:
 
-| Feature                 | Description                               | Status           |
-| ----------------------- | ----------------------------------------- | ---------------- |
-| **User Authentication** | Handles user login and registration       | Future Iteration |
-| **Dashboard**           | Displays user data and analytics          | Completed        |
-| **API Integration**     | Connects to third-party services          | Completed        |
-| **Notification System** | Sends notifications based on user actions | Future Iteration |
+```mermaid
+sequenceDiagram
+TMRW App / UOB Website ->> Python Backend System: Submits user query and data
+React Application ->> Python Backend System: Makes API call for updates
+Python Backend System->>MongoDB: Logs and stores user data
+Python Backend System->> TMRW App / UOB Website: Returns chatbot response to user
+Python Backend System->> React Application: Returns updated data
+```
 
 ## Features
 
@@ -63,20 +81,19 @@ The AI-powered chatbot is designed to provide seamless and efficient communicati
 
 #### Language Detection
 
-- The chatbot automatically detects the language in which a user is communicating. This is achieved using natural language processing (NLP) algorithms that analyze the input text and identify the language.
+- The chatbot automatically detects the language in which a user is communicating. This is achieved via finetuning the LLM on a corpus of linguistic data (i.e capture the nuances of each language).
+- Natural language processing (NLP) algorithms analyze the user input query and auto-tags the topic (e.g loans, investing, account creation etc) most relevant to the query for administrative insights and analytics.
 
 #### Language Switching
 
-- Users can switch languages during a conversation without restarting the session. The chatbot seamlessly transitions to the new language, maintaining the context of the conversation.
-- This is particularly useful in multilingual regions or for users who are comfortable using multiple languages.
+- Users can switch languages during a conversation without restarting the session. The chatbot seamlessly transitions to the new language, maintaining the context of the conversation. This is particularly useful in multilingual regions or for users who are comfortable using multiple languages.
 
 #### Fallback Mechanism
 
-In cases where the chatbot encounters text in a language that is not supported or poorly understood, it will provide a fallback response in a default language (e.g., English), and suggest ways for the user to continue the conversation (e.g., using a different language or contacting support).
+- In cases where the chatbot encounters text in a language that is not supported or poorly understood, it will provide a fallback response in a default language (e.g., English), and suggest ways for the user to continue the conversation (e.g., using a different language or contacting support).
+- Acknowledging the possibilities of inaccurate response and language outputs due to limited model training, customers have the ability to escalate or report a response for adminstrative follow-ups. Such capabilities establishes an auto-feedback channel to facilitate iterative improvements to the overall service.
 
-However, we do acknowledge that inaccurate response and language outputs may occur at times due to limited model training.
-
-## Dashboard for Monitoring
+## Dashboard for Monitoring and Gauging Chatbot Performance
 
 ### General Analytics
 
@@ -105,7 +122,7 @@ However, we do acknowledge that inaccurate response and language outputs may occ
 
 ## Usage
 
-### Accessing the Chatbot on Telegram
+### Accessing the Chatbot
 
 ### Using the Dashboard
 
