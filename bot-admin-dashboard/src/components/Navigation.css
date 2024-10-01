@@ -1,5 +1,5 @@
 .navbar {
-  background-color: #233253;
+  background-color: #151f32;
   margin-bottom: 5px;
   margin-top: -15px;
   border-radius: 5px;
@@ -31,7 +31,7 @@
   color: #fff;
   font-weight: bold;
   font-size: 2.0rem;
-  background-color: #233253;
+  background-color: #151f32;
 }
 
 /* Navbar links */
@@ -54,7 +54,7 @@
 
 /* Dropdown menu */
 .navbar .dropdown-menu {
-  background-color: #2a3d67;
+  background-color: #151f32;
   border: none;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
@@ -111,7 +111,7 @@
 }
 
 .custom-dropdown-item:hover {
-  background-color: rgba(0, 123, 255, 0.1); /* Highlight on hover */
+  background-color: rgba(255, 255, 255, 0.1);
   color: #007bff; /* Text color on hover */
 }
 

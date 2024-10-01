@@ -140,7 +140,7 @@ function Login() {
       fluid
       className="vh-100 d-flex align-items-center justify-content-center auth-form"
     >
-      <Row className="w-100 justify-content-center">
+      <Row className="w-100 justify-content-center login-container">
         <Col xs={12} md={6} lg={4}>
           <div className="login-form-container p-4 shadow-lg rounded bg-white">
             <h2 className="text-center mb-4">

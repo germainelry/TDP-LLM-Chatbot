@@ -19,20 +19,12 @@ from nltk.corpus import stopwords
 import atexit
 from pymongo import MongoClient
 
-# TODO
 # Core libraries for the chatbot LLM Model
-# All these libraries will be transferred to the LLM Training Folder
-
 from langchain_ollama import OllamaLLM
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
-from langchain.memory import ConversationBufferMemory, \
-	ConversationBufferWindowMemory, ConversationSummaryMemory, \
-		VectorStoreRetrieverMemory
-from langchain_core.runnables.history import RunnableWithMessageHistory
+from langchain.memory import ConversationBufferWindowMemory
 from langchain.chains import ConversationChain
-from langchain_community.vectorstores import Chroma
-from langchain_community.embeddings.openai import OpenAIEmbeddings
 from py3langid.langid import LanguageIdentifier, MODEL_FILE
 
 # ---------- Start of Initialising Environment Variables ----------
@@ -66,7 +58,7 @@ CORS(app)  # Enable CORS (Cross-Origin Resource Sharing) for all routes in react
 model = OllamaLLM(model="stablelm2") # LLM Model to be used for chatbot
 
 prompt = ChatPromptTemplate.from_messages([
-	('system', 'You are a helpful assistant. Answer the question asked by the user in maximum 30 words.'),
+	('system', 'You are a helpful UOB chatbot assistant. Response to customer queries in a detailed and accurate manner.'),
 	('user', 'Question : {input}'),
 ])
 chain = prompt | model | StrOutputParser() # Pipeline for initialising the chatbot
@@ -131,6 +123,7 @@ def user_conversation(userInputMessage, userInfo) -> str:
 	
 
 # ---------- Start of API Functions ----------
+# Function that authenticates the admin user
 @app.route('/userLoginAuth', methods = ['POST'])
 def userLoginAuth():
 	data = request.json
@@ -152,7 +145,19 @@ def userLoginAuth():
 			print("Password Matched")
 			return {"status": "Successful Login"}
 
+# Function to fetch user profile
+@app.route('/fetchUserProfile', methods = ['POST'])
+def userProfile():
+	data = request.json
+	username = data.get("username")
+	user = admin_users_collection.find_one({"username": username})
+ 
+	if user == None:
+		raise ValueError("User does not exist")
+	else:
+		return {"username": user["username"], "email": user["email"]}
 
+# Function to sign up a new admin user
 @app.route('/userSignUpAuth', methods = ['POST'])
 def userSignUpAuth():
 	data = request.json
@@ -161,8 +166,6 @@ def userSignUpAuth():
 	password = data.get("password")
 	adminCode = data.get("adminCode")
  
-	print(username, email, password, adminCode)
- 	
 	if adminCode != "admin":
 		raise ValueError("Incorrect Admin Code Provided")
 	else:
@@ -180,7 +183,7 @@ def userSignUpAuth():
 # Find similar questions (sentences) in the chat history
 
 
-# Update Conversation Resolution Metrics in DB when Admin change an unresolved or escalated conversation
+# Update Conversation Resolution Metrics in DB when admin resolves an unresolved or escalated conversation
 @app.route("/update_conversation_status", methods = ['POST'])
 def update_conversation_status():
   data = request.json
@@ -232,7 +235,6 @@ def update_conversation_status():
   
   return {"status": "success"}
 	
-
 # Conversation Logs in Table Form
 @app.route('/conversation_history')
 def conversation_history():
@@ -247,7 +249,7 @@ def conversation_history():
 		})
 	return conversation_log
 
-# Basic Numerical Information
+# Basic Numerical Information on Chat Logs
 @app.route('/basic_chat_information')
 def compute_chat_statistics():
 	totalLogs = history_collection.count_documents({}) # Total Chat Logs
@@ -269,7 +271,7 @@ def compute_chat_statistics():
 		"average_response_time": round(totalResponseTime / responseCount, 6)
 	}
 
-# Language Distribution
+# Language Distribution of Chat Logs
 @app.route('/languages_distribution')
 def compute_language_distribution():
 	languagesDetected = defaultdict(int)
@@ -282,7 +284,7 @@ def compute_language_distribution():
 
 	return dict(sortedDict)
 
-# Conversation Resolution Metrics
+# Conversation Resolution Metrics (Unresolved, Resolved, Escalated)
 @app.route('/conversation_resolution_metrics')
 def resolution_metrics():	
 	data = []
@@ -362,7 +364,8 @@ def chat_duration_per_user():
 			chat_duration_interval[user].append(duration)
 	
 	# We will now segment out the chat duration to identify chat sessions
-	# To do so, we will assume that a chat session is over if the duration between two chat sessions is greater than 1 hr (3600s)
+	# To do so, we will assume that a chat session is over if the duration between 
+  # two chat sessions is greater than 1 hr (3600s)
 	# We will then sum up the chat duration for each chat session
 	criteria = 3600
 
