@@ -1,0 +1,9 @@
+{"time":"2024-09-29T14:45:28.654839887Z","level":"INFO","msg":"using version","core version":"0.18.2"}
+{"time":"2024-09-29T14:45:28.655970301Z","level":"INFO","msg":"created symlink","path":"/content/drive/My Drive/TDP Capstone Grp 7/LLM Model Training/qLoRA/wandb/out-a045f627-1c1d-4d82-bcb4-b76e23e44540/wandb/run-20240929_144525-c1hhpd5o/logs/debug-core.log"}
+{"time":"2024-09-29T14:45:28.664951909Z","level":"INFO","msg":"created new stream","id":"c1hhpd5o"}
+{"time":"2024-09-29T14:45:28.665737795Z","level":"INFO","msg":"stream: started","id":"c1hhpd5o"}
+{"time":"2024-09-29T14:45:28.6657577Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"c1hhpd5o"}}
+{"time":"2024-09-29T14:45:28.665784774Z","level":"INFO","msg":"handler: started","stream_id":{"value":"c1hhpd5o"}}
+{"time":"2024-09-29T14:45:28.66580753Z","level":"INFO","msg":"sender: started","stream_id":{"value":"c1hhpd5o"}}
+{"time":"2024-09-29T14:45:33.932392971Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-09-29T14:45:33.939210918Z","level":"INFO","msg":"Starting system monitor"}

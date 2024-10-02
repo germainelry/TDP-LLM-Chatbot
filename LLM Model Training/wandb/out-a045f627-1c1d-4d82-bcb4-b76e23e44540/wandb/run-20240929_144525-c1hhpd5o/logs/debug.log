@@ -1,0 +1,170 @@
+2024-09-29 14:45:25,984 INFO    MainThread:213 [wandb_setup.py:_flush():79] Current SDK version is 0.18.2
+2024-09-29 14:45:25,986 INFO    MainThread:213 [wandb_setup.py:_flush():79] Configure stats pid to 213
+2024-09-29 14:45:25,986 INFO    MainThread:213 [wandb_setup.py:_flush():79] Loading settings from /root/.config/wandb/settings
+2024-09-29 14:45:25,986 INFO    MainThread:213 [wandb_setup.py:_flush():79] Loading settings from /content/wandb/settings
+2024-09-29 14:45:25,986 INFO    MainThread:213 [wandb_setup.py:_flush():79] Loading settings from environment variables: {}
+2024-09-29 14:45:25,987 INFO    MainThread:213 [wandb_setup.py:_flush():79] Applying setup settings: {'mode': None, '_disable_service': None}
+2024-09-29 14:45:25,990 INFO    MainThread:213 [wandb_setup.py:_flush():79] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2024-09-29 14:45:25,990 INFO    MainThread:213 [wandb_setup.py:_flush():79] Applying login settings: {}
+2024-09-29 14:45:25,991 INFO    MainThread:213 [wandb_setup.py:_flush():79] Applying login settings: {'api_key': '***REDACTED***'}
+2024-09-29 14:45:25,991 INFO    MainThread:213 [wandb_init.py:_log_setup():532] Logging user logs to /content/drive/My Drive/TDP Capstone Grp 7/LLM Model Training/qLoRA/wandb/out-a045f627-1c1d-4d82-bcb4-b76e23e44540/wandb/run-20240929_144525-c1hhpd5o/logs/debug.log
+2024-09-29 14:45:25,992 INFO    MainThread:213 [wandb_init.py:_log_setup():533] Logging internal logs to /content/drive/My Drive/TDP Capstone Grp 7/LLM Model Training/qLoRA/wandb/out-a045f627-1c1d-4d82-bcb4-b76e23e44540/wandb/run-20240929_144525-c1hhpd5o/logs/debug-internal.log
+2024-09-29 14:45:25,992 INFO    MainThread:213 [wandb_init.py:init():616] calling init triggers
+2024-09-29 14:45:25,993 INFO    MainThread:213 [wandb_init.py:init():623] wandb.init called with sweep_config: {}
+config: {'model_name': 'StableLM2_TDP', 'run_id': 'a045f627-1c1d-4d82-bcb4-b76e23e44540', 'dataset': 'LLM Model Training', 'output_dir': '/content/drive/My Drive/TDP Capstone Grp 7/LLM Model Training/qLoRA/wandb/out-a045f627-1c1d-4d82-bcb4-b76e23e44540', 'lr': 0.0002, 'max_length': 1024, 'train_batch_size': 4, 'validation_batch_size': 4, 'ga_steps': 4, 'training_args': TrainingArguments(
+_n_gpu=1,
+accelerator_config={'split_batches': False, 'dispatch_batches': None, 'even_batches': True, 'use_seedable_sampler': True, 'non_blocking': False, 'gradient_accumulation_kwargs': None, 'use_configured_state': False},
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+auto_find_batch_size=False,
+batch_eval_metrics=False,
+bf16=False,
+bf16_full_eval=False,
+data_seed=None,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_persistent_workers=False,
+dataloader_pin_memory=True,
+dataloader_prefetch_factor=None,
+ddp_backend=None,
+ddp_broadcast_buffers=None,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+ddp_timeout=1800,
+debug=[],
+deepspeed=None,
+disable_tqdm=False,
+dispatch_batches=None,
+do_eval=True,
+do_predict=False,
+do_train=False,
+eval_accumulation_steps=None,
+eval_delay=0,
+eval_do_concat_batches=True,
+eval_on_start=False,
+eval_steps=None,
+eval_strategy=epoch,
+eval_use_gather_object=False,
+evaluation_strategy=None,
+fp16=True,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+fsdp=[],
+fsdp_config={'min_num_params': 0, 'xla': False, 'xla_fsdp_v2': False, 'xla_fsdp_grad_ckpt': False},
+fsdp_min_num_params=0,
+fsdp_transformer_layer_cls_to_wrap=None,
+full_determinism=False,
+gradient_accumulation_steps=4,
+gradient_checkpointing=False,
+gradient_checkpointing_kwargs=None,
+greater_is_better=False,
+group_by_length=False,
+half_precision_backend=auto,
+hub_always_push=False,
+hub_model_id=None,
+hub_private_repo=False,
+hub_strategy=every_save,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+include_inputs_for_metrics=False,
+include_num_input_tokens_seen=False,
+include_tokens_per_second=False,
+jit_mode_eval=False,
+label_names=None,
+label_smoothing_factor=0.0,
+learning_rate=0.0002,
+length_column_name=length,
+load_best_model_at_end=True,
+local_rank=0,
+log_level=passive,
+log_level_replica=warning,
+log_on_each_node=True,
+logging_dir=/content/drive/My Drive/TDP Capstone Grp 7/LLM Model Training/qLoRA/wandb/out-a045f627-1c1d-4d82-bcb4-b76e23e44540/runs/Sep29_14-45-25_9a0f6f065574,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=500,
+logging_strategy=epoch,
+lr_scheduler_kwargs={},
+lr_scheduler_type=linear,
+max_grad_norm=1.0,
+max_steps=-1,
+metric_for_best_model=loss,
+mp_parameters=,
+neftune_noise_alpha=None,
+no_cuda=False,
+num_train_epochs=5,
+optim=paged_adamw_8bit,
+optim_args=None,
+optim_target_modules=None,
+output_dir=/content/drive/My Drive/TDP Capstone Grp 7/LLM Model Training/qLoRA/wandb/out-a045f627-1c1d-4d82-bcb4-b76e23e44540,
+overwrite_output_dir=False,
+past_index=-1,
+per_device_eval_batch_size=4,
+per_device_train_batch_size=4,
+prediction_loss_only=False,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+ray_scope=last,
+remove_unused_columns=True,
+report_to=['tensorboard', 'wandb'],
+restore_callback_states_from_checkpoint=False,
+resume_from_checkpoint=None,
+run_name=/content/drive/My Drive/TDP Capstone Grp 7/LLM Model Training/qLoRA/wandb/out-a045f627-1c1d-4d82-bcb4-b76e23e44540,
+save_on_each_node=False,
+save_only_model=False,
+save_safetensors=True,
+save_steps=500,
+save_strategy=epoch,
+save_total_limit=None,
+seed=42,
+skip_memory_metrics=True,
+split_batches=None,
+tf32=None,
+torch_compile=False,
+torch_compile_backend=None,
+torch_compile_mode=None,
+torch_empty_cache_steps=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+use_cpu=False,
+use_ipex=False,
+use_legacy_prediction_loop=False,
+use_mps_device=False,
+warmup_ratio=0.0,
+warmup_steps=2,
+weight_decay=0.01,
+), 'GPUs': 1}
+2024-09-29 14:45:25,994 INFO    MainThread:213 [wandb_init.py:init():641] re-initializing run, found existing run on stack: 8ydx7uv0
+2024-09-29 14:45:25,996 INFO    MainThread:213 [wandb_run.py:_finish():2163] finishing run kevintanyj-uob/OA2-finetune/8ydx7uv0
+2024-09-29 14:45:26,000 INFO    MainThread:213 [jupyter.py:save_history():459] not saving jupyter history
+2024-09-29 14:45:26,000 INFO    MainThread:213 [jupyter.py:save_ipynb():387] not saving jupyter notebook
+2024-09-29 14:45:26,001 INFO    MainThread:213 [wandb_init.py:_jupyter_teardown():460] cleaning up jupyter logic
+2024-09-29 14:45:26,001 INFO    MainThread:213 [wandb_run.py:_atexit_cleanup():2427] got exitcode: 0
+2024-09-29 14:45:26,005 INFO    MainThread:213 [wandb_run.py:_restore():2409] restore
+2024-09-29 14:45:26,006 INFO    MainThread:213 [wandb_run.py:_restore():2415] restore done
+2024-09-29 14:45:28,583 INFO    MainThread:213 [wandb_run.py:_footer_history_summary_info():4042] rendering history
+2024-09-29 14:45:28,584 INFO    MainThread:213 [wandb_run.py:_footer_history_summary_info():4074] rendering summary
+2024-09-29 14:45:28,597 INFO    MainThread:213 [wandb_run.py:_footer_sync_info():4001] logging synced files
+2024-09-29 14:45:28,610 INFO    MainThread:213 [wandb_init.py:init():666] starting backend
+2024-09-29 14:45:28,610 INFO    MainThread:213 [wandb_init.py:init():670] sending inform_init request
+2024-09-29 14:45:28,618 INFO    MainThread:213 [backend.py:_multiprocessing_setup():104] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2024-09-29 14:45:28,619 INFO    MainThread:213 [wandb_init.py:init():683] backend started and connected
+2024-09-29 14:45:28,667 INFO    MainThread:213 [wandb_run.py:_label_probe_notebook():1345] probe notebook
+2024-09-29 14:45:33,676 INFO    MainThread:213 [wandb_run.py:_label_probe_notebook():1355] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2024-09-29 14:45:33,677 INFO    MainThread:213 [wandb_init.py:init():778] updated telemetry
+2024-09-29 14:45:33,678 INFO    MainThread:213 [wandb_init.py:init():811] communicating run to backend with 90.0 second timeout
+2024-09-29 14:45:33,921 INFO    MainThread:213 [wandb_init.py:init():862] starting run threads in backend
+2024-09-29 14:45:34,372 INFO    MainThread:213 [wandb_run.py:_console_start():2464] atexit reg
+2024-09-29 14:45:34,374 INFO    MainThread:213 [wandb_run.py:_redirect():2312] redirect: wrap_raw
+2024-09-29 14:45:34,376 INFO    MainThread:213 [wandb_run.py:_redirect():2377] Wrapping output streams.
+2024-09-29 14:45:34,376 INFO    MainThread:213 [wandb_run.py:_redirect():2402] Redirects installed.
+2024-09-29 14:45:34,379 INFO    MainThread:213 [wandb_init.py:init():906] run started, returning control to user process
+2024-09-29 14:45:35,092 INFO    MainThread:213 [wandb_run.py:_config_callback():1393] config_cb None None {'peft_config': {'default': {'peft_type': <PeftType.LORA: 'LORA'>, 'auto_mapping': None, 'base_model_name_or_path': 'stabilityai/stablelm-2-1_6b', 'revision': None, 'task_type': 'CAUSAL_LM', 'inference_mode': False, 'r': 8, 'target_modules': {'q_proj'}, 'lora_alpha': 32, 'lora_dropout': 0.05, 'fan_in_fan_out': False, 'bias': 'none', 'use_rslora': False, 'modules_to_save': None, 'init_lora_weights': True, 'layers_to_transform': None, 'layers_pattern': None, 'rank_pattern': {}, 'alpha_pattern': {}, 'megatron_config': None, 'megatron_core': 'megatron.core', 'loftq_config': {}, 'use_dora': False, 'layer_replication': None, 'runtime_config': {'ephemeral_gpu_offload': False}}}, 'vocab_size': 100352, 'max_position_embeddings': 4096, 'hidden_size': 2048, 'intermediate_size': 5632, 'num_hidden_layers': 24, 'num_attention_heads': 32, 'num_key_value_heads': 32, 'hidden_act': 'silu', 'initializer_range': 0.02, 'layer_norm_eps': 1e-05, 'use_cache': False, 'rope_theta': 10000, 'rope_scaling': None, 'use_qkv_bias': True, 'qk_layernorm': False, 'use_parallel_residual': False, 'hidden_dropout': 0.0, 'attention_dropout': 0.0, 'partial_rotary_factor': 0.25, 'return_dict': True, 'output_hidden_states': False, 'output_attentions': False, 'torchscript': False, 'torch_dtype': 'float16', 'use_bfloat16': False, 'tf_legacy_loss': False, 'pruned_heads': {}, 'tie_word_embeddings': False, 'chunk_size_feed_forward': 0, 'is_encoder_decoder': False, 'is_decoder': False, 'cross_attention_hidden_size': None, 'add_cross_attention': False, 'tie_encoder_decoder': False, 'max_length': 20, 'min_length': 0, 'do_sample': False, 'early_stopping': False, 'num_beams': 1, 'num_beam_groups': 1, 'diversity_penalty': 0.0, 'temperature': 1.0, 'top_k': 50, 'top_p': 1.0, 'typical_p': 1.0, 'repetition_penalty': 1.0, 'length_penalty': 1.0, 'no_repeat_ngram_size': 0, 'encoder_no_repeat_ngram_size': 0, 'bad_words_ids': None, 'num_return_sequences': 1, 'output_scores': False, 'return_dict_in_generate': False, 'forced_bos_token_id': None, 'forced_eos_token_id': None, 'remove_invalid_values': False, 'exponential_decay_length_penalty': None, 'suppress_tokens': None, 'begin_suppress_tokens': None, 'architectures': ['StableLmForCausalLM'], 'finetuning_task': None, 'id2label': {0: 'LABEL_0', 1: 'LABEL_1'}, 'label2id': {'LABEL_0': 0, 'LABEL_1': 1}, 'tokenizer_class': None, 'prefix': None, 'bos_token_id': 100257, 'pad_token_id': None, 'eos_token_id': 100278, 'sep_token_id': None, 'decoder_start_token_id': None, 'task_specific_params': None, 'problem_type': None, '_name_or_path': 'stabilityai/stablelm-2-1_6b', 'transformers_version': '4.44.2', 'model_type': 'stablelm', 'output_dir': '/content/drive/My Drive/TDP Capstone Grp 7/LLM Model Training/qLoRA/wandb/out-a045f627-1c1d-4d82-bcb4-b76e23e44540', 'overwrite_output_dir': False, 'do_train': False, 'do_eval': True, 'do_predict': False, 'eval_strategy': 'epoch', 'prediction_loss_only': False, 'per_device_train_batch_size': 4, 'per_device_eval_batch_size': 4, 'per_gpu_train_batch_size': None, 'per_gpu_eval_batch_size': None, 'gradient_accumulation_steps': 4, 'eval_accumulation_steps': None, 'eval_delay': 0, 'torch_empty_cache_steps': None, 'learning_rate': 0.0002, 'weight_decay': 0.01, 'adam_beta1': 0.9, 'adam_beta2': 0.999, 'adam_epsilon': 1e-08, 'max_grad_norm': 1.0, 'num_train_epochs': 5, 'max_steps': -1, 'lr_scheduler_type': 'linear', 'lr_scheduler_kwargs': {}, 'warmup_ratio': 0.0, 'warmup_steps': 2, 'log_level': 'passive', 'log_level_replica': 'warning', 'log_on_each_node': True, 'logging_dir': '/content/drive/My Drive/TDP Capstone Grp 7/LLM Model Training/qLoRA/wandb/out-a045f627-1c1d-4d82-bcb4-b76e23e44540/runs/Sep29_14-45-25_9a0f6f065574', 'logging_strategy': 'epoch', 'logging_first_step': False, 'logging_steps': 500, 'logging_nan_inf_filter': True, 'save_strategy': 'epoch', 'save_steps': 500, 'save_total_limit': None, 'save_safetensors': True, 'save_on_each_node': False, 'save_only_model': False, 'restore_callback_states_from_checkpoint': False, 'no_cuda': False, 'use_cpu': False, 'use_mps_device': False, 'seed': 42, 'data_seed': None, 'jit_mode_eval': False, 'use_ipex': False, 'bf16': False, 'fp16': True, 'fp16_opt_level': 'O1', 'half_precision_backend': 'auto', 'bf16_full_eval': False, 'fp16_full_eval': False, 'tf32': None, 'local_rank': 0, 'ddp_backend': None, 'tpu_num_cores': None, 'tpu_metrics_debug': False, 'debug': [], 'dataloader_drop_last': False, 'eval_steps': None, 'dataloader_num_workers': 0, 'dataloader_prefetch_factor': None, 'past_index': -1, 'run_name': '/content/drive/My Drive/TDP Capstone Grp 7/LLM Model Training/qLoRA/wandb/out-a045f627-1c1d-4d82-bcb4-b76e23e44540', 'disable_tqdm': False, 'remove_unused_columns': True, 'label_names': None, 'load_best_model_at_end': True, 'metric_for_best_model': 'loss', 'greater_is_better': False, 'ignore_data_skip': False, 'fsdp': [], 'fsdp_min_num_params': 0, 'fsdp_config': {'min_num_params': 0, 'xla': False, 'xla_fsdp_v2': False, 'xla_fsdp_grad_ckpt': False}, 'fsdp_transformer_layer_cls_to_wrap': None, 'accelerator_config': {'split_batches': False, 'dispatch_batches': None, 'even_batches': True, 'use_seedable_sampler': True, 'non_blocking': False, 'gradient_accumulation_kwargs': None}, 'deepspeed': None, 'label_smoothing_factor': 0.0, 'optim': 'paged_adamw_8bit', 'optim_args': None, 'adafactor': False, 'group_by_length': False, 'length_column_name': 'length', 'report_to': ['tensorboard', 'wandb'], 'ddp_find_unused_parameters': None, 'ddp_bucket_cap_mb': None, 'ddp_broadcast_buffers': None, 'dataloader_pin_memory': True, 'dataloader_persistent_workers': False, 'skip_memory_metrics': True, 'use_legacy_prediction_loop': False, 'push_to_hub': False, 'resume_from_checkpoint': None, 'hub_model_id': None, 'hub_strategy': 'every_save', 'hub_token': '<HUB_TOKEN>', 'hub_private_repo': False, 'hub_always_push': False, 'gradient_checkpointing': False, 'gradient_checkpointing_kwargs': None, 'include_inputs_for_metrics': False, 'eval_do_concat_batches': True, 'fp16_backend': 'auto', 'evaluation_strategy': None, 'push_to_hub_model_id': None, 'push_to_hub_organization': None, 'push_to_hub_token': '<PUSH_TO_HUB_TOKEN>', 'mp_parameters': '', 'auto_find_batch_size': False, 'full_determinism': False, 'torchdynamo': None, 'ray_scope': 'last', 'ddp_timeout': 1800, 'torch_compile': False, 'torch_compile_backend': None, 'torch_compile_mode': None, 'dispatch_batches': None, 'split_batches': None, 'include_tokens_per_second': False, 'include_num_input_tokens_seen': False, 'neftune_noise_alpha': None, 'optim_target_modules': None, 'batch_eval_metrics': False, 'eval_on_start': False, 'eval_use_gather_object': False}
+2024-09-29 14:45:35,097 INFO    MainThread:213 [wandb_config.py:__setitem__():154] config set model/num_parameters = 1645301760 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7ad559fd1300>>
+2024-09-29 14:45:35,097 INFO    MainThread:213 [wandb_run.py:_config_callback():1393] config_cb model/num_parameters 1645301760 None

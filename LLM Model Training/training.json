@@ -1,0 +1,3788 @@
+{
+  "conversation": [
+    {
+      "content": "How can I sign up for the TMRW app?",
+      "role": "user"
+    },
+    {
+      "content": "You can sign up for the TMRW app via our website or directly on the app from the App Store.",
+      "role": "assistant"
+    },
+    {
+      "content": "What documents do I need to apply for a credit card?",
+      "role": "user"
+    },
+    {
+      "content": "You'll need your NRIC, latest income documents, and proof of residence to apply for a credit card.",
+      "role": "assistant"
+    },
+    {
+      "content": "How can I apply for a personal loan?",
+      "role": "user"
+    },
+    {
+      "content": "You can apply for a personal loan through our online banking portal or by visiting a UOB branch.",
+      "role": "assistant"
+    },
+    {
+      "content": "Quels services d'investissement proposez-vous ?",
+      "role": "user"
+    },
+    {
+      "content": "UOB propose des options d'investissement telles que des fonds communs, des obligations et des d\u00e9p\u00f4ts structur\u00e9s.",
+      "role": "assistant"
+    },
+    {
+      "content": "How do I check my TMRW app balance?",
+      "role": "user"
+    },
+    {
+      "content": "You can check your balance by logging into the TMRW app and selecting the 'Account Balance' tab.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u00bfC\u00f3mo puedo solicitar una tarjeta de cr\u00e9dito?",
+      "role": "user"
+    },
+    {
+      "content": "Puede solicitar una tarjeta de cr\u00e9dito a trav\u00e9s de nuestro portal en l\u00ednea o en una sucursal de UOB.",
+      "role": "assistant"
+    },
+    {
+      "content": "How can I invest in a fixed deposit with UOB?",
+      "role": "user"
+    },
+    {
+      "content": "You can open a fixed deposit account online via UOB Personal Internet Banking or at any branch.",
+      "role": "assistant"
+    },
+    {
+      "content": "What is the interest rate for personal loans?",
+      "role": "user"
+    },
+    {
+      "content": "The interest rate for personal loans varies based on eligibility. Please visit our website for more details.",
+      "role": "assistant"
+    },
+    {
+      "content": "Quels sont les taux d'int\u00e9r\u00eat pour les d\u00e9p\u00f4ts \u00e0 terme ?",
+      "role": "user"
+    },
+    {
+      "content": "Les taux d'int\u00e9r\u00eat pour les d\u00e9p\u00f4ts \u00e0 terme d\u00e9pendent de la dur\u00e9e et du montant. Consultez notre site web pour plus de d\u00e9tails.",
+      "role": "assistant"
+    },
+    {
+      "content": "How long does it take to get a UOB credit card approved?",
+      "role": "user"
+    },
+    {
+      "content": "UOB typically takes 5-7 working days to approve a credit card application, subject to eligibility.",
+      "role": "assistant"
+    },
+    {
+      "content": "How can I manage my investments via the TMRW app?",
+      "role": "user"
+    },
+    {
+      "content": "You can manage your investments through the 'Invest' section in the TMRW app.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u00bfC\u00f3mo puedo verificar mi saldo en la aplicaci\u00f3n TMRW?",
+      "role": "user"
+    },
+    {
+      "content": "Puede verificar su saldo iniciando sesi\u00f3n en la aplicaci\u00f3n TMRW y seleccionando la pesta\u00f1a 'Saldo de cuenta'.",
+      "role": "assistant"
+    },
+    {
+      "content": "Comment puis-je demander un pr\u00eat immobilier chez UOB ?",
+      "role": "user"
+    },
+    {
+      "content": "Vous pouvez demander un pr\u00eat immobilier en ligne via notre site web ou dans une succursale UOB.",
+      "role": "assistant"
+    },
+    {
+      "content": "What is the maximum credit limit for UOB credit cards?",
+      "role": "user"
+    },
+    {
+      "content": "The credit limit for UOB credit cards depends on your income level and eligibility, typically up to 4x your monthly income.",
+      "role": "assistant"
+    },
+    {
+      "content": "What are the interest rates for UOB home loans?",
+      "role": "user"
+    },
+    {
+      "content": "UOB home loan interest rates start from 1.25% per annum, depending on the loan package you choose.",
+      "role": "assistant"
+    },
+    {
+      "content": "Can I open a UOB savings account online?",
+      "role": "user"
+    },
+    {
+      "content": "Yes, you can open a UOB savings account online via UOB Personal Internet Banking.",
+      "role": "assistant"
+    },
+    {
+      "content": "How can I request a replacement for my lost credit card?",
+      "role": "user"
+    },
+    {
+      "content": "You can request a replacement credit card by logging into UOB Internet Banking or calling our customer service hotline.",
+      "role": "assistant"
+    },
+    {
+      "content": "How much can I withdraw from a UOB ATM daily?",
+      "role": "user"
+    },
+    {
+      "content": "The daily withdrawal limit for UOB ATMs is up to S$3,000, subject to your card settings.",
+      "role": "assistant"
+    },
+    {
+      "content": "What is UOB's SWIFT code for international transfers?",
+      "role": "user"
+    },
+    {
+      "content": "UOB\u2019s SWIFT code is UOVBSGSG, used for international money transfers.",
+      "role": "assistant"
+    },
+    {
+      "content": "How do I change my contact details for my UOB account?",
+      "role": "user"
+    },
+    {
+      "content": "You can update your contact details via UOB Personal Internet Banking or by visiting any branch.",
+      "role": "assistant"
+    },
+    {
+      "content": "What types of insurance does UOB offer?",
+      "role": "user"
+    },
+    {
+      "content": "UOB offers a range of insurance products, including life, health, and travel insurance.",
+      "role": "assistant"
+    },
+    {
+      "content": "How can I pay my UOB credit card bill?",
+      "role": "user"
+    },
+    {
+      "content": "You can pay your UOB credit card bill through UOB Internet Banking, mobile banking, or at any UOB branch.",
+      "role": "assistant"
+    },
+    {
+      "content": "What are UOB's business banking services?",
+      "role": "user"
+    },
+    {
+      "content": "UOB offers business banking services including corporate loans, cash management, and trade finance solutions.",
+      "role": "assistant"
+    },
+    {
+      "content": "How do I transfer funds between my UOB accounts?",
+      "role": "user"
+    },
+    {
+      "content": "You can transfer funds between your UOB accounts through UOB Personal Internet Banking or the UOB mobile app.",
+      "role": "assistant"
+    },
+    {
+      "content": "Can I link my UOB credit card to Apple Pay?",
+      "role": "user"
+    },
+    {
+      "content": "Yes, UOB credit cards can be linked to Apple Pay for contactless payments.",
+      "role": "assistant"
+    },
+    {
+      "content": "What is the minimum age to apply for a UOB credit card?",
+      "role": "user"
+    },
+    {
+      "content": "The minimum age to apply for a UOB credit card is 21 years.",
+      "role": "assistant"
+    },
+    {
+      "content": "What types of loans does UOB offer?",
+      "role": "user"
+    },
+    {
+      "content": "UOB offers personal loans, car loans, home loans, and business loans.",
+      "role": "assistant"
+    },
+    {
+      "content": "How can I close my UOB savings account?",
+      "role": "user"
+    },
+    {
+      "content": "You can close your UOB savings account by visiting a UOB branch or calling customer service.",
+      "role": "assistant"
+    },
+    {
+      "content": "Does UOB offer a salary crediting service?",
+      "role": "user"
+    },
+    {
+      "content": "Yes, UOB offers a salary crediting service, where your salary is automatically credited into your UOB account.",
+      "role": "assistant"
+    },
+    {
+      "content": "How can I activate my UOB debit card?",
+      "role": "user"
+    },
+    {
+      "content": "You can activate your UOB debit card via UOB Internet Banking, mobile app, or by calling customer service.",
+      "role": "assistant"
+    },
+    {
+      "content": "How can I check my UOB credit card statement?",
+      "role": "user"
+    },
+    {
+      "content": "You can check your UOB credit card statement via UOB Internet Banking or the mobile app.",
+      "role": "assistant"
+    },
+    {
+      "content": "What are UOB's foreign currency deposit options?",
+      "role": "user"
+    },
+    {
+      "content": "UOB offers foreign currency deposits in major currencies such as USD, EUR, and JPY.",
+      "role": "assistant"
+    },
+    {
+      "content": "How do I apply for a UOB supplementary credit card?",
+      "role": "user"
+    },
+    {
+      "content": "You can apply for a supplementary credit card for a family member via UOB Internet Banking or by visiting a branch.",
+      "role": "assistant"
+    },
+    {
+      "content": "How do I transfer money overseas with UOB?",
+      "role": "user"
+    },
+    {
+      "content": "You can transfer money overseas via UOB Internet Banking, using UOB's Telegraphic Transfer service.",
+      "role": "assistant"
+    },
+    {
+      "content": "What is the UOB KidSmart account?",
+      "role": "user"
+    },
+    {
+      "content": "The UOB KidSmart account is a savings account designed for children, with no minimum balance requirement.",
+      "role": "assistant"
+    },
+    {
+      "content": "How do I qualify for UOB Wealth Banking?",
+      "role": "user"
+    },
+    {
+      "content": "You can qualify for UOB Wealth Banking with a minimum of S$100,000 in deposits or investments with UOB.",
+      "role": "assistant"
+    },
+    {
+      "content": "What is UOB One Account?",
+      "role": "user"
+    },
+    {
+      "content": "The UOB One Account is a high-interest savings account that rewards you for credit card spending and salary crediting.",
+      "role": "assistant"
+    },
+    {
+      "content": "Can I apply for a UOB home loan if I\u2019m self-employed?",
+      "role": "user"
+    },
+    {
+      "content": "Yes, self-employed individuals can apply for UOB home loans, subject to income verification.",
+      "role": "assistant"
+    },
+    {
+      "content": "How do I redeem UOB credit card rewards points?",
+      "role": "user"
+    },
+    {
+      "content": "You can redeem UOB credit card rewards points via UOB Internet Banking or the UOB Rewards app.",
+      "role": "assistant"
+    },
+    {
+      "content": "What is the UOB Lady's Card?",
+      "role": "user"
+    },
+    {
+      "content": "The UOB Lady's Card is a credit card designed exclusively for women, offering tailored rewards and privileges.",
+      "role": "assistant"
+    },
+    {
+      "content": "How can I cancel my UOB credit card?",
+      "role": "user"
+    },
+    {
+      "content": "You can cancel your UOB credit card by calling the UOB customer service hotline or visiting a branch.",
+      "role": "assistant"
+    },
+    {
+      "content": "What is the interest rate for UOB fixed deposits?",
+      "role": "user"
+    },
+    {
+      "content": "UOB fixed deposit rates vary by currency and tenure. Please check the UOB website for the latest rates.",
+      "role": "assistant"
+    },
+    {
+      "content": "How do I report a fraudulent transaction on my UOB account?",
+      "role": "user"
+    },
+    {
+      "content": "You can report fraudulent transactions by calling UOB's fraud hotline or using the Internet Banking portal.",
+      "role": "assistant"
+    },
+    {
+      "content": "What is UOB's PayNow service?",
+      "role": "user"
+    },
+    {
+      "content": "UOB's PayNow service allows you to transfer funds instantly to other Singaporean banks using just a mobile number or NRIC.",
+      "role": "assistant"
+    },
+    {
+      "content": "Can I apply for a UOB credit card as a foreigner?",
+      "role": "user"
+    },
+    {
+      "content": "Yes, foreigners can apply for UOB credit cards, subject to income and visa requirements.",
+      "role": "assistant"
+    },
+    {
+      "content": "What is UOB's customer service hotline?",
+      "role": "user"
+    },
+    {
+      "content": "UOB's customer service hotline in Singapore is 1800 222 2121 for general inquiries and banking services.",
+      "role": "assistant"
+    },
+    {
+      "content": "How do I invest in UOB bonds?",
+      "role": "user"
+    },
+    {
+      "content": "You can invest in UOB bonds through UOB's Wealth Management services or UOB Personal Internet Banking.",
+      "role": "assistant"
+    },
+    {
+      "content": "What is the minimum salary requirement for a UOB credit card?",
+      "role": "user"
+    },
+    {
+      "content": "The minimum salary requirement for a UOB credit card is S$30,000 per annum for Singapore citizens and PRs.",
+      "role": "assistant"
+    },
+    {
+      "content": "How can I apply for a UOB car loan?",
+      "role": "user"
+    },
+    {
+      "content": "You can apply for a UOB car loan via UOB Internet Banking or by visiting a branch.",
+      "role": "assistant"
+    },
+    {
+      "content": "What is the UOB Visa Signature Card?",
+      "role": "user"
+    },
+    {
+      "content": "The UOB Visa Signature Card offers cashback on online and overseas purchases, as well as exclusive travel privileges.",
+      "role": "assistant"
+    },
+    {
+      "content": "How do I enroll in UOB's investment advisory services?",
+      "role": "user"
+    },
+    {
+      "content": "You can enroll in UOB's investment advisory services through your relationship manager or by visiting a UOB branch.",
+      "role": "assistant"
+    },
+    {
+      "content": "What is the UOB YOLO Card?",
+      "role": "user"
+    },
+    {
+      "content": "The UOB YOLO Card is a cashback credit card targeted at millennials, offering rewards on dining, entertainment, and travel.",
+      "role": "assistant"
+    },
+    {
+      "content": "How can I apply for a UOB education loan?",
+      "role": "user"
+    },
+    {
+      "content": "You can apply for a UOB education loan via the UOB website or by visiting a branch.",
+      "role": "assistant"
+    },
+    {
+      "content": "What is the UOB Mighty app?",
+      "role": "user"
+    },
+    {
+      "content": "The UOB Mighty app is UOB's mobile banking app that lets you access banking, payments, and rewards in one place.",
+      "role": "assistant"
+    },
+    {
+      "content": "How can I update my mailing address with UOB?",
+      "role": "user"
+    },
+    {
+      "content": "You can update your mailing address by logging into UOB Personal Internet Banking or visiting a branch.",
+      "role": "assistant"
+    },
+    {
+      "content": "What is the UOB Privilege Banking service?",
+      "role": "user"
+    },
+    {
+      "content": "UOB Privilege Banking offers personalized wealth management and investment services for high-net-worth clients.",
+      "role": "assistant"
+    },
+    {
+      "content": "How do I apply for a UOB mortgage loan?",
+      "role": "user"
+    },
+    {
+      "content": "You can apply for a UOB mortgage loan via UOB's website or by contacting a relationship manager.",
+      "role": "assistant"
+    },
+    {
+      "content": "Can I set up standing instructions with UOB?",
+      "role": "user"
+    },
+    {
+      "content": "Yes, you can set up standing instructions for bill payments or transfers via UOB Personal Internet Banking.",
+      "role": "assistant"
+    },
+    {
+      "content": "What is UOB's minimum balance requirement for savings accounts?",
+      "role": "user"
+    },
+    {
+      "content": "The minimum balance requirement for UOB savings accounts varies, but is typically S$500 for basic accounts.",
+      "role": "assistant"
+    },
+    {
+      "content": "How can I open a UOB joint account?",
+      "role": "user"
+    },
+    {
+      "content": "You can open a UOB joint account by visiting any UOB branch with the joint account holder.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u5982\u4f55\u7533\u8bf7UOB\u4fe1\u7528\u5361\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "\u60a8\u53ef\u4ee5\u901a\u8fc7\u6211\u4eec\u7684\u7f51\u7ad9\u6216\u5728\u5206\u884c\u7533\u8bf7UOB\u4fe1\u7528\u5361\uff0c\u9700\u63d0\u4f9b\u8eab\u4efd\u8bc1\u660e\u548c\u6536\u5165\u8bc1\u660e\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "Bagaimana cara mendaftar di aplikasi TMRW?",
+      "role": "user"
+    },
+    {
+      "content": "Anda bisa mendaftar di aplikasi TMRW melalui situs web kami atau langsung di aplikasinya.",
+      "role": "assistant"
+    },
+    {
+      "content": "Puis-je ouvrir un compte d'\u00e9pargne en ligne ?",
+      "role": "user"
+    },
+    {
+      "content": "Oui, vous pouvez ouvrir un compte d'\u00e9pargne en ligne via notre service bancaire en ligne.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u0645\u0627 \u0647\u0648 \u0627\u0644\u062d\u062f \u0627\u0644\u0623\u062f\u0646\u0649 \u0644\u0644\u0631\u0627\u062a\u0628 \u0644\u0644\u062d\u0635\u0648\u0644 \u0639\u0644\u0649 \u0628\u0637\u0627\u0642\u0629 UOB \u0627\u0644\u0627\u0626\u062a\u0645\u0627\u0646\u064a\u0629\u061f",
+      "role": "user"
+    },
+    {
+      "content": "\u0627\u0644\u062d\u062f \u0627\u0644\u0623\u062f\u0646\u0649 \u0644\u0644\u0631\u0627\u062a\u0628 \u0644\u0644\u062d\u0635\u0648\u0644 \u0639\u0644\u0649 \u0628\u0637\u0627\u0642\u0629 UOB \u0627\u0644\u0627\u0626\u062a\u0645\u0627\u0646\u064a\u0629 \u0647\u0648 30,000 \u062f\u0648\u0644\u0627\u0631 \u0633\u0646\u0648\u064a\u064b\u0627.",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u3067\u4f4f\u5b85\u30ed\u30fc\u30f3\u3092\u7533\u3057\u8fbc\u3080\u306b\u306f\u3069\u3046\u3059\u308c\u3070\u3044\u3044\u3067\u3059\u304b\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB\u306e\u30a6\u30a7\u30d6\u30b5\u30a4\u30c8\u307e\u305f\u306f\u652f\u5e97\u306b\u3066\u4f4f\u5b85\u30ed\u30fc\u30f3\u306e\u7533\u8acb\u304c\u53ef\u80fd\u3067\u3059\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "Como posso verificar meu saldo no aplicativo TMRW?",
+      "role": "user"
+    },
+    {
+      "content": "Voc\u00ea pode verificar seu saldo fazendo login no aplicativo TMRW e selecionando \"Saldo de conta\".",
+      "role": "assistant"
+    },
+    {
+      "content": "\u00bfQu\u00e9 documentos necesito para solicitar un pr\u00e9stamo personal?",
+      "role": "user"
+    },
+    {
+      "content": "Necesitar\u00e1 su documento de identidad, comprobante de ingresos y una prueba de residencia.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u041a\u0430\u043a \u044f \u043c\u043e\u0433\u0443 \u043f\u043e\u0434\u0430\u0442\u044c \u0437\u0430\u044f\u0432\u043a\u0443 \u043d\u0430 \u043a\u0440\u0435\u0434\u0438\u0442\u043d\u0443\u044e \u043a\u0430\u0440\u0442\u0443 UOB?",
+      "role": "user"
+    },
+    {
+      "content": "\u0412\u044b \u043c\u043e\u0436\u0435\u0442\u0435 \u043f\u043e\u0434\u0430\u0442\u044c \u0437\u0430\u044f\u0432\u043a\u0443 \u043d\u0430 \u043a\u0440\u0435\u0434\u0438\u0442\u043d\u0443\u044e \u043a\u0430\u0440\u0442\u0443 UOB \u0447\u0435\u0440\u0435\u0437 \u043d\u0430\u0448 \u0441\u0430\u0439\u0442 \u0438\u043b\u0438 \u0432 \u043b\u044e\u0431\u043e\u043c \u043e\u0442\u0434\u0435\u043b\u0435\u043d\u0438\u0438 UOB.",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB \uacc4\uc88c\uc5d0\uc11c \ub2e4\ub978 \uacc4\uc88c\ub85c \uc790\uae08\uc744 \uc5b4\ub5bb\uac8c \uc774\uccb4\ud558\ub098\uc694?",
+      "role": "user"
+    },
+    {
+      "content": "UOB \ubaa8\ubc14\uc77c \uc571 \ub610\ub294 \uc778\ud130\ub137 \ubc45\ud0b9\uc744 \ud1b5\ud574 \ub2e4\ub978 \uacc4\uc88c\ub85c \uc790\uae08\uc744 \uc774\uccb4\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4.",
+      "role": "assistant"
+    },
+    {
+      "content": "Puis-je demander un pr\u00eat automobile chez UOB?",
+      "role": "user"
+    },
+    {
+      "content": "Oui, vous pouvez demander un pr\u00eat automobile en ligne ou dans une succursale UOB.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u6211\u5982\u4f55\u67e5\u8be2\u6211\u7684UOB\u4fe1\u7528\u5361\u8d26\u5355\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "\u60a8\u53ef\u4ee5\u901a\u8fc7UOB\u7f51\u4e0a\u94f6\u884c\u6216\u624b\u673a\u5e94\u7528\u7a0b\u5e8f\u67e5\u8be2\u4fe1\u7528\u5361\u8d26\u5355\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "Qual \u00e9 o c\u00f3digo SWIFT do UOB para transfer\u00eancias internacionais?",
+      "role": "user"
+    },
+    {
+      "content": "O c\u00f3digo SWIFT do UOB para transfer\u00eancias internacionais \u00e9 UOVBSGSG.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u00bfCu\u00e1les son las tasas de inter\u00e9s de los dep\u00f3sitos a plazo fijo en UOB?",
+      "role": "user"
+    },
+    {
+      "content": "Las tasas de inter\u00e9s var\u00edan seg\u00fan el plazo e la moneda.",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u306ePayNow\u30b5\u30fc\u30d3\u30b9\u3068\u306f\u4f55\u3067\u3059\u304b\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB\u306ePayNow\u30b5\u30fc\u30d3\u30b9\u306f\u3001\u30e2\u30d0\u30a4\u30eb\u756a\u53f7\u3084NRIC\u3067\u5373\u6642\u9001\u91d1\u304c\u53ef\u80fd\u306a\u30b5\u30fc\u30d3\u30b9\u3067\u3059\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "Quels types d'investissement propose UOB ?",
+      "role": "user"
+    },
+    {
+      "content": "UOB propose des fonds communs, des obligations, et des produits structur\u00e9s.",
+      "role": "assistant"
+    },
+    {
+      "content": "Apakah UOB menawarkan layanan transfer uang internasional?",
+      "role": "user"
+    },
+    {
+      "content": "Ya, UOB menawarkan layanan transfer uang internasional melalui perbankan online.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u041a\u0430\u043a \u043f\u0440\u043e\u0432\u0435\u0440\u0438\u0442\u044c \u0431\u0430\u043b\u0430\u043d\u0441 \u043d\u0430 \u0441\u0447\u0435\u0442\u0435 \u0447\u0435\u0440\u0435\u0437 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435 TMRW?",
+      "role": "user"
+    },
+    {
+      "content": "\u0412\u044b \u043c\u043e\u0436\u0435\u0442\u0435 \u043f\u0440\u043e\u0432\u0435\u0440\u0438\u0442\u044c \u0431\u0430\u043b\u0430\u043d\u0441, \u0432\u043e\u0439\u0434\u044f \u0432 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435 TMRW \u0438 \u0432\u044b\u0431\u0440\u0430\u0432 \u0432\u043a\u043b\u0430\u0434\u043a\u0443 \"\u0411\u0430\u043b\u0430\u043d\u0441 \u0441\u0447\u0435\u0442\u0430\".",
+      "role": "assistant"
+    },
+    {
+      "content": "\u00bfC\u00f3mo puedo pagar la factura de mi tarjeta de cr\u00e9dito UOB?",
+      "role": "user"
+    },
+    {
+      "content": "Puede pagar su factura de tarjeta de cr\u00e9dito UOB a trav\u00e9s de la banca en l\u00ednea o m\u00f3vil.",
+      "role": "assistant"
+    },
+    {
+      "content": "Bagaimana cara mengajukan pinjaman pribadi di UOB?",
+      "role": "user"
+    },
+    {
+      "content": "Anda dapat mengajukan pinjaman pribadi melalui portal perbankan UOB atau cabang terdekat.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u6211\u8be5\u5982\u4f55\u53d6\u6d88\u6211\u7684UOB\u4fe1\u7528\u5361\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "\u60a8\u53ef\u4ee5\u901a\u8fc7\u6211\u4eec\u7684\u5ba2\u6237\u670d\u52a1\u70ed\u7ebf\u6216\u8bbf\u95eeUOB\u5206\u884c\u53d6\u6d88\u4fe1\u7528\u5361\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "Comment puis-je mettre \u00e0 jour mes coordonn\u00e9es avec UOB ?",
+      "role": "user"
+    },
+    {
+      "content": "Vous pouvez mettre \u00e0 jour vos coordonn\u00e9es via le service bancaire en ligne ou en visitant une agence UOB.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u0645\u0627 \u0647\u0648 \u0631\u0642\u0645 \u062e\u062f\u0645\u0629 \u0627\u0644\u0639\u0645\u0644\u0627\u0621 \u0627\u0644\u062e\u0627\u0635 \u0628\u0628\u0646\u0643 UOB\u061f",
+      "role": "user"
+    },
+    {
+      "content": "\u0631\u0642\u0645 \u062e\u062f\u0645\u0629 \u0627\u0644\u0639\u0645\u0644\u0627\u0621 \u0644\u0628\u0646\u0643 UOB \u0641\u064a \u0633\u0646\u063a\u0627\u0641\u0648\u0631\u0629 \u0647\u0648 1800 222 2121.",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB \uacc4\uc88c\ub97c \ud574\uc9c0\ud558\ub824\uba74 \uc5b4\ub5bb\uac8c \ud574\uc57c \ud558\ub098\uc694?",
+      "role": "user"
+    },
+    {
+      "content": "UOB \uacc4\uc88c\ub294 UOB \uc9c0\uc810\uc5d0 \ubc29\ubb38\ud558\uac70\ub098 \uace0\uac1d \uc11c\ube44\uc2a4\uc5d0 \ubb38\uc758\ud558\uc5ec \ud574\uc9c0\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4.",
+      "role": "assistant"
+    },
+    {
+      "content": "Quali servizi aziendali offre UOB?",
+      "role": "user"
+    },
+    {
+      "content": "UOB offre servizi aziendali come prestiti societari, gestione della liquidit\u00e0 e finanziamenti commerciali.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u00bfC\u00f3mo puedo solicitar una tarjeta de cr\u00e9dito suplementaria UOB?",
+      "role": "user"
+    },
+    {
+      "content": "Puede solicitar una tarjeta de cr\u00e9dito suplementaria para un familiar a trav\u00e9s de la banca en l\u00ednea.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u041a\u0430\u043a\u043e\u0432\u044b \u043f\u0440\u043e\u0446\u0435\u043d\u0442\u044b \u043f\u043e \u0441\u0440\u043e\u0447\u043d\u044b\u043c \u0434\u0435\u043f\u043e\u0437\u0438\u0442\u0430\u043c UOB?",
+      "role": "user"
+    },
+    {
+      "content": "\u041f\u0440\u043e\u0446\u0435\u043d\u0442\u043d\u044b\u0435 \u0441\u0442\u0430\u0432\u043a\u0438 \u043f\u043e \u0441\u0440\u043e\u0447\u043d\u044b\u043c \u0434\u0435\u043f\u043e\u0437\u0438\u0442\u0430\u043c UOB \u0437\u0430\u0432\u0438\u0441\u044f\u0442 \u043e\u0442 \u0432\u0430\u043b\u044e\u0442\u044b \u0438 \u0441\u0440\u043e\u043a\u0430. \u041f\u043e\u0434\u0440\u043e\u0431\u043d\u043e\u0441\u0442\u0438 \u043d\u0430 \u0441\u0430\u0439\u0442\u0435.",
+      "role": "assistant"
+    },
+    {
+      "content": "Bagaimana cara mendaftar di UOB Wealth Banking?",
+      "role": "user"
+    },
+    {
+      "content": "Anda bisa mendaftar di UOB Wealth Banking dengan simpanan minimal sebesar S$100,000.",
+      "role": "assistant"
+    },
+    {
+      "content": "Quels types de pr\u00eats propose UOB ?",
+      "role": "user"
+    },
+    {
+      "content": "UOB propose des pr\u00eats personnels, des pr\u00eats hypoth\u00e9caires et des pr\u00eats automobiles.",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u306eMighty\u30a2\u30d7\u30ea\u3068\u306f\u4f55\u3067\u3059\u304b\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB Mighty\u30a2\u30d7\u30ea\u306f\u3001\u9280\u884c\u3001\u6c7a\u6e08\u3001\u5831\u916c\u3092\u4e00\u62ec\u3057\u3066\u7ba1\u7406\u3067\u304d\u308b\u30e2\u30d0\u30a4\u30eb\u30a2\u30d7\u30ea\u3067\u3059\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "\uc5b4\ub5bb\uac8c UOB \uacc4\uc88c\uc5d0\uc11c \uc790\uae08\uc774\uc804 \uc2e0\uccad\uc744 \ud560 \uc218 \uc788\ub098\uc694?",
+      "role": "user"
+    },
+    {
+      "content": "UOB \ubaa8\ubc14\uc77c \uc571\uc744 \ud1b5\ud574 \uc790\uae08\uc774\uccb4\ub97c \uc2e0\uccad\ud560 \uc218 \uc788\uc73c\uba70, \uc778\ud130\ub137 \ubc45\ud0b9\uc73c\ub85c\ub3c4 \uac00\ub2a5\ud569\ub2c8\ub2e4.",
+      "role": "assistant"
+    },
+    {
+      "content": "Quais servi\u00e7os de investimento a UOB oferece?",
+      "role": "user"
+    },
+    {
+      "content": "A UOB oferece investimentos em fundos m\u00fatuos, t\u00edtulos e produtos estruturados.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u00bfCu\u00e1l es el l\u00edmite m\u00e1ximo de retiro en un cajero UOB?",
+      "role": "user"
+    },
+    {
+      "content": "El l\u00edmite m\u00e1ximo de retiro en un cajero UOB es de S$3,000 diarios, sujeto a la configuraci\u00f3n de su tarjeta.",
+      "role": "assistant"
+    },
+    {
+      "content": "Quali tipi di mutui offre UOB?",
+      "role": "user"
+    },
+    {
+      "content": "UOB offre mutui ipotecari, prestiti personali e prestiti aziendali.",
+      "role": "assistant"
+    },
+    {
+      "content": "Bagaimana cara mengubah nomor telepon saya di UOB?",
+      "role": "user"
+    },
+    {
+      "content": "Anda bisa memperbarui nomor telepon Anda melalui layanan perbankan internet UOB atau dengan mengunjungi cabang.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u6211\u5982\u4f55\u7533\u8bf7UOB\u7684\u6295\u8d44\u54a8\u8be2\u670d\u52a1\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "\u60a8\u53ef\u4ee5\u901a\u8fc7\u6211\u4eec\u7684\u8d22\u5bcc\u7ba1\u7406\u90e8\u95e8\u6216\u8bbf\u95ee\u4efb\u4f55UOB\u5206\u884c\u7533\u8bf7\u6295\u8d44\u54a8\u8be2\u670d\u52a1\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "Comment activer ma carte de d\u00e9bit UOB ?",
+      "role": "user"
+    },
+    {
+      "content": "Vous pouvez activer votre carte de d\u00e9bit UOB via le service bancaire en ligne ou l'application mobile.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u0645\u0627 \u0647\u0648 UOB One Account\u061f",
+      "role": "user"
+    },
+    {
+      "content": "UOB One Account \u0647\u0648 \u062d\u0633\u0627\u0628 \u062a\u0648\u0641\u064a\u0631 \u0628\u0641\u0648\u0627\u0626\u062f \u0639\u0627\u0644\u064a\u0629 \u064a\u062a\u064a\u062d \u0644\u0643 \u0643\u0633\u0628 \u0645\u0643\u0627\u0641\u0622\u062a \u0628\u0646\u0627\u0621\u064b \u0639\u0644\u0649 \u0625\u0646\u0641\u0627\u0642 \u0628\u0637\u0627\u0642\u062a\u0643 \u0627\u0644\u0627\u0626\u062a\u0645\u0627\u0646\u064a\u0629 \u0648\u0625\u064a\u062f\u0627\u0639 \u0631\u0627\u062a\u0628\u0643.",
+      "role": "assistant"
+    },
+    {
+      "content": "Quali carte di credito UOB sono compatibili con Apple Pay?",
+      "role": "user"
+    },
+    {
+      "content": "Le carte di credito UOB possono essere collegate a Apple Pay per pagamenti contactless.",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u306e\u30af\u30ec\u30b8\u30c3\u30c8\u30ab\u30fc\u30c9\u306e\u7279\u5178\u30dd\u30a4\u30f3\u30c8\u3092\u3069\u306e\u3088\u3046\u306b\u5229\u7528\u3067\u304d\u307e\u3059\u304b\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "\u30af\u30ec\u30b8\u30c3\u30c8\u30ab\u30fc\u30c9\u306e\u7279\u5178\u30dd\u30a4\u30f3\u30c8\u306f\u3001UOB\u30a4\u30f3\u30bf\u30fc\u30cd\u30c3\u30c8\u30d0\u30f3\u30ad\u30f3\u30b0\u307e\u305f\u306f\u7279\u5178\u30a2\u30d7\u30ea\u3067\u4ea4\u63db\u3067\u304d\u307e\u3059\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "Bagaimana cara melaporkan transaksi curang di akun UOB saya?",
+      "role": "user"
+    },
+    {
+      "content": "Anda bisa melaporkan transaksi curang melalui hotline layanan pelanggan UOB atau melalui internet banking.",
+      "role": "assistant"
+    },
+    {
+      "content": "Como posso configurar instru\u00e7\u00f5es permanentes com UOB?",
+      "role": "user"
+    },
+    {
+      "content": "Voc\u00ea pode configurar instru\u00e7\u00f5es permanentes para pagamentos ou transfer\u00eancias atrav\u00e9s do Internet Banking da UOB.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u00bfQu\u00e9 es la tarjeta UOB Lady's?",
+      "role": "user"
+    },
+    {
+      "content": "La tarjeta UOB Lady's es una tarjeta de cr\u00e9dito dise\u00f1ada exclusivamente para mujeres, con recompensas personalizadas.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u041a\u0430\u043a \u044f \u043c\u043e\u0433\u0443 \u0438\u0437\u043c\u0435\u043d\u0438\u0442\u044c \u0441\u0432\u043e\u0439 \u043f\u043e\u0447\u0442\u043e\u0432\u044b\u0439 \u0430\u0434\u0440\u0435\u0441 \u0432 UOB?",
+      "role": "user"
+    },
+    {
+      "content": "\u0412\u044b \u043c\u043e\u0436\u0435\u0442\u0435 \u0438\u0437\u043c\u0435\u043d\u0438\u0442\u044c \u0441\u0432\u043e\u0439 \u043f\u043e\u0447\u0442\u043e\u0432\u044b\u0439 \u0430\u0434\u0440\u0435\u0441 \u0447\u0435\u0440\u0435\u0437 \u0438\u043d\u0442\u0435\u0440\u043d\u0435\u0442-\u0431\u0430\u043d\u043a\u0438\u043d\u0433 UOB \u0438\u043b\u0438 \u043e\u0431\u0440\u0430\u0442\u0438\u0432\u0448\u0438\u0441\u044c \u0432 \u043e\u0442\u0434\u0435\u043b\u0435\u043d\u0438\u0435 \u0431\u0430\u043d\u043a\u0430.",
+      "role": "assistant"
+    },
+    {
+      "content": "Quels produits d'assurance propose UOB ?",
+      "role": "user"
+    },
+    {
+      "content": "UOB propose une gamme de produits d'assurance, y compris l'assurance vie, sant\u00e9 et voyage.",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u4fe1\u7528\u5361\u7684\u5e74\u8d39\u662f\u591a\u5c11\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB\u4fe1\u7528\u5361\u7684\u5e74\u8d39\u56e0\u5361\u79cd\u800c\u5f02\uff0c\u901a\u5e38\u5728S$80\u81f3S$200\u4e4b\u95f4\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "Apa keuntungan menggunakan aplikasi TMRW?",
+      "role": "user"
+    },
+    {
+      "content": "Aplikasi TMRW menawarkan kemudahan pengelolaan keuangan dan fitur penghematan otomatis.",
+      "role": "assistant"
+    },
+    {
+      "content": "Quelles sont les heures d'ouverture des agences UOB ?",
+      "role": "user"
+    },
+    {
+      "content": "Les agences UOB sont g\u00e9n\u00e9ralement ouvertes de 9h \u00e0 16h du lundi au vendredi.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u0643\u064a\u0641 \u064a\u0645\u0643\u0646\u0646\u064a \u0645\u0639\u0631\u0641\u0629 \u0631\u0635\u064a\u062f\u064a \u0641\u064a \u062d\u0633\u0627\u0628\u064a UOB\u061f",
+      "role": "user"
+    },
+    {
+      "content": "\u064a\u0645\u0643\u0646\u0643 \u0645\u0639\u0631\u0641\u0629 \u0631\u0635\u064a\u062f \u062d\u0633\u0627\u0628\u0643 \u0639\u0646 \u0637\u0631\u064a\u0642 \u062a\u0633\u062c\u064a\u0644 \u0627\u0644\u062f\u062e\u0648\u0644 \u0625\u0644\u0649 \u0627\u0644\u062e\u062f\u0645\u0627\u062a \u0627\u0644\u0645\u0635\u0631\u0641\u064a\u0629 \u0639\u0628\u0631 \u0627\u0644\u0625\u0646\u062a\u0631\u0646\u062a \u0623\u0648 \u0627\u0644\u062a\u0637\u0628\u064a\u0642.",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u306e\u30e2\u30d0\u30a4\u30eb\u30d0\u30f3\u30ad\u30f3\u30b0\u306e\u6a5f\u80fd\u306f\u4f55\u3067\u3059\u304b\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB\u306e\u30e2\u30d0\u30a4\u30eb\u30d0\u30f3\u30ad\u30f3\u30b0\u3067\u306f\u3001\u53e3\u5ea7\u306e\u6b8b\u9ad8\u78ba\u8a8d\u3001\u632f\u8fbc\u3001\u652f\u6255\u3044\u304c\u53ef\u80fd\u3067\u3059\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "Como posso cancelar um cart\u00e3o de cr\u00e9dito UOB?",
+      "role": "user"
+    },
+    {
+      "content": "Voc\u00ea pode cancelar seu cart\u00e3o de cr\u00e9dito UOB entrando em contato com o atendimento ao cliente.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u00bfCu\u00e1nto tiempo tarda en procesarse un pr\u00e9stamo personal?",
+      "role": "user"
+    },
+    {
+      "content": "Por lo general, el procesamiento de un pr\u00e9stamo personal toma de 3 a 5 d\u00edas h\u00e1biles.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u041a\u0430\u043a \u043f\u043e\u043b\u0443\u0447\u0438\u0442\u044c \u0434\u043e\u0441\u0442\u0443\u043f \u043a \u0438\u043d\u0442\u0435\u0440\u043d\u0435\u0442-\u0431\u0430\u043d\u043a\u0438\u043d\u0433\u0443 UOB?",
+      "role": "user"
+    },
+    {
+      "content": "\u0412\u044b \u043c\u043e\u0436\u0435\u0442\u0435 \u0437\u0430\u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0438\u0440\u043e\u0432\u0430\u0442\u044c\u0441\u044f \u0434\u043b\u044f \u0434\u043e\u0441\u0442\u0443\u043f\u0430 \u043a \u0438\u043d\u0442\u0435\u0440\u043d\u0435\u0442-\u0431\u0430\u043d\u043a\u0438\u043d\u0433\u0443 \u043d\u0430 \u0432\u0435\u0431-\u0441\u0430\u0439\u0442\u0435 UOB.",
+      "role": "assistant"
+    },
+    {
+      "content": "Bagaimana cara mengajukan pinjaman rumah di UOB?",
+      "role": "user"
+    },
+    {
+      "content": "Anda bisa mengajukan pinjaman rumah di situs web UOB atau langsung di cabang.",
+      "role": "assistant"
+    },
+    {
+      "content": "Quais s\u00e3o os requisitos para abrir uma conta UOB?",
+      "role": "user"
+    },
+    {
+      "content": "Para abrir uma conta UOB, voc\u00ea precisa de um documento de identidade e um comprovante de resid\u00eancia.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u00bfQu\u00e9 es el servicio de asesoramiento financiero de UOB?",
+      "role": "user"
+    },
+    {
+      "content": "Es um servi\u00e7o que ayuda a los clientes a gestionar sus inversiones y ahorros.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u041a\u0430\u043a \u044f \u043c\u043e\u0433\u0443 \u043f\u043e\u043b\u0443\u0447\u0438\u0442\u044c \u0432\u044b\u043f\u0438\u0441\u043a\u0443 \u043f\u043e \u0441\u0447\u0435\u0442\u0443 UOB?",
+      "role": "user"
+    },
+    {
+      "content": "\u0412\u044b \u043c\u043e\u0436\u0435\u0442\u0435 \u043f\u043e\u043b\u0443\u0447\u0438\u0442\u044c \u0432\u044b\u043f\u0438\u0441\u043a\u0443 \u043f\u043e \u0441\u0447\u0435\u0442\u0443 \u0447\u0435\u0440\u0435\u0437 \u0438\u043d\u0442\u0435\u0440\u043d\u0435\u0442-\u0431\u0430\u043d\u043a\u0438\u043d\u0433 \u0438\u043b\u0438 \u0432 \u043b\u044e\u0431\u043e\u043c \u043e\u0442\u0434\u0435\u043b\u0435\u043d\u0438\u0438 UOB.",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u3067\u5916\u8ca8\u9810\u91d1\u3092\u958b\u8a2d\u3059\u308b\u306b\u306f\u3069\u3046\u3059\u308c\u3070\u3088\u3044\u3067\u3059\u304b\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB\u306e\u30a6\u30a7\u30d6\u30b5\u30a4\u30c8\u307e\u305f\u306f\u652f\u5e97\u3067\u5916\u8ca8\u9810\u91d1\u53e3\u5ea7\u3092\u958b\u8a2d\u3067\u304d\u307e\u3059\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "Quels sont les frais associ\u00e9s aux pr\u00eats personnels UOB ?",
+      "role": "user"
+    },
+    {
+      "content": "Les frais varient en fonction du montant et de la dur\u00e9e du pr\u00eat.",
+      "role": "assistant"
+    },
+    {
+      "content": "Bagaimana cara mendapatkan laporan kredit dari UOB?",
+      "role": "user"
+    },
+    {
+      "content": "Anda dapat meminta laporan kredit melalui layanan pelanggan UOB atau aplikasi TMRW.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u00bfCu\u00e1l es la tasa de inter\u00e9s para los pr\u00e9stamos personales?",
+      "role": "user"
+    },
+    {
+      "content": "Las tasas de inter\u00e9s var\u00edan seg\u00fan el perfil crediticio del solicitante.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u041a\u0430\u043a\u043e\u0439 \u043c\u0438\u043d\u0438\u043c\u0430\u043b\u044c\u043d\u044b\u0439 \u0441\u0440\u043e\u043a \u0432\u043a\u043b\u0430\u0434\u0430 UOB?",
+      "role": "user"
+    },
+    {
+      "content": "\u041c\u0438\u043d\u0438\u043c\u0430\u043b\u044c\u043d\u044b\u0439 \u0441\u0440\u043e\u043a \u0432\u043a\u043b\u0430\u0434\u0430 UOB \u0441\u043e\u0441\u0442\u0430\u0432\u043b\u044f\u0435\u0442 3 \u043c\u0435\u0441\u044f\u0446\u0430.",
+      "role": "assistant"
+    },
+    {
+      "content": "What investment options does UOB offer?",
+      "role": "user"
+    },
+    {
+      "content": "UOB offers a range of investment options, including mutual funds, bonds, structured products, and investment-linked insurance plans. These products cater to different risk appetites and investment goals.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u00bfCu\u00e1les son los requisitos para invertir en UOB?",
+      "role": "user"
+    },
+    {
+      "content": "Para invertir en UOB, necesita abrir una cuenta de inversi\u00f3n, cumplir con los requisitos de inversi\u00f3n m\u00ednima que var\u00edan seg\u00fan el producto y, en algunos casos, proporcionar documentaci\u00f3n adicional sobre su situaci\u00f3n financiera.",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u306e\u6295\u8cc7\u53e3\u5ea7\u306f\u3069\u306e\u3088\u3046\u306b\u958b\u8a2d\u3057\u307e\u3059\u304b\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB\u306e\u6295\u8cc7\u53e3\u5ea7\u306f\u3001\u30aa\u30f3\u30e9\u30a4\u30f3\u30d0\u30f3\u30ad\u30f3\u30b0\u3092\u5229\u7528\u3059\u308b\u304b\u3001\u6700\u5bc4\u308a\u306e\u652f\u5e97\u3092\u8a2a\u308c\u308b\u3053\u3068\u3067\u958b\u8a2d\u3067\u304d\u307e\u3059\u3002\u5fc5\u8981\u306a\u66f8\u985e\u3092\u63d0\u51fa\u3057\u3001\u53e3\u5ea7\u958b\u8a2d\u306e\u624b\u7d9a\u304d\u3092\u884c\u3044\u307e\u3059\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "\u041a\u0430\u043a \u044f \u043c\u043e\u0433\u0443 \u043d\u0430\u0447\u0430\u0442\u044c \u0438\u043d\u0432\u0435\u0441\u0442\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 UOB?",
+      "role": "user"
+    },
+    {
+      "content": "\u0427\u0442\u043e\u0431\u044b \u043d\u0430\u0447\u0430\u0442\u044c \u0438\u043d\u0432\u0435\u0441\u0442\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 UOB, \u0432\u0430\u043c \u043d\u0443\u0436\u043d\u043e \u043e\u0442\u043a\u0440\u044b\u0442\u044c \u0438\u043d\u0432\u0435\u0441\u0442\u0438\u0446\u0438\u043e\u043d\u043d\u044b\u0439 \u0441\u0447\u0435\u0442, \u0432\u044b\u0431\u0440\u0430\u0442\u044c \u0438\u043d\u0432\u0435\u0441\u0442\u0438\u0446\u0438\u043e\u043d\u043d\u044b\u0435 \u043f\u0440\u043e\u0434\u0443\u043a\u0442\u044b, \u043a\u043e\u0442\u043e\u0440\u044b\u0435 \u0441\u043e\u043e\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0443\u044e\u0442 \u0432\u0430\u0448\u0438\u043c \u0446\u0435\u043b\u044f\u043c, \u0438 \u0432\u043d\u0435\u0441\u0442\u0438 \u043f\u0435\u0440\u0432\u043e\u043d\u0430\u0447\u0430\u043b\u044c\u043d\u044b\u0439 \u0434\u0435\u043f\u043e\u0437\u0438\u0442. \u041a\u0440\u043e\u043c\u0435 \u0442\u043e\u0433\u043e, \u0440\u0435\u043a\u043e\u043c\u0435\u043d\u0434\u0443\u0435\u0442\u0441\u044f \u043f\u0440\u043e\u043a\u043e\u043d\u0441\u0443\u043b\u044c\u0442\u0438\u0440\u043e\u0432\u0430\u0442\u044c\u0441\u044f \u0441 \u0444\u0438\u043d\u0430\u043d\u0441\u043e\u0432\u044b\u043c \u043a\u043e\u043d\u0441\u0443\u043b\u044c\u0442\u0430\u043d\u0442\u043e\u043c.",
+      "role": "assistant"
+    },
+    {
+      "content": "Bagaimana cara melakukan investasi di UOB?",
+      "role": "user"
+    },
+    {
+      "content": "Anda dapat melakukan investasi di UOB dengan membuka akun investasi, memilih produk investasi yang sesuai, dan menyetor dana ke dalam akun tersebut. UOB juga menawarkan platform online untuk memudahkan investasi.",
+      "role": "assistant"
+    },
+    {
+      "content": "Quels sont les frais d'investissement chez UOB ?",
+      "role": "user"
+    },
+    {
+      "content": "Les frais d'investissement chez UOB varient selon le produit et peuvent inclure des frais de gestion, des frais de performance, et des frais d'entr\u00e9e ou de sortie. Il est conseill\u00e9 de consulter les d\u00e9tails sp\u00e9cifiques pour chaque produit.",
+      "role": "assistant"
+    },
+    {
+      "content": "How do I check my investment portfolio with UOB?",
+      "role": "user"
+    },
+    {
+      "content": "You can check your investment portfolio through UOB's online banking portal or mobile app, where you can view your account balance, transaction history, and performance metrics for your investments.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u00bfQu\u00e9 es el servicio de asesor\u00eda de inversiones de UOB?",
+      "role": "user"
+    },
+    {
+      "content": "El servicio de asesor\u00eda de inversiones de UOB ofrece asesoramiento personalizado sobre la gesti\u00f3n de inversiones, ayudando a los clientes a seleccionar productos adecuados seg\u00fan sus objetivos financieros y tolerancia al riesgo.",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u306e\u6295\u8cc7\u4fe1\u8a17\u306e\u624b\u6570\u6599\u306f\u3069\u306e\u304f\u3089\u3044\u3067\u3059\u304b\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "\u6295\u8cc7\u4fe1\u8a17\u306e\u624b\u6570\u6599\u306f\u30d5\u30a1\u30f3\u30c9\u306b\u3088\u3063\u3066\u7570\u306a\u308a\u307e\u3059\u304c\u3001\u4e00\u822c\u7684\u306b\u306f\u7ba1\u7406\u624b\u6570\u6599\u3084\u8ca9\u58f2\u624b\u6570\u6599\u304c\u542b\u307e\u308c\u307e\u3059\u3002\u8a73\u7d30\u306f\u5177\u4f53\u7684\u306a\u30d5\u30a1\u30f3\u30c9\u306e\u8aac\u660e\u66f8\u3067\u78ba\u8a8d\u3067\u304d\u307e\u3059\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "Apa itu produk investasi terstruktur UOB?",
+      "role": "user"
+    },
+    {
+      "content": "Produk investasi terstruktur UOB dirancang untuk memberikan imbal hasil yang sesuai dengan kinerja aset yang mendasarinya. Ini menawarkan potensi keuntungan yang lebih tinggi dengan risiko yang terkelola.",
+      "role": "assistant"
+    },
+    {
+      "content": "Quels sont les avantages d'investir avec UOB ?",
+      "role": "user"
+    },
+    {
+      "content": "Les avantages d'investir avec UOB incluent un acc\u00e8s \u00e0 une large gamme de produits d'investissement, des conseils d'experts, et des outils en ligne pour g\u00e9rer vos investissements facilement.",
+      "role": "assistant"
+    },
+    {
+      "content": "How do I transfer funds to my investment account at UOB?",
+      "role": "user"
+    },
+    {
+      "content": "You can transfer funds to your investment account using UOB's online banking service, through a bank transfer, or by visiting a UOB branch to make a deposit in person.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u00bfCu\u00e1nto tiempo tardan las inversiones en UOB en madurar?",
+      "role": "user"
+    },
+    {
+      "content": "El tiempo que tarda una inversi\u00f3n en madurar depende del tipo de producto y del plazo de inversi\u00f3n; generalmente, se recomienda a los inversores a largo plazo que mantengan sus inversiones durante al menos tres a cinco a\u00f1os.",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u306e\u8cc7\u7523\u904b\u7528\u30b5\u30fc\u30d3\u30b9\u3068\u306f\u4f55\u3067\u3059\u304b\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "\u8cc7\u7523\u904b\u7528\u30b5\u30fc\u30d3\u30b9\u306f\u3001\u5c02\u9580\u306e\u30d5\u30a1\u30a4\u30ca\u30f3\u30b7\u30e3\u30eb\u30a2\u30c9\u30d0\u30a4\u30b6\u30fc\u306b\u3088\u308b\u500b\u5225\u306e\u8cc7\u7523\u7ba1\u7406\u3092\u63d0\u4f9b\u3057\u3001\u9867\u5ba2\u306e\u76ee\u6a19\u306b\u57fa\u3065\u3044\u305f\u6295\u8cc7\u6226\u7565\u3092\u69cb\u7bc9\u3057\u307e\u3059\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "\u041a\u0430\u043a\u043e\u0432\u0430 \u043c\u0438\u043d\u0438\u043c\u0430\u043b\u044c\u043d\u0430\u044f \u0441\u0443\u043c\u043c\u0430 \u0434\u043b\u044f \u0438\u043d\u0432\u0435\u0441\u0442\u0438\u0446\u0438\u0439 \u0432 UOB?",
+      "role": "user"
+    },
+    {
+      "content": "\u041c\u0438\u043d\u0438\u043c\u0430\u043b\u044c\u043d\u0430\u044f \u0441\u0443\u043c\u043c\u0430 \u0434\u043b\u044f \u0438\u043d\u0432\u0435\u0441\u0442\u0438\u0446\u0438\u0439 \u0437\u0430\u0432\u0438\u0441\u0438\u0442 \u043e\u0442 \u043a\u043e\u043d\u043a\u0440\u0435\u0442\u043d\u043e\u0433\u043e \u043f\u0440\u043e\u0434\u0443\u043a\u0442\u0430 \u0438 \u043c\u043e\u0436\u0435\u0442 \u0432\u0430\u0440\u044c\u0438\u0440\u043e\u0432\u0430\u0442\u044c\u0441\u044f \u043e\u0442 \u043d\u0435\u0441\u043a\u043e\u043b\u044c\u043a\u0438\u0445 \u0441\u043e\u0442\u0435\u043d \u0434\u043e \u0442\u044b\u0441\u044f\u0447 \u0440\u0443\u0431\u043b\u0435\u0439. \u0420\u0435\u043a\u043e\u043c\u0435\u043d\u0434\u0443\u0435\u0442\u0441\u044f \u043e\u0431\u0440\u0430\u0442\u0438\u0442\u044c\u0441\u044f \u043a \u043c\u0435\u043d\u0435\u0434\u0436\u0435\u0440\u0443 \u043f\u043e \u0438\u043d\u0432\u0435\u0441\u0442\u0438\u0446\u0438\u044f\u043c \u0434\u043b\u044f \u043f\u043e\u043b\u0443\u0447\u0435\u043d\u0438\u044f \u0442\u043e\u0447\u043d\u043e\u0439 \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u0438.",
+      "role": "assistant"
+    },
+    {
+      "content": "Bagaimana cara mengakses laporan investasi saya di UOB?",
+      "role": "user"
+    },
+    {
+      "content": "Anda dapat mengakses laporan investasi Anda melalui aplikasi UOB atau layanan perbankan internet, yang menyediakan ringkasan kinerja investasi Anda, saldo, dan informasi penting lainnya.",
+      "role": "assistant"
+    },
+    {
+      "content": "Quels types de fonds communs UOB propose-t-il ?",
+      "role": "user"
+    },
+    {
+      "content": "UOB propose diff\u00e9rents types de fonds communs, y compris des fonds d'actions, des fonds obligataires, et des fonds mixtes, permettant aux investisseurs de diversifier leurs portefeuilles en fonction de leur tol\u00e9rance au risque.",
+      "role": "assistant"
+    },
+    {
+      "content": "Can I invest through UOB if I am not a Singapore citizen?",
+      "role": "user"
+    },
+    {
+      "content": "Yes, UOB offers investment services to both residents and non-residents, but you may need to meet specific criteria and provide additional documentation to open an investment account.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u00bfCu\u00e1les son los riesgos asociados con la inversi\u00f3n en UOB?",
+      "role": "user"
+    },
+    {
+      "content": "Los riesgos asociados con la inversi\u00f3n en UOB incluyen la volatilidad del mercado, el riesgo de cr\u00e9dito, y el riesgo de liquidez. Es importante evaluar su tolerancia al riesgo y diversificar su cartera.",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u306e\u9867\u5ba2\u5411\u3051\u30bb\u30df\u30ca\u30fc\u306f\u3069\u306e\u3088\u3046\u306b\u53c2\u52a0\u3067\u304d\u307e\u3059\u304b\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB\u306f\u5b9a\u671f\u7684\u306b\u6295\u8cc7\u30bb\u30df\u30ca\u30fc\u3092\u958b\u50ac\u3057\u3066\u304a\u308a\u3001\u53c2\u52a0\u306f\u30aa\u30f3\u30e9\u30a4\u30f3\u307e\u305f\u306f\u652f\u5e97\u3067\u306e\u7533\u3057\u8fbc\u307f\u304c\u53ef\u80fd\u3067\u3059\u3002\u30a6\u30a7\u30d6\u30b5\u30a4\u30c8\u3092\u30c1\u30a7\u30c3\u30af\u3057\u3066\u6700\u65b0\u306e\u30bb\u30df\u30ca\u30fc\u60c5\u5831\u3092\u5165\u624b\u3057\u3066\u304f\u3060\u3055\u3044\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "What are UOB's investment strategies?",
+      "role": "user"
+    },
+    {
+      "content": "UOB's investment strategies typically focus on asset allocation, diversification, and risk management to optimize returns while aligning with clients' financial goals and risk tolerances.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u00bfUOB ofrece opciones de inversi\u00f3n sostenibles?",
+      "role": "user"
+    },
+    {
+      "content": "S\u00ed, UOB ha introducido opciones de inversi\u00f3n sostenibles que permiten a los clientes invertir en proyectos y empresas que cumplen con criterios ambientales, sociales y de gobernanza (ESG).",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u306e\u5b9a\u671f\u9810\u91d1\u306e\u5229\u7387\u306f\u3069\u306e\u304f\u3089\u3044\u3067\u3059\u304b\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB\u306e\u5b9a\u671f\u9810\u91d1\u306e\u5229\u7387\u306f\u5e02\u5834\u306e\u72b6\u6cc1\u306b\u3088\u3063\u3066\u7570\u306a\u308a\u307e\u3059\u304c\u3001\u9867\u5ba2\u306f\u7af6\u4e89\u529b\u306e\u3042\u308b\u5229\u7387\u3092\u4eab\u53d7\u3067\u304d\u307e\u3059\u3002\u6700\u65b0\u306e\u5229\u7387\u306b\u3064\u3044\u3066\u306f\u3001UOB\u306e\u516c\u5f0f\u30a6\u30a7\u30d6\u30b5\u30a4\u30c8\u3092\u53c2\u7167\u3057\u3066\u304f\u3060\u3055\u3044\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "What are UOB's policies on ethical investing?",
+      "role": "user"
+    },
+    {
+      "content": "UOB emphasizes ethical investing by integrating environmental, social, and governance (ESG) criteria into its investment processes, promoting responsible investment practices among its clients.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u00bfUOB ofrece cuentas de ahorro para ni\u00f1os?",
+      "role": "user"
+    },
+    {
+      "content": "S\u00ed, UOB ofrece cuentas de ahorro para ni\u00f1os que permiten a los padres ense\u00f1ar a sus hijos sobre la importancia del ahorro y la inversi\u00f3n a una edad temprana.",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u306e\u30ed\u30dc\u30a2\u30c9\u30d0\u30a4\u30b6\u30fc\u30b5\u30fc\u30d3\u30b9\u306f\u3069\u306e\u3088\u3046\u306a\u3082\u306e\u3067\u3059\u304b\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB\u306e\u30ed\u30dc\u30a2\u30c9\u30d0\u30a4\u30b6\u30fc\u30b5\u30fc\u30d3\u30b9\u306f\u3001\u6295\u8cc7\u76ee\u6a19\u3084\u30ea\u30b9\u30af\u8a31\u5bb9\u5ea6\u306b\u57fa\u3065\u3044\u3066\u3001\u500b\u5225\u306b\u30ab\u30b9\u30bf\u30de\u30a4\u30ba\u3055\u308c\u305f\u30dd\u30fc\u30c8\u30d5\u30a9\u30ea\u30aa\u3092\u81ea\u52d5\u3067\u63d0\u4f9b\u3057\u3001\u624b\u8efd\u306b\u6295\u8cc7\u3092\u59cb\u3081\u3089\u308c\u308b\u3088\u3046\u306b\u3057\u307e\u3059\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "\u041a\u0430\u043a\u043e\u0432\u0430 \u043f\u043e\u043b\u0438\u0442\u0438\u043a\u0430 UOB \u0432 \u043e\u0442\u043d\u043e\u0448\u0435\u043d\u0438\u0438 \u0438\u043d\u0432\u0435\u0441\u0442\u0438\u0446\u0438\u043e\u043d\u043d\u043e\u0433\u043e \u0441\u0442\u0440\u0430\u0445\u043e\u0432\u0430\u043d\u0438\u044f?",
+      "role": "user"
+    },
+    {
+      "content": "UOB \u043f\u0440\u0435\u0434\u043b\u0430\u0433\u0430\u0435\u0442 \u0438\u043d\u0432\u0435\u0441\u0442\u0438\u0446\u0438\u043e\u043d\u043d\u043e\u0435 \u0441\u0442\u0440\u0430\u0445\u043e\u0432\u0430\u043d\u0438\u0435, \u043a\u043e\u0442\u043e\u0440\u043e\u0435 \u0441\u043e\u0447\u0435\u0442\u0430\u0435\u0442 \u0432 \u0441\u0435\u0431\u0435 \u0441\u0442\u0440\u0430\u0445\u043e\u0432\u043e\u0435 \u043f\u043e\u043a\u0440\u044b\u0442\u0438\u0435 \u0438 \u0438\u043d\u0432\u0435\u0441\u0442\u0438\u0446\u0438\u043e\u043d\u043d\u044b\u0435 \u0432\u043e\u0437\u043c\u043e\u0436\u043d\u043e\u0441\u0442\u0438, \u043e\u0431\u0435\u0441\u043f\u0435\u0447\u0438\u0432\u0430\u044f \u0437\u0430\u0449\u0438\u0442\u0443 \u0438 \u043f\u043e\u0442\u0435\u043d\u0446\u0438\u0430\u043b\u044c\u043d\u044b\u0439 \u0440\u043e\u0441\u0442 \u043a\u0430\u043f\u0438\u0442\u0430\u043b\u0430 \u0434\u043b\u044f \u043a\u043b\u0438\u0435\u043d\u0442\u043e\u0432.",
+      "role": "assistant"
+    },
+    {
+      "content": "Bagaimana cara mengatur investasi otomatis di UOB?",
+      "role": "user"
+    },
+    {
+      "content": "Anda dapat mengatur investasi otomatis melalui aplikasi UOB dengan menentukan jumlah investasi dan frekuensi setoran, yang akan secara otomatis ditransfer ke akun investasi Anda.",
+      "role": "assistant"
+    },
+    {
+      "content": "Quels outils de gestion de portefeuille UOB propose-t-il ?",
+      "role": "user"
+    },
+    {
+      "content": "UOB propose des outils en ligne pour la gestion de portefeuille, permettant aux investisseurs de suivre la performance de leurs investissements, de r\u00e9\u00e9quilibrer leurs actifs et de recevoir des conseils bas\u00e9s sur les donn\u00e9es du march\u00e9.",
+      "role": "assistant"
+    },
+    {
+      "content": "How can I withdraw funds from my UOB investment account?",
+      "role": "user"
+    },
+    {
+      "content": "To withdraw funds from your UOB investment account, you can request a withdrawal through the online banking platform, or you may visit a branch for assistance. The withdrawal process may vary depending on the type of investment product.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u00bfQu\u00e9 es el asesoramiento en inversiones de UOB?",
+      "role": "user"
+    },
+    {
+      "content": "El asesoramiento en inversiones de UOB implica brindar apoyo y orientaci\u00f3n a los clientes para ayudarles a tomar decisiones informadas sobre sus inversiones, considerando su perfil de riesgo y objetivos financieros.",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u306e\u8cc7\u7523\u904b\u7528\u306e\u76ee\u6a19\u306f\u4f55\u3067\u3059\u304b\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB\u306e\u8cc7\u7523\u904b\u7528\u306e\u76ee\u6a19\u306f\u3001\u9867\u5ba2\u306e\u30ea\u30b9\u30af\u8a31\u5bb9\u5ea6\u3068\u8ca1\u52d9\u76ee\u6a19\u306b\u57fa\u3065\u3044\u3066\u6295\u8cc7\u3092\u6700\u9069\u5316\u3057\u3001\u9577\u671f\u7684\u306a\u8cc7\u672c\u6210\u9577\u3068\u5b89\u5b9a\u7684\u306a\u53ce\u5165\u3092\u63d0\u4f9b\u3059\u308b\u3053\u3068\u3067\u3059\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "How can I apply for a UOB personal loan?",
+      "role": "user"
+    },
+    {
+      "content": "You can apply for a UOB personal loan via the UOB website or by visiting a branch.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u00bfCu\u00e1les son los requisitos para solicitar un pr\u00e9stamo personal en UOB?",
+      "role": "user"
+    },
+    {
+      "content": "Para solicitar un pr\u00e9stamo personal en UOB, necesita abrir una cuenta de inversi\u00f3n, cumplir con los requisitos de inversi\u00f3n m\u00ednima que var\u00edan seg\u00fan el producto y, en algunos casos, proporcionar documentaci\u00f3n adicional sobre su situaci\u00f3n financiera.",
+      "role": "assistant"
+    },
+    {
+      "content": "Can I use my UOB personal loan for home renovation?",
+      "role": "user"
+    },
+    {
+      "content": "Yes, UOB personal loans can be used for home renovation projects.",
+      "role": "assistant"
+    },
+    {
+      "content": "What is the interest rate for UOB personal loans?",
+      "role": "user"
+    },
+    {
+      "content": "The interest rate varies depending on your loan amount and tenure.",
+      "role": "assistant"
+    },
+    {
+      "content": "How long does it take to get approval for a UOB business loan?",
+      "role": "user"
+    },
+    {
+      "content": "Approval can take anywhere from a few days to a few weeks, depending on the complexity of your application.",
+      "role": "assistant"
+    },
+    {
+      "content": "What types of personal loans does UOB offer?",
+      "role": "user"
+    },
+    {
+      "content": "UOB offers personal loans for various purposes, including debt consolidation, home renovation, and education.",
+      "role": "assistant"
+    },
+    {
+      "content": "Is there a minimum income requirement for a UOB personal loan?",
+      "role": "user"
+    },
+    {
+      "content": "Yes, there is a minimum income requirement, which varies based on the type of loan.",
+      "role": "assistant"
+    },
+    {
+      "content": "Can I apply for a UOB business loan if I\u2019m self-employed?",
+      "role": "user"
+    },
+    {
+      "content": "Yes, self-employed individuals can apply for a UOB business loan, subject to income verification.",
+      "role": "assistant"
+    },
+    {
+      "content": "What are the repayment options for UOB personal loans?",
+      "role": "user"
+    },
+    {
+      "content": "You can choose from various repayment options, including monthly installments and lump-sum payments.",
+      "role": "assistant"
+    },
+    {
+      "content": "Can I check my loan balance online with UOB?",
+      "role": "user"
+    },
+    {
+      "content": "Yes, you can check your loan balance through UOB Internet Banking.",
+      "role": "assistant"
+    },
+    {
+      "content": "What is the UOB Home Renovation Loan?",
+      "role": "user"
+    },
+    {
+      "content": "The UOB Home Renovation Loan is specifically designed to help homeowners finance their renovation projects.",
+      "role": "assistant"
+    },
+    {
+      "content": "What are the eligibility criteria for UOB business loans?",
+      "role": "user"
+    },
+    {
+      "content": "Eligibility criteria include having a registered business, a good credit history, and sufficient financial statements.",
+      "role": "assistant"
+    },
+    {
+      "content": "Can I refinance my existing loans with UOB?",
+      "role": "user"
+    },
+    {
+      "content": "Yes, UOB offers refinancing options for existing loans to help reduce your monthly payments.",
+      "role": "assistant"
+    },
+    {
+      "content": "What happens if I miss a payment on my UOB loan?",
+      "role": "user"
+    },
+    {
+      "content": "Missing a payment may result in late fees and can affect your credit score.",
+      "role": "assistant"
+    },
+    {
+      "content": "Can I pay off my UOB personal loan early?",
+      "role": "user"
+    },
+    {
+      "content": "Yes, you can pay off your UOB personal loan early, but there may be a penalty fee.",
+      "role": "assistant"
+    },
+    {
+      "content": "Does UOB offer loans for purchasing a vehicle?",
+      "role": "user"
+    },
+    {
+      "content": "Yes, UOB offers car loans to help you finance your vehicle purchase.",
+      "role": "assistant"
+    },
+    {
+      "content": "How do I contact UOB for loan inquiries?",
+      "role": "user"
+    },
+    {
+      "content": "You can contact UOB customer service via phone or visit a branch for assistance.",
+      "role": "assistant"
+    },
+    {
+      "content": "How can I lower my monthly loan payments with UOB?",
+      "role": "user"
+    },
+    {
+      "content": "You may consider refinancing your loan or extending your loan tenure to lower monthly payments.",
+      "role": "assistant"
+    },
+    {
+      "content": "What is the UOB Education Loan?",
+      "role": "user"
+    },
+    {
+      "content": "The UOB Education Loan is designed to help students finance their education expenses, including tuition and fees.",
+      "role": "assistant"
+    },
+    {
+      "content": "What are the repayment terms for UOB car loans?",
+      "role": "user"
+    },
+    {
+      "content": "Repayment terms for UOB car loans typically range from 1 to 7 years, depending on the loan amount.",
+      "role": "assistant"
+    },
+    {
+      "content": "Is collateral required for UOB personal loans?",
+      "role": "user"
+    },
+    {
+      "content": "No, UOB personal loans are unsecured, meaning no collateral is required.",
+      "role": "assistant"
+    },
+    {
+      "content": "Can I transfer my existing loan to UOB?",
+      "role": "user"
+    },
+    {
+      "content": "Yes, UOB offers the option to transfer your existing loans from other banks.",
+      "role": "assistant"
+    },
+    {
+      "content": "What is the maximum amount I can borrow with a UOB personal loan?",
+      "role": "user"
+    },
+    {
+      "content": "The maximum loan amount varies based on your income and creditworthiness.",
+      "role": "assistant"
+    },
+    {
+      "content": "Are there any fees associated with UOB personal loans?",
+      "role": "user"
+    },
+    {
+      "content": "Yes, there may be processing fees and early repayment fees, depending on the loan terms.",
+      "role": "assistant"
+    },
+    {
+      "content": "Can I check the status of my UOB loan application?",
+      "role": "user"
+    },
+    {
+      "content": "You can check the status of your loan application through UOB Internet Banking or by contacting customer service.",
+      "role": "assistant"
+    },
+    {
+      "content": "How can I report a fraudulent transaction on my UOB loan?",
+      "role": "user"
+    },
+    {
+      "content": "You can report fraudulent transactions via the UOB customer service hotline or through Internet Banking.",
+      "role": "assistant"
+    },
+    {
+      "content": "What types of savings accounts does UOB offer?",
+      "role": "user"
+    },
+    {
+      "content": "UOB offers various savings accounts, including the UOB Stash Account, UOB One Account, and UOB Savings Account, each with different features and interest rates.",
+      "role": "assistant"
+    },
+    {
+      "content": "What is the interest rate for UOB savings accounts?",
+      "role": "user"
+    },
+    {
+      "content": "The interest rate for UOB savings accounts varies depending on the account type and balance. Generally, rates are higher for larger deposits and certain promotional offers.",
+      "role": "assistant"
+    },
+    {
+      "content": "How can I open a UOB savings account?",
+      "role": "user"
+    },
+    {
+      "content": "You can open a UOB savings account online through the UOB website or by visiting a branch with the necessary identification documents.",
+      "role": "assistant"
+    },
+    {
+      "content": "What is the minimum balance requirement for UOB savings accounts?",
+      "role": "user"
+    },
+    {
+      "content": "The minimum balance requirement varies by account type, but it typically ranges from S$500 to S$1,000.",
+      "role": "assistant"
+    },
+    {
+      "content": "Can I link my UOB savings account to my debit card?",
+      "role": "user"
+    },
+    {
+      "content": "Yes, you can link your UOB savings account to a UOB debit card for easy access to your funds.",
+      "role": "assistant"
+    },
+    {
+      "content": "What are the benefits of the UOB One Account?",
+      "role": "user"
+    },
+    {
+      "content": "The UOB One Account offers high interest rates, cashback rewards, and no monthly fees when specific conditions are met, such as maintaining a minimum balance.",
+      "role": "assistant"
+    },
+    {
+      "content": "How is interest calculated for UOB savings accounts?",
+      "role": "user"
+    },
+    {
+      "content": "Interest for UOB savings accounts is typically calculated daily and credited monthly, based on the account balance.",
+      "role": "assistant"
+    },
+    {
+      "content": "Can I withdraw funds from my UOB savings account anytime?",
+      "role": "user"
+    },
+    {
+      "content": "Yes, you can withdraw funds from your UOB savings account anytime without penalties, provided you maintain the minimum balance requirement.",
+      "role": "assistant"
+    },
+    {
+      "content": "Are there any fees associated with UOB savings accounts?",
+      "role": "user"
+    },
+    {
+      "content": "UOB savings accounts generally do not have monthly fees, but there may be fees for services such as international transactions or overdrafts.",
+      "role": "assistant"
+    },
+    {
+      "content": "What is the UOB Stash Account?",
+      "role": "user"
+    },
+    {
+      "content": "The UOB Stash Account is a flexible savings account that allows you to save while enjoying higher interest rates based on your deposits and savings behavior.",
+      "role": "assistant"
+    },
+    {
+      "content": "Can I set up automatic transfers to my UOB savings account?",
+      "role": "user"
+    },
+    {
+      "content": "Yes, you can set up automatic transfers to your UOB savings account from your checking account to help you save regularly.",
+      "role": "assistant"
+    },
+    {
+      "content": "Is the interest on UOB savings accounts taxable?",
+      "role": "user"
+    },
+    {
+      "content": "Yes, the interest earned on UOB savings accounts is subject to tax under Singapore law.",
+      "role": "assistant"
+    },
+    {
+      "content": "What happens if I do not meet the minimum balance for my UOB savings account?",
+      "role": "user"
+    },
+    {
+      "content": "If you do not meet the minimum balance requirement, you may incur a fee or earn a lower interest rate on your account.",
+      "role": "assistant"
+    },
+    {
+      "content": "Can I access my UOB savings account through mobile banking?",
+      "role": "user"
+    },
+    {
+      "content": "Yes, you can access your UOB savings account through the UOB mobile banking app, allowing you to check balances, make transfers, and more.",
+      "role": "assistant"
+    },
+    {
+      "content": "How often is interest credited to UOB savings accounts?",
+      "role": "user"
+    },
+    {
+      "content": "Interest is usually credited to UOB savings accounts on a monthly basis.",
+      "role": "assistant"
+    },
+    {
+      "content": "What is the maximum interest rate I can earn on a UOB savings account?",
+      "role": "user"
+    },
+    {
+      "content": "The maximum interest rate you can earn depends on the type of savings account and your account balance, with promotional rates occasionally offered.",
+      "role": "assistant"
+    },
+    {
+      "content": "Was sind die Zinss\u00e4tze f\u00fcr UOB-Sparkonten?",
+      "role": "user"
+    },
+    {
+      "content": "Die Zinss\u00e4tze f\u00fcr UOB-Sparkonten variieren je nach Kontotyp und Guthaben. In der Regel sind die S\u00e4tze f\u00fcr gr\u00f6\u00dfere Einlagen und bestimmte Sonderangebote h\u00f6her.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u0643\u064a\u0641\u064a\u0629 \u0641\u062a\u062d \u062d\u0633\u0627\u0628 \u0627\u062f\u062e\u0627\u0631 \u0641\u064a UOB\u061f",
+      "role": "user"
+    },
+    {
+      "content": "\u064a\u0645\u0643\u0646\u0643 \u0641\u062a\u062d \u062d\u0633\u0627\u0628 \u0627\u062f\u062e\u0627\u0631 \u0641\u064a UOB \u0639\u0628\u0631 \u0627\u0644\u0625\u0646\u062a\u0631\u0646\u062a \u0645\u0646 \u062e\u0644\u0627\u0644 \u0645\u0648\u0642\u0639 UOB \u0623\u0648 \u0628\u0632\u064a\u0627\u0631\u0629 \u0623\u062d\u062f \u0627\u0644\u0641\u0631\u0648\u0639 \u0645\u0639 \u0627\u0644\u0645\u0633\u062a\u0646\u062f\u0627\u062a \u0627\u0644\u062a\u0639\u0631\u064a\u0641\u064a\u0629 \u0627\u0644\u0644\u0627\u0632\u0645\u0629.",
+      "role": "assistant"
+    },
+    {
+      "content": "Quelles sont les conditions minimales de solde pour les comptes d'\u00e9pargne UOB ?",
+      "role": "user"
+    },
+    {
+      "content": "La condition de solde minimum varie selon le type de compte, mais elle se situe g\u00e9n\u00e9ralement entre 500 S$ et 1 000 S$.",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB'daki tasarruf hesaplar\u0131m\u0131 banka kart\u0131ma ba\u011flayabilir miyim?",
+      "role": "user"
+    },
+    {
+      "content": "Evet, UOB tasarruf hesab\u0131n\u0131z\u0131 UOB banka kart\u0131n\u0131za ba\u011flayabilirsiniz, b\u00f6ylece fonlar\u0131n\u0131za kolayca eri\u015febilirsiniz.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u0645\u0627 \u0647\u064a \u0645\u0632\u0627\u064a\u0627 \u062d\u0633\u0627\u0628 UOB One\u061f",
+      "role": "user"
+    },
+    {
+      "content": "\u064a\u0648\u0641\u0631 \u062d\u0633\u0627\u0628 UOB One \u0645\u0639\u062f\u0644\u0627\u062a \u0641\u0627\u0626\u062f\u0629 \u0645\u0631\u062a\u0641\u0639\u0629 \u0648\u0645\u0643\u0627\u0641\u0622\u062a \u0646\u0642\u062f\u064a\u0629\u060c \u0648\u0644\u0627 \u062a\u0648\u062c\u062f \u0631\u0633\u0648\u0645 \u0634\u0647\u0631\u064a\u0629 \u0639\u0646\u062f \u062a\u062d\u0642\u064a\u0642 \u0634\u0631\u0648\u0637 \u0645\u0639\u064a\u0646\u0629 \u0645\u062b\u0644 \u0627\u0644\u062d\u0641\u0627\u0638 \u0639\u0644\u0649 \u0627\u0644\u062d\u062f \u0627\u0644\u0623\u062f\u0646\u0649 \u0645\u0646 \u0627\u0644\u0631\u0635\u064a\u062f.",
+      "role": "assistant"
+    },
+    {
+      "content": "Wie wird Zinsen f\u00fcr UOB-Sparkonten berechnet?",
+      "role": "user"
+    },
+    {
+      "content": "Zinsen f\u00fcr UOB-Sparkonten werden typischerweise t\u00e4glich berechnet und monatlich gutgeschrieben, basierend auf dem Kontostand.",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB tasarruf hesab\u0131mdan istedi\u011fim zaman para \u00e7ekebilir miyim?",
+      "role": "user"
+    },
+    {
+      "content": "Evet, UOB tasarruf hesab\u0131n\u0131zdan istedi\u011finiz zaman ceza olmaks\u0131z\u0131n para \u00e7ekebilirsiniz, sa\u011flanan minimum bakiye gereklili\u011fine dikkat ederek.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u00bfHay tarifas asociadas con las cuentas de ahorro de UOB?",
+      "role": "user"
+    },
+    {
+      "content": "Las cuentas de ahorro de UOB generalmente no tienen tarifas mensuales, pero puede haber tarifas por servicios como transacciones internacionales o sobregiros.",
+      "role": "assistant"
+    },
+    {
+      "content": "Wat is de UOB Stash Account?",
+      "role": "user"
+    },
+    {
+      "content": "De UOB Stash Account is een flexibele spaarrekening die je in staat stelt om te sparen terwijl je profiteert van hogere rentepercentages op basis van je stortingen en spaargedrag.",
+      "role": "assistant"
+    },
+    {
+      "content": "Can I set up automatic transfers to my UOB savings account?",
+      "role": "user"
+    },
+    {
+      "content": "S\u00ed, puede configurar transferencias autom\u00e1ticas a su cuenta de ahorros de UOB desde su cuenta corriente para ayudarle a ahorrar regularmente.",
+      "role": "assistant"
+    },
+    {
+      "content": "Is the interest on UOB savings accounts taxable?",
+      "role": "user"
+    },
+    {
+      "content": "Oui, les int\u00e9r\u00eats gagn\u00e9s sur les comptes d'\u00e9pargne UOB sont soumis \u00e0 l'imp\u00f4t en vertu de la loi singapourienne.",
+      "role": "assistant"
+    },
+    {
+      "content": "Apa yang terjadi jika saya tidak memenuhi saldo minimum untuk akun tabungan UOB saya?",
+      "role": "user"
+    },
+    {
+      "content": "Jika Anda tidak memenuhi syarat saldo minimum, Anda mungkin akan dikenakan biaya atau mendapatkan suku bunga yang lebih rendah pada akun Anda.",
+      "role": "assistant"
+    },
+    {
+      "content": "Can I access my UOB savings account through mobile banking?",
+      "role": "user"
+    },
+    {
+      "content": "\u0414\u0430, \u0432\u044b \u043c\u043e\u0436\u0435\u0442\u0435 \u043f\u043e\u043b\u0443\u0447\u0438\u0442\u044c \u0434\u043e\u0441\u0442\u0443\u043f \u043a \u0441\u0432\u043e\u0435\u043c\u0443 \u0441\u0431\u0435\u0440\u0435\u0433\u0430\u0442\u0435\u043b\u044c\u043d\u043e\u043c\u0443 \u0441\u0447\u0435\u0442\u0443 UOB \u0447\u0435\u0440\u0435\u0437 \u043c\u043e\u0431\u0438\u043b\u044c\u043d\u043e\u0435 \u0431\u0430\u043d\u043a\u043e\u0432\u0441\u043a\u043e\u0435 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435 UOB, \u043f\u043e\u0437\u0432\u043e\u043b\u044f\u044e\u0449\u0435\u0435 \u0432\u0430\u043c \u043f\u0440\u043e\u0432\u0435\u0440\u044f\u0442\u044c \u0431\u0430\u043b\u0430\u043d\u0441\u044b, \u0434\u0435\u043b\u0430\u0442\u044c \u043f\u0435\u0440\u0435\u0432\u043e\u0434\u044b \u0438 \u043c\u043d\u043e\u0433\u043e\u0435 \u0434\u0440\u0443\u0433\u043e\u0435.",
+      "role": "assistant"
+    },
+    {
+      "content": "How often is interest credited to UOB savings accounts?",
+      "role": "user"
+    },
+    {
+      "content": "Interessi generalmente vengono accreditati sui conti di risparmio UOB su base mensile.",
+      "role": "assistant"
+    },
+    {
+      "content": "What is the maximum interest rate I can earn on a UOB savings account?",
+      "role": "user"
+    },
+    {
+      "content": "Maximum interessa che puoi guadagnare dipende dal tipo di conto di risparmio e dal tuo saldo, con tassi promozionali occasionalmente offerti.",
+      "role": "assistant"
+    },
+    {
+      "content": "When was UOB founded?",
+      "role": "user"
+    },
+    {
+      "content": "UOB was founded in 1935 as United Chinese Bank in Singapore.",
+      "role": "assistant"
+    },
+    {
+      "content": "What does UOB stand for?",
+      "role": "user"
+    },
+    {
+      "content": "UOB stands for United Overseas Bank.",
+      "role": "assistant"
+    },
+    {
+      "content": "Who was the founder of UOB?",
+      "role": "user"
+    },
+    {
+      "content": "UOB was founded by Dr. Goh Keng Swee, who played a significant role in its early development.",
+      "role": "assistant"
+    },
+    {
+      "content": "Where was the first UOB branch located?",
+      "role": "user"
+    },
+    {
+      "content": "The first UOB branch was located in the Chinatown area of Singapore.",
+      "role": "assistant"
+    },
+    {
+      "content": "How did UOB expand internationally?",
+      "role": "user"
+    },
+    {
+      "content": "UOB expanded internationally through acquisitions and establishing branches in various countries, including Malaysia, Indonesia, and China.",
+      "role": "assistant"
+    },
+    {
+      "content": "What year did UOB become a publicly listed company?",
+      "role": "user"
+    },
+    {
+      "content": "UOB became a publicly listed company in 1970 on the Singapore Stock Exchange.",
+      "role": "assistant"
+    },
+    {
+      "content": "What significant acquisition did UOB make in 2001?",
+      "role": "user"
+    },
+    {
+      "content": "In 2001, UOB acquired Overseas Union Bank, strengthening its position in Singapore and the region.",
+      "role": "assistant"
+    },
+    {
+      "content": "What was UOB's slogan in the 1980s?",
+      "role": "user"
+    },
+    {
+      "content": "UOB's slogan in the 1980s was \"Your Bank of Choice.\"",
+      "role": "assistant"
+    },
+    {
+      "content": "What innovative service did UOB introduce in the 1990s?",
+      "role": "user"
+    },
+    {
+      "content": "UOB introduced Internet banking in the 1990s, becoming one of the first banks in Singapore to offer online banking services.",
+      "role": "assistant"
+    },
+    {
+      "content": "How does UOB support community initiatives?",
+      "role": "user"
+    },
+    {
+      "content": "UOB supports community initiatives through the UOB Foundation, which focuses on education, art, and social welfare projects.",
+      "role": "assistant"
+    },
+    {
+      "content": "What awards has UOB received for its services?",
+      "role": "user"
+    },
+    {
+      "content": "UOB has received numerous awards for its banking services, including accolades for customer service and digital banking innovations.",
+      "role": "assistant"
+    },
+    {
+      "content": "What is the UOB Art Gallery?",
+      "role": "user"
+    },
+    {
+      "content": "The UOB Art Gallery showcases contemporary art and is dedicated to promoting local artists in the region.",
+      "role": "assistant"
+    },
+    {
+      "content": "How does UOB participate in sustainability initiatives?",
+      "role": "user"
+    },
+    {
+      "content": "UOB participates in sustainability initiatives by financing green projects and promoting environmentally friendly practices within its operations.",
+      "role": "assistant"
+    },
+    {
+      "content": "What was UOB's role during the Asian Financial Crisis?",
+      "role": "user"
+    },
+    {
+      "content": "During the Asian Financial Crisis, UOB focused on strengthening its balance sheet and ensuring stability, which helped it recover quickly.",
+      "role": "assistant"
+    },
+    {
+      "content": "What is the significance of UOB's logo?",
+      "role": "user"
+    },
+    {
+      "content": "UOB's logo, featuring a red and blue color scheme, represents stability, strength, and trust, which are core values of the bank.",
+      "role": "assistant"
+    },
+    {
+      "content": "When did UOB open its first overseas branch?",
+      "role": "user"
+    },
+    {
+      "content": "UOB opened its first overseas branch in Hong Kong in 1964, marking the beginning of its international expansion.",
+      "role": "assistant"
+    },
+    {
+      "content": "How many countries does UOB operate in today?",
+      "role": "user"
+    },
+    {
+      "content": "UOB operates in 19 countries today, providing a wide range of financial services to its customers.",
+      "role": "assistant"
+    },
+    {
+      "content": "What is the UOB Volunteer Programme?",
+      "role": "user"
+    },
+    {
+      "content": "The UOB Volunteer Programme encourages employees to engage in community service and volunteer activities, fostering a culture of giving back.",
+      "role": "assistant"
+    },
+    {
+      "content": "What year did UOB establish its wealth management division?",
+      "role": "user"
+    },
+    {
+      "content": "UOB established its wealth management division in 2003 to cater to the growing needs of affluent clients.",
+      "role": "assistant"
+    },
+    {
+      "content": "What kind of training does UOB provide to its employees?",
+      "role": "user"
+    },
+    {
+      "content": "UOB provides comprehensive training programs, including leadership development, technical skills, and customer service training to enhance employee capabilities.",
+      "role": "assistant"
+    },
+    {
+      "content": "How does UOB integrate technology in its services?",
+      "role": "user"
+    },
+    {
+      "content": "UOB integrates technology by offering digital banking solutions, mobile apps, and innovative financial products that enhance customer experience.",
+      "role": "assistant"
+    },
+    {
+      "content": "What is UOB's approach to risk management?",
+      "role": "user"
+    },
+    {
+      "content": "UOB adopts a proactive approach to risk management, focusing on identifying and mitigating risks to protect its assets and customers' interests.",
+      "role": "assistant"
+    },
+    {
+      "content": "What notable partnerships has UOB formed?",
+      "role": "user"
+    },
+    {
+      "content": "UOB has formed notable partnerships with various technology firms to enhance its digital banking capabilities and customer services.",
+      "role": "assistant"
+    },
+    {
+      "content": "How has UOB contributed to Singapore's economy?",
+      "role": "user"
+    },
+    {
+      "content": "UOB has contributed to Singapore's economy by providing financial services, creating jobs, and supporting local businesses and entrepreneurship initiatives.",
+      "role": "assistant"
+    },
+    {
+      "content": "What was UOB's market capitalization as of 2023?",
+      "role": "user"
+    },
+    {
+      "content": "As of 2023, UOB's market capitalization was over SGD 50 billion, making it one of the largest banks in Southeast Asia.",
+      "role": "assistant"
+    },
+    {
+      "content": "How does UOB promote financial literacy?",
+      "role": "user"
+    },
+    {
+      "content": "UOB promotes financial literacy through workshops, seminars, and educational materials aimed at helping individuals and businesses manage their finances effectively.",
+      "role": "assistant"
+    },
+    {
+      "content": "What is UOB's digital banking strategy?",
+      "role": "user"
+    },
+    {
+      "content": "UOB's digital banking strategy focuses on enhancing customer experience through innovation, convenience, and security in its digital services.",
+      "role": "assistant"
+    },
+    {
+      "content": "How does UOB engage with young entrepreneurs?",
+      "role": "user"
+    },
+    {
+      "content": "UOB engages with young entrepreneurs through initiatives like the UOB Startup Fund, which provides financing and support to startups in the region.",
+      "role": "assistant"
+    },
+    {
+      "content": "What are UOB's corporate social responsibility goals?",
+      "role": "user"
+    },
+    {
+      "content": "UOB's corporate social responsibility goals include promoting education, sustainability, and community development through various initiatives and partnerships.",
+      "role": "assistant"
+    },
+    {
+      "content": "How does UOB support women in business?",
+      "role": "user"
+    },
+    {
+      "content": "UOB supports women in business through initiatives like the UOB Women Entrepreneur Programme, which provides resources, mentorship, and funding opportunities.",
+      "role": "assistant"
+    },
+    {
+      "content": "What is UOB's approach to customer service?",
+      "role": "user"
+    },
+    {
+      "content": "UOB emphasizes personalized customer service and strives to understand individual client needs to provide tailored financial solutions.",
+      "role": "assistant"
+    },
+    {
+      "content": "What role does UOB play in the ASEAN banking sector?",
+      "role": "user"
+    },
+    {
+      "content": "UOB plays a significant role in the ASEAN banking sector by providing cross-border banking services and supporting regional trade and investment.",
+      "role": "assistant"
+    },
+    {
+      "content": "How does UOB leverage fintech partnerships?",
+      "role": "user"
+    },
+    {
+      "content": "UOB leverages fintech partnerships to enhance its digital services, improve customer experience, and innovate its banking products.",
+      "role": "assistant"
+    },
+    {
+      "content": "What is UOB's commitment to diversity and inclusion?",
+      "role": "user"
+    },
+    {
+      "content": "UOB is committed to diversity and inclusion by fostering a workplace that values different perspectives and backgrounds, promoting equal opportunities for all employees.",
+      "role": "assistant"
+    },
+    {
+      "content": "How does UOB promote local art and culture?",
+      "role": "user"
+    },
+    {
+      "content": "UOB promotes local art and culture through sponsorships of art exhibitions, grants for artists, and partnerships with cultural organizations.",
+      "role": "assistant"
+    },
+    {
+      "content": "What year did UOB launch its mobile banking app?",
+      "role": "user"
+    },
+    {
+      "content": "UOB launched its mobile banking app in 2015, allowing customers to access banking services on the go.",
+      "role": "assistant"
+    },
+    {
+      "content": "How does UOB foster innovation within the bank?",
+      "role": "user"
+    },
+    {
+      "content": "UOB fosters innovation through initiatives like the UOB FinLab, which supports startups and helps businesses adopt digital solutions.",
+      "role": "assistant"
+    },
+    {
+      "content": "What is the UOB Mighty app?",
+      "role": "user"
+    },
+    {
+      "content": "The UOB Mighty app is a digital banking application that allows customers to manage their accounts, make payments, and access financial services conveniently.",
+      "role": "assistant"
+    },
+    {
+      "content": "How does UOB support environmental sustainability?",
+      "role": "user"
+    },
+    {
+      "content": "UOB supports environmental sustainability by financing green projects, promoting eco-friendly practices, and reducing its carbon footprint in operations.",
+      "role": "assistant"
+    },
+    {
+      "content": "What is UOB's approach to corporate governance?",
+      "role": "user"
+    },
+    {
+      "content": "UOB adheres to strong corporate governance principles, ensuring transparency, accountability, and ethical conduct in its operations and decision-making.",
+      "role": "assistant"
+    },
+    {
+      "content": "How does UOB engage with its stakeholders?",
+      "role": "user"
+    },
+    {
+      "content": "UOB engages with its stakeholders through regular communication, feedback mechanisms, and collaborative initiatives that align with their interests and values.",
+      "role": "assistant"
+    },
+    {
+      "content": "What is UOB's target market for personal loans?",
+      "role": "user"
+    },
+    {
+      "content": "UOB's target market for personal loans includes individuals seeking financial assistance for personal expenses, education, and home improvements.",
+      "role": "assistant"
+    },
+    {
+      "content": "How does UOB contribute to regional economic development?",
+      "role": "user"
+    },
+    {
+      "content": "UOB contributes to regional economic development by providing financial services to businesses, facilitating trade, and supporting infrastructure projects.",
+      "role": "assistant"
+    },
+    {
+      "content": "What is UOB's vision for the future?",
+      "role": "user"
+    },
+    {
+      "content": "UOB's vision for the future is to be the most trusted bank in the region, providing innovative financial solutions and exceptional service to customers.",
+      "role": "assistant"
+    },
+    {
+      "content": "How does UOB handle customer complaints?",
+      "role": "user"
+    },
+    {
+      "content": "UOB handles customer complaints through a dedicated customer service team that addresses issues promptly and strives to resolve them to customers' satisfaction.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u00bfCu\u00e1ndo se fund\u00f3 UOB?",
+      "role": "user"
+    },
+    {
+      "content": "UOB fue fundado en 1935 y ha crecido hasta convertirse en uno de los principales bancos en Asia.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u00bfCu\u00e1l es la misi\u00f3n de UOB?",
+      "role": "user"
+    },
+    {
+      "content": "La misi\u00f3n de UOB es ser un banco que se preocupe por sus clientes, ofreciendo soluciones financieras innovadoras y un excelente servicio al cliente.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u00bfEn qu\u00e9 pa\u00edses opera UOB?",
+      "role": "user"
+    },
+    {
+      "content": "UOB opera en varios pa\u00edses de Asia, incluyendo Singapur, Malasia, Indonesia, Tailandia y Vietnam, ofreciendo una amplia gama de servicios financieros.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u00bfC\u00f3mo UOB ha evolucionado a lo largo de los a\u00f1os?",
+      "role": "user"
+    },
+    {
+      "content": "UOB ha evolucionado mediante la adopci\u00f3n de tecnolog\u00eda digital, la expansi\u00f3n de su red y la diversificaci\u00f3n de sus servicios financieros.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u00bfCu\u00e1les son algunas de las innovaciones de UOB en banca digital?",
+      "role": "user"
+    },
+    {
+      "content": "UOB ha lanzado varias innovaciones, incluyendo la aplicaci\u00f3n UOB Mighty, que permite a los clientes realizar transacciones y gestionar sus cuentas de manera digital.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u00bfQu\u00e9 tipo de clientes atiende UOB?",
+      "role": "user"
+    },
+    {
+      "content": "UOB atiende a una amplia gama de clientes, desde individuos y peque\u00f1as empresas hasta grandes corporaciones y clientes institucionales.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u00bfCu\u00e1les son los valores fundamentales de UOB?",
+      "role": "user"
+    },
+    {
+      "content": "Los valores fundamentales de UOB incluyen la integridad, la innovaci\u00f3n, el servicio al cliente y el trabajo en equipo.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u00bfC\u00f3mo UOB apoya a las comunidades locales?",
+      "role": "user"
+    },
+    {
+      "content": "UOB apoya a las comunidades locales a trav\u00e9s de iniciativas de responsabilidad social corporativa, como donaciones y programas de voluntariado.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u00bfQu\u00e9 es el programa UOB Stand By Me?",
+      "role": "user"
+    },
+    {
+      "content": "El programa UOB Stand By Me es una iniciativa que ofrece apoyo financiero y asesoramiento a clientes en situaciones dif\u00edciles.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u00bfCu\u00e1les son algunos hitos importantes en la historia de UOB?",
+      "role": "user"
+    },
+    {
+      "content": "Algunos hitos importantes incluyen la expansi\u00f3n internacional en los a\u00f1os 90 y la adopci\u00f3n de tecnolog\u00eda digital en la \u00faltima d\u00e9cada.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u00bfQu\u00e9 hace UOB para promover la sostenibilidad?",
+      "role": "user"
+    },
+    {
+      "content": "UOB promueve la sostenibilidad mediante el financiamiento de proyectos ecol\u00f3gicos y la reducci\u00f3n de su huella de carbono en sus operaciones.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u00bfC\u00f3mo UOB gestiona su riesgo crediticio?",
+      "role": "user"
+    },
+    {
+      "content": "UOB gestiona su riesgo crediticio mediante evaluaciones rigurosas de cr\u00e9dito y un seguimiento constante de sus carteras de pr\u00e9stamos.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u00bfQu\u00e9 papel juega UOB en la promoci\u00f3n del emprendimiento?",
+      "role": "user"
+    },
+    {
+      "content": "UOB apoya el emprendimiento a trav\u00e9s de programas de financiamiento y asesoramiento para startups y peque\u00f1as empresas.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u00bfCu\u00e1l es el enfoque de UOB hacia la innovaci\u00f3n financiera?",
+      "role": "user"
+    },
+    {
+      "content": "UOB adopta un enfoque proactivo hacia la innovaci\u00f3n financiera, invirtiendo en tecnolog\u00edas emergentes y colaborando con fintechs.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u00bfQu\u00e9 iniciativas tiene UOB para la educaci\u00f3n financiera?",
+      "role": "user"
+    },
+    {
+      "content": "UOB ofrece talleres y recursos en l\u00ednea para ayudar a los clientes a mejorar su educaci\u00f3n financiera y tomar decisiones informadas.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u00bfC\u00f3mo UOB apoya a sus empleados?",
+      "role": "user"
+    },
+    {
+      "content": "UOB apoya a sus empleados ofreciendo oportunidades de desarrollo profesional, programas de bienestar y un entorno laboral inclusivo.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u00bfCu\u00e1l es la visi\u00f3n de UOB para el futuro?",
+      "role": "user"
+    },
+    {
+      "content": "La visi\u00f3n de UOB es ser un banco l\u00edder en la regi\u00f3n de Asia, centrado en el cliente y comprometido con la sostenibilidad y la innovaci\u00f3n.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u00bfQu\u00e9 tipo de productos de inversi\u00f3n ofrece UOB?",
+      "role": "user"
+    },
+    {
+      "content": "UOB ofrece una variedad de productos de inversi\u00f3n, incluidos fondos mutuos, bonos, acciones y productos estructurados.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u00bfQu\u00e9 es el programa de recompensas de UOB?",
+      "role": "user"
+    },
+    {
+      "content": "El programa de recompensas de UOB permite a los clientes ganar puntos por transacciones que pueden canjearse por premios y descuentos.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u00bfCu\u00e1les son los beneficios de abrir una cuenta en UOB?",
+      "role": "user"
+    },
+    {
+      "content": "Abrir una cuenta en UOB brinda acceso a una variedad de productos y servicios financieros, as\u00ed como la conveniencia de la banca en l\u00ednea y m\u00f3vil.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u00bfC\u00f3mo UOB se involucra en la promoci\u00f3n del arte?",
+      "role": "user"
+    },
+    {
+      "content": "UOB apoya el arte local mediante patrocinios y colaboraciones con artistas y organizaciones culturales.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u00bfQu\u00e9 es el UOB FinLab?",
+      "role": "user"
+    },
+    {
+      "content": "El UOB FinLab es un espacio de innovaci\u00f3n que apoya a startups y empresas en la adopci\u00f3n de tecnolog\u00edas financieras y desarrollo de negocios.",
+      "role": "assistant"
+    },
+    {
+      "content": "Quand UOB a-t-il \u00e9t\u00e9 fond\u00e9 ?",
+      "role": "user"
+    },
+    {
+      "content": "UOB a \u00e9t\u00e9 fond\u00e9 en 1935 et a grandi pour devenir l'une des principales banques en Asie.",
+      "role": "assistant"
+    },
+    {
+      "content": "Quelle est la mission de UOB ?",
+      "role": "user"
+    },
+    {
+      "content": "La mission de UOB est d'\u00eatre une banque soucieuse de ses clients, offrant des solutions financi\u00e8res innovantes et un excellent service \u00e0 la client\u00e8le.",
+      "role": "assistant"
+    },
+    {
+      "content": "Dans quels pays UOB op\u00e8re-t-il ?",
+      "role": "user"
+    },
+    {
+      "content": "UOB op\u00e8re dans plusieurs pays d'Asie, y compris Singapour, Malaisie, Indon\u00e9sie, Tha\u00eflande et Vietnam, offrant une large gamme de services financiers.",
+      "role": "assistant"
+    },
+    {
+      "content": "Comment UOB a-t-il \u00e9volu\u00e9 au fil des ans ?",
+      "role": "user"
+    },
+    {
+      "content": "UOB a \u00e9volu\u00e9 par l'adoption de la technologie num\u00e9rique, l'expansion de son r\u00e9seau et la diversification de ses services financiers.",
+      "role": "assistant"
+    },
+    {
+      "content": "Quelles sont certaines des innovations de UOB en mati\u00e8re de banque num\u00e9rique ?",
+      "role": "user"
+    },
+    {
+      "content": "UOB a lanc\u00e9 plusieurs innovations, y compris l'application UOB Mighty, qui permet aux clients d'effectuer des transactions et de g\u00e9rer leurs comptes de mani\u00e8re num\u00e9rique.",
+      "role": "assistant"
+    },
+    {
+      "content": "Quel type de clients UOB sert-il ?",
+      "role": "user"
+    },
+    {
+      "content": "UOB sert un large \u00e9ventail de clients, allant des particuliers et petites entreprises aux grandes entreprises et clients institutionnels.",
+      "role": "assistant"
+    },
+    {
+      "content": "Quels sont les valeurs fondamentales de UOB ?",
+      "role": "user"
+    },
+    {
+      "content": "Les valeurs fondamentales de UOB incluent l'int\u00e9grit\u00e9, l'innovation, le service \u00e0 la client\u00e8le et le travail d'\u00e9quipe.",
+      "role": "assistant"
+    },
+    {
+      "content": "Comment UOB soutient-il les communaut\u00e9s locales ?",
+      "role": "user"
+    },
+    {
+      "content": "UOB soutient les communaut\u00e9s locales \u00e0 travers des initiatives de responsabilit\u00e9 sociale d'entreprise, comme des dons et des programmes de b\u00e9n\u00e9volat.",
+      "role": "assistant"
+    },
+    {
+      "content": "Qu'est-ce que le programme UOB Stand By Me ?",
+      "role": "user"
+    },
+    {
+      "content": "Le programme UOB Stand By Me est une initiative qui offre un soutien financier et des conseils aux clients en difficult\u00e9.",
+      "role": "assistant"
+    },
+    {
+      "content": "Quels sont quelques jalons importants dans l'histoire de UOB ?",
+      "role": "user"
+    },
+    {
+      "content": "Quelques jalons importants incluent l'expansion internationale dans les ann\u00e9es 90 et l'adoption de la technologie num\u00e9rique au cours de la derni\u00e8re d\u00e9cennie.",
+      "role": "assistant"
+    },
+    {
+      "content": "Que fait UOB pour promouvoir la durabilit\u00e9 ?",
+      "role": "user"
+    },
+    {
+      "content": "UOB promeut la durabilit\u00e9 en finan\u00e7ant des projets \u00e9cologiques et en r\u00e9duisant son empreinte carbone dans ses op\u00e9rations.",
+      "role": "assistant"
+    },
+    {
+      "content": "Comment UOB g\u00e8re-t-il son risque de cr\u00e9dit ?",
+      "role": "user"
+    },
+    {
+      "content": "UOB g\u00e8re son risque de cr\u00e9dit par des \u00e9valuations rigoureuses du cr\u00e9dit et un suivi constant de ses portefeuilles de pr\u00eats.",
+      "role": "assistant"
+    },
+    {
+      "content": "Quel r\u00f4le joue UOB dans la promotion de l'entrepreneuriat ?",
+      "role": "user"
+    },
+    {
+      "content": "UOB soutient l'entrepreneuriat par des programmes de financement et de conseil pour les startups et les petites entreprises.",
+      "role": "assistant"
+    },
+    {
+      "content": "Quelle est l'approche de UOB envers l'innovation financi\u00e8re ?",
+      "role": "user"
+    },
+    {
+      "content": "UOB adopte une approche proactive envers l'innovation financi\u00e8re, en investissant dans des technologies \u00e9mergentes et en collaborant avec des fintechs.",
+      "role": "assistant"
+    },
+    {
+      "content": "Quelles initiatives UOB propose-t-il pour l'\u00e9ducation financi\u00e8re ?",
+      "role": "user"
+    },
+    {
+      "content": "UOB propose des ateliers et des ressources en ligne pour aider les clients \u00e0 am\u00e9liorer leur \u00e9ducation financi\u00e8re et \u00e0 prendre des d\u00e9cisions \u00e9clair\u00e9es.",
+      "role": "assistant"
+    },
+    {
+      "content": "Comment UOB soutient-il ses employ\u00e9s ?",
+      "role": "user"
+    },
+    {
+      "content": "UOB soutient ses employ\u00e9s en offrant des opportunit\u00e9s de d\u00e9veloppement professionnel, des programmes de bien-\u00eatre et un environnement de travail inclusif.",
+      "role": "assistant"
+    },
+    {
+      "content": "Quelle est la vision de UOB pour l'avenir ?",
+      "role": "user"
+    },
+    {
+      "content": "La vision de UOB est d'\u00eatre une banque leader dans la r\u00e9gion asiatique, centr\u00e9e sur le client et engag\u00e9e envers la durabilit\u00e9 et l'innovation.",
+      "role": "assistant"
+    },
+    {
+      "content": "Quels types de produits d'investissement UOB propose-t-il ?",
+      "role": "user"
+    },
+    {
+      "content": "UOB propose une vari\u00e9t\u00e9 de produits d'investissement, y compris des fonds mutuels, des obligations, des actions et des produits structur\u00e9s.",
+      "role": "assistant"
+    },
+    {
+      "content": "Qu'est-ce que le programme de r\u00e9compenses de UOB ?",
+      "role": "user"
+    },
+    {
+      "content": "Le programme de r\u00e9compenses de UOB permet aux clients de gagner des points pour des transactions pouvant \u00eatre \u00e9chang\u00e9s contre des prix et des r\u00e9ductions.",
+      "role": "assistant"
+    },
+    {
+      "content": "Quels sont les avantages d'ouvrir un compte chez UOB ?",
+      "role": "user"
+    },
+    {
+      "content": "Ouvrir un compte chez UOB donne acc\u00e8s \u00e0 une vari\u00e9t\u00e9 de produits et services financiers, ainsi qu'\u00e0 la commodit\u00e9 de la banque en ligne et mobile.",
+      "role": "assistant"
+    },
+    {
+      "content": "Comment UOB s'implique-t-il dans la promotion de l'art ?",
+      "role": "user"
+    },
+    {
+      "content": "UOB soutient l'art local par des parrainages d'\u00e9v\u00e9nements artistiques, des expositions et des programmes \u00e9ducatifs sur l'art.",
+      "role": "assistant"
+    },
+    {
+      "content": "Quando o UOB foi fundado?",
+      "role": "user"
+    },
+    {
+      "content": "O UOB foi fundado em 1935 e cresceu para se tornar um dos principais bancos da \u00c1sia.",
+      "role": "assistant"
+    },
+    {
+      "content": "Qual \u00e9 a miss\u00e3o do UOB?",
+      "role": "user"
+    },
+    {
+      "content": "A miss\u00e3o do UOB \u00e9 ser um banco focado no cliente, oferecendo solu\u00e7\u00f5es financeiras inovadoras e um excelente atendimento ao cliente.",
+      "role": "assistant"
+    },
+    {
+      "content": "Em quais pa\u00edses o UOB opera?",
+      "role": "user"
+    },
+    {
+      "content": "O UOB opera em v\u00e1rios pa\u00edses da \u00c1sia, incluindo Singapura, Mal\u00e1sia, Indon\u00e9sia, Tail\u00e2ndia e Vietn\u00e3, oferecendo uma ampla gama de servi\u00e7os financeiros.",
+      "role": "assistant"
+    },
+    {
+      "content": "Como o UOB evoluiu ao longo dos anos?",
+      "role": "user"
+    },
+    {
+      "content": "O UOB evoluiu com a ado\u00e7\u00e3o de tecnologia digital, expans\u00e3o de sua rede e diversifica\u00e7\u00e3o de seus servi\u00e7os financeiros.",
+      "role": "assistant"
+    },
+    {
+      "content": "Quais s\u00e3o algumas das inova\u00e7\u00f5es do UOB em servi\u00e7os banc\u00e1rios digitais?",
+      "role": "user"
+    },
+    {
+      "content": "O UOB lan\u00e7ou v\u00e1rias inova\u00e7\u00f5es, incluindo o aplicativo UOB Mighty, que permite que os clientes realizem transa\u00e7\u00f5es e gerenciem suas contas digitalmente.",
+      "role": "assistant"
+    },
+    {
+      "content": "Que tipo de clientes o UOB atende?",
+      "role": "user"
+    },
+    {
+      "content": "O UOB atende uma ampla gama de clientes, desde indiv\u00edduos e pequenas empresas at\u00e9 grandes corpora\u00e7\u00f5es e clientes institucionais.",
+      "role": "assistant"
+    },
+    {
+      "content": "Quais s\u00e3o os valores fundamentais do UOB?",
+      "role": "user"
+    },
+    {
+      "content": "Os valores fundamentais do UOB incluem integridade, inova\u00e7\u00e3o, atendimento ao cliente e trabalho em equipe.",
+      "role": "assistant"
+    },
+    {
+      "content": "Como o UOB apoia as comunidades locais?",
+      "role": "user"
+    },
+    {
+      "content": "O UOB apoia as comunidades locais por meio de iniciativas de responsabilidade social corporativa, como doa\u00e7\u00f5es e programas de voluntariado.",
+      "role": "assistant"
+    },
+    {
+      "content": "O que \u00e9 o programa UOB Stand By Me?",
+      "role": "user"
+    },
+    {
+      "content": "O programa UOB Stand By Me \u00e9 uma iniciativa que oferece apoio financeiro e orienta\u00e7\u00e3o a clientes em dificuldades.",
+      "role": "assistant"
+    },
+    {
+      "content": "Quais s\u00e3o alguns marcos importantes na hist\u00f3ria do UOB?",
+      "role": "user"
+    },
+    {
+      "content": "Alguns marcos importantes incluem a expans\u00e3o internacional nos anos 90 e a ado\u00e7\u00e3o de tecnologia digital na \u00faltima d\u00e9cada.",
+      "role": "assistant"
+    },
+    {
+      "content": "O que o UOB faz para promover a sustentabilidade?",
+      "role": "user"
+    },
+    {
+      "content": "O UOB promove a sustentabilidade financiando projetos ecol\u00f3gicos e reduzindo sua pegada de carbono em suas opera\u00e7\u00f5es.",
+      "role": "assistant"
+    },
+    {
+      "content": "Como o UOB gerencia seu risco de cr\u00e9dito?",
+      "role": "user"
+    },
+    {
+      "content": "O UOB gerencia seu risco de cr\u00e9dito por meio de rigorosas avalia\u00e7\u00f5es de cr\u00e9dito e monitoramento constante de suas carteiras de empr\u00e9stimos.",
+      "role": "assistant"
+    },
+    {
+      "content": "Qual \u00e9 o papel do UOB na promo\u00e7\u00e3o do empreendedorismo?",
+      "role": "user"
+    },
+    {
+      "content": "O UOB apoia o empreendedorismo por meio de programas de financiamento e consultoria para startups e pequenas empresas.",
+      "role": "assistant"
+    },
+    {
+      "content": "Qual \u00e9 a abordagem do UOB em rela\u00e7\u00e3o \u00e0 inova\u00e7\u00e3o financeira?",
+      "role": "user"
+    },
+    {
+      "content": "O UOB adota uma abordagem proativa em rela\u00e7\u00e3o \u00e0 inova\u00e7\u00e3o financeira, investindo em tecnologias emergentes e colaborando com fintechs.",
+      "role": "assistant"
+    },
+    {
+      "content": "Quais iniciativas o UOB oferece para a educa\u00e7\u00e3o financeira?",
+      "role": "user"
+    },
+    {
+      "content": "O UOB oferece workshops e recursos online para ajudar os clientes a melhorar sua educa\u00e7\u00e3o financeira e tomar decis\u00f5es informadas.",
+      "role": "assistant"
+    },
+    {
+      "content": "Como o UOB apoia seus funcion\u00e1rios?",
+      "role": "user"
+    },
+    {
+      "content": "O UOB apoia seus funcion\u00e1rios oferecendo oportunidades de desenvolvimento profissional, programas de bem-estar e um ambiente de trabalho inclusivo.",
+      "role": "assistant"
+    },
+    {
+      "content": "Qual \u00e9 a vis\u00e3o do UOB para o futuro?",
+      "role": "user"
+    },
+    {
+      "content": "A vis\u00e3o do UOB \u00e9 ser um banco l\u00edder na regi\u00e3o asi\u00e1tica, centrado no cliente e comprometido com a sustentabilidade e inova\u00e7\u00e3o.",
+      "role": "assistant"
+    },
+    {
+      "content": "Que tipos de produtos de investimento o UOB oferece?",
+      "role": "user"
+    },
+    {
+      "content": "O UOB oferece uma variedade de produtos de investimento, incluindo fundos m\u00fatuos, t\u00edtulos, a\u00e7\u00f5es e produtos estruturados.",
+      "role": "assistant"
+    },
+    {
+      "content": "O que \u00e9 o programa de recompensas do UOB?",
+      "role": "user"
+    },
+    {
+      "content": "O programa de recompensas do UOB permite que os clientes ganhem pontos por transa\u00e7\u00f5es que podem ser trocados por pr\u00eamios e descontos.",
+      "role": "assistant"
+    },
+    {
+      "content": "Quais s\u00e3o os benef\u00edcios de abrir uma conta no UOB?",
+      "role": "user"
+    },
+    {
+      "content": "Abrir uma conta no UOB oferece acesso a uma variedade de produtos e servi\u00e7os financeiros, al\u00e9m da conveni\u00eancia da internet banking e do aplicativo m\u00f3vel.",
+      "role": "assistant"
+    },
+    {
+      "content": "Como o UOB se envolve na promo\u00e7\u00e3o da arte?",
+      "role": "user"
+    },
+    {
+      "content": "O UOB apoia a arte local por meio de patroc\u00ednios de eventos art\u00edsticos, exposi\u00e7\u00f5es e programas educacionais sobre arte.",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\ub294 \uc5b8\uc81c \uc124\ub9bd\ub418\uc5c8\ub098\uc694?",
+      "role": "user"
+    },
+    {
+      "content": "UOB\ub294 1935\ub144\uc5d0 \uc124\ub9bd\ub418\uc5c8\uc73c\uba70, \uc544\uc2dc\uc544\uc758 \uc8fc\uc694 \uc740\ud589 \uc911 \ud558\ub098\ub85c \uc131\uc7a5\ud588\uc2b5\ub2c8\ub2e4.",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\uc758 \ubbf8\uc158\uc740 \ubb34\uc5c7\uc778\uac00\uc694?",
+      "role": "user"
+    },
+    {
+      "content": "UOB\uc758 \ubbf8\uc158\uc740 \uace0\uac1d \uc911\uc2ec\uc758 \uc740\ud589\uc73c\ub85c, \ud601\uc2e0\uc801\uc778 \uae08\uc735 \uc194\ub8e8\uc158\uacfc \ub6f0\uc5b4\ub09c \uace0\uac1d \uc11c\ube44\uc2a4\ub97c \uc81c\uacf5\ud558\ub294 \uac83\uc785\ub2c8\ub2e4.",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\ub294 \uc5b4\ub5a4 \ub098\ub77c\uc5d0\uc11c \uc6b4\uc601\ub418\ub098\uc694?",
+      "role": "user"
+    },
+    {
+      "content": "UOB\ub294 \uc2f1\uac00\ud3ec\ub974, \ub9d0\ub808\uc774\uc2dc\uc544, \uc778\ub3c4\ub124\uc2dc\uc544, \ud0dc\uad6d \ubc0f \ubca0\ud2b8\ub0a8\uc744 \ud3ec\ud568\ud55c \uc5ec\ub7ec \uc544\uc2dc\uc544 \uad6d\uac00\uc5d0\uc11c \uc6b4\uc601\ub418\uba70, \ub2e4\uc591\ud55c \uae08\uc735 \uc11c\ube44\uc2a4\ub97c \uc81c\uacf5\ud569\ub2c8\ub2e4.",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\ub294 \uc2dc\uac04\uc774 \uc9c0\ub0a8\uc5d0 \ub530\ub77c \uc5b4\ub5bb\uac8c \ubc1c\uc804\ud574\uc654\ub098\uc694?",
+      "role": "user"
+    },
+    {
+      "content": "UOB\ub294 \ub514\uc9c0\ud138 \uae30\uc220 \ub3c4\uc785, \ub124\ud2b8\uc6cc\ud06c \ud655\uc7a5 \ubc0f \uae08\uc735 \uc11c\ube44\uc2a4 \ub2e4\uc591\ud654\ub97c \ud1b5\ud574 \ubc1c\uc804\ud574\uc654\uc2b5\ub2c8\ub2e4.",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\uc758 \ub514\uc9c0\ud138 \uae08\uc735 \uc11c\ube44\uc2a4 \ud601\uc2e0\uc740 \ubb34\uc5c7\uc778\uac00\uc694?",
+      "role": "user"
+    },
+    {
+      "content": "UOB\ub294 \uace0\uac1d\uc774 \uac70\ub798\ub97c \uc218\ud589\ud558\uace0 \uacc4\uc88c\ub97c \uad00\ub9ac\ud560 \uc218 \uc788\ub3c4\ub85d \ud558\ub294 UOB Mighty \uc571\uc744 \ud3ec\ud568\ud55c \uc5ec\ub7ec \ud601\uc2e0\uc744 \ucd9c\uc2dc\ud588\uc2b5\ub2c8\ub2e4.",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\ub294 \uc5b4\ub5a4 \uace0\uac1d\uc744 \ub300\uc0c1\uc73c\ub85c \ud558\ub098\uc694?",
+      "role": "user"
+    },
+    {
+      "content": "UOB\ub294 \uac1c\uc778, \uc18c\uae30\uc5c5, \ub300\uae30\uc5c5 \ubc0f \uae30\uad00 \uace0\uac1d \ub4f1 \ub2e4\uc591\ud55c \uace0\uac1d\uce35\uc744 \ub300\uc0c1\uc73c\ub85c \ud569\ub2c8\ub2e4.",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\uc758 \ud575\uc2ec \uac00\uce58\ub294 \ubb34\uc5c7\uc778\uac00\uc694?",
+      "role": "user"
+    },
+    {
+      "content": "UOB\uc758 \ud575\uc2ec \uac00\uce58\ub294 \ubb34\uacb0\uc131, \ud601\uc2e0, \uace0\uac1d \uc11c\ube44\uc2a4 \ubc0f \ud300\uc6cc\ud06c\uc785\ub2c8\ub2e4.",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\ub294 \uc9c0\uc5ed \uc0ac\ud68c\ub97c \uc5b4\ub5bb\uac8c \uc9c0\uc6d0\ud558\ub098\uc694?",
+      "role": "user"
+    },
+    {
+      "content": "UOB\ub294 \uae30\ubd80 \ubc0f \uc790\uc6d0 \ubd09\uc0ac \ud504\ub85c\uadf8\ub7a8\uacfc \uac19\uc740 \uae30\uc5c5\uc758 \uc0ac\ud68c\uc801 \ucc45\uc784 \uc774\ub2c8\uc154\ud2f0\ube0c\ub97c \ud1b5\ud574 \uc9c0\uc5ed \uc0ac\ud68c\ub97c \uc9c0\uc6d0\ud569\ub2c8\ub2e4.",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB Stand By Me \ud504\ub85c\uadf8\ub7a8\uc740 \ubb34\uc5c7\uc778\uac00\uc694?",
+      "role": "user"
+    },
+    {
+      "content": "UOB Stand By Me \ud504\ub85c\uadf8\ub7a8\uc740 \uc5b4\ub824\uc6c0\uc5d0 \ucc98\ud55c \uace0\uac1d\uc5d0\uac8c \uc7ac\uc815 \uc9c0\uc6d0 \ubc0f \uc0c1\ub2f4\uc744 \uc81c\uacf5\ud558\ub294 \uc774\ub2c8\uc154\ud2f0\ube0c\uc785\ub2c8\ub2e4.",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\uc758 \uc5ed\uc0ac\uc5d0\uc11c \uc911\uc694\ud55c \uc774\uc815\ud45c\ub294 \ubb34\uc5c7\uc778\uac00\uc694?",
+      "role": "user"
+    },
+    {
+      "content": "UOB\uc758 \uc5ed\uc0ac\uc5d0\uc11c \uc911\uc694\ud55c \uc774\uc815\ud45c\ub85c\ub294 1990\ub144\ub300 \uad6d\uc81c\uc801\uc73c\ub85c \ud655\uc7a5\ud558\uace0 \uc9c0\ub09c 10\ub144\uac04 \ub514\uc9c0\ud138 \uae30\uc220\uc744 \ucc44\ud0dd\ud55c \uac83\uc774 \uc788\uc2b5\ub2c8\ub2e4.",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\ub294 \uc9c0\uc18d \uac00\ub2a5\uc131\uc744 \uc5b4\ub5bb\uac8c \ucd09\uc9c4\ud558\ub098\uc694?",
+      "role": "user"
+    },
+    {
+      "content": "UOB\ub294 \uc0dd\ud0dc \ud504\ub85c\uc81d\ud2b8\uc5d0 \ub300\ud55c \uc790\uae08 \uc9c0\uc6d0 \ubc0f \uc6b4\uc601\uc5d0\uc11c \ud0c4\uc18c \ubc1c\uc790\uad6d\uc744 \uc904\uc774\ub294 \ubc29\ubc95\uc73c\ub85c \uc9c0\uc18d \uac00\ub2a5\uc131\uc744 \ucd09\uc9c4\ud569\ub2c8\ub2e4.",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\ub294 \uc2e0\uc6a9 \uc704\ud5d8\uc744 \uc5b4\ub5bb\uac8c \uad00\ub9ac\ud558\ub098\uc694?",
+      "role": "user"
+    },
+    {
+      "content": "UOB\ub294 \ucca0\uc800\ud55c \uc2e0\uc6a9 \ud3c9\uac00\uc640 \ub300\ucd9c \ud3ec\ud2b8\ud3f4\ub9ac\uc624\uc758 \uc9c0\uc18d\uc801\uc778 \ubaa8\ub2c8\ud130\ub9c1\uc744 \ud1b5\ud574 \uc2e0\uc6a9 \uc704\ud5d8\uc744 \uad00\ub9ac\ud569\ub2c8\ub2e4.",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\ub294 \uae30\uc5c5\uac00 \uc815\uc2e0\uc744 \uc5b4\ub5bb\uac8c \uc9c0\uc6d0\ud558\ub098\uc694?",
+      "role": "user"
+    },
+    {
+      "content": "UOB\ub294 \uc2a4\ud0c0\ud2b8\uc5c5\uacfc \uc18c\uae30\uc5c5\uc744 \uc704\ud55c \uc790\uae08 \uc9c0\uc6d0 \ubc0f \uc0c1\ub2f4 \ud504\ub85c\uadf8\ub7a8\uc744 \ud1b5\ud574 \uae30\uc5c5\uac00 \uc815\uc2e0\uc744 \uc9c0\uc6d0\ud569\ub2c8\ub2e4.",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\uc758 \uae08\uc735 \ud601\uc2e0\uc5d0 \ub300\ud55c \uc811\uadfc \ubc29\uc2dd\uc740 \ubb34\uc5c7\uc778\uac00\uc694?",
+      "role": "user"
+    },
+    {
+      "content": "UOB\ub294 \uc2e0\ud765 \uae30\uc220\uc5d0 \ud22c\uc790\ud558\uace0 \ud540\ud14c\ud06c\uc640 \ud611\ub825\ud568\uc73c\ub85c\uc368 \uae08\uc735 \ud601\uc2e0\uc5d0 \ub300\ud574 \uc801\uadf9\uc801\uc778 \uc811\uadfc \ubc29\uc2dd\uc744 \ucde8\ud558\uace0 \uc788\uc2b5\ub2c8\ub2e4.",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\ub294 \uae08\uc735 \uad50\uc721\uc744 \uc704\ud574 \uc5b4\ub5a4 \ud504\ub85c\uadf8\ub7a8\uc744 \uc81c\uacf5\ud558\ub098\uc694?",
+      "role": "user"
+    },
+    {
+      "content": "UOB\ub294 \uace0\uac1d\ub4e4\uc774 \uc7ac\uc815 \uad50\uc721\uc744 \ud5a5\uc0c1\uc2dc\ud0a4\uace0 \uc815\ubcf4\uc5d0 \uc785\uac01\ud55c \uacb0\uc815\uc744 \ub0b4\ub9b4 \uc218 \uc788\ub3c4\ub85d \ub3d5\uae30 \uc704\ud574 \uc6cc\ud06c\uc20d \ubc0f \uc628\ub77c\uc778 \uc790\ub8cc\ub97c \uc81c\uacf5\ud569\ub2c8\ub2e4.",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\ub294 \uc9c1\uc6d0\ub4e4\uc744 \uc5b4\ub5bb\uac8c \uc9c0\uc6d0\ud558\ub098\uc694?",
+      "role": "user"
+    },
+    {
+      "content": "UOB\ub294 \uc9c1\uc6d0\ub4e4\uc5d0\uac8c \uc9c1\uc5c5 \uac1c\ubc1c \uae30\ud68c, \uc6f0\ube59 \ud504\ub85c\uadf8\ub7a8 \ubc0f \ud3ec\uc6a9\uc801\uc778 \uadfc\ubb34 \ud658\uacbd\uc744 \uc81c\uacf5\ud568\uc73c\ub85c\uc368 \uadf8\ub4e4\uc744 \uc9c0\uc6d0\ud569\ub2c8\ub2e4.",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\uc758 \ubbf8\ub798 \ube44\uc804\uc740 \ubb34\uc5c7\uc778\uac00\uc694?",
+      "role": "user"
+    },
+    {
+      "content": "UOB\uc758 \ubbf8\ub798 \ube44\uc804\uc740 \uc544\uc2dc\uc544 \uc9c0\uc5ed\uc758 \uc120\ub3c4\uc801\uc778 \uc740\ud589\uc774 \ub418\uc5b4 \uace0\uac1d \uc911\uc2ec\uc758 \uc11c\ube44\uc2a4\ub97c \uc81c\uacf5\ud558\uace0 \uc9c0\uc18d \uac00\ub2a5\uc131\uacfc \ud601\uc2e0\uc5d0 \ud5cc\uc2e0\ud558\ub294 \uac83\uc785\ub2c8\ub2e4.",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\ub294 \uc5b4\ub5a4 \ud22c\uc790 \uc0c1\ud488\uc744 \uc81c\uacf5\ud558\ub098\uc694?",
+      "role": "user"
+    },
+    {
+      "content": "UOB\ub294 \ubba4\ucd94\uc5bc \ud380\ub4dc, \ucc44\uad8c, \uc8fc\uc2dd \ubc0f \uad6c\uc870\ud654\ub41c \uc0c1\ud488\uc744 \ud3ec\ud568\ud55c \ub2e4\uc591\ud55c \ud22c\uc790 \uc0c1\ud488\uc744 \uc81c\uacf5\ud569\ub2c8\ub2e4.",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\uc758 \ubcf4\uc0c1 \ud504\ub85c\uadf8\ub7a8\uc740 \ubb34\uc5c7\uc778\uac00\uc694?",
+      "role": "user"
+    },
+    {
+      "content": "UOB\uc758 \ubcf4\uc0c1 \ud504\ub85c\uadf8\ub7a8\uc740 \uace0\uac1d\uc774 \uac70\ub798\ub97c \ud1b5\ud574 \ud3ec\uc778\ud2b8\ub97c \uc801\ub9bd\ud558\uace0 \uc774\ub97c \uc0c1\ud488\uacfc \ud560\uc778\uc73c\ub85c \uad50\ud658\ud560 \uc218 \uc788\uac8c \ud574\uc90d\ub2c8\ub2e4.",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\uc5d0\uc11c \uacc4\uc88c\ub97c \uac1c\uc124\ud558\ub294 \uc774\uc810\uc740 \ubb34\uc5c7\uc778\uac00\uc694?",
+      "role": "user"
+    },
+    {
+      "content": "UOB\uc5d0\uc11c \uacc4\uc88c\ub97c \uac1c\uc124\ud558\uba74 \ub2e4\uc591\ud55c \uae08\uc735 \uc0c1\ud488 \ubc0f \uc11c\ube44\uc2a4\uc5d0 \uc811\uadfc\ud560 \uc218 \uc788\uc73c\uba70 \uc778\ud130\ub137 \ubc45\ud0b9\uacfc \ubaa8\ubc14\uc77c \uc571\uc758 \ud3b8\ub9ac\ud568\uc744 \ub204\ub9b4 \uc218 \uc788\uc2b5\ub2c8\ub2e4.",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u306f\u3044\u3064\u8a2d\u7acb\u3055\u308c\u307e\u3057\u305f\u304b\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB\u306f1935\u5e74\u306b\u8a2d\u7acb\u3055\u308c\u3001\u30a2\u30b8\u30a2\u306e\u4e3b\u8981\u306a\u9280\u884c\u306e\u4e00\u3064\u3068\u3057\u3066\u6210\u9577\u3057\u307e\u3057\u305f\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u306e\u30df\u30c3\u30b7\u30e7\u30f3\u306f\u4f55\u3067\u3059\u304b\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB\u306e\u30df\u30c3\u30b7\u30e7\u30f3\u306f\u3001\u9867\u5ba2\u4e2d\u5fc3\u306e\u9280\u884c\u3068\u3057\u3066\u9769\u65b0\u7684\u306a\u91d1\u878d\u30bd\u30ea\u30e5\u30fc\u30b7\u30e7\u30f3\u3068\u512a\u308c\u305f\u9867\u5ba2\u30b5\u30fc\u30d3\u30b9\u3092\u63d0\u4f9b\u3059\u308b\u3053\u3068\u3067\u3059\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u306f\u3069\u306e\u56fd\u3067\u904b\u55b6\u3055\u308c\u3066\u3044\u307e\u3059\u304b\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB\u306f\u30b7\u30f3\u30ac\u30dd\u30fc\u30eb\u3001\u30de\u30ec\u30fc\u30b7\u30a2\u3001\u30a4\u30f3\u30c9\u30cd\u30b7\u30a2\u3001\u30bf\u30a4\u3001\u30d9\u30c8\u30ca\u30e0\u306a\u3069\u3001\u30a2\u30b8\u30a2\u306e\u8907\u6570\u306e\u56fd\u3067\u904b\u55b6\u3055\u308c\u3066\u304a\u308a\u3001\u3055\u307e\u3056\u307e\u306a\u91d1\u878d\u30b5\u30fc\u30d3\u30b9\u3092\u63d0\u4f9b\u3057\u3066\u3044\u307e\u3059\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u306f\u6642\u9593\u3068\u3068\u3082\u306b\u3069\u306e\u3088\u3046\u306b\u767a\u5c55\u3057\u3066\u304d\u307e\u3057\u305f\u304b\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB\u306f\u30c7\u30b8\u30bf\u30eb\u6280\u8853\u306e\u5c0e\u5165\u3001\u30cd\u30c3\u30c8\u30ef\u30fc\u30af\u306e\u62e1\u5927\u3001\u91d1\u878d\u30b5\u30fc\u30d3\u30b9\u306e\u591a\u69d8\u5316\u3092\u901a\u3058\u3066\u767a\u5c55\u3057\u3066\u304d\u307e\u3057\u305f\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u306e\u30c7\u30b8\u30bf\u30eb\u91d1\u878d\u30b5\u30fc\u30d3\u30b9\u306e\u9769\u65b0\u306f\u4f55\u3067\u3059\u304b\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB\u306f\u9867\u5ba2\u304c\u53d6\u5f15\u3092\u884c\u3044\u3001\u53e3\u5ea7\u3092\u7ba1\u7406\u3067\u304d\u308bUOB Mighty\u30a2\u30d7\u30ea\u3092\u542b\u3080\u3055\u307e\u3056\u307e\u306a\u9769\u65b0\u3092\u5c0e\u5165\u3057\u307e\u3057\u305f\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u306f\u3069\u306e\u3088\u3046\u306a\u9867\u5ba2\u3092\u5bfe\u8c61\u3068\u3057\u3066\u3044\u307e\u3059\u304b\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB\u306f\u500b\u4eba\u3001\u4e2d\u5c0f\u4f01\u696d\u3001\u5927\u4f01\u696d\u3001\u6a5f\u95a2\u9867\u5ba2\u306a\u3069\u3001\u3055\u307e\u3056\u307e\u306a\u9867\u5ba2\u5c64\u3092\u5bfe\u8c61\u3068\u3057\u3066\u3044\u307e\u3059\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u306e\u30b3\u30a2\u30d0\u30ea\u30e5\u30fc\u306f\u4f55\u3067\u3059\u304b\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB\u306e\u30b3\u30a2\u30d0\u30ea\u30e5\u30fc\u306f\u3001\u8aa0\u5b9f\u3055\u3001\u9769\u65b0\u3001\u9867\u5ba2\u30b5\u30fc\u30d3\u30b9\u3001\u30c1\u30fc\u30e0\u30ef\u30fc\u30af\u3067\u3059\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u306f\u5730\u57df\u793e\u4f1a\u3092\u3069\u306e\u3088\u3046\u306b\u652f\u63f4\u3057\u3066\u3044\u307e\u3059\u304b\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB\u306f\u5bc4\u4ed8\u3084\u30dc\u30e9\u30f3\u30c6\u30a3\u30a2\u30d7\u30ed\u30b0\u30e9\u30e0\u306a\u3069\u306e\u4f01\u696d\u306e\u793e\u4f1a\u7684\u8cac\u4efb\u30a4\u30cb\u30b7\u30a2\u30c6\u30a3\u30d6\u3092\u901a\u3058\u3066\u5730\u57df\u793e\u4f1a\u3092\u652f\u63f4\u3057\u3066\u3044\u307e\u3059\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB Stand By Me\u30d7\u30ed\u30b0\u30e9\u30e0\u3068\u306f\u4f55\u3067\u3059\u304b\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB Stand By Me\u30d7\u30ed\u30b0\u30e9\u30e0\u306f\u3001\u56f0\u96e3\u306b\u76f4\u9762\u3057\u3066\u3044\u308b\u9867\u5ba2\u306b\u5bfe\u3057\u3066\u8ca1\u653f\u7684\u652f\u63f4\u3084\u76f8\u8ac7\u3092\u63d0\u4f9b\u3059\u308b\u30a4\u30cb\u30b7\u30a2\u30c6\u30a3\u30d6\u3067\u3059\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u306e\u6b74\u53f2\u306b\u304a\u3051\u308b\u91cd\u8981\u306a\u30de\u30a4\u30eb\u30b9\u30c8\u30fc\u30f3\u306f\u4f55\u3067\u3059\u304b\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB\u306e\u6b74\u53f2\u306b\u304a\u3051\u308b\u91cd\u8981\u306a\u30de\u30a4\u30eb\u30b9\u30c8\u30fc\u30f3\u306b\u306f\u30011990\u5e74\u4ee3\u306e\u56fd\u969b\u7684\u306a\u62e1\u5f35\u3084\u3001\u904e\u53bb10\u5e74\u9593\u306e\u30c7\u30b8\u30bf\u30eb\u6280\u8853\u306e\u63a1\u7528\u304c\u3042\u308a\u307e\u3059\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u306f\u6301\u7d9a\u53ef\u80fd\u6027\u3092\u3069\u306e\u3088\u3046\u306b\u4fc3\u9032\u3057\u3066\u3044\u307e\u3059\u304b\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB\u306f\u30a8\u30b3\u30d7\u30ed\u30b8\u30a7\u30af\u30c8\u3078\u306e\u8cc7\u91d1\u63d0\u4f9b\u3084\u3001\u904b\u55b6\u306b\u304a\u3051\u308b\u30ab\u30fc\u30dc\u30f3\u30d5\u30c3\u30c8\u30d7\u30ea\u30f3\u30c8\u306e\u524a\u6e1b\u65b9\u6cd5\u3092\u901a\u3058\u3066\u6301\u7d9a\u53ef\u80fd\u6027\u3092\u4fc3\u9032\u3057\u3066\u3044\u307e\u3059\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u306f\u4fe1\u7528\u30ea\u30b9\u30af\u3092\u3069\u306e\u3088\u3046\u306b\u7ba1\u7406\u3057\u3066\u3044\u307e\u3059\u304b\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB\u306f\u53b3\u683c\u306a\u4fe1\u7528\u8a55\u4fa1\u3068\u8cb8\u51fa\u30dd\u30fc\u30c8\u30d5\u30a9\u30ea\u30aa\u306e\u7d99\u7d9a\u7684\u306a\u76e3\u8996\u3092\u901a\u3058\u3066\u4fe1\u7528\u30ea\u30b9\u30af\u3092\u7ba1\u7406\u3057\u3066\u3044\u307e\u3059\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u306f\u4f01\u696d\u5bb6\u7cbe\u795e\u3092\u3069\u306e\u3088\u3046\u306b\u652f\u63f4\u3057\u3066\u3044\u307e\u3059\u304b\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB\u306f\u30b9\u30bf\u30fc\u30c8\u30a2\u30c3\u30d7\u3084\u4e2d\u5c0f\u4f01\u696d\u306e\u305f\u3081\u306e\u8cc7\u91d1\u63d0\u4f9b\u3084\u76f8\u8ac7\u30d7\u30ed\u30b0\u30e9\u30e0\u3092\u901a\u3058\u3066\u4f01\u696d\u5bb6\u7cbe\u795e\u3092\u652f\u63f4\u3057\u3066\u3044\u307e\u3059\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u306e\u91d1\u878d\u9769\u65b0\u3078\u306e\u30a2\u30d7\u30ed\u30fc\u30c1\u306f\u4f55\u3067\u3059\u304b\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB\u306f\u65b0\u8208\u6280\u8853\u3078\u306e\u6295\u8cc7\u3068\u30d5\u30a3\u30f3\u30c6\u30c3\u30af\u3068\u306e\u63d0\u643a\u3092\u901a\u3058\u3066\u91d1\u878d\u9769\u65b0\u306b\u7a4d\u6975\u7684\u306b\u53d6\u308a\u7d44\u3093\u3067\u3044\u307e\u3059\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u306f\u91d1\u878d\u6559\u80b2\u306e\u305f\u3081\u306b\u3069\u306e\u3088\u3046\u306a\u30d7\u30ed\u30b0\u30e9\u30e0\u3092\u63d0\u4f9b\u3057\u3066\u3044\u307e\u3059\u304b\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB\u306f\u9867\u5ba2\u304c\u91d1\u878d\u6559\u80b2\u3092\u5411\u4e0a\u3055\u305b\u3001\u60c5\u5831\u306b\u57fa\u3065\u3044\u305f\u610f\u601d\u6c7a\u5b9a\u3092\u884c\u3048\u308b\u3088\u3046\u306b\u3059\u308b\u305f\u3081\u306b\u3001\u30ef\u30fc\u30af\u30b7\u30e7\u30c3\u30d7\u3084\u30aa\u30f3\u30e9\u30a4\u30f3\u8cc7\u6599\u3092\u63d0\u4f9b\u3057\u3066\u3044\u307e\u3059\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u306f\u5f93\u696d\u54e1\u3092\u3069\u306e\u3088\u3046\u306b\u652f\u63f4\u3057\u3066\u3044\u307e\u3059\u304b\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB\u306f\u5f93\u696d\u54e1\u306b\u8077\u696d\u958b\u767a\u306e\u6a5f\u4f1a\u3001\u30a6\u30a7\u30eb\u30d3\u30fc\u30a4\u30f3\u30b0\u30d7\u30ed\u30b0\u30e9\u30e0\u3001\u304a\u3088\u3073\u5305\u62ec\u7684\u306a\u8077\u5834\u74b0\u5883\u3092\u63d0\u4f9b\u3059\u308b\u3053\u3068\u3067\u3001\u5f7c\u3089\u3092\u652f\u63f4\u3057\u3066\u3044\u307e\u3059\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "\u041a\u043e\u0433\u0434\u0430 \u0431\u044b\u043b\u0430 \u043e\u0441\u043d\u043e\u0432\u0430\u043d\u0430 UOB?",
+      "role": "user"
+    },
+    {
+      "content": "UOB \u0431\u044b\u043b\u0430 \u043e\u0441\u043d\u043e\u0432\u0430\u043d\u0430 \u0432 1935 \u0433\u043e\u0434\u0443 \u0438 \u0441 \u0442\u0435\u0445 \u043f\u043e\u0440 \u0441\u0442\u0430\u043b\u0430 \u043e\u0434\u043d\u0438\u043c \u0438\u0437 \u0432\u0435\u0434\u0443\u0449\u0438\u0445 \u0431\u0430\u043d\u043a\u043e\u0432 \u0432 \u0410\u0437\u0438\u0438.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u041a\u0430\u043a\u043e\u0432\u0430 \u043c\u0438\u0441\u0441\u0438\u044f UOB?",
+      "role": "user"
+    },
+    {
+      "content": "\u041c\u0438\u0441\u0441\u0438\u044f UOB \u0437\u0430\u043a\u043b\u044e\u0447\u0430\u0435\u0442\u0441\u044f \u0432 \u043f\u0440\u0435\u0434\u043e\u0441\u0442\u0430\u0432\u043b\u0435\u043d\u0438\u0438 \u0438\u043d\u043d\u043e\u0432\u0430\u0446\u0438\u043e\u043d\u043d\u044b\u0445 \u0444\u0438\u043d\u0430\u043d\u0441\u043e\u0432\u044b\u0445 \u0440\u0435\u0448\u0435\u043d\u0438\u0439 \u0438 \u043e\u0442\u043b\u0438\u0447\u043d\u043e\u0433\u043e \u043e\u0431\u0441\u043b\u0443\u0436\u0438\u0432\u0430\u043d\u0438\u044f \u043a\u043b\u0438\u0435\u043d\u0442\u043e\u0432.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u0412 \u043a\u0430\u043a\u0438\u0445 \u0441\u0442\u0440\u0430\u043d\u0430\u0445 \u0440\u0430\u0431\u043e\u0442\u0430\u0435\u0442 UOB?",
+      "role": "user"
+    },
+    {
+      "content": "UOB \u0440\u0430\u0431\u043e\u0442\u0430\u0435\u0442 \u0432 \u043d\u0435\u0441\u043a\u043e\u043b\u044c\u043a\u0438\u0445 \u0441\u0442\u0440\u0430\u043d\u0430\u0445 \u0410\u0437\u0438\u0438, \u0432\u043a\u043b\u044e\u0447\u0430\u044f \u0421\u0438\u043d\u0433\u0430\u043f\u0443\u0440, \u041c\u0430\u043b\u0430\u0439\u0437\u0438\u044e, \u0418\u043d\u0434\u043e\u043d\u0435\u0437\u0438\u044e, \u0422\u0430\u0438\u043b\u0430\u043d\u0434 \u0438 \u0412\u044c\u0435\u0442\u043d\u0430\u043c, \u043f\u0440\u0435\u0434\u043b\u0430\u0433\u0430\u044f \u0440\u0430\u0437\u043d\u043e\u043e\u0431\u0440\u0430\u0437\u043d\u044b\u0435 \u0444\u0438\u043d\u0430\u043d\u0441\u043e\u0432\u044b\u0435 \u0443\u0441\u043b\u0443\u0433\u0438.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u041a\u0430\u043a UOB \u0440\u0430\u0437\u0432\u0438\u0432\u0430\u043b\u0430\u0441\u044c \u0441\u043e \u0432\u0440\u0435\u043c\u0435\u043d\u0435\u043c?",
+      "role": "user"
+    },
+    {
+      "content": "UOB \u0440\u0430\u0437\u0432\u0438\u0432\u0430\u043b\u0430\u0441\u044c \u0437\u0430 \u0441\u0447\u0435\u0442 \u0432\u043d\u0435\u0434\u0440\u0435\u043d\u0438\u044f \u0446\u0438\u0444\u0440\u043e\u0432\u044b\u0445 \u0442\u0435\u0445\u043d\u043e\u043b\u043e\u0433\u0438\u0439, \u0440\u0430\u0441\u0448\u0438\u0440\u0435\u043d\u0438\u044f \u0441\u0435\u0442\u0438 \u0438 \u0434\u0438\u0432\u0435\u0440\u0441\u0438\u0444\u0438\u043a\u0430\u0446\u0438\u0438 \u0444\u0438\u043d\u0430\u043d\u0441\u043e\u0432\u044b\u0445 \u0443\u0441\u043b\u0443\u0433.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u041a\u0430\u043a\u0438\u0435 \u0438\u043d\u043d\u043e\u0432\u0430\u0446\u0438\u0438 \u0432 \u0446\u0438\u0444\u0440\u043e\u0432\u044b\u0445 \u0444\u0438\u043d\u0430\u043d\u0441\u043e\u0432\u044b\u0445 \u0443\u0441\u043b\u0443\u0433\u0430\u0445 \u043f\u0440\u0435\u0434\u043b\u0430\u0433\u0430\u0435\u0442 UOB?",
+      "role": "user"
+    },
+    {
+      "content": "UOB \u0432\u043d\u0435\u0434\u0440\u0438\u043b\u0430 \u0440\u0430\u0437\u043b\u0438\u0447\u043d\u044b\u0435 \u0438\u043d\u043d\u043e\u0432\u0430\u0446\u0438\u0438, \u0432\u043a\u043b\u044e\u0447\u0430\u044f \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435 UOB Mighty, \u043a\u043e\u0442\u043e\u0440\u043e\u0435 \u043f\u043e\u0437\u0432\u043e\u043b\u044f\u0435\u0442 \u043a\u043b\u0438\u0435\u043d\u0442\u0430\u043c \u0441\u043e\u0432\u0435\u0440\u0448\u0430\u0442\u044c \u0442\u0440\u0430\u043d\u0437\u0430\u043a\u0446\u0438\u0438 \u0438 \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u0442\u044c \u0441\u0432\u043e\u0438\u043c\u0438 \u0441\u0447\u0435\u0442\u0430\u043c\u0438.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u041a\u0430\u043a\u0443\u044e \u043a\u043b\u0438\u0435\u043d\u0442\u0441\u043a\u0443\u044e \u0431\u0430\u0437\u0443 \u043e\u0431\u0441\u043b\u0443\u0436\u0438\u0432\u0430\u0435\u0442 UOB?",
+      "role": "user"
+    },
+    {
+      "content": "UOB \u043e\u0431\u0441\u043b\u0443\u0436\u0438\u0432\u0430\u0435\u0442 \u0440\u0430\u0437\u043b\u0438\u0447\u043d\u044b\u0435 \u0433\u0440\u0443\u043f\u043f\u044b \u043a\u043b\u0438\u0435\u043d\u0442\u043e\u0432, \u0432\u043a\u043b\u044e\u0447\u0430\u044f \u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0438\u0445 \u043b\u0438\u0446, \u043c\u0430\u043b\u044b\u0435 \u0438 \u0441\u0440\u0435\u0434\u043d\u0438\u0435 \u043f\u0440\u0435\u0434\u043f\u0440\u0438\u044f\u0442\u0438\u044f, \u043a\u0440\u0443\u043f\u043d\u044b\u0435 \u043a\u043e\u0440\u043f\u043e\u0440\u0430\u0446\u0438\u0438 \u0438 \u0438\u043d\u0441\u0442\u0438\u0442\u0443\u0446\u0438\u043e\u043d\u0430\u043b\u044c\u043d\u044b\u0445 \u043a\u043b\u0438\u0435\u043d\u0442\u043e\u0432.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u041a\u0430\u043a\u043e\u0432\u044b \u043e\u0441\u043d\u043e\u0432\u043d\u044b\u0435 \u0446\u0435\u043d\u043d\u043e\u0441\u0442\u0438 UOB?",
+      "role": "user"
+    },
+    {
+      "content": "\u041e\u0441\u043d\u043e\u0432\u043d\u044b\u0435 \u0446\u0435\u043d\u043d\u043e\u0441\u0442\u0438 UOB \u0432\u043a\u043b\u044e\u0447\u0430\u044e\u0442 \u0447\u0435\u0441\u0442\u043d\u043e\u0441\u0442\u044c, \u0438\u043d\u043d\u043e\u0432\u0430\u0446\u0438\u0438, \u043e\u0431\u0441\u043b\u0443\u0436\u0438\u0432\u0430\u043d\u0438\u0435 \u043a\u043b\u0438\u0435\u043d\u0442\u043e\u0432 \u0438 \u043a\u043e\u043c\u0430\u043d\u0434\u043d\u0443\u044e \u0440\u0430\u0431\u043e\u0442\u0443.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u041a\u0430\u043a UOB \u043f\u043e\u0434\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u0435\u0442 \u043c\u0435\u0441\u0442\u043d\u043e\u0435 \u0441\u043e\u043e\u0431\u0449\u0435\u0441\u0442\u0432\u043e?",
+      "role": "user"
+    },
+    {
+      "content": "UOB \u043f\u043e\u0434\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u0435\u0442 \u043c\u0435\u0441\u0442\u043d\u043e\u0435 \u0441\u043e\u043e\u0431\u0449\u0435\u0441\u0442\u0432\u043e \u0447\u0435\u0440\u0435\u0437 \u0438\u043d\u0438\u0446\u0438\u0430\u0442\u0438\u0432\u044b \u043a\u043e\u0440\u043f\u043e\u0440\u0430\u0442\u0438\u0432\u043d\u043e\u0439 \u0441\u043e\u0446\u0438\u0430\u043b\u044c\u043d\u043e\u0439 \u043e\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0435\u043d\u043d\u043e\u0441\u0442\u0438, \u0442\u0430\u043a\u0438\u0435 \u043a\u0430\u043a \u043f\u043e\u0436\u0435\u0440\u0442\u0432\u043e\u0432\u0430\u043d\u0438\u044f \u0438 \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u043c\u044b \u0432\u043e\u043b\u043e\u043d\u0442\u0435\u0440\u0441\u0442\u0432\u0430.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u0427\u0442\u043e \u0442\u0430\u043a\u043e\u0435 \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u043c\u0430 UOB Stand By Me?",
+      "role": "user"
+    },
+    {
+      "content": "\u041f\u0440\u043e\u0433\u0440\u0430\u043c\u043c\u0430 UOB Stand By Me \u2014 \u044d\u0442\u043e \u0438\u043d\u0438\u0446\u0438\u0430\u0442\u0438\u0432\u0430, \u043d\u0430\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u043d\u0430\u044f \u043d\u0430 \u043f\u0440\u0435\u0434\u043e\u0441\u0442\u0430\u0432\u043b\u0435\u043d\u0438\u0435 \u0444\u0438\u043d\u0430\u043d\u0441\u043e\u0432\u043e\u0439 \u043f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u0438 \u0438 \u043a\u043e\u043d\u0441\u0443\u043b\u044c\u0442\u0430\u0446\u0438\u0439 \u043a\u043b\u0438\u0435\u043d\u0442\u0430\u043c, \u043e\u043a\u0430\u0437\u0430\u0432\u0448\u0438\u043c\u0441\u044f \u0432 \u0442\u0440\u0443\u0434\u043d\u043e\u0439 \u0441\u0438\u0442\u0443\u0430\u0446\u0438\u0438.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u041a\u0430\u043a\u0438\u0435 \u0432\u0430\u0436\u043d\u044b\u0435 \u0432\u0435\u0445\u0438 \u0432 \u0438\u0441\u0442\u043e\u0440\u0438\u0438 UOB?",
+      "role": "user"
+    },
+    {
+      "content": "\u0412\u0430\u0436\u043d\u044b\u0435 \u0432\u0435\u0445\u0438 \u0432 \u0438\u0441\u0442\u043e\u0440\u0438\u0438 UOB \u0432\u043a\u043b\u044e\u0447\u0430\u044e\u0442 \u043c\u0435\u0436\u0434\u0443\u043d\u0430\u0440\u043e\u0434\u043d\u0443\u044e \u044d\u043a\u0441\u043f\u0430\u043d\u0441\u0438\u044e \u0432 1990-\u0445 \u0433\u043e\u0434\u0430\u0445 \u0438 \u0432\u043d\u0435\u0434\u0440\u0435\u043d\u0438\u0435 \u0446\u0438\u0444\u0440\u043e\u0432\u044b\u0445 \u0442\u0435\u0445\u043d\u043e\u043b\u043e\u0433\u0438\u0439 \u0437\u0430 \u043f\u043e\u0441\u043b\u0435\u0434\u043d\u0438\u0435 \u0434\u0435\u0441\u044f\u0442\u044c \u043b\u0435\u0442.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u041a\u0430\u043a UOB \u043f\u0440\u043e\u0434\u0432\u0438\u0433\u0430\u0435\u0442 \u0443\u0441\u0442\u043e\u0439\u0447\u0438\u0432\u043e\u0435 \u0440\u0430\u0437\u0432\u0438\u0442\u0438\u0435?",
+      "role": "user"
+    },
+    {
+      "content": "UOB \u043f\u0440\u043e\u0434\u0432\u0438\u0433\u0430\u0435\u0442 \u0443\u0441\u0442\u043e\u0439\u0447\u0438\u0432\u043e\u0435 \u0440\u0430\u0437\u0432\u0438\u0442\u0438\u0435 \u0447\u0435\u0440\u0435\u0437 \u0444\u0438\u043d\u0430\u043d\u0441\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435 \u044d\u043a\u043e\u043b\u043e\u0433\u0438\u0447\u0435\u0441\u043a\u0438\u0445 \u043f\u0440\u043e\u0435\u043a\u0442\u043e\u0432 \u0438 \u0432\u043d\u0435\u0434\u0440\u0435\u043d\u0438\u0435 \u043c\u0435\u0442\u043e\u0434\u043e\u0432 \u0441\u043e\u043a\u0440\u0430\u0449\u0435\u043d\u0438\u044f \u0443\u0433\u043b\u0435\u0440\u043e\u0434\u043d\u043e\u0433\u043e \u0441\u043b\u0435\u0434\u0430 \u0432 \u0441\u0432\u043e\u0435\u0439 \u0434\u0435\u044f\u0442\u0435\u043b\u044c\u043d\u043e\u0441\u0442\u0438.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u041a\u0430\u043a UOB \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u0435\u0442 \u043a\u0440\u0435\u0434\u0438\u0442\u043d\u044b\u043c\u0438 \u0440\u0438\u0441\u043a\u0430\u043c\u0438?",
+      "role": "user"
+    },
+    {
+      "content": "UOB \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u0435\u0442 \u043a\u0440\u0435\u0434\u0438\u0442\u043d\u044b\u043c\u0438 \u0440\u0438\u0441\u043a\u0430\u043c\u0438 \u0447\u0435\u0440\u0435\u0437 \u0441\u0442\u0440\u043e\u0433\u0443\u044e \u043e\u0446\u0435\u043d\u043a\u0443 \u043a\u0440\u0435\u0434\u0438\u0442\u043e\u0441\u043f\u043e\u0441\u043e\u0431\u043d\u043e\u0441\u0442\u0438 \u0438 \u043f\u043e\u0441\u0442\u043e\u044f\u043d\u043d\u044b\u0439 \u043c\u043e\u043d\u0438\u0442\u043e\u0440\u0438\u043d\u0433 \u043a\u0440\u0435\u0434\u0438\u0442\u043d\u043e\u0433\u043e \u043f\u043e\u0440\u0442\u0444\u0435\u043b\u044f.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u041a\u0430\u043a UOB \u043f\u043e\u0434\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u0435\u0442 \u043f\u0440\u0435\u0434\u043f\u0440\u0438\u043d\u0438\u043c\u0430\u0442\u0435\u043b\u044c\u0441\u0442\u0432\u043e?",
+      "role": "user"
+    },
+    {
+      "content": "UOB \u043f\u043e\u0434\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u0435\u0442 \u043f\u0440\u0435\u0434\u043f\u0440\u0438\u043d\u0438\u043c\u0430\u0442\u0435\u043b\u044c\u0441\u0442\u0432\u043e \u0447\u0435\u0440\u0435\u0437 \u0444\u0438\u043d\u0430\u043d\u0441\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435 \u0438 \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u043c\u044b \u043a\u043e\u043d\u0441\u0443\u043b\u044c\u0442\u0430\u0446\u0438\u0439 \u0434\u043b\u044f \u0441\u0442\u0430\u0440\u0442\u0430\u043f\u043e\u0432 \u0438 \u043c\u0430\u043b\u044b\u0445 \u0438 \u0441\u0440\u0435\u0434\u043d\u0438\u0445 \u043f\u0440\u0435\u0434\u043f\u0440\u0438\u044f\u0442\u0438\u0439.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u041a\u0430\u043a\u043e\u0439 \u043f\u043e\u0434\u0445\u043e\u0434 UOB \u043a \u0444\u0438\u043d\u0430\u043d\u0441\u043e\u0432\u044b\u043c \u0438\u043d\u043d\u043e\u0432\u0430\u0446\u0438\u044f\u043c?",
+      "role": "user"
+    },
+    {
+      "content": "UOB \u0430\u043a\u0442\u0438\u0432\u043d\u043e \u0437\u0430\u043d\u0438\u043c\u0430\u0435\u0442\u0441\u044f \u0444\u0438\u043d\u0430\u043d\u0441\u043e\u0432\u044b\u043c\u0438 \u0438\u043d\u043d\u043e\u0432\u0430\u0446\u0438\u044f\u043c\u0438, \u0438\u043d\u0432\u0435\u0441\u0442\u0438\u0440\u0443\u044f \u0432 \u043d\u043e\u0432\u044b\u0435 \u0442\u0435\u0445\u043d\u043e\u043b\u043e\u0433\u0438\u0438 \u0438 \u0441\u043e\u0442\u0440\u0443\u0434\u043d\u0438\u0447\u0430\u044f \u0441 \u0444\u0438\u043d\u0442\u0435\u0445-\u043a\u043e\u043c\u043f\u0430\u043d\u0438\u044f\u043c\u0438.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u041a\u0430\u043a\u0438\u0435 \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u043c\u044b \u043f\u0440\u0435\u0434\u043b\u0430\u0433\u0430\u0435\u0442 UOB \u0434\u043b\u044f \u0444\u0438\u043d\u0430\u043d\u0441\u043e\u0432\u043e\u0433\u043e \u043e\u0431\u0440\u0430\u0437\u043e\u0432\u0430\u043d\u0438\u044f?",
+      "role": "user"
+    },
+    {
+      "content": "UOB \u043f\u0440\u0435\u0434\u043b\u0430\u0433\u0430\u0435\u0442 \u0440\u0430\u0437\u043b\u0438\u0447\u043d\u044b\u0435 \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u043c\u044b \u0434\u043b\u044f \u043f\u043e\u0432\u044b\u0448\u0435\u043d\u0438\u044f \u0444\u0438\u043d\u0430\u043d\u0441\u043e\u0432\u043e\u0439 \u0433\u0440\u0430\u043c\u043e\u0442\u043d\u043e\u0441\u0442\u0438 \u043a\u043b\u0438\u0435\u043d\u0442\u043e\u0432, \u0432\u043a\u043b\u044e\u0447\u0430\u044f \u0441\u0435\u043c\u0438\u043d\u0430\u0440\u044b \u0438 \u043e\u043d\u043b\u0430\u0439\u043d-\u043c\u0430\u0442\u0435\u0440\u0438\u0430\u043b\u044b.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u041a\u0430\u043a UOB \u043f\u043e\u0434\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u0435\u0442 \u0441\u0432\u043e\u0438\u0445 \u0441\u043e\u0442\u0440\u0443\u0434\u043d\u0438\u043a\u043e\u0432?",
+      "role": "user"
+    },
+    {
+      "content": "UOB \u043f\u043e\u0434\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u0435\u0442 \u0441\u0432\u043e\u0438\u0445 \u0441\u043e\u0442\u0440\u0443\u0434\u043d\u0438\u043a\u043e\u0432, \u043f\u0440\u0435\u0434\u043e\u0441\u0442\u0430\u0432\u043b\u044f\u044f \u0432\u043e\u0437\u043c\u043e\u0436\u043d\u043e\u0441\u0442\u0438 \u0434\u043b\u044f \u043f\u0440\u043e\u0444\u0435\u0441\u0441\u0438\u043e\u043d\u0430\u043b\u044c\u043d\u043e\u0433\u043e \u0440\u0430\u0437\u0432\u0438\u0442\u0438\u044f, \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u043c\u044b \u043f\u043e \u0443\u043b\u0443\u0447\u0448\u0435\u043d\u0438\u044e \u0431\u043b\u0430\u0433\u043e\u0441\u043e\u0441\u0442\u043e\u044f\u043d\u0438\u044f \u0438 \u0441\u043e\u0437\u0434\u0430\u0432\u0430\u044f \u0438\u043d\u043a\u043b\u044e\u0437\u0438\u0432\u043d\u0443\u044e \u0440\u0430\u0431\u043e\u0447\u0443\u044e \u0441\u0440\u0435\u0434\u0443.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u041a\u0430\u043a\u0438\u0435 \u043f\u0440\u043e\u0435\u043a\u0442\u044b UOB \u0440\u0435\u0430\u043b\u0438\u0437\u0443\u0435\u0442 \u0432 \u043e\u0431\u043b\u0430\u0441\u0442\u0438 \u0441\u043e\u0446\u0438\u0430\u043b\u044c\u043d\u043e\u0439 \u043e\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0435\u043d\u043d\u043e\u0441\u0442\u0438?",
+      "role": "user"
+    },
+    {
+      "content": "UOB \u0440\u0435\u0430\u043b\u0438\u0437\u0443\u0435\u0442 \u043f\u0440\u043e\u0435\u043a\u0442\u044b \u0432 \u043e\u0431\u043b\u0430\u0441\u0442\u0438 \u0441\u043e\u0446\u0438\u0430\u043b\u044c\u043d\u043e\u0439 \u043e\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0435\u043d\u043d\u043e\u0441\u0442\u0438, \u043d\u0430\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u043d\u044b\u0435 \u043d\u0430 \u043f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u0443 \u043e\u0431\u0440\u0430\u0437\u043e\u0432\u0430\u043d\u0438\u044f, \u043e\u0445\u0440\u0430\u043d\u044b \u043e\u043a\u0440\u0443\u0436\u0430\u044e\u0449\u0435\u0439 \u0441\u0440\u0435\u0434\u044b \u0438 \u043c\u0435\u0441\u0442\u043d\u044b\u0445 \u0441\u043e\u043e\u0431\u0449\u0435\u0441\u0442\u0432.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u041a\u0430\u043a UOB \u0440\u0435\u0430\u0433\u0438\u0440\u0443\u0435\u0442 \u043d\u0430 \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f \u0432 \u0444\u0438\u043d\u0430\u043d\u0441\u043e\u0432\u043e\u0439 \u0441\u0440\u0435\u0434\u0435?",
+      "role": "user"
+    },
+    {
+      "content": "UOB \u0430\u0434\u0430\u043f\u0442\u0438\u0440\u0443\u0435\u0442\u0441\u044f \u043a \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f\u043c \u0432 \u0444\u0438\u043d\u0430\u043d\u0441\u043e\u0432\u043e\u0439 \u0441\u0440\u0435\u0434\u0435 \u0447\u0435\u0440\u0435\u0437 \u0433\u0438\u0431\u043a\u0438\u0435 \u0431\u0438\u0437\u043d\u0435\u0441-\u043c\u043e\u0434\u0435\u043b\u0438 \u0438 \u0430\u043a\u0442\u0438\u0432\u043d\u043e\u0435 \u0438\u043d\u0432\u0435\u0441\u0442\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435 \u0432 \u0442\u0435\u0445\u043d\u043e\u043b\u043e\u0433\u0438\u0438.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u041a\u0430\u043a\u0438\u0435 \u043f\u043b\u0430\u043d\u044b \u043d\u0430 \u0431\u0443\u0434\u0443\u0449\u0435\u0435 \u0443 UOB?",
+      "role": "user"
+    },
+    {
+      "content": "UOB \u043f\u043b\u0430\u043d\u0438\u0440\u0443\u0435\u0442 \u043f\u0440\u043e\u0434\u043e\u043b\u0436\u0430\u0442\u044c \u0440\u0430\u0441\u0448\u0438\u0440\u0435\u043d\u0438\u0435 \u0441\u0432\u043e\u0438\u0445 \u0443\u0441\u043b\u0443\u0433, \u0443\u043b\u0443\u0447\u0448\u0435\u043d\u0438\u0435 \u043a\u043b\u0438\u0435\u043d\u0442\u0441\u043a\u043e\u0433\u043e \u043e\u043f\u044b\u0442\u0430 \u0438 \u0438\u043d\u0432\u0435\u0441\u0442\u0438\u0446\u0438\u0438 \u0432 \u0446\u0438\u0444\u0440\u043e\u0432\u044b\u0435 \u0442\u0435\u0445\u043d\u043e\u043b\u043e\u0433\u0438\u0438.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u041a\u0430\u043a UOB \u0432\u043b\u0438\u044f\u0435\u0442 \u043d\u0430 \u044d\u043a\u043e\u043d\u043e\u043c\u0438\u0447\u0435\u0441\u043a\u043e\u0435 \u0440\u0430\u0437\u0432\u0438\u0442\u0438\u0435 \u0440\u0435\u0433\u0438\u043e\u043d\u0430?",
+      "role": "user"
+    },
+    {
+      "content": "UOB \u0441\u043f\u043e\u0441\u043e\u0431\u0441\u0442\u0432\u0443\u0435\u0442 \u044d\u043a\u043e\u043d\u043e\u043c\u0438\u0447\u0435\u0441\u043a\u043e\u043c\u0443 \u0440\u0430\u0437\u0432\u0438\u0442\u0438\u044e \u0440\u0435\u0433\u0438\u043e\u043d\u0430 \u0447\u0435\u0440\u0435\u0437 \u0444\u0438\u043d\u0430\u043d\u0441\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435 \u043c\u0435\u0441\u0442\u043d\u044b\u0445 \u043f\u0440\u0435\u0434\u043f\u0440\u0438\u044f\u0442\u0438\u0439 \u0438 \u043f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u0443 \u0441\u0442\u0430\u0440\u0442\u0430\u043f\u043e\u0432.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u041a\u0430\u043a UOB \u043f\u043e\u0434\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u0435\u0442 \u0446\u0438\u0444\u0440\u043e\u0432\u0438\u0437\u0430\u0446\u0438\u044e \u0431\u0438\u0437\u043d\u0435\u0441\u0430?",
+      "role": "user"
+    },
+    {
+      "content": "UOB \u043f\u043e\u0434\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u0435\u0442 \u0446\u0438\u0444\u0440\u043e\u0432\u0438\u0437\u0430\u0446\u0438\u044e \u0431\u0438\u0437\u043d\u0435\u0441\u0430 \u0447\u0435\u0440\u0435\u0437 \u043a\u0440\u0435\u0434\u0438\u0442\u043e\u0432\u0430\u043d\u0438\u0435 \u0438 \u043a\u043e\u043d\u0441\u0443\u043b\u044c\u0442\u0430\u0446\u0438\u043e\u043d\u043d\u044b\u0435 \u0443\u0441\u043b\u0443\u0433\u0438 \u0434\u043b\u044f \u043f\u0440\u0435\u0434\u043f\u0440\u0438\u044f\u0442\u0438\u0439, \u0436\u0435\u043b\u0430\u044e\u0449\u0438\u0445 \u0432\u043d\u0435\u0434\u0440\u044f\u0442\u044c \u043d\u043e\u0432\u044b\u0435 \u0442\u0435\u0445\u043d\u043e\u043b\u043e\u0433\u0438\u0438.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u041a\u0430\u043a\u0438\u0435 \u043f\u0430\u0440\u0442\u043d\u0435\u0440\u0441\u0442\u0432\u0430 UOB \u0437\u0430\u043a\u043b\u044e\u0447\u0430\u0435\u0442 \u0434\u043b\u044f \u0443\u043b\u0443\u0447\u0448\u0435\u043d\u0438\u044f \u0443\u0441\u043b\u0443\u0433?",
+      "role": "user"
+    },
+    {
+      "content": "UOB \u0437\u0430\u043a\u043b\u044e\u0447\u0430\u0435\u0442 \u043f\u0430\u0440\u0442\u043d\u0435\u0440\u0441\u0442\u0432\u0430 \u0441 \u0444\u0438\u043d\u0442\u0435\u0445-\u043a\u043e\u043c\u043f\u0430\u043d\u0438\u044f\u043c\u0438 \u0438 \u0442\u0435\u0445\u043d\u043e\u043b\u043e\u0433\u0438\u0447\u0435\u0441\u043a\u0438\u043c\u0438 \u0441\u0442\u0430\u0440\u0442\u0430\u043f\u0430\u043c\u0438 \u0434\u043b\u044f \u0443\u043b\u0443\u0447\u0448\u0435\u043d\u0438\u044f \u0441\u0432\u043e\u0438\u0445 \u0444\u0438\u043d\u0430\u043d\u0441\u043e\u0432\u044b\u0445 \u0443\u0441\u043b\u0443\u0433.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u041a\u0430\u043a UOB \u0440\u0435\u0430\u0433\u0438\u0440\u0443\u0435\u0442 \u043d\u0430 \u044d\u043a\u043e\u043b\u043e\u0433\u0438\u0447\u0435\u0441\u043a\u0438\u0435 \u0432\u044b\u0437\u043e\u0432\u044b?",
+      "role": "user"
+    },
+    {
+      "content": "UOB \u0440\u0430\u0437\u0440\u0430\u0431\u0430\u0442\u044b\u0432\u0430\u0435\u0442 \u0438\u043d\u0438\u0446\u0438\u0430\u0442\u0438\u0432\u044b \u043f\u043e \u0443\u0441\u0442\u043e\u0439\u0447\u0438\u0432\u043e\u043c\u0443 \u0444\u0438\u043d\u0430\u043d\u0441\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u044e \u0438 \u043f\u043e\u0434\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u0435\u0442 \u043f\u0440\u043e\u0435\u043a\u0442\u044b, \u043d\u0430\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u043d\u044b\u0435 \u043d\u0430 \u0441\u043d\u0438\u0436\u0435\u043d\u0438\u0435 \u0432\u043e\u0437\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u044f \u043d\u0430 \u043e\u043a\u0440\u0443\u0436\u0430\u044e\u0449\u0443\u044e \u0441\u0440\u0435\u0434\u0443.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u041a\u0430\u043a UOB \u043f\u043e\u0434\u0445\u043e\u0434\u0438\u0442 \u043a \u043a\u043b\u0438\u0435\u043d\u0442\u0441\u043a\u043e\u043c\u0443 \u043e\u0431\u0441\u043b\u0443\u0436\u0438\u0432\u0430\u043d\u0438\u044e?",
+      "role": "user"
+    },
+    {
+      "content": "UOB \u0444\u043e\u043a\u0443\u0441\u0438\u0440\u0443\u0435\u0442\u0441\u044f \u043d\u0430 \u043a\u043b\u0438\u0435\u043d\u0442\u0441\u043a\u043e\u043c \u043e\u0431\u0441\u043b\u0443\u0436\u0438\u0432\u0430\u043d\u0438\u0438, \u043f\u0440\u0435\u0434\u043b\u0430\u0433\u0430\u044f \u043f\u0435\u0440\u0441\u043e\u043d\u0430\u043b\u0438\u0437\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u0435 \u0440\u0435\u0448\u0435\u043d\u0438\u044f \u0438 \u0432\u044b\u0441\u043e\u043a\u0438\u0439 \u0443\u0440\u043e\u0432\u0435\u043d\u044c \u043e\u0431\u0441\u043b\u0443\u0436\u0438\u0432\u0430\u043d\u0438\u044f \u043d\u0430 \u0432\u0441\u0435\u0445 \u044d\u0442\u0430\u043f\u0430\u0445 \u0432\u0437\u0430\u0438\u043c\u043e\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u044f \u0441 \u043a\u043b\u0438\u0435\u043d\u0442\u0430\u043c\u0438.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u041a\u0430\u043a UOB \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u0435\u0442 \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f\u043c\u0438 \u0432 \u043e\u0440\u0433\u0430\u043d\u0438\u0437\u0430\u0446\u0438\u0438?",
+      "role": "user"
+    },
+    {
+      "content": "UOB \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u0435\u0442 \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f\u043c\u0438 \u0447\u0435\u0440\u0435\u0437 \u0441\u0442\u0440\u0430\u0442\u0435\u0433\u0438\u0438 \u0443\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u044f \u043f\u0440\u043e\u0435\u043a\u0442\u0430\u043c\u0438 \u0438 \u0432\u043e\u0432\u043b\u0435\u0447\u0435\u043d\u0438\u0435 \u0441\u043e\u0442\u0440\u0443\u0434\u043d\u0438\u043a\u043e\u0432 \u0432 \u043f\u0440\u043e\u0446\u0435\u0441\u0441 \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u0439 \u0434\u043b\u044f \u0434\u043e\u0441\u0442\u0438\u0436\u0435\u043d\u0438\u044f \u0446\u0435\u043b\u0435\u0439.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u041a\u0430\u043a UOB \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u0435\u0442 \u0442\u0435\u0445\u043d\u043e\u043b\u043e\u0433\u0438\u0438 \u0434\u043b\u044f \u043f\u043e\u0432\u044b\u0448\u0435\u043d\u0438\u044f \u044d\u0444\u0444\u0435\u043a\u0442\u0438\u0432\u043d\u043e\u0441\u0442\u0438?",
+      "role": "user"
+    },
+    {
+      "content": "UOB \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u0435\u0442 \u0442\u0435\u0445\u043d\u043e\u043b\u043e\u0433\u0438\u0438 \u0434\u043b\u044f \u0430\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0437\u0430\u0446\u0438\u0438 \u043f\u0440\u043e\u0446\u0435\u0441\u0441\u043e\u0432, \u0443\u043b\u0443\u0447\u0448\u0435\u043d\u0438\u044f \u043a\u043b\u0438\u0435\u043d\u0442\u0441\u043a\u043e\u0433\u043e \u043e\u043f\u044b\u0442\u0430 \u0438 \u043f\u043e\u0432\u044b\u0448\u0435\u043d\u0438\u044f \u043f\u0440\u043e\u0438\u0437\u0432\u043e\u0434\u0438\u0442\u0435\u043b\u044c\u043d\u043e\u0441\u0442\u0438 \u0441\u043e\u0442\u0440\u0443\u0434\u043d\u0438\u043a\u043e\u0432.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u041a\u0430\u043a UOB \u0440\u0430\u0431\u043e\u0442\u0430\u0435\u0442 \u0441 \u043c\u0435\u0436\u0434\u0443\u043d\u0430\u0440\u043e\u0434\u043d\u044b\u043c\u0438 \u043a\u043b\u0438\u0435\u043d\u0442\u0430\u043c\u0438?",
+      "role": "user"
+    },
+    {
+      "content": "UOB \u043f\u0440\u0435\u0434\u043b\u0430\u0433\u0430\u0435\u0442 \u043c\u0435\u0436\u0434\u0443\u043d\u0430\u0440\u043e\u0434\u043d\u044b\u0435 \u0431\u0430\u043d\u043a\u043e\u0432\u0441\u043a\u0438\u0435 \u0443\u0441\u043b\u0443\u0433\u0438 \u0438 \u0440\u0435\u0448\u0435\u043d\u0438\u044f, \u043f\u043e\u0434\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u044e\u0449\u0438\u0435 \u0431\u0438\u0437\u043d\u0435\u0441-\u043a\u043b\u0438\u0435\u043d\u0442\u043e\u0432 \u043d\u0430 \u0433\u043b\u043e\u0431\u0430\u043b\u044c\u043d\u043e\u043c \u0443\u0440\u043e\u0432\u043d\u0435.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u041a\u0430\u043a UOB \u043e\u0431\u0435\u0441\u043f\u0435\u0447\u0438\u0432\u0430\u0435\u0442 \u0431\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e\u0441\u0442\u044c \u0434\u0430\u043d\u043d\u044b\u0445 \u043a\u043b\u0438\u0435\u043d\u0442\u043e\u0432?",
+      "role": "user"
+    },
+    {
+      "content": "UOB \u043f\u0440\u0438\u043c\u0435\u043d\u044f\u0435\u0442 \u043f\u0435\u0440\u0435\u0434\u043e\u0432\u044b\u0435 \u0442\u0435\u0445\u043d\u043e\u043b\u043e\u0433\u0438\u0438 \u0438 \u0441\u0442\u0440\u043e\u0433\u0438\u0435 \u043f\u0440\u043e\u0442\u043e\u043a\u043e\u043b\u044b \u0431\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e\u0441\u0442\u0438 \u0434\u043b\u044f \u0437\u0430\u0449\u0438\u0442\u044b \u0434\u0430\u043d\u043d\u044b\u0445 \u043a\u043b\u0438\u0435\u043d\u0442\u043e\u0432 \u0438 \u043f\u0440\u0435\u0434\u043e\u0442\u0432\u0440\u0430\u0449\u0435\u043d\u0438\u044f \u0443\u0442\u0435\u0447\u0435\u043a \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u0438.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u041a\u0430\u043a UOB \u043f\u043e\u0434\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u0435\u0442 \u0432\u043d\u0435\u0434\u0440\u0435\u043d\u0438\u0435 \u043d\u043e\u0432\u044b\u0445 \u0442\u0435\u0445\u043d\u043e\u043b\u043e\u0433\u0438\u0439?",
+      "role": "user"
+    },
+    {
+      "content": "UOB \u0430\u043a\u0442\u0438\u0432\u043d\u043e \u0432\u043d\u0435\u0434\u0440\u044f\u0435\u0442 \u043d\u043e\u0432\u044b\u0435 \u0442\u0435\u0445\u043d\u043e\u043b\u043e\u0433\u0438\u0438 \u0447\u0435\u0440\u0435\u0437 \u0438\u0441\u0441\u043b\u0435\u0434\u043e\u0432\u0430\u043d\u0438\u044f \u0438 \u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0438, \u0430 \u0442\u0430\u043a\u0436\u0435 \u0441\u043e\u0442\u0440\u0443\u0434\u043d\u0438\u0447\u0430\u044f \u0441 \u0444\u0438\u043d\u0442\u0435\u0445-\u043a\u043e\u043c\u043f\u0430\u043d\u0438\u044f\u043c\u0438 \u0434\u043b\u044f \u0443\u043b\u0443\u0447\u0448\u0435\u043d\u0438\u044f \u0441\u0432\u043e\u0438\u0445 \u0444\u0438\u043d\u0430\u043d\u0441\u043e\u0432\u044b\u0445 \u0443\u0441\u043b\u0443\u0433.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u041a\u0430\u043a UOB \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u0435\u0442 \u043a\u043e\u0440\u043f\u043e\u0440\u0430\u0442\u0438\u0432\u043d\u043e\u0439 \u0441\u043e\u0446\u0438\u0430\u043b\u044c\u043d\u043e\u0439 \u043e\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0435\u043d\u043d\u043e\u0441\u0442\u044c\u044e?",
+      "role": "user"
+    },
+    {
+      "content": "UOB \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u0435\u0442 \u043a\u043e\u0440\u043f\u043e\u0440\u0430\u0442\u0438\u0432\u043d\u043e\u0439 \u0441\u043e\u0446\u0438\u0430\u043b\u044c\u043d\u043e\u0439 \u043e\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0435\u043d\u043d\u043e\u0441\u0442\u044c\u044e \u0447\u0435\u0440\u0435\u0437 \u0441\u0442\u0440\u0430\u0442\u0435\u0433\u0438\u0438 \u0438 \u0438\u043d\u0438\u0446\u0438\u0430\u0442\u0438\u0432\u044b, \u043d\u0430\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u043d\u044b\u0435 \u043d\u0430 \u0443\u043b\u0443\u0447\u0448\u0435\u043d\u0438\u0435 \u0436\u0438\u0437\u043d\u0438 \u0432 \u0441\u043e\u043e\u0431\u0449\u0435\u0441\u0442\u0432\u0430\u0445, \u0433\u0434\u0435 \u043e\u043d \u0440\u0430\u0431\u043e\u0442\u0430\u0435\u0442.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u041a\u0430\u043a UOB \u0432\u0437\u0430\u0438\u043c\u043e\u0434\u0435\u0439\u0441\u0442\u0432\u0443\u0435\u0442 \u0441 \u0430\u043a\u0446\u0438\u043e\u043d\u0435\u0440\u0430\u043c\u0438?",
+      "role": "user"
+    },
+    {
+      "content": "UOB \u0430\u043a\u0442\u0438\u0432\u043d\u043e \u0432\u0437\u0430\u0438\u043c\u043e\u0434\u0435\u0439\u0441\u0442\u0432\u0443\u0435\u0442 \u0441 \u0430\u043a\u0446\u0438\u043e\u043d\u0435\u0440\u0430\u043c\u0438 \u0447\u0435\u0440\u0435\u0437 \u0440\u0435\u0433\u0443\u043b\u044f\u0440\u043d\u044b\u0435 \u043e\u0442\u0447\u0435\u0442\u044b, \u0441\u043e\u0431\u0440\u0430\u043d\u0438\u044f \u0438 \u043f\u0440\u044f\u043c\u0443\u044e \u0441\u0432\u044f\u0437\u044c, \u043e\u0431\u0435\u0441\u043f\u0435\u0447\u0438\u0432\u0430\u044f \u043f\u0440\u043e\u0437\u0440\u0430\u0447\u043d\u043e\u0441\u0442\u044c \u0438 \u043f\u043e\u0434\u043e\u0442\u0447\u0435\u0442\u043d\u043e\u0441\u0442\u044c.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u041a\u0430\u043a\u0438\u0435 \u0444\u0430\u043a\u0442\u043e\u0440\u044b \u0432\u043b\u0438\u044f\u044e\u0442 \u043d\u0430 \u0441\u0442\u0440\u0430\u0442\u0435\u0433\u0438\u0447\u0435\u0441\u043a\u043e\u0435 \u0440\u0430\u0437\u0432\u0438\u0442\u0438\u0435 UOB?",
+      "role": "user"
+    },
+    {
+      "content": "\u0421\u0442\u0440\u0430\u0442\u0435\u0433\u0438\u0447\u0435\u0441\u043a\u043e\u0435 \u0440\u0430\u0437\u0432\u0438\u0442\u0438\u0435 UOB \u0437\u0430\u0432\u0438\u0441\u0438\u0442 \u043e\u0442 \u0440\u044b\u043d\u043e\u0447\u043d\u044b\u0445 \u0442\u0435\u043d\u0434\u0435\u043d\u0446\u0438\u0439, \u043a\u043b\u0438\u0435\u043d\u0442\u0441\u043a\u0438\u0445 \u043f\u043e\u0442\u0440\u0435\u0431\u043d\u043e\u0441\u0442\u0435\u0439 \u0438 \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u0439 \u0432 \u0444\u0438\u043d\u0430\u043d\u0441\u043e\u0432\u043e\u0439 \u0441\u0440\u0435\u0434\u0435.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u041a\u0430\u043a UOB \u0430\u0434\u0430\u043f\u0442\u0438\u0440\u0443\u0435\u0442\u0441\u044f \u043a \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f\u043c \u0432 \u043f\u043e\u0442\u0440\u0435\u0431\u0438\u0442\u0435\u043b\u044c\u0441\u043a\u0438\u0445 \u043f\u0440\u0435\u0434\u043f\u043e\u0447\u0442\u0435\u043d\u0438\u044f\u0445?",
+      "role": "user"
+    },
+    {
+      "content": "UOB \u0430\u0434\u0430\u043f\u0442\u0438\u0440\u0443\u0435\u0442\u0441\u044f \u043a \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f\u043c \u0432 \u043f\u043e\u0442\u0440\u0435\u0431\u0438\u0442\u0435\u043b\u044c\u0441\u043a\u0438\u0445 \u043f\u0440\u0435\u0434\u043f\u043e\u0447\u0442\u0435\u043d\u0438\u044f\u0445 \u0447\u0435\u0440\u0435\u0437 \u0438\u0441\u0441\u043b\u0435\u0434\u043e\u0432\u0430\u043d\u0438\u044f \u0440\u044b\u043d\u043a\u0430 \u0438 \u043e\u0431\u0440\u0430\u0442\u043d\u0443\u044e \u0441\u0432\u044f\u0437\u044c \u043e\u0442 \u043a\u043b\u0438\u0435\u043d\u0442\u043e\u0432 \u0434\u043b\u044f \u0443\u043b\u0443\u0447\u0448\u0435\u043d\u0438\u044f \u0441\u0432\u043e\u0438\u0445 \u043f\u0440\u043e\u0434\u0443\u043a\u0442\u043e\u0432 \u0438 \u0443\u0441\u043b\u0443\u0433.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u041a\u0430\u043a UOB \u0440\u0430\u0437\u0432\u0438\u0432\u0430\u0435\u0442 \u0441\u0432\u043e\u0438\u0445 \u0441\u043e\u0442\u0440\u0443\u0434\u043d\u0438\u043a\u043e\u0432?",
+      "role": "user"
+    },
+    {
+      "content": "UOB \u0440\u0430\u0437\u0432\u0438\u0432\u0430\u0435\u0442 \u0441\u0432\u043e\u0438\u0445 \u0441\u043e\u0442\u0440\u0443\u0434\u043d\u0438\u043a\u043e\u0432 \u0447\u0435\u0440\u0435\u0437 \u043e\u0431\u0443\u0447\u0435\u043d\u0438\u0435, \u043d\u0430\u0441\u0442\u0430\u0432\u043d\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u0438 \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u043c\u044b \u043a\u0430\u0440\u044c\u0435\u0440\u043d\u043e\u0433\u043e \u0440\u043e\u0441\u0442\u0430, \u043f\u043e\u0434\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u044f \u0438\u0445 \u043b\u0438\u0447\u043d\u043e\u0441\u0442\u043d\u043e\u0435 \u0438 \u043f\u0440\u043e\u0444\u0435\u0441\u0441\u0438\u043e\u043d\u0430\u043b\u044c\u043d\u043e\u0435 \u0440\u0430\u0437\u0432\u0438\u0442\u0438\u0435.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u041a\u0430\u043a UOB \u0440\u0435\u0430\u043b\u0438\u0437\u0443\u0435\u0442 \u043f\u043e\u043b\u0438\u0442\u0438\u043a\u0443 \u0438\u043d\u043a\u043b\u044e\u0437\u0438\u0432\u043d\u043e\u0441\u0442\u0438?",
+      "role": "user"
+    },
+    {
+      "content": "UOB \u0440\u0435\u0430\u043b\u0438\u0437\u0443\u0435\u0442 \u043f\u043e\u043b\u0438\u0442\u0438\u043a\u0443 \u0438\u043d\u043a\u043b\u044e\u0437\u0438\u0432\u043d\u043e\u0441\u0442\u0438, \u0441\u043e\u0437\u0434\u0430\u0432\u0430\u044f \u0440\u0430\u0432\u043d\u044b\u0435 \u0432\u043e\u0437\u043c\u043e\u0436\u043d\u043e\u0441\u0442\u0438 \u0434\u043b\u044f \u0432\u0441\u0435\u0445 \u0441\u043e\u0442\u0440\u0443\u0434\u043d\u0438\u043a\u043e\u0432 \u0438 \u043f\u043e\u0434\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u044f \u0440\u0430\u0437\u043d\u043e\u043e\u0431\u0440\u0430\u0437\u0438\u0435 \u043d\u0430 \u0440\u0430\u0431\u043e\u0447\u0435\u043c \u043c\u0435\u0441\u0442\u0435.",
+      "role": "assistant"
+    },
+    {
+      "content": "\u041a\u0430\u043a UOB \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u0435\u0442 \u0441\u0432\u043e\u0435\u0439 \u0440\u0435\u043f\u0443\u0442\u0430\u0446\u0438\u0435\u0439?",
+      "role": "user"
+    },
+    {
+      "content": "UOB \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u0435\u0442 \u0441\u0432\u043e\u0435\u0439 \u0440\u0435\u043f\u0443\u0442\u0430\u0446\u0438\u0435\u0439 \u0447\u0435\u0440\u0435\u0437 \u043f\u0440\u043e\u0437\u0440\u0430\u0447\u043d\u044b\u0435 \u0431\u0438\u0437\u043d\u0435\u0441-\u043f\u0440\u0430\u043a\u0442\u0438\u043a\u0438, \u0432\u044b\u0441\u043e\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e \u043e\u0431\u0441\u043b\u0443\u0436\u0438\u0432\u0430\u043d\u0438\u044f \u043a\u043b\u0438\u0435\u043d\u0442\u043e\u0432 \u0438 \u0430\u043a\u0442\u0438\u0432\u043d\u043e\u0435 \u0443\u0447\u0430\u0441\u0442\u0438\u0435 \u0432 \u0436\u0438\u0437\u043d\u0438 \u0441\u043e\u043e\u0431\u0449\u0435\u0441\u0442\u0432.",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u6210\u7acb\u4e8e\u4ec0\u4e48\u65f6\u5019\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB\u6210\u7acb\u4e8e1935\u5e74\uff0c\u81ea\u6210\u7acb\u4ee5\u6765\uff0c\u5df2\u6210\u4e3a\u4e9a\u6d32\u9886\u5148\u7684\u94f6\u884c\u4e4b\u4e00\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u7684\u4f7f\u547d\u662f\u4ec0\u4e48\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB\u7684\u4f7f\u547d\u662f\u63d0\u4f9b\u521b\u65b0\u7684\u91d1\u878d\u89e3\u51b3\u65b9\u6848\u548c\u5353\u8d8a\u7684\u5ba2\u6237\u670d\u52a1\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u5728\u54ea\u4e9b\u56fd\u5bb6\u8fd0\u8425\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB\u5728\u591a\u4e2a\u4e9a\u6d32\u56fd\u5bb6\u8fd0\u8425\uff0c\u5305\u62ec\u65b0\u52a0\u5761\u3001\u9a6c\u6765\u897f\u4e9a\u3001\u5370\u5ea6\u5c3c\u897f\u4e9a\u3001\u6cf0\u56fd\u548c\u8d8a\u5357\uff0c\u63d0\u4f9b\u591a\u6837\u7684\u91d1\u878d\u670d\u52a1\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u5982\u4f55\u968f\u7740\u65f6\u95f4\u7684\u53d1\u5c55\u800c\u53d8\u5316\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB\u901a\u8fc7\u91c7\u7528\u6570\u5b57\u6280\u672f\u3001\u6269\u5927\u7f51\u7edc\u548c\u591a\u6837\u5316\u91d1\u878d\u670d\u52a1\u6765\u4e0d\u65ad\u53d1\u5c55\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u63d0\u4f9b\u54ea\u4e9b\u6570\u5b57\u91d1\u878d\u670d\u52a1\u7684\u521b\u65b0\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB\u63a8\u51fa\u4e86\u591a\u9879\u521b\u65b0\uff0c\u5305\u62ecUOB Mighty\u5e94\u7528\u7a0b\u5e8f\uff0c\u5141\u8bb8\u5ba2\u6237\u8fdb\u884c\u4ea4\u6613\u548c\u7ba1\u7406\u5176\u8d26\u6237\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u7684\u5ba2\u6237\u7fa4\u4f53\u662f\u4ec0\u4e48\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB\u670d\u52a1\u4e8e\u4e0d\u540c\u5ba2\u6237\u7fa4\u4f53\uff0c\u5305\u62ec\u4e2a\u4eba\u3001\u5c0f\u578b\u548c\u4e2d\u578b\u4f01\u4e1a\u3001\u5927\u578b\u516c\u53f8\u4ee5\u53ca\u673a\u6784\u5ba2\u6237\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u7684\u6838\u5fc3\u4ef7\u503c\u89c2\u662f\u4ec0\u4e48\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB\u7684\u6838\u5fc3\u4ef7\u503c\u89c2\u5305\u62ec\u8bda\u4fe1\u3001\u521b\u65b0\u3001\u5ba2\u6237\u670d\u52a1\u548c\u56e2\u961f\u5408\u4f5c\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u5982\u4f55\u652f\u6301\u5f53\u5730\u793e\u533a\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB\u901a\u8fc7\u4f01\u4e1a\u793e\u4f1a\u8d23\u4efb\u5021\u8bae\u6765\u652f\u6301\u5f53\u5730\u793e\u533a\uff0c\u4f8b\u5982\u6350\u6b3e\u548c\u5fd7\u613f\u8005\u8ba1\u5212\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "\u4ec0\u4e48\u662fUOB Stand By Me\u8ba1\u5212\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB Stand By Me\u8ba1\u5212\u662f\u4e00\u9879\u65e8\u5728\u4e3a\u9762\u4e34\u56f0\u96be\u7684\u5ba2\u6237\u63d0\u4f9b\u91d1\u878d\u652f\u6301\u548c\u54a8\u8be2\u7684\u5021\u8bae\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u5386\u53f2\u4e0a\u6709\u54ea\u4e9b\u91cd\u8981\u7684\u91cc\u7a0b\u7891\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB\u5386\u53f2\u4e0a\u7684\u91cd\u8981\u91cc\u7a0b\u7891\u5305\u62ec1990\u5e74\u4ee3\u7684\u56fd\u9645\u6269\u5c55\u548c\u8fc7\u53bb\u5341\u5e74\u7684\u6570\u5b57\u6280\u672f\u5b9e\u65bd\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u5982\u4f55\u63a8\u52a8\u53ef\u6301\u7eed\u53d1\u5c55\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB\u901a\u8fc7\u8d44\u52a9\u73af\u4fdd\u9879\u76ee\u548c\u5728\u5176\u4e1a\u52a1\u4e2d\u5b9e\u65bd\u51cf\u5c11\u78b3\u8db3\u8ff9\u7684\u65b9\u6cd5\u6765\u63a8\u52a8\u53ef\u6301\u7eed\u53d1\u5c55\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u5982\u4f55\u7ba1\u7406\u4fe1\u8d37\u98ce\u9669\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB\u901a\u8fc7\u4e25\u683c\u7684\u4fe1\u8d37\u8bc4\u4f30\u548c\u5bf9\u4fe1\u8d37\u6295\u8d44\u7ec4\u5408\u7684\u6301\u7eed\u76d1\u63a7\u6765\u7ba1\u7406\u4fe1\u8d37\u98ce\u9669\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u5982\u4f55\u652f\u6301\u521b\u4e1a\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB\u901a\u8fc7\u4e3a\u521d\u521b\u4f01\u4e1a\u548c\u4e2d\u5c0f\u4f01\u4e1a\u63d0\u4f9b\u878d\u8d44\u548c\u54a8\u8be2\u8ba1\u5212\u6765\u652f\u6301\u521b\u4e1a\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u5bf9\u91d1\u878d\u521b\u65b0\u7684\u6001\u5ea6\u662f\u4ec0\u4e48\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB\u79ef\u6781\u4ece\u4e8b\u91d1\u878d\u521b\u65b0\uff0c\u6295\u8d44\u65b0\u6280\u672f\u5e76\u4e0e\u91d1\u878d\u79d1\u6280\u516c\u53f8\u5408\u4f5c\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u63d0\u4f9b\u54ea\u4e9b\u91d1\u878d\u6559\u80b2\u9879\u76ee\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB\u63d0\u4f9b\u591a\u79cd\u91d1\u878d\u7d20\u517b\u63d0\u5347\u9879\u76ee\uff0c\u5305\u62ec\u7814\u8ba8\u4f1a\u548c\u5728\u7ebf\u6750\u6599\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u5982\u4f55\u652f\u6301\u5458\u5de5\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB\u901a\u8fc7\u63d0\u4f9b\u804c\u4e1a\u53d1\u5c55\u673a\u4f1a\u3001\u798f\u5229\u6539\u5584\u8ba1\u5212\u548c\u521b\u9020\u5305\u5bb9\u6027\u5de5\u4f5c\u73af\u5883\u6765\u652f\u6301\u5458\u5de5\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u5982\u4f55\u5b9e\u65bd\u5305\u5bb9\u6027\u653f\u7b56\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB\u901a\u8fc7\u4e3a\u6240\u6709\u5458\u5de5\u521b\u9020\u5e73\u7b49\u673a\u4f1a\u548c\u652f\u6301\u591a\u6837\u5316\u7684\u5de5\u4f5c\u73af\u5883\u6765\u5b9e\u65bd\u5305\u5bb9\u6027\u653f\u7b56\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u5982\u4f55\u7ba1\u7406\u5176\u58f0\u8a89\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB\u901a\u8fc7\u900f\u660e\u7684\u5546\u4e1a\u5b9e\u8df5\u3001\u9ad8\u8d28\u91cf\u7684\u5ba2\u6237\u670d\u52a1\u548c\u79ef\u6781\u53c2\u4e0e\u793e\u533a\u4e8b\u52a1\u6765\u7ba1\u7406\u5176\u58f0\u8a89\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u7684\u6218\u7565\u53d1\u5c55\u53d7\u5230\u54ea\u4e9b\u56e0\u7d20\u5f71\u54cd\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB\u7684\u6218\u7565\u53d1\u5c55\u53d7\u5e02\u573a\u8d8b\u52bf\u3001\u5ba2\u6237\u9700\u6c42\u548c\u91d1\u878d\u73af\u5883\u53d8\u5316\u7684\u5f71\u54cd\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u5982\u4f55\u9002\u5e94\u6d88\u8d39\u504f\u597d\u7684\u53d8\u5316\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB\u901a\u8fc7\u5e02\u573a\u8c03\u7814\u548c\u5ba2\u6237\u53cd\u9988\u9002\u5e94\u6d88\u8d39\u504f\u597d\u7684\u53d8\u5316\uff0c\u4ee5\u6539\u5584\u5176\u4ea7\u54c1\u548c\u670d\u52a1\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u5982\u4f55\u57f9\u517b\u5176\u5458\u5de5\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB\u901a\u8fc7\u57f9\u8bad\u3001\u6307\u5bfc\u548c\u804c\u4e1a\u53d1\u5c55\u9879\u76ee\u6765\u57f9\u517b\u5176\u5458\u5de5\uff0c\u652f\u6301\u4ed6\u4eec\u7684\u4e2a\u4eba\u548c\u804c\u4e1a\u6210\u957f\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u5982\u4f55\u5b9e\u65bd\u4f01\u4e1a\u793e\u4f1a\u8d23\u4efb\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB\u901a\u8fc7\u65e8\u5728\u6539\u5584\u5176\u4e1a\u52a1\u6240\u5728\u793e\u533a\u7684\u751f\u6d3b\u8d28\u91cf\u7684\u6218\u7565\u548c\u5021\u8bae\u5b9e\u65bd\u4f01\u4e1a\u793e\u4f1a\u8d23\u4efb\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u5982\u4f55\u4e0e\u80a1\u4e1c\u4e92\u52a8\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB\u901a\u8fc7\u5b9a\u671f\u62a5\u544a\u3001\u80a1\u4e1c\u4f1a\u8bae\u548c\u76f4\u63a5\u6c9f\u901a\u4e0e\u80a1\u4e1c\u79ef\u6781\u4e92\u52a8\uff0c\u786e\u4fdd\u900f\u660e\u5ea6\u548c\u95ee\u8d23\u5236\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u7684\u6218\u7565\u53d1\u5c55\u53d7\u54ea\u4e9b\u56e0\u7d20\u5f71\u54cd\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB\u7684\u6218\u7565\u53d1\u5c55\u53d7\u5e02\u573a\u8d8b\u52bf\u3001\u5ba2\u6237\u9700\u6c42\u548c\u91d1\u878d\u73af\u5883\u53d8\u5316\u7684\u5f71\u54cd\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u5982\u4f55\u9002\u5e94\u6d88\u8d39\u504f\u597d\u7684\u53d8\u5316\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB\u901a\u8fc7\u5e02\u573a\u8c03\u7814\u548c\u5ba2\u6237\u53cd\u9988\u9002\u5e94\u6d88\u8d39\u504f\u597d\u7684\u53d8\u5316\uff0c\u4ee5\u6539\u5584\u5176\u4ea7\u54c1\u548c\u670d\u52a1\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u5982\u4f55\u57f9\u517b\u5176\u5458\u5de5\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB\u901a\u8fc7\u57f9\u8bad\u3001\u6307\u5bfc\u548c\u804c\u4e1a\u53d1\u5c55\u9879\u76ee\u6765\u57f9\u517b\u5176\u5458\u5de5\uff0c\u652f\u6301\u4ed6\u4eec\u7684\u4e2a\u4eba\u548c\u804c\u4e1a\u6210\u957f\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u5982\u4f55\u5b9e\u65bd\u4f01\u4e1a\u793e\u4f1a\u8d23\u4efb\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB\u901a\u8fc7\u65e8\u5728\u6539\u5584\u5176\u4e1a\u52a1\u6240\u5728\u793e\u533a\u7684\u751f\u6d3b\u8d28\u91cf\u7684\u6218\u7565\u548c\u5021\u8bae\u5b9e\u65bd\u4f01\u4e1a\u793e\u4f1a\u8d23\u4efb\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u5982\u4f55\u4e0e\u80a1\u4e1c\u4e92\u52a8\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB\u901a\u8fc7\u5b9a\u671f\u62a5\u544a\u3001\u80a1\u4e1c\u4f1a\u8bae\u548c\u76f4\u63a5\u6c9f\u901a\u4e0e\u80a1\u4e1c\u79ef\u6781\u4e92\u52a8\uff0c\u786e\u4fdd\u900f\u660e\u5ea6\u548c\u95ee\u8d23\u5236\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "UOB\u5982\u4f55\u5728\u91d1\u878d\u6280\u672f\u65b9\u9762\u4fdd\u6301\u7ade\u4e89\u529b\uff1f",
+      "role": "user"
+    },
+    {
+      "content": "UOB\u901a\u8fc7\u6295\u8d44\u4e8e\u65b0\u6280\u672f\u548c\u4e0e\u91d1\u878d\u79d1\u6280\u516c\u53f8\u5408\u4f5c\u6765\u4fdd\u6301\u5176\u5728\u91d1\u878d\u6280\u672f\u65b9\u9762\u7684\u7ade\u4e89\u529b\u3002",
+      "role": "assistant"
+    },
+    {
+      "content": "Kapan UOB didirikan?",
+      "role": "user"
+    },
+    {
+      "content": "UOB didirikan pada tahun 1935 dan telah menjadi salah satu bank terkemuka di Asia sejak saat itu.",
+      "role": "assistant"
+    },
+    {
+      "content": "Apa misi UOB?",
+      "role": "user"
+    },
+    {
+      "content": "Misi UOB adalah untuk menyediakan solusi keuangan yang inovatif dan layanan pelanggan yang unggul.",
+      "role": "assistant"
+    },
+    {
+      "content": "Di negara mana UOB beroperasi?",
+      "role": "user"
+    },
+    {
+      "content": "UOB beroperasi di berbagai negara Asia, termasuk Singapura, Malaysia, Indonesia, Thailand, dan Vietnam, menawarkan berbagai layanan keuangan.",
+      "role": "assistant"
+    },
+    {
+      "content": "Bagaimana UOB beradaptasi seiring waktu?",
+      "role": "user"
+    },
+    {
+      "content": "UOB terus berkembang dengan mengadopsi teknologi digital, memperluas jaringan, dan mendiversifikasi layanan keuangannya.",
+      "role": "assistant"
+    },
+    {
+      "content": "Inovasi layanan keuangan digital apa yang ditawarkan UOB?",
+      "role": "user"
+    },
+    {
+      "content": "UOB meluncurkan berbagai inovasi, termasuk aplikasi UOB Mighty yang memungkinkan pelanggan melakukan transaksi dan mengelola akun mereka.",
+      "role": "assistant"
+    },
+    {
+      "content": "Siapa kelompok pelanggan UOB?",
+      "role": "user"
+    },
+    {
+      "content": "UOB melayani berbagai kelompok pelanggan, termasuk individu, usaha kecil dan menengah, perusahaan besar, dan klien institusi.",
+      "role": "assistant"
+    },
+    {
+      "content": "Apa nilai inti UOB?",
+      "role": "user"
+    },
+    {
+      "content": "Nilai inti UOB meliputi integritas, inovasi, pelayanan pelanggan, dan kerja sama tim.",
+      "role": "assistant"
+    },
+    {
+      "content": "Bagaimana UOB mendukung komunitas lokal?",
+      "role": "user"
+    },
+    {
+      "content": "UOB mendukung komunitas lokal melalui inisiatif tanggung jawab sosial perusahaan, seperti sumbangan dan program sukarela.",
+      "role": "assistant"
+    },
+    {
+      "content": "Apa itu program UOB Stand By Me?",
+      "role": "user"
+    },
+    {
+      "content": "Program UOB Stand By Me adalah inisiatif yang bertujuan memberikan dukungan keuangan dan konsultasi kepada pelanggan yang menghadapi kesulitan.",
+      "role": "assistant"
+    },
+    {
+      "content": "Apa saja tonggak sejarah penting dalam sejarah UOB?",
+      "role": "user"
+    },
+    {
+      "content": "Tonggak sejarah penting dalam sejarah UOB termasuk ekspansi internasional di tahun 1990-an dan penerapan teknologi digital dalam dekade terakhir.",
+      "role": "assistant"
+    },
+    {
+      "content": "Bagaimana UOB mendorong keberlanjutan?",
+      "role": "user"
+    },
+    {
+      "content": "UOB mendorong keberlanjutan dengan mendanai proyek-proyek ramah lingkungan dan menerapkan metode untuk mengurangi jejak karbon dalam bisnisnya.",
+      "role": "assistant"
+    },
+    {
+      "content": "Bagaimana UOB mengelola risiko kredit?",
+      "role": "user"
+    },
+    {
+      "content": "UOB mengelola risiko kredit melalui evaluasi kredit yang ketat dan pemantauan berkelanjutan terhadap portofolio kreditnya.",
+      "role": "assistant"
+    },
+    {
+      "content": "Bagaimana UOB mendukung kewirausahaan?",
+      "role": "user"
+    },
+    {
+      "content": "UOB mendukung kewirausahaan dengan menyediakan pembiayaan dan program konsultasi untuk usaha kecil dan menengah.",
+      "role": "assistant"
+    },
+    {
+      "content": "Apa sikap UOB terhadap inovasi keuangan?",
+      "role": "user"
+    },
+    {
+      "content": "UOB memiliki sikap positif terhadap inovasi keuangan, berinvestasi dalam teknologi baru dan bekerja sama dengan perusahaan fintech.",
+      "role": "assistant"
+    },
+    {
+      "content": "Program pendidikan keuangan apa yang ditawarkan UOB?",
+      "role": "user"
+    },
+    {
+      "content": "UOB menawarkan berbagai program peningkatan literasi keuangan, termasuk seminar dan materi online.",
+      "role": "assistant"
+    },
+    {
+      "content": "Bagaimana UOB mendukung karyawan?",
+      "role": "user"
+    },
+    {
+      "content": "UOB mendukung karyawan dengan menyediakan kesempatan pengembangan karier, program peningkatan kesejahteraan, dan menciptakan lingkungan kerja yang inklusif.",
+      "role": "assistant"
+    },
+    {
+      "content": "Bagaimana UOB menerapkan kebijakan inklusi?",
+      "role": "user"
+    },
+    {
+      "content": "UOB menerapkan kebijakan inklusi dengan menciptakan kesempatan yang setara untuk semua karyawan dan mendukung lingkungan kerja yang beragam.",
+      "role": "assistant"
+    },
+    {
+      "content": "Bagaimana UOB mengelola reputasinya?",
+      "role": "user"
+    },
+    {
+      "content": "UOB mengelola reputasinya melalui praktik bisnis yang transparan, layanan pelanggan yang berkualitas, dan keterlibatan aktif dalam kegiatan komunitas.",
+      "role": "assistant"
+    },
+    {
+      "content": "Apa faktor yang mempengaruhi perkembangan strategi UOB?",
+      "role": "user"
+    },
+    {
+      "content": "Perkembangan strategi UOB dipengaruhi oleh tren pasar, permintaan pelanggan, dan perubahan dalam lingkungan keuangan.",
+      "role": "assistant"
+    },
+    {
+      "content": "Bagaimana UOB beradaptasi terhadap perubahan preferensi konsumen?",
+      "role": "user"
+    },
+    {
+      "content": "UOB beradaptasi terhadap perubahan preferensi konsumen dengan melakukan riset pasar dan umpan balik pelanggan untuk meningkatkan produk dan layanannya.",
+      "role": "assistant"
+    },
+    {
+      "content": "Bagaimana UOB mengembangkan karyawannya?",
+      "role": "user"
+    },
+    {
+      "content": "UOB mengembangkan karyawannya melalui pelatihan, bimbingan, dan program pengembangan karier untuk mendukung pertumbuhan pribadi dan profesional mereka.",
+      "role": "assistant"
+    },
+    {
+      "content": "Bagaimana UOB melaksanakan tanggung jawab sosial perusahaan?",
+      "role": "user"
+    },
+    {
+      "content": "UOB melaksanakan tanggung jawab sosial perusahaan melalui strategi dan inisiatif yang bertujuan untuk meningkatkan kualitas hidup di komunitas tempat bisnisnya berada.",
+      "role": "assistant"
+    },
+    {
+      "content": "Bagaimana UOB berinteraksi dengan pemegang saham?",
+      "role": "user"
+    },
+    {
+      "content": "UOB berinteraksi dengan pemegang saham melalui laporan berkala, rapat pemegang saham, dan komunikasi langsung untuk memastikan transparansi dan akuntabilitas.",
+      "role": "assistant"
+    },
+    {
+      "content": "Bagaimana UOB tetap kompetitif dalam teknologi keuangan?",
+      "role": "user"
+    },
+    {
+      "content": "UOB tetap kompetitif dalam teknologi keuangan dengan berinvestasi dalam teknologi baru dan bekerja sama dengan perusahaan fintech.",
+      "role": "assistant"
+    },
+    {
+      "content": "Bilakah UOB ditubuhkan?",
+      "role": "user"
+    },
+    {
+      "content": "UOB ditubuhkan pada tahun 1935 dan telah menjadi salah satu bank terkemuka di Asia sejak itu.",
+      "role": "assistant"
+    },
+    {
+      "content": "Apakah misi UOB?",
+      "role": "user"
+    },
+    {
+      "content": "Misi UOB adalah untuk menyediakan penyelesaian kewangan yang inovatif dan perkhidmatan pelanggan yang cemerlang.",
+      "role": "assistant"
+    },
+    {
+      "content": "Di negara mana UOB beroperasi?",
+      "role": "user"
+    },
+    {
+      "content": "UOB beroperasi di pelbagai negara Asia, termasuk Singapura, Malaysia, Indonesia, Thailand, dan Vietnam, menawarkan pelbagai perkhidmatan kewangan.",
+      "role": "assistant"
+    },
+    {
+      "content": "Bagaimana UOB menyesuaikan diri dari semasa ke semasa?",
+      "role": "user"
+    },
+    {
+      "content": "UOB terus berkembang dengan mengadaptasi teknologi digital, memperluas rangkaian, dan mendiversifikasi perkhidmatan kewangannya.",
+      "role": "assistant"
+    },
+    {
+      "content": "Inovasi perkhidmatan kewangan digital apakah yang ditawarkan oleh UOB?",
+      "role": "user"
+    },
+    {
+      "content": "UOB melancarkan pelbagai inovasi, termasuk aplikasi UOB Mighty yang membolehkan pelanggan melakukan transaksi dan menguruskan akaun mereka.",
+      "role": "assistant"
+    },
+    {
+      "content": "Siapakah kumpulan pelanggan UOB?",
+      "role": "user"
+    },
+    {
+      "content": "UOB melayani pelbagai kumpulan pelanggan, termasuk individu, perniagaan kecil dan sederhana, syarikat besar, dan pelanggan institusi.",
+      "role": "assistant"
+    },
+    {
+      "content": "Apakah nilai teras UOB?",
+      "role": "user"
+    },
+    {
+      "content": "Nilai teras UOB termasuk integriti, inovasi, perkhidmatan pelanggan, dan kerjasama pasukan.",
+      "role": "assistant"
+    },
+    {
+      "content": "Bagaimana UOB menyokong komuniti tempatan?",
+      "role": "user"
+    },
+    {
+      "content": "UOB menyokong komuniti tempatan melalui inisiatif tanggungjawab sosial korporat, seperti sumbangan dan program sukarela.",
+      "role": "assistant"
+    },
+    {
+      "content": "Apakah program UOB Stand By Me?",
+      "role": "user"
+    },
+    {
+      "content": "Program UOB Stand By Me adalah inisiatif yang bertujuan memberikan sokongan kewangan dan konsultasi kepada pelanggan yang menghadapi kesukaran.",
+      "role": "assistant"
+    },
+    {
+      "content": "Apakah pencapaian penting dalam sejarah UOB?",
+      "role": "user"
+    },
+    {
+      "content": "Pencapaian penting dalam sejarah UOB termasuk pengembangan antarabangsa pada tahun 1990-an dan pelaksanaan teknologi digital dalam dekad terakhir.",
+      "role": "assistant"
+    },
+    {
+      "content": "Bagaimana UOB mendorong kelestarian?",
+      "role": "user"
+    },
+    {
+      "content": "UOB mendorong kelestarian dengan membiayai projek-projek mesra alam dan menerapkan kaedah untuk mengurangkan jejak karbon dalam perniagaannya.",
+      "role": "assistant"
+    },
+    {
+      "content": "Bagaimana UOB menguruskan risiko kredit?",
+      "role": "user"
+    },
+    {
+      "content": "UOB menguruskan risiko kredit melalui penilaian kredit yang ketat dan pemantauan berterusan terhadap portfolio kreditnya.",
+      "role": "assistant"
+    },
+    {
+      "content": "Bagaimana UOB menyokong keusahawanan?",
+      "role": "user"
+    },
+    {
+      "content": "UOB menyokong keusahawanan dengan menyediakan pembiayaan dan program konsultasi untuk perniagaan kecil dan sederhana.",
+      "role": "assistant"
+    },
+    {
+      "content": "Apakah sikap UOB terhadap inovasi kewangan?",
+      "role": "user"
+    },
+    {
+      "content": "UOB mempunyai sikap positif terhadap inovasi kewangan, melabur dalam teknologi baru dan bekerjasama dengan syarikat fintech.",
+      "role": "assistant"
+    },
+    {
+      "content": "Program pendidikan kewangan apakah yang ditawarkan UOB?",
+      "role": "user"
+    },
+    {
+      "content": "UOB menawarkan pelbagai program peningkatan literasi kewangan, termasuk seminar dan bahan dalam talian.",
+      "role": "assistant"
+    },
+    {
+      "content": "Bagaimana UOB menyokong kakitangannya?",
+      "role": "user"
+    },
+    {
+      "content": "UOB menyokong kakitangannya dengan menyediakan peluang pembangunan kerjaya, program peningkatan kesejahteraan, dan mencipta persekitaran kerja yang inklusif.",
+      "role": "assistant"
+    },
+    {
+      "content": "Bagaimana UOB melaksanakan polisi inklusi?",
+      "role": "user"
+    },
+    {
+      "content": "UOB melaksanakan polisi inklusi dengan mencipta peluang yang sama untuk semua kakitangan dan menyokong persekitaran kerja yang pelbagai.",
+      "role": "assistant"
+    },
+    {
+      "content": "Bagaimana UOB mengurus reputasinya?",
+      "role": "user"
+    },
+    {
+      "content": "UOB mengurus reputasinya melalui amalan perniagaan yang telus, perkhidmatan pelanggan berkualiti, dan penglibatan aktif dalam aktiviti komuniti.",
+      "role": "assistant"
+    },
+    {
+      "content": "Apakah faktor yang mempengaruhi perkembangan strategi UOB?",
+      "role": "user"
+    },
+    {
+      "content": "Perkembangan strategi UOB dipengaruhi oleh trend pasaran, permintaan pelanggan, dan perubahan dalam persekitaran kewangan.",
+      "role": "assistant"
+    },
+    {
+      "content": "Bagaimana UOB menyesuaikan diri terhadap perubahan pilihan pengguna?",
+      "role": "user"
+    },
+    {
+      "content": "UOB menyesuaikan diri terhadap perubahan pilihan pengguna dengan melakukan penyelidikan pasaran dan maklum balas pelanggan untuk meningkatkan produk dan perkhidmatannya.",
+      "role": "assistant"
+    },
+    {
+      "content": "Bagaimana UOB membangunkan kakitangannya?",
+      "role": "user"
+    },
+    {
+      "content": "UOB membangunkan kakitangannya melalui latihan, bimbingan, dan peluang untuk kemajuan kerjaya dalam organisasi.",
+      "role": "assistant"
+    },
+    {
+      "content": "Apakah inisiatif mesra alam UOB?",
+      "role": "user"
+    },
+    {
+      "content": "Inisiatif mesra alam UOB termasuk pembiayaan projek lestari dan inisiatif untuk mengurangkan penggunaan kertas dalam operasi mereka.",
+      "role": "assistant"
+    },
+    {
+      "content": "Apakah maklumat yang diperlukan untuk membuka akaun UOB?",
+      "role": "user"
+    },
+    {
+      "content": "Untuk membuka akaun UOB, anda perlu menyediakan pengenalan diri, bukti alamat, dan maklumat peribadi lain yang diperlukan.",
+      "role": "assistant"
+    },
+    {
+      "content": "Bilakah UOB mula menawarkan perkhidmatan pinjaman?",
+      "role": "user"
+    },
+    {
+      "content": "UOB mula menawarkan perkhidmatan pinjaman sejak awal penubuhannya, membantu individu dan perniagaan dalam mendapatkan pembiayaan.",
+      "role": "assistant"
+    },
+    {
+      "content": "Apakah cara UOB melindungi maklumat pelanggan?",
+      "role": "user"
+    },
+    {
+      "content": "UOB melindungi maklumat pelanggan melalui langkah keselamatan yang ketat dan mematuhi undang-undang privasi data.",
+      "role": "assistant"
+    },
+    {
+      "content": "Apa yang menjadikan UOB berbeza dari bank lain?",
+      "role": "user"
+    },
+    {
+      "content": "UOB berbeza dari bank lain dengan komitmennya terhadap inovasi, perkhidmatan pelanggan yang cemerlang, dan pelbagai penyelesaian kewangan yang ditawarkan.",
+      "role": "assistant"
+    },
+    {
+      "content": "Apakah pandangan UOB tentang tanggungjawab sosial korporat?",
+      "role": "user"
+    },
+    {
+      "content": "UOB percaya bahawa tanggungjawab sosial korporat adalah penting dan melibatkan diri dalam inisiatif yang memberi manfaat kepada masyarakat dan persekitaran.",
+      "role": "assistant"
+    },
+    {
+      "content": "Bagaimana UOB berusaha untuk meningkatkan literasi kewangan?",
+      "role": "user"
+    },
+    {
+      "content": "UOB berusaha untuk meningkatkan literasi kewangan dengan menyediakan pendidikan kewangan dan program-program yang mendidik pelanggan tentang pengurusan kewangan.",
+      "role": "assistant"
+    },
+    {
+      "content": "Apakah faedah menjadi pelanggan UOB?",
+      "role": "user"
+    },
+    {
+      "content": "Faedah menjadi pelanggan UOB termasuk akses kepada pelbagai produk kewangan, perkhidmatan pelanggan yang baik, dan penyelesaian yang disesuaikan dengan keperluan pelanggan.",
+      "role": "assistant"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{"time":"2024-09-29T14:23:09.856595469Z","level":"INFO","msg":"using version","core version":"0.18.2"}
+{"time":"2024-09-29T14:23:09.857811323Z","level":"INFO","msg":"created symlink","path":"/content/drive/My Drive/TDP Capstone Grp 7/LLM Model Training/qLoRA/wandb/out-a045f627-1c1d-4d82-bcb4-b76e23e44540/wandb/run-20240929_142307-8ydx7uv0/logs/debug-core.log"}
+{"time":"2024-09-29T14:23:09.863888332Z","level":"INFO","msg":"created new stream","id":"8ydx7uv0"}
+{"time":"2024-09-29T14:23:09.864658471Z","level":"INFO","msg":"stream: started","id":"8ydx7uv0"}
+{"time":"2024-09-29T14:23:09.864677281Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"8ydx7uv0"}}
+{"time":"2024-09-29T14:23:09.864709164Z","level":"INFO","msg":"handler: started","stream_id":{"value":"8ydx7uv0"}}
+{"time":"2024-09-29T14:23:09.864733604Z","level":"INFO","msg":"sender: started","stream_id":{"value":"8ydx7uv0"}}
+{"time":"2024-09-29T14:23:15.11276146Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-09-29T14:23:15.119453505Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-09-29T14:25:44.020034344Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2024-09-29T14:27:08.718638293Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2024-09-29T14:27:08.759264825Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2024-09-29T14:27:32.472643237Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2024-09-29T14:27:32.492633601Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2024-09-29T14:27:54.384621858Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2024-09-29T14:27:54.765947257Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2024-09-29T14:30:14.767882577Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2024-09-29T14:30:14.773605596Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2024-09-29T14:30:52.164822355Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2024-09-29T14:30:52.183611894Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2024-09-29T14:31:13.365133553Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2024-09-29T14:31:13.929698857Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2024-09-29T14:45:25.681425281Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2024-09-29T14:45:26.040222674Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-09-29T14:45:26.042676592Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-09-29T14:45:26.393050103Z","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-09-29T14:45:26.393218388Z","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-09-29T14:45:26.393269054Z","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-09-29T14:45:27.33294769Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-09-29T14:45:28.605789455Z","level":"INFO","msg":"stream: closing","id":"8ydx7uv0"}
+{"time":"2024-09-29T14:45:28.605967414Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"8ydx7uv0"}}
+{"time":"2024-09-29T14:45:28.606026891Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"8ydx7uv0"}}
+{"time":"2024-09-29T14:45:28.606418693Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"8ydx7uv0"}}
+{"time":"2024-09-29T14:45:28.607128001Z","level":"INFO","msg":"stream: closed","id":"8ydx7uv0"}
+{"time":"2024-09-29T14:45:31.04308709Z","level":"ERROR","msg":"monitor: gpu: timeout waiting for process to exit"}

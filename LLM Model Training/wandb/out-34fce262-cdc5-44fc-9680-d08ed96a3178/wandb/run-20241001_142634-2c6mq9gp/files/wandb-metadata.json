@@ -1,0 +1,37 @@
+{
+  "os":  "Linux-6.1.85+-x86_64-with-glibc2.35",
+  "python":  "3.10.12",
+  "startedAt":  "2024-10-01T14:26:34.884870Z",
+  "program":  "qlora_LLM_finetuning.ipynb",
+  "email":  "kevintanyj@gmail.com",
+  "root":  "/content/drive/My Drive/TDP Capstone Grp 7/LLM Model Training/qLoRA/wandb/out-34fce262-cdc5-44fc-9680-d08ed96a3178",
+  "host":  "163da2fc7d6d",
+  "username":  "root",
+  "executable":  "/usr/bin/python3",
+  "colab":  "https://colab.research.google.com/notebook#fileId=1GB5CfvBn0De1-iKwcTB5x9SRIHH7pUId",
+  "cpu_count":  1,
+  "cpu_count_logical":  2,
+  "gpu":  "[]",
+  "gpu_count":  1,
+  "disk":  {
+    "/":  {
+      "total":  "120942624768",
+      "used":  "43404038144"
+    }
+  },
+  "memory":  {
+    "total":  "13609422848"
+  },
+  "cpu":  {
+    "count":  1,
+    "countLogical":  2
+  },
+  "gpu_nvidia":  [
+    {
+      "memoryTotal":  "16106127360",
+      "cudaCores":  2560,
+      "architecture":  "Turing"
+    }
+  ],
+  "cudaVersion":  "12.2"
+}
