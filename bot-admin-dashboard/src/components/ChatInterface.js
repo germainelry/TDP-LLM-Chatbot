@@ -1,6 +1,10 @@
 import React, { useState, useRef, useEffect } from "react";
 import UserRatings from "./UserRatings"; // Keep the import for UserRatings
+import ApplicationInfo from "./ApplicationInfo";
 import "./ChatInterface.css";
+import uobLogo from "../img/uob-logo.png";
+import uobLogoWhite from "../img/uob-logo-white.png";
+import uobChineseLogo from "../img/uob-chinese-logo.png";
 
 const ChatInterface = () => {
   const [input, setInput] = useState("");
@@ -219,10 +223,24 @@ const ChatInterface = () => {
         isModalOpen ? "blur-background" : ""
       }`}
     >
+      <div className="uob-main-header">
+        <span className="uob-header">
+          <img src={uobLogoWhite} alt="UOB Logo" className="uob-logo-header" />
+          <img
+            src={uobChineseLogo}
+            alt="UOB Logo"
+            className="uob-chinese-logo-header"
+          />
+        </span>
+      </div>
+      <div className="app-info-section">
+        <ApplicationInfo />
+      </div>
       <div className="chatbot-container">
         <div className="chatbot-header">
           <h4 className="chatbot-title">
-            Interact with our Custom AI Chatbot <i className="bi bi-robot"></i>
+            <img src={uobLogo} alt="UOB Logo" className="uob-logo" />
+            UOB Digital Assistant <i className="bi bi-robot"></i>
           </h4>
 
           <button
@@ -235,35 +253,37 @@ const ChatInterface = () => {
         </div>
 
         {!userSubmitted ? (
-          <form className="user-info-form" onSubmit={handleUserInfoSubmit}>
-            <h6>Please provide your details to continue:</h6>
-            <div className="input-group">
-              <i className="bi bi-info-square"></i>
-              <input
-                type="text"
-                value={userInfo.name}
-                onChange={(e) =>
-                  setUserInfo({ ...userInfo, name: e.target.value })
-                }
-                placeholder="Enter your name"
-                required
-              />
-            </div>
-            <div className="input-group">
-              <i className="bi bi-telephone-plus"></i>
-              <input
-                type="tel"
-                value={userInfo.phone}
-                onChange={(e) =>
-                  setUserInfo({ ...userInfo, phone: e.target.value })
-                }
-                placeholder="Enter your phone number"
-                required
-              />
-            </div>
+          <div class="container-form">
+            <form className="user-info-form" onSubmit={handleUserInfoSubmit}>
+              <h6>Please provide your details to continue:</h6>
+              <div className="input-group">
+                <i className="bi bi-info-square"></i>
+                <input
+                  type="text"
+                  value={userInfo.name}
+                  onChange={(e) =>
+                    setUserInfo({ ...userInfo, name: e.target.value })
+                  }
+                  placeholder="Enter your name"
+                  required
+                />
+              </div>
+              <div className="input-group">
+                <i className="bi bi-telephone-plus"></i>
+                <input
+                  type="tel"
+                  value={userInfo.phone}
+                  onChange={(e) =>
+                    setUserInfo({ ...userInfo, phone: e.target.value })
+                  }
+                  placeholder="Enter your phone number"
+                  required
+                />
+              </div>
 
-            <button type="submit">Submit</button>
-          </form>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
         ) : (
           <>
             <div className="chatbot-messages">

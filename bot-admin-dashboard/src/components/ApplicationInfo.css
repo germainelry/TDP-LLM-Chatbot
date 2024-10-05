@@ -1,0 +1,78 @@
+.app-info-container {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  position: relative;
+  opacity: 1;
+  padding: 50px;
+  width: 950px;
+  margin-top: 100px;
+}
+
+.move-up {
+  transform: translateY(-550px);
+}
+
+.faq-list-container {
+  transition: height 0.5s ease; /* Smooth transition for the FAQs */
+  overflow: hidden; /* Hide overflowing content */
+  height: auto; /* Set height automatically */
+  margin-top: 20px;
+}
+
+.faq-list {
+  list-style-type: none;
+  padding: 0; 
+  margin: 0; 
+  color: white;
+}
+
+.back-btn {
+  margin-top: 80px; /* Space above the back button */
+  margin-bottom: 10px;
+  opacity: 1;
+  width: 100px;
+}
+
+.app-info-container h1 {
+  font-size: 60px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.app-info-container p {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.faq-btn {
+  background-color: white;
+  color: #0e6deb;
+}
+
+.faq-btn, .watch-now-btn {
+  margin-top: 20px;
+  margin-right: 20px;
+  font-size: 15px; 
+  padding: 10px 30px 10px 30px;
+}
+
+.faq-item {
+  cursor: pointer; /* Change cursor to pointer for clickable items */
+  margin: 10px 0; /* Space between FAQ items */
+}
+
+.faq-question {
+  background-color: #343a40;
+  color: white;
+  padding: 10px; 
+  border-radius: 5px; 
+  font-size: 18px;
+}
+
+.faq-answer {
+  color: white;
+  padding: 10px; 
+  border-radius: 5px; 
+  margin-top: 10px; 
+  margin-bottom: 15px;
+}
