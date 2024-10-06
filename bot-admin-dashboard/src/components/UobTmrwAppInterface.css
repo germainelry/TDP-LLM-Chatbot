@@ -10,9 +10,13 @@
   width: auto; /* Maintain aspect ratio */
 }
 
-.robot-icon-app {
-  font-size: 35px; 
-  color: rgb(0, 119, 255);
+.bou-icon {
+  position: absolute;
+  bottom: 12.5%; /* Adjust to position the icon */
+  left: 27%;
+  transform: translateX(-50%); /* Center the icon */
+  width: 100px; /* Width of the icon */
+  height: 80px; /* Height of the icon */
 }
 
 .pulsing-background {
@@ -27,7 +31,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: pulse 2s infinite; /* Pulsing effect */
+  animation: pulse 2.5s infinite; /* Pulsing effect */
 }
 
 @keyframes pulse {
@@ -35,7 +39,7 @@
     transform: translateX(-50%) scale(1);
   }
   50% {
-    transform: translateX(-50%) scale(1.05); /* Slightly increase size */
+    transform: translateX(-50%) scale(1.02); /* Slightly increase size */
   }
   100% {
     transform: translateX(-50%) scale(1);

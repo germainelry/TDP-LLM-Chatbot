@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import UserRatings from "./UserRatings";
 import "./UobTmrwChatInterface.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import uobLogo from "../img/uob-logo-cleaned.png";
 
 function UobTmrwChatInterface({ onClose }) {
   const [input, setInput] = useState("");
@@ -55,6 +56,10 @@ function UobTmrwChatInterface({ onClose }) {
       inputRef.current.style.width = `${Math.min(spanWidth + 20, 300)}px`;
     }
   }, [input]);
+
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages]);
 
   const sendDataToBackend = async (message) => {
     try {
@@ -195,11 +200,6 @@ function UobTmrwChatInterface({ onClose }) {
     }
   };
 
-  const handleCloseReasonModal = () => {
-    setShowReasonModal(false); // Close the reason modal
-    setIsSliding(false); // Slide back to center
-  };
-
   // Add blur class if modal is open
   const isModalOpen = isRatingsModalOpen || selectedMessage || showReasonModal;
 
@@ -214,9 +214,10 @@ function UobTmrwChatInterface({ onClose }) {
     >
       <div className="chatbot-container-tmrw-app">
         <div className="chatbot-header-tmrw-app">
-          <h5 className="chatbot-title-tmrw-app">
-            UOB AI Chatbot <i className="bi bi-robot"></i>
-          </h5>
+          <h6 className="chatbot-title-tmrw-app">
+            <img src={uobLogo} alt="uob-logo" className="uob-logo-cleaned" />
+            UOB Digital Assistant <i className="bi bi-robot"></i>
+          </h6>
 
           <button
             className="rate-bot-btn-tmrw-app"
@@ -234,7 +235,7 @@ function UobTmrwChatInterface({ onClose }) {
           >
             <h6>Please provide your details to continue:</h6>
             <div className="input-group-tmrw-app">
-              <i className="bi bi-info-square-tmrw-app"></i>
+              <i className="bi bi-info-square detail-input-icon"></i>
               <input
                 type="text"
                 value={userInfo.name}
@@ -243,10 +244,11 @@ function UobTmrwChatInterface({ onClose }) {
                 }
                 placeholder="Enter your name"
                 required
+                className="placeholder-tmrw-app"
               />
             </div>
             <div className="input-group-tmrw-app">
-              <i className="bi bi-telephone-plus-tmrw-app"></i>
+              <i className="bi bi-telephone detail-input-icon"></i>
               <input
                 type="tel"
                 value={userInfo.phone}
@@ -255,6 +257,7 @@ function UobTmrwChatInterface({ onClose }) {
                 }
                 placeholder="Enter your phone number"
                 required
+                className="placeholder-tmrw-app"
               />
             </div>
 
@@ -318,15 +321,28 @@ function UobTmrwChatInterface({ onClose }) {
       </div>
 
       {isRatingsModalOpen && (
-        <div className="modal-user-feedback-tmrw-app">
-          <div className="modal-content-feedback-tmrw-app">
-            <UserRatings userData={userInfo} />
-            <button
-              onClick={handleRatingsToggle}
-              className="close-modal-btn-feedback-tmrw-app"
-            >
-              Close
-            </button>
+        <div className="modal fade show ratings-modal-tmrw-app">
+          <div className="modal-dialog modal-dialog-centered">
+            <div className="modal-content">
+              <div className="modal-header">
+                <button
+                  type="button"
+                  className="btn-close"
+                  onClick={handleRatingsToggle}
+                ></button>
+              </div>
+              <div className="modal-body">
+                <UserRatings userData={userInfo} />
+              </div>
+              <div className="modal-footer">
+                <button
+                  onClick={handleRatingsToggle}
+                  className="btn btn-secondary"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       )}
@@ -367,38 +383,38 @@ function UobTmrwChatInterface({ onClose }) {
                   <i className="bi bi-exclamation-circle-fill"></i> Report
                 </button>
               </div>
-            </div>
-          </div>
-        </div>
-      )}
 
-      {showReasonModal && (
-        <div className="reason-modal reason-modal-tmrw-app">
-          <div className="reason-modal-content reason-modal-content-tmrw-app">
-            <div className="modal-header modal-header-tmrw-app">
-              <h5 className="reason-modal-title reason-modal-title-tmrw-app">
-                Please provide your reason:
-              </h5>
-              <button
-                type="button"
-                className="reason-modal-close reason-modal-close-tmrw-app"
-                onClick={handleCloseReasonModal}
-              >
-                &times;
-              </button>
+              {(actionType === "Report" || actionType === "Escalate") && (
+                <form
+                  className="reason-form-tmrw-app" // Add some margin-top
+                  onSubmit={handleReasonSubmit}
+                >
+                  <div className="mb">
+                    <label
+                      htmlFor="reason-input"
+                      className="form-label fw-bold form-label-tmrw-app"
+                    >
+                      Please provide a reason:
+                    </label>
+                    <textarea
+                      id="reason-input"
+                      value={reason}
+                      onChange={(e) => setReason(e.target.value)}
+                      className="form-control"
+                      placeholder="Type your reason here..."
+                      rows="1"
+                      required
+                    ></textarea>
+                  </div>
+                  <button
+                    type="submit"
+                    className="btn btn-primary submit-btn-tmrw-app"
+                  >
+                    Submit
+                  </button>
+                </form>
+              )}
             </div>
-            <form onSubmit={handleReasonSubmit}>
-              <textarea
-                value={reason}
-                onChange={(e) => setReason(e.target.value)}
-                placeholder="Enter your reason here..."
-                required
-                rows="4"
-              />
-              <button type="submit" className="reason-modal-submit">
-                Submit Reason
-              </button>
-            </form>
           </div>
         </div>
       )}

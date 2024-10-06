@@ -3,6 +3,7 @@ import tmrw from "../img/tmrw-app.png";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import React, { useState } from "react";
 import UobTmrwChatInterface from "./UobTmrwChatInterface";
+import bou from "../img/BOU.png";
 
 function UobTmrwAppInterface() {
   const [isChatOpen, setChatOpen] = useState(false);
@@ -20,7 +21,7 @@ function UobTmrwAppInterface() {
       <div className="tmrw-app-main">
         <img src={tmrw} alt="UOB Logo" className="tmrw-app" />
         <div className="pulsing-background" onClick={handleRobotClick}>
-          <i class="bi bi-chat-dots-fill robot-icon-app"></i>
+          <img src={bou} alt="bou-robot" className="bou-icon" />
         </div>
       </div>
       {isChatOpen && <UobTmrwChatInterface onClose={handleCloseChat} />}

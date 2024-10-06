@@ -1,6 +1,7 @@
 .auth-form {
   background-image: url('../img/cbd.png');
   margin-top: -100px;
+  background-size: cover;
 }
 
 .user-icon, .email-icon, .key-icon, .code-icon {
@@ -13,6 +14,10 @@
 .login-form-container {
   max-width: 600px;
   margin: auto;
+  background: rgba(255, 255, 255, 0.5);
+  margin: auto;
+  opacity: 1;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
 }
 
 .forgot-password-link {
