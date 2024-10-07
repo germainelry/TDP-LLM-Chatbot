@@ -1,0 +1,14 @@
+.tree-chart {
+  margin-right: 10px;
+}
+
+.tree-chart-title{
+  text-align: left;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.apex-tree-chart {
+  margin-top: -10px;
+}

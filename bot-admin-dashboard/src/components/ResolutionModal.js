@@ -7,7 +7,13 @@ import "./ConvoResolution.css";
 // Submodal to display user message and bot response
 function SubModal({ show, onHide, userMessage, botResponse }) {
   return (
-    <Modal show={show} onHide={onHide} size="md" centered>
+    <Modal
+      show={show}
+      onHide={onHide}
+      size="xl"
+      centered
+      className="modal-content"
+    >
       <Modal.Header closeButton>
         <Modal.Title>Conversation Details</Modal.Title>
       </Modal.Header>
@@ -53,6 +59,7 @@ function ResolutionModal(props) {
         aria-labelledby="contained-modal-title-vcenter"
         centered
         dialogClassName="resolution-modal-pop-up"
+        className="resolution-modal"
       >
         <Modal.Header closeButton>
           <Modal.Title id="contained-modal-title-vcenter">
@@ -126,6 +133,7 @@ function ResolutionModal(props) {
         userMessage={selectedConvo[2]}
         botResponse={selectedConvo[3]}
         size="xl"
+        centered
         dialogClassName="sub-modal-pop-up"
       />
     </>

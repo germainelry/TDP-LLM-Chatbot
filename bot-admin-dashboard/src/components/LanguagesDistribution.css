@@ -8,13 +8,13 @@
   align-items: center;
   justify-content: center;
   margin: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 45px;
   background-color: white;
   border-radius: 5px;
 }
 
 #language-distribution-chart-container {
-  width: 101%;
+  width: 100%;
   height: 100%;
   margin-top: -9px;
   margin-left: -10px;

@@ -233,107 +233,109 @@ const ChatInterface = () => {
           />
         </span>
       </div>
-      <div className="app-info-section">
-        <ApplicationInfo />
-      </div>
-      <div className="chatbot-container">
-        <div className="chatbot-header">
-          <h4 className="chatbot-title">
-            <img src={uobLogo} alt="UOB Logo" className="uob-logo" />
-            UOB Digital Assistant <i className="bi bi-robot"></i>
-          </h4>
-
-          <button
-            className="rate-bot-btn"
-            onClick={handleRatingsToggle}
-            aria-label="Rate Bot"
-          >
-            <i className="bi bi-star"></i> Rate the Bot!
-          </button>
+      <div className="content-wrapper">
+        <div className="app-info-section">
+          <ApplicationInfo />
         </div>
+        <div className="chatbot-container">
+          <div className="chatbot-header">
+            <h4 className="chatbot-title">
+              <img src={uobLogo} alt="UOB Logo" className="uob-logo" />
+              UOB Digital Assistant <i className="bi bi-robot"></i>
+            </h4>
 
-        {!userSubmitted ? (
-          <div class="container-form">
-            <form className="user-info-form" onSubmit={handleUserInfoSubmit}>
-              <h6>Please provide your details to continue:</h6>
-              <div className="input-group">
-                <i className="bi bi-info-square"></i>
-                <input
-                  type="text"
-                  value={userInfo.name}
-                  onChange={(e) =>
-                    setUserInfo({ ...userInfo, name: e.target.value })
-                  }
-                  placeholder="Enter your name"
-                  required
-                />
-              </div>
-              <div className="input-group">
-                <i className="bi bi-telephone-plus"></i>
-                <input
-                  type="tel"
-                  value={userInfo.phone}
-                  onChange={(e) =>
-                    setUserInfo({ ...userInfo, phone: e.target.value })
-                  }
-                  placeholder="Enter your phone number"
-                  required
-                />
-              </div>
-
-              <button type="submit">Submit</button>
-            </form>
+            <button
+              className="rate-bot-btn"
+              onClick={handleRatingsToggle}
+              aria-label="Rate Bot"
+            >
+              <i className="bi bi-star"></i> Rate the Bot!
+            </button>
           </div>
-        ) : (
-          <>
-            <div className="chatbot-messages">
-              {messages.map((message, index) => (
-                <div
-                  key={index}
-                  className={`message ${
-                    message.user ? "user-message" : "ai-message"
-                  }`}
-                  onClick={
-                    !message.user ? () => handleMessageClick(message) : null
-                  }
-                  style={{ cursor: !message.user ? "pointer" : "default" }}
-                >
-                  <div className="message-header">
-                    {message.user ? (
-                      <i className="bi bi-person-fill"></i>
-                    ) : (
-                      <i id="chatbox-bot" className="bi bi-robot"></i>
-                    )}
-                    {message.user ? " You" : " Bot"}
-                  </div>
-                  <div className="message-text">{message.text}</div>
-                </div>
-              ))}
-              <div ref={messagesEndRef} />
-            </div>
 
-            <form className="chatbot-input-form" onSubmit={handleSubmit}>
-              <input
-                ref={inputRef}
-                type="text"
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                placeholder="Type your message..."
-                className="chat-input"
-              />
-              <button
-                type="button"
-                onClick={handleSpeechToText}
-                className={`voice-btn ${isListening ? "listening" : ""}`}
-              >
-                {isListening ? "Listening..." : <i className="bi bi-mic"></i>}
-              </button>
-              <button type="submit" disabled={loading}>
-                {loading ? "Sending..." : "Send"}
-              </button>
-            </form>
-          </>
-        )}
+          {!userSubmitted ? (
+            <div class="container-form">
+              <form className="user-info-form" onSubmit={handleUserInfoSubmit}>
+                <h6>Please provide your details to continue:</h6>
+                <div className="input-group">
+                  <i className="bi bi-info-square"></i>
+                  <input
+                    type="text"
+                    value={userInfo.name}
+                    onChange={(e) =>
+                      setUserInfo({ ...userInfo, name: e.target.value })
+                    }
+                    placeholder="Enter your name"
+                    required
+                  />
+                </div>
+                <div className="input-group">
+                  <i className="bi bi-telephone-plus"></i>
+                  <input
+                    type="tel"
+                    value={userInfo.phone}
+                    onChange={(e) =>
+                      setUserInfo({ ...userInfo, phone: e.target.value })
+                    }
+                    placeholder="Enter your phone number"
+                    required
+                  />
+                </div>
+
+                <button type="submit">Submit</button>
+              </form>
+            </div>
+          ) : (
+            <>
+              <div className="chatbot-messages">
+                {messages.map((message, index) => (
+                  <div
+                    key={index}
+                    className={`message ${
+                      message.user ? "user-message" : "ai-message"
+                    }`}
+                    onClick={
+                      !message.user ? () => handleMessageClick(message) : null
+                    }
+                    style={{ cursor: !message.user ? "pointer" : "default" }}
+                  >
+                    <div className="message-header">
+                      {message.user ? (
+                        <i className="bi bi-person-fill"></i>
+                      ) : (
+                        <i id="chatbox-bot" className="bi bi-robot"></i>
+                      )}
+                      {message.user ? " You" : " Bot"}
+                    </div>
+                    <div className="message-text">{message.text}</div>
+                  </div>
+                ))}
+                <div ref={messagesEndRef} />
+              </div>
+
+              <form className="chatbot-input-form" onSubmit={handleSubmit}>
+                <input
+                  ref={inputRef}
+                  type="text"
+                  value={input}
+                  onChange={(e) => setInput(e.target.value)}
+                  placeholder="Type your message..."
+                  className="chat-input"
+                />
+                <button
+                  type="button"
+                  onClick={handleSpeechToText}
+                  className={`voice-btn ${isListening ? "listening" : ""}`}
+                >
+                  {isListening ? "Listening..." : <i className="bi bi-mic"></i>}
+                </button>
+                <button type="submit" disabled={loading}>
+                  {loading ? "Sending..." : "Send"}
+                </button>
+              </form>
+            </>
+          )}
+        </div>
       </div>
 
       {isRatingsModalOpen && (

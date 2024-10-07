@@ -55,7 +55,7 @@ function LanguagesDistribution() {
             options={options}
             series={series}
             type="polarArea"
-            height={350}
+            height={315}
           />
         ) : (
           <p>Loading data...</p>
