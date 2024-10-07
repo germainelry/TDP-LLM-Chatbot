@@ -249,6 +249,55 @@ def conversation_history():
 		})
 	return conversation_log
 
+
+# Compute percentage change of metrics
+@app.route('/percentage__metric_computation')
+def compute_percentage_change():
+	# Retrieve the last two entries from the conversation resolution collection
+	convoLog = list(history_collection.find())
+	
+	# Calculate the percentage change of interactions and users
+	# Step 1: Get the user count for each datetime (by week) from the convoLog
+	userInterCount = defaultdict(int)
+	userCount = defaultdict()
+	
+	for entry in convoLog:
+		# Only retrieve the date from the timestamp
+		dateStr = entry["timestamp"].split(" ")[0]
+  
+		date_obj = datetime.strptime(dateStr, '%Y-%m-%d')
+		start_of_week = date_obj - timedelta(days=date_obj.weekday())  
+		userInterCount[start_of_week.strftime('%Y-%m-%d')] += 1
+
+		if start_of_week.strftime('%Y-%m-%d') not in userCount:
+			userCount[start_of_week.strftime('%Y-%m-%d')] = []
+			userCount[start_of_week.strftime('%Y-%m-%d')].append(entry["username"])
+		else:
+			userCount[start_of_week.strftime('%Y-%m-%d')].append(entry["username"])
+  
+	# Sort the user count by date
+	sortedUserCount = dict(sorted(userInterCount.items(), key=lambda item: item[0]))
+	# Calculate the percentage change of interactions (since last week)
+	w0, w1 = list(sortedUserCount.values())[-2], list(sortedUserCount.values())[-1]
+	percentageIntChange = round(((w1 - w0) / w0) * 100, 3)
+	
+
+ 	# Step 2: Calculate the percentage change of users by the weeks
+  # Compress the entire list of users 
+	for key, value in userCount.items():
+		userCount[key] = len(set(value))
+
+ 	#	Sort the user count by date
+	sortedUserCount = dict(sorted(userCount.items(), key=lambda item: item[0]))
+	u0, u1 = list(sortedUserCount.values())[-2], list(sortedUserCount.values())[-1]
+	percentage_change = round(((u1 - u0) / u0) * 100, 3)
+
+	return {
+		"percentage_change_interactions": percentageIntChange,
+		"percentage_change_users": percentage_change,
+	}
+
+
 # Basic Numerical Information on Chat Logs
 @app.route('/basic_chat_information')
 def compute_chat_statistics():
@@ -488,3 +537,4 @@ atexit.register(close_mongo_connection)
 #  If the script is run directly, start the Flask app
 if __name__ == '__main__':
 	app.run(debug = True)
+ 	

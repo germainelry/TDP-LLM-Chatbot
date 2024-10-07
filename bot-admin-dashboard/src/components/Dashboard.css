@@ -18,6 +18,21 @@ body {
 .mini-stat {
   padding: 15px;
   margin-bottom: 20px;
+  position: relative;
+}
+
+.percentage-change {
+  position: absolute; /* Position the element absolutely */
+  top: 5px;  /* Adjust the top position */
+  right: 15px; /* Adjust the right position */
+  font-size: 1.5em;  /* Make the text slightly smaller */
+  flex-direction: column;
+  align-items: flex-end;
+  display: flex;
+}
+
+.span-text {
+  font-size: 0.5em; /* Adjust percentage size */
 }
 
 .mini-stat-info {

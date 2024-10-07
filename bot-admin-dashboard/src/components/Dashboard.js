@@ -16,6 +16,25 @@ function Dashboard() {
     average_response_time: 0,
   });
 
+  const [pctData, setPctData] = useState({
+    percentage_change_interactions: 0.0,
+    percentage_change_users: 0.0,
+  });
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("/percentage__metric_computation");
+        const data = await response.json();
+        setPctData(data);
+      } catch (error) {
+        console.error("Error fetching basic chat information:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -30,6 +49,9 @@ function Dashboard() {
     fetchData();
   }, []);
 
+  console.log(data.percentage_change_interactions > 0);
+  console.log(data.percentage_change_interactions);
+
   return (
     <>
       <div id="metrics-top" className="row align-items-center">
@@ -41,6 +63,20 @@ function Dashboard() {
                 Number of Users
                 <i className="bi bi-person-fill ms-2"></i>
               </div>
+              <div className="mini-stat-percentage percentage-change">
+                <span
+                  style={{
+                    color:
+                      pctData.percentage_change_users >= 0 ? "green" : "red",
+                  }}
+                >
+                  {pctData.percentage_change_users >= 0 ? "+" : "-"}
+                  {pctData.percentage_change_users.toFixed(1)}%
+                </span>
+                <span className="mini-stat-percentage-label span-text">
+                  <i>since last week</i>
+                </span>
+              </div>
             </div>
           </div>
           <div id="metric-container" className="col-md-3 col-sm-6 col-xs-12">
@@ -49,6 +85,22 @@ function Dashboard() {
                 <span id="interactionCount">{data.total_conversations}</span>
                 Number of Interactions Logged
                 <i className="bi bi-chat-dots-fill ms-2"></i>
+              </div>
+              <div className="mini-stat-percentage percentage-change">
+                <span
+                  style={{
+                    color:
+                      pctData.percentage_change_interactions >= 0
+                        ? "green"
+                        : "red",
+                  }}
+                >
+                  {pctData.percentage_change_interactions >= 0 ? "+" : "-"}
+                  {pctData.percentage_change_interactions.toFixed(1)}%
+                </span>
+                <span className="mini-stat-percentage-label span-text">
+                  <i>since last week</i>
+                </span>
               </div>
             </div>
           </div>

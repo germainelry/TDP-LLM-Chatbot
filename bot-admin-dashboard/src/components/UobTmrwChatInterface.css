@@ -1,7 +1,7 @@
 .chatbot-interface-main-tmrw-app {
   background-size: cover;
   border-radius: 5px;
-  height: 90vh;
+  height: 900px;
   position: absolute;
   flex-direction: column;
   display: flex;
@@ -16,10 +16,10 @@
   position: fixed;
   right: 0;
   margin-right: 250px;
-  margin-bottom: 30px;
+  margin-bottom: 90px;
   bottom: 0;
   width: 430px;
-  height: 86%; 
+  height: 830px; 
   padding: 10px;
   border-radius: 50px;
   background-color: #fcf9f9;
