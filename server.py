@@ -112,13 +112,21 @@ def user_conversation(userInputMessage, userInfo) -> str:
 				keywords_collection.insert_one({"keyword": word, "count": 1})
 
 	start_time = time.time()
-	botResponse = chain.invoke({'input' : f"{userInputMessage}"})
+	# Initial bot response based on user input
+	botResponse = chain.invoke({'input': f"{userInputMessage}"})
 	end_time = time.time()
 
 	execution_time = end_time - start_time  # Calculate the execution time
 	log_conversation(userInputMessage, botResponse, execution_time, userInfo)
 
-	return botResponse.get("response")
+	# Send the generated response to the LLM model for summarization in 100 words
+	summaryResponse = chain.invoke({'input': f"Summarize the following text within 120 words: {botResponse.get('response')}"})
+
+	# Log the summarized response if needed
+	log_conversation("Summarized Response", summaryResponse, execution_time, userInfo)
+
+	# Return the summarized response
+	return summaryResponse.get("response")
 # ---------- End of Chatbot Functions ----------
 	
 
