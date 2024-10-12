@@ -5,3 +5,4 @@ data/keywords.json
 data/conversationResolution.json
 data/ratings.json
 chatbot/
+node_modules/
