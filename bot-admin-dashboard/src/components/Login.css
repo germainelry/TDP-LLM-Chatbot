@@ -1,5 +1,21 @@
+@keyframes backgroundFade {
+  0% {
+    background-image: url('../img/cbd.png');
+    opacity: 1;
+  }
+  50% {
+    background-image: url('../img/cbd-day-transformed.png');
+    opacity: 1;
+  }
+  100% {
+    background-image: url('../img/cbd.png');
+    opacity: 1;
+  }
+}
+
 .auth-form {
-  background-image: url('../img/cbd.png');
+  animation: backgroundFade 15s ease-in-out infinite;
+  /* background-image: url('../img/cbd-day-transformed.png'); */
   margin-top: -100px;
   background-size: cover;
 }

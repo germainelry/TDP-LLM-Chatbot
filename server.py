@@ -6,6 +6,7 @@ import en_core_web_sm
 import os
 import time
 import math
+import numpy as np
 import nltk
 import bcrypt
 from flask import Flask, request, jsonify
@@ -14,6 +15,8 @@ from collections import defaultdict
 from datetime import datetime, timedelta
 from dotenv import load_dotenv
 from nltk.corpus import stopwords
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
 
 # Core libraries for MongoDB
 import atexit
@@ -112,22 +115,13 @@ def user_conversation(userInputMessage, userInfo) -> str:
 				keywords_collection.insert_one({"keyword": word, "count": 1})
 
 	start_time = time.time()
-	# Initial bot response based on user input
-	botResponse = chain.invoke({'input': f"{userInputMessage}"})
+	botResponse = chain.invoke({'input' : f"{userInputMessage}"})
 	end_time = time.time()
 
 	execution_time = end_time - start_time  # Calculate the execution time
 	log_conversation(userInputMessage, botResponse, execution_time, userInfo)
 
-	# Send the generated response to the LLM model for summarization in 100 words
-	summaryResponse = chain.invoke({'input': f"Summarize the following text within 120 words: {botResponse.get('response')}"})
-
-	# Log the summarized response if needed
-	log_conversation("Summarized Response", summaryResponse, execution_time, userInfo)
-
-	# Return the summarized response
-	return summaryResponse.get("response")
-
+	return botResponse.get("response")
 # ---------- End of Chatbot Functions ----------
 	
 
@@ -189,8 +183,51 @@ def userSignUpAuth():
 		return {"status": "Successful Signup"}
 	
 
-# Find similar questions (sentences) in the chat history
-
+# Topic tagging in user's query
+@app.route('/topic_tagging')
+def topic_tagging() -> None:
+  historical_data = list(history_collection.find())
+  user_query = [doc["input"] for doc in historical_data]
+  
+  tags_to_scrape = [
+    "Account Opening", 
+    "Account Closure",
+    "Loans", 
+    "Fraud Detection", 
+    "Technical Support",
+    "Online Banking", 
+    "Mobile Banking", 
+    "Investment Services",
+    "Mortgage", 
+    "Customer Support", 
+    "Transaction Issues", 
+    "Lending", 
+    "Money", 
+    "Others"
+	]
+  # Initialise the vectorizer
+  vectorizer = TfidfVectorizer()
+  all_text = user_query + tags_to_scrape  # Combine sentences and keywords for vectorization
+  tfidf_matrix = vectorizer.fit_transform(all_text)
+  
+  sentence_vectors = tfidf_matrix[:len(user_query)]
+  tags_vectors = tfidf_matrix[len(user_query):]
+  similarity_matrix = cosine_similarity(sentence_vectors, tags_vectors)
+  tags_dct = {}
+  
+  for i, sentence in enumerate(user_query):
+    best_match_idx = np.argmax(similarity_matrix[i])  # Find index of highest similarity
+    best_match_tag = tags_to_scrape[best_match_idx]     # Get the corresponding keyword
+    if best_match_tag not in tags_dct: 
+      tags_dct[best_match_tag] = 1
+    else:
+      if tags_dct[best_match_tag] > 20:
+        continue
+      else:
+        tags_dct[best_match_tag] += 1	
+  
+  return tags_dct
+  
 
 # Update Conversation Resolution Metrics in DB when admin resolves an unresolved or escalated conversation
 @app.route("/update_conversation_status", methods = ['POST'])

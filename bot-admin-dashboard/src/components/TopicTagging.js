@@ -1,49 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ReactApexChart from "react-apexcharts";
 import "./TopicTagging.css";
 
 function TopicTagging() {
-  const data = {
+  const [data, setData] = useState({});
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("/topic_tagging");
+        const data = await response.json();
+        setData(data);
+      } catch (error) {
+        console.error("Error fetching most topic tagging:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  const queryData = Object.entries(data).map((entry) => ({
+    x: entry[0],
+    y: entry[1],
+  }));
+
+  console.log(queryData);
+  const mainData = {
     series: [
       {
-        data: [
-          {
-            x: "Investment",
-            y: 149,
-          },
-          {
-            x: "Loans",
-            y: 284,
-          },
-          {
-            x: "Savings Account",
-            y: 55,
-          },
-          {
-            x: "Interest Rates",
-            y: 134,
-          },
-          {
-            x: "Others",
-            y: 70,
-          },
-          {
-            x: "Credit/Debit Cards",
-            y: 40,
-          },
-          {
-            x: "Mobile Banking",
-            y: 44,
-          },
-          {
-            x: "Bank Transfers",
-            y: 68,
-          },
-          {
-            x: "Online Banking",
-            y: 19,
-          },
-        ],
+        data: queryData,
       },
     ],
     options: {
@@ -87,8 +72,8 @@ function TopicTagging() {
       <div className="tree-chart">
         <span className="tree-chart-title">Topics Enquired by Users</span>
         <ReactApexChart
-          options={data.options}
-          series={data.series}
+          options={mainData.options}
+          series={mainData.series}
           type="treemap"
           height={375}
           width={430}

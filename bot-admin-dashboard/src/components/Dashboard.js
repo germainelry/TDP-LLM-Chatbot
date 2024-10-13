@@ -64,7 +64,7 @@ function Dashboard() {
             <div className="mini-stat clearfix bg-metrics">
               <div className="mini-stat-info">
                 <span id="userCount">{data.unique_users}</span>
-                Number of Users
+                Total Number of Users
                 <i className="bi bi-person-fill ms-2"></i>
               </div>
               <div className="mini-stat-percentage percentage-change">

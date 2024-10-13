@@ -2,6 +2,7 @@
   background-color: #151f32;
   margin-bottom: 15px;
   margin-top: -25px;
+  z-index: 100;
 }
 
 .main-header {
