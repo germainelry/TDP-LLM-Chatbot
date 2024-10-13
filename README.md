@@ -18,48 +18,29 @@ In addition to its core functionality, a comprehensive dashboard has been develo
 
 The following table highlights some of the key features in our project.
 
-| Feature | Description | Status |
-
+| Feature                      | Description                                                       | Status           |
 | ---------------------------- | ----------------------------------------------------------------- | ---------------- |
-
-| **User Authentication** | Handles admin login and registration | Completed |
-
-| **Dashboard** | Displays user data and analytics | Completed |
-
-| **API Integration** | Connects to third-party services | Completed |
-
+| **User Authentication**      | Handles admin login and registration                              | Completed        |
+| **Dashboard**                | Displays user data and analytics                                  | Completed        |
+| **API Integration**          | Connects to third-party services                                  | Completed        |
 | **Push Notification System** | Sends notifications based on user actions (e.g report / escalate) | Future Iteration |
-
-| **Large Language Model** | Improvement from traditional dialog flow interaction | Completed |
+| **Large Language Model**     | Improvement from traditional dialog flow interaction              | Completed        |
 
 ## Table of Contents
 
 - [Technology Stack](#technology-stack)
-
-- [UML Diagram](#uml-diagram)
-
+  - [UML Diagram](#uml-diagram)
 - [Features](#features)
-
-- [Multilingual Support](#multilingual-support)
-
-- [Personalized Customer Service](#personalized-customer-service)
-
-- [Dashboard for Monitoring](#dashboard-for-monitoring)
-
+  - [Multilingual Support](#multilingual-support)
+  - [Personalized Customer Service](#personalized-customer-service)
+  - [Dashboard for Monitoring](#dashboard-for-monitoring)
 - [Installation](#installation)
-
-- [Prerequisites](#prerequisites)
-
-- [Setup Instructions](#setup-instructions)
-
+  - [Prerequisites](#prerequisites)
+  - [Setup Instructions](#setup-instructions)
 - [Usage](#usage)
-
-- [Using the Dashboard](#using-the-dashboard)
-
+  - [Using the Dashboard](#using-the-dashboard)
 - [Authors](#authors)
-
 - [License](#license)
-
 - [Contact](#contact)
 
 ## Technology Stack
@@ -76,17 +57,12 @@ The following table highlights some of the key features in our project.
 
 - **[GitHub](https://pages.github.com)**: For hosting our web application and dashboard. GitHub's built-in version control system allows for collaborative development and tracking of changes, which is crucial as the project scales up in future use case.
 
-| Technology | Purpose |
-
+| Technology  | Purpose                               |
 | ----------- | ------------------------------------- |
-
-| **React** | Frontend Application |
-
-| **Python** | Backend System, LLM Model Fine-tuning |
-
-| **Flask** | API Calls |
-
-| **MongoDB** | Database Management |
+| **React**   | Frontend Application                  |
+| **Python**  | Backend System, LLM Model Fine-tuning |
+| **Flask**   | API Calls                             |
+| **MongoDB** | Database Management                   |
 
 ## UML Diagram
 
@@ -133,33 +109,22 @@ The AI-powered chatbot is designed to provide seamless and efficient communicati
 
 ### General Analytics
 
-| Feature | Description | Purpose |
-
+| Feature                           | Description                                                                                              | Purpose                                                                                     |
 | --------------------------------- | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-
-| **Conversation History** | Provides access to past conversations between customers and the chatbot. | Enables agents to review previous interactions for context and follow-up. |
-
-| **Multilingual Interaction Logs** | Logs and categorizes conversations based on the language used by the customer. | Facilitates analysis of language preferences and ensures multilingual support is effective. |
-
-| **Data Export** | Provides options to export conversation logs and performance data in various formats (CSV, Excel, etc.). | Facilitates external analysis and reporting. |
-
-| **Alerts & Notifications** | Sends real-time alerts for specific triggers (e.g., high-priority customers, unresolved issues). | Ensures timely response to critical situations. |
+| **Conversation History**          | Provides access to past conversations between customers and the chatbot.                                 | Enables agents to review previous interactions for context and follow-up.                   |
+| **Multilingual Interaction Logs** | Logs and categorizes conversations based on the language used by the customer.                           | Facilitates analysis of language preferences and ensures multilingual support is effective. |
+| **Data Export**                   | Provides options to export conversation logs and performance data in various formats (CSV, Excel, etc.). | Facilitates external analysis and reporting.                                                |
+| **Alerts & Notifications**        | Sends real-time alerts for specific triggers (e.g., high-priority customers, unresolved issues).         | Ensures timely response to critical situations.                                             |
 
 ### Performance analytics
 
-| Feature | Description | Purpose |
-
+| Feature                             | Description                                                                        | Purpose                                                                                   |
 | ----------------------------------- | ---------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-
-| **Conversation-Resolution Metrics** | Displays ongoing customer conversations in real-time. | Allows customer service agents to monitor and intervene if needed. |
-
-| **Sentiment Analysis** | Analyzes the sentiment of customer messages (positive, neutral, negative). | Helps agents understand customer emotions and prioritize responses. |
-
-| **Performance Metrics** | Shows key performance indicators (KPIs) such as response time and resolution rate. | Allows management to track chatbot efficiency and customer satisfaction. |
-
-| **User Feedback Collection** | Displays customer feedback and ratings on chatbot interactions. | Helps in evaluating customer satisfaction and refining the chatbot experience. |
-
-| **Issue Escalation Tracking** | Tracks cases where conversations were escalated to human agents. | Monitors the chatbot's ability to handle queries and when human intervention is required. |
+| **Conversation-Resolution Metrics** | Displays ongoing customer conversations in real-time.                              | Allows customer service agents to monitor and intervene if needed.                        |
+| **Sentiment Analysis**              | Analyzes the sentiment of customer messages (positive, neutral, negative).         | Helps agents understand customer emotions and prioritize responses.                       |
+| **Performance Metrics**             | Shows key performance indicators (KPIs) such as response time and resolution rate. | Allows management to track chatbot efficiency and customer satisfaction.                  |
+| **User Feedback Collection**        | Displays customer feedback and ratings on chatbot interactions.                    | Helps in evaluating customer satisfaction and refining the chatbot experience.            |
+| **Issue Escalation Tracking**       | Tracks cases where conversations were escalated to human agents.                   | Monitors the chatbot's ability to handle queries and when human intervention is required. |
 
 ## Installation
 
