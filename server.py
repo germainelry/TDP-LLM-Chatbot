@@ -17,6 +17,7 @@ from dotenv import load_dotenv
 from nltk.corpus import stopwords
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
+from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
 # Core libraries for MongoDB
 import atexit
@@ -181,7 +182,6 @@ def userSignUpAuth():
 			"password": hashed_password,
 		})
 		return {"status": "Successful Signup"}
-	
 
 # Topic tagging in user's query
 @app.route('/topic_tagging')
@@ -227,7 +227,6 @@ def topic_tagging() -> None:
         tags_dct[best_match_tag] += 1	
   
   return tags_dct
-  
 
 # Update Conversation Resolution Metrics in DB when admin resolves an unresolved or escalated conversation
 @app.route("/update_conversation_status", methods = ['POST'])
@@ -278,7 +277,6 @@ def update_conversation_status():
 			}
 		}
 	)
-  
   return {"status": "success"}
 	
 # Conversation Logs in Table Form
@@ -294,7 +292,6 @@ def conversation_history():
 			"output": entry["output"]
 		})
 	return conversation_log
-
 
 # Compute percentage change of metrics
 @app.route('/percentage__metric_computation')
@@ -327,7 +324,6 @@ def compute_percentage_change():
 	w0, w1 = list(sortedUserCount.values())[-2], list(sortedUserCount.values())[-1]
 	percentageIntChange = round(((w1 - w0) / w0) * 100, 3)
 	
-
  	# Step 2: Calculate the percentage change of users by the weeks
   # Compress the entire list of users 
 	for key, value in userCount.items():
@@ -342,7 +338,6 @@ def compute_percentage_change():
 		"percentage_change_interactions": percentageIntChange,
 		"percentage_change_users": percentage_change,
 	}
-
 
 # Basic Numerical Information on Chat Logs
 @app.route('/basic_chat_information')
@@ -559,9 +554,7 @@ def user_feedbacks_resolution():
 				}
 			}
 		)
-   
   return {"status": "success"}
-
 
 # Compute the user ratings for speedometer display
 @app.route('/user_ratings')
@@ -572,6 +565,21 @@ def customer_ratings():
 		ratings += entry["ratings"]
 	
 	return jsonify({'ratings': ratings / ratings_collection.count_documents({})})
+
+# Compute the sentiment score of the user feedback
+@app.route('/sentiment_analysis')
+def sentiment_analysis():
+	sentiment_analyzer = SentimentIntensityAnalyzer()
+	userFeedbacks = [usr['feedback'] for usr in list(ratings_collection.find())]
+
+	# Compute the sentiment score for each feedback
+	sentiment_scores = [sentiment_analyzer.polarity_scores(text) for text in userFeedbacks]
+	
+	# Compute the average sentiment score
+	average_sentiment = np.mean([score["compound"] for score in sentiment_scores])
+	
+	return jsonify({'average_sentiment': average_sentiment})
+
 # ---------- End of API Functions ----------
 
 # Ensure MongoDB connection closes when the app exits

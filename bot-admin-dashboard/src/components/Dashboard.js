@@ -22,6 +22,10 @@ function Dashboard() {
     percentage_change_users: 0.0,
   });
 
+  const [sentimentData, setSentimentData] = useState({
+    average_sentiment: 0.0,
+  });
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -43,7 +47,21 @@ function Dashboard() {
         const data = await response.json();
         setData(data);
       } catch (error) {
-        console.error("Error fetching basic chat information:", error);
+        console.error("Error fetching percentage information:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("/sentiment_analysis");
+        const data = await response.json();
+        setSentimentData(data);
+      } catch (error) {
+        console.error("Error fetching sentiment information:", error);
       }
     };
 
@@ -52,7 +70,7 @@ function Dashboard() {
 
   const showAlert = () => {
     alert(
-      "This score reflects the average sentiment derived from user feedback, ranging from 0 (negative) to  0.5 (neutral) to 1 (positive)."
+      "This score reflects the average compounded sentiment derived from user feedback, (negative, neutral, positive, compound). \n\nE.g Sentiment of text 1: {'neg': 0.0, 'neu': 0.73, 'pos': 0.27, 'compound': 0.5719} \nE.g Sentiment of text 2: {'neg': 0.508, 'neu': 0.492, 'pos': 0.0, 'compound': -0.4767}"
     );
   };
 
@@ -134,9 +152,9 @@ function Dashboard() {
                   id="sentimentScore"
                   onClick={showAlert}
                 >
-                  {0.35523}
+                  {sentimentData.average_sentiment.toFixed(5)}
                 </span>
-                Feedback Sentiment Score (0-1)
+                Feedback Sentiment (Compound)
                 <i className="bi bi-award-fill ms-2"></i>
               </div>
             </div>
