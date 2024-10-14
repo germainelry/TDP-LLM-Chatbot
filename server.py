@@ -116,7 +116,9 @@ def user_conversation(userInputMessage, userInfo) -> str:
 				keywords_collection.insert_one({"keyword": word, "count": 1})
 
 	start_time = time.time()
-	botResponse = chain.invoke({'input' : f"{userInputMessage}"})
+	# botResponse = chain.invoke({'input' : f"{userInputMessage}"}) # use below code instead to get a more concise output from LLM
+	botResponse = chain.invoke({'input': f"Provide a concise and easy-to-understand response to the following: {userInputMessage}"})
+
 	end_time = time.time()
 
 	execution_time = end_time - start_time  # Calculate the execution time
