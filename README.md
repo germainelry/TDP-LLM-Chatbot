@@ -29,7 +29,7 @@ The following table highlights some of the key features in our project.
 ## Table of Contents
 
 - [Technology Stack](#technology-stack)
-  - [UML Diagram](#uml-diagram)
+- [UML Diagram](#uml-diagram)
 - [Features](#features)
   - [Multilingual Support](#multilingual-support)
   - [Personalized Customer Service](#personalized-customer-service)
