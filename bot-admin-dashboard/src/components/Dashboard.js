@@ -92,7 +92,7 @@ function Dashboard() {
                       pctData.percentage_change_users >= 0 ? "green" : "red",
                   }}
                 >
-                  {pctData.percentage_change_users >= 0 ? "+" : "-"}
+                  {pctData.percentage_change_users >= 0 ? "+" : ""}
                   {pctData.percentage_change_users.toFixed(1)}%
                 </span>
                 <span className="mini-stat-percentage-label span-text">
@@ -117,7 +117,7 @@ function Dashboard() {
                         : "red",
                   }}
                 >
-                  {pctData.percentage_change_interactions >= 0 ? "+" : "-"}
+                  {pctData.percentage_change_interactions >= 0 ? "+" : ""}
                   {pctData.percentage_change_interactions.toFixed(1)}%
                 </span>
                 <span className="mini-stat-percentage-label span-text">
