@@ -2,7 +2,6 @@
 import re
 import uuid
 import json
-import en_core_web_sm
 import os
 import time
 import math
@@ -52,7 +51,6 @@ stop_words = set()
 for lang in languages:
 	stop_words.update(stopwords.words(lang))
 
-nlp = en_core_web_sm.load() # TO BE TRANSFERRED TO LLM TRAINING FOLDER
 app = Flask(__name__) # Initialise the Flask app
 CORS(app)  # Enable CORS (Cross-Origin Resource Sharing) for all routes in react app 
 # ---------- End of Initialising Environment Variables ----------
