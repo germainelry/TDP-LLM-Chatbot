@@ -7,9 +7,6 @@ alabaster==0.7.12
 allure-behave==2.13.5
 allure-python-commons==2.13.5
 altair==5.0.1
-anaconda-anon-usage==0.4.4
-anaconda-client==1.12.3
-anaconda-navigator==2.1.1
 annotated-types==0.7.0
 anyio==4.2.0
 appdirs==1.4.4
