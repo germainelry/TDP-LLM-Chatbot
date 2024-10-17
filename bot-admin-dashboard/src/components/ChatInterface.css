@@ -144,13 +144,17 @@
 
 .user-message {
   background-color: #095cb4;
-  color: white;
+  color: white !important;  /* Force the color to white */
   align-self: flex-end;
   text-align: right;
   max-width: 50%;
   display: block;
   margin-left: auto;
   white-space: pre-wrap;
+}
+
+.user-message * {
+  color: white !important;  /* Ensure all child elements use white color */
 }
 
 .ai-message {
