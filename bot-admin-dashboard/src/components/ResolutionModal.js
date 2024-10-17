@@ -126,7 +126,6 @@ function ResolutionModal(props) {
         </Modal.Body>
       </Modal>
 
-      {/* Submodal for showing user message and bot response */}
       <SubModal
         show={subModalShow}
         onHide={() => setSubModalShow(false)}

@@ -580,6 +580,46 @@ def sentiment_analysis():
 	
 	return jsonify({'average_sentiment': average_sentiment})
 
+# Building user conversation flow from text response
+@app.route('/conversation_flow')
+def conversation_flow():
+	conversations = history_collection.find()
+ 
+	# Similar substrings based on username and datetime concatenated
+	conversation_grp = defaultdict(list)
+	usernames = set()
+	logDates = set()
+
+	for entry in conversations:
+		try:
+			chat_id = entry["_id"]
+			convo_string = entry["username"] + entry["timestamp"].split(" ")[0]
+
+			if entry["username"] not in usernames:
+				usernames.add(entry["username"])
+    
+			if entry["timestamp"].split(" ")[0] not in logDates:	
+				logDates.add(entry["timestamp"].split(" ")[0])	
+    
+			conversation_grp[convo_string].append({
+				"chat_id": str(chat_id),
+				"username": entry["username"],
+				"date": entry["timestamp"].split(" ")[0],
+				"timestamp": entry["timestamp"],
+				"input": entry["input"],
+				"output": entry["output"]
+			})
+		except TypeError:
+			continue
+	# Filter our for conversations with more than 1 entry
+	conversation_grp = {key: value for key, value in conversation_grp.items() if len(value) > 1}
+ 
+	return jsonify({
+  	"conversationLogs": conversation_grp, 
+   	"usernames": list(usernames),
+    "dates": list(logDates)
+  })
+
 # ---------- End of API Functions ----------
 
 # Ensure MongoDB connection closes when the app exits
@@ -590,5 +630,5 @@ atexit.register(close_mongo_connection)
 
 #  If the script is run directly, start the Flask app
 if __name__ == '__main__':
-	app.run(debug = True)
+  app.run(debug = True)
  	

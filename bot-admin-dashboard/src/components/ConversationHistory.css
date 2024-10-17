@@ -18,12 +18,21 @@
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-#conversation-history-title {
+#conversation-history-title, #conversation-history-description {
   text-align: center;
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 20px;
   margin-left: 0px;
+}
+
+#conversation-history-description {
+	margin-left: 335px;
+}
+
+.spreadsheet, .numbers {
+	margin-left: 10px;
+	font-size: 20px;
 }
 
 #filter-input {
@@ -63,6 +72,41 @@
 	padding-bottom: 20px;
 	font-size: 12px;
 	width: 100px;
+}
+
+#session-basic-1 {
+	margin-left: 10px;
+	height: 30px;
+	color: white;
+	background-color: #233253;
+	border-color: #233253;
+	font-family: Helvetica, sans-serif;
+	font-weight: bold;
+	text-align: center;
+	border-radius: 5px;
+	padding-bottom: 20px;
+	font-size: 12px;
+	width: 300px;
+}
+
+.session-btn {
+	margin-top: 10px;
+	height: 30px;
+	color: white;
+	background-color: #233253;
+	border-color: #233253;
+	font-family: Helvetica, sans-serif;
+	font-weight: bold;
+	text-align: center;
+	border-radius: 5px;
+	padding-bottom: 20px;
+	font-size: 12px;
+	width: 200px;
+}
+
+.session-modal {
+	height: 90vh; /* Set height to 80% of the viewport height */
+	max-height: 100vh; /* Set a maximum height to prevent overflow */
 }
 
 .results-count {

@@ -61,7 +61,7 @@
   margin-top: 0px;
   margin-bottom: 0px;
   background-color: white;
-  height: 50px;
+  height: 80px;
   z-index: -3;
 }
 
@@ -76,7 +76,7 @@
   margin-bottom: 15px;
   bottom: 0;
   width: 700px;
-  height: 85vh; 
+  height: 82vh; 
   background-color: #fcf9f9;
   box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.1);
   z-index: 100;
