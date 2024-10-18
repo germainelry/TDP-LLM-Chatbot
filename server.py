@@ -619,6 +619,53 @@ def conversation_flow():
    	"usernames": list(usernames),
     "dates": list(logDates)
   })
+ 
+ 
+# Retrieve the conversation history for users from a specific date
+@app.route('/retrieve_users_from_selected_date', methods = ['POST'])
+def retrieve_users_from_selected_date():
+	data = request.json
+	selectedDate = data['date']
+	
+	# Retrieve the conversation history from the selected date
+	conversations = history_collection.find()
+ 
+	# Similar substrings based on username and datetime concatenated
+	conversation_grp = defaultdict(list)
+	usernames = set()
+	
+	for entry in conversations:
+		try:
+			chat_id = entry["_id"]
+			if entry["timestamp"].split(" ")[0] == selectedDate:
+				convo_string = entry["username"] + entry["timestamp"].split(" ")[0]
+
+				if entry["username"] not in usernames:
+					usernames.add(entry["username"])
+				
+				conversation_grp[convo_string].append({
+					"chat_id": str(chat_id),
+					"username": entry["username"],
+					"date": entry["timestamp"].split(" ")[0],
+					"timestamp": entry["timestamp"],
+					"input": entry["input"],
+					"output": entry["output"]
+				})
+		except TypeError:
+			continue
+ 
+	# Filter our for conversations with more than 1 entry
+	conversation_grp = {key: value for key, value in dict(conversation_grp).items() if len(value) > 1}
+	if conversation_grp == {}: # If no conversations are found, return an empty dictionary
+			return jsonify({
+			"conversationLogs": {}, 
+			"usernames": [],
+		})
+	return jsonify({
+  	"conversationLogs": conversation_grp, 
+   	"usernames": 
+      [name[:-10] if name.endswith(selectedDate) else name for name in list(conversation_grp.keys())]
+  })
 
 # ---------- End of API Functions ----------
 

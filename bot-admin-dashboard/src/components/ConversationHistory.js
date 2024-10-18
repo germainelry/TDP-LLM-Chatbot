@@ -99,6 +99,9 @@ function ConversationHistory() {
   const handleModalShow = () => setSessionModalShow(true);
   const handleModalClose = () => setSessionModalShow(false);
 
+  // Selected User Modal
+  const [showSelectedUserModal, setShowSelectedUserModal] = useState(false);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -118,9 +121,10 @@ function ConversationHistory() {
       try {
         const response = await fetch("/conversation_flow");
         const data = await response.json();
-        setSessionLogs(data["conversationLogs"]);
-        setSessionNames(data["usernames"]);
-        setSessionDates(data["dates"]);
+        const sortedDate = data["dates"].sort(
+          (a, b) => new Date(b) - new Date(a)
+        );
+        setSessionDates(sortedDate);
       } catch (error) {
         console.error("Error fetching session history:", error);
       }
@@ -129,7 +133,33 @@ function ConversationHistory() {
     fetchSessionData();
   }, []);
 
-  console.log(sessionLogs);
+  const sendDateToBackend = async () => {
+    if (!selectedDate) {
+      alert("Please select a date before proceeding.");
+      return;
+    }
+
+    try {
+      const response = await fetch("/retrieve_users_from_selected_date", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ date: selectedDate }),
+      });
+
+      if (response.ok) {
+        console.log("Date submitted successfully:");
+        const result = await response.json();
+        setSessionLogs(result["conversationLogs"]);
+        setSessionNames(result["usernames"]);
+      } else {
+        console.error("Failed to submit date.");
+      }
+    } catch (error) {
+      console.error("Error submitting date:", error);
+    }
+  };
 
   // Get unique language codes from the data
   const languageCodes = Array.from(
@@ -148,13 +178,17 @@ function ConversationHistory() {
 
   // Handle date selection
   const handleDateChange = (e) => {
-    setSelectedDate(e.target.value);
+    setSelectedDate(e.target.value || "-"); // Set to "-" if empty
   };
 
   // Handle username selection
   const handleUsernameChange = (e) => {
-    setSelectedUsername(e.target.value);
+    setSelectedUsername(e.target.value || "-"); // Set to "-" if empty
+
+    if (e.target.value) setShowSelectedUserModal(true);
   };
+
+  console.log("Session logs:", sessionLogs);
 
   // Filtered info data
   const filteredData = data.filter((info) => {
@@ -184,7 +218,7 @@ function ConversationHistory() {
     } else if (sortOrder === "newest") {
       return new Date(b.timestamp) - new Date(a.timestamp);
     }
-    return 0; // Default case
+    return 0;
   });
 
   return (
@@ -266,15 +300,22 @@ function ConversationHistory() {
                 </Form.Select>
               </Form.Group>
               <br />
+              <Button
+                variant="info"
+                className="session-btn"
+                onClick={sendDateToBackend}
+              >
+                Submit Date
+              </Button>
               <Form.Group controlId="username">
                 <Form.Label>
-                  <strong>Select Username:</strong>
+                  <strong>Available Users: {sessionNames.length}</strong>
                 </Form.Label>
                 <Form.Select
                   value={selectedUsername}
                   onChange={handleUsernameChange}
                 >
-                  <option value="">-- Select a username --</option>
+                  <option value="">-- Select a user --</option>
                   {sessionNames.map((username, index) => (
                     <option key={index} value={username}>
                       {username}
@@ -282,13 +323,22 @@ function ConversationHistory() {
                   ))}
                 </Form.Select>
               </Form.Group>
-              <Button
-                variant="info"
-                className="session-btn"
-                onClick={handleModalShow}
-              >
-                View User Session Logs
-              </Button>
+              <Modal show={showSelectedUserModal} onHide={handleClose}>
+                <Modal.Header closeButton>
+                  <Modal.Title>User Details</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                  <p>
+                    <strong>Selected Username:</strong> {selectedUsername}
+                  </p>
+                  <p>You can display more details about the user here.</p>
+                </Modal.Body>
+                <Modal.Footer>
+                  <Button variant="secondary" onClick={handleClose}>
+                    Close
+                  </Button>
+                </Modal.Footer>
+              </Modal>
             </Offcanvas.Body>
           </Offcanvas>
         </>
