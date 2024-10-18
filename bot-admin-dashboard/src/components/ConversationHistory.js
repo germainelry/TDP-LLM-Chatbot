@@ -74,6 +74,7 @@ function SelectedUserConversation({
             <div key={index} className="chat-log">
               <div className="user-log p-3 mb-2 rounded bg-light session-input">
                 <p className="mb-0">
+                  <i class="bi bi-person-fill"></i>
                   <strong>Input:</strong> <br />
                   {log.input}
                 </p>
@@ -82,10 +83,15 @@ function SelectedUserConversation({
               <br />
               <br />
               <div className="bot-log p-3 mb-2 rounded bg-primary session-output">
-                <p className="mb-0">
+                <p className="mb-0 text-white">
+                  <i class="bi bi-reply-all-fill"></i>
                   <strong>Output:</strong> <br />
                   {log.output.split("\n").map((line, index) => (
-                    <p key={index} style={{ margin: 0 }}>
+                    <p
+                      key={index}
+                      style={{ margin: 0 }}
+                      className="text-white mb-0"
+                    >
                       {line}
                     </p>
                   ))}
