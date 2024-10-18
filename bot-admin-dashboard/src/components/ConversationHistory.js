@@ -51,28 +51,59 @@ function UserInformation(props) {
   );
 }
 
-function SessionModal({ show, onHide, selectedDate, selectedUsername }) {
+function SelectedUserConversation({
+  show,
+  onHide,
+  selectedUsername,
+  selectedUserLog,
+}) {
   return (
     <Modal
       show={show}
       onHide={onHide}
       size="xl"
-      className="session-modal"
       centered
+      className="session-modal"
     >
       <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">
-          Session Logs for {selectedUsername} on {selectedDate}
-        </Modal.Title>
+        <Modal.Title>User: {selectedUsername}</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <h4>Centered Modal</h4>
-        <p>
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-          consectetur ac, vestibulum at eros.
-        </p>
+        {selectedUserLog.length > 0 ? (
+          selectedUserLog.map((log, index) => (
+            <div key={index} className="chat-log">
+              <div className="user-log p-3 mb-2 rounded bg-light session-input">
+                <p className="mb-0">
+                  <strong>Input:</strong> <br />
+                  {log.input}
+                </p>
+              </div>
+              <br />
+              <br />
+              <br />
+              <div className="bot-log p-3 mb-2 rounded bg-primary session-output">
+                <p className="mb-0">
+                  <strong>Output:</strong> <br />
+                  {log.output.split("\n").map((line, index) => (
+                    <p key={index} style={{ margin: 0 }}>
+                      {line}
+                    </p>
+                  ))}
+                </p>
+              </div>
+              <div style={{ clear: "both" }}></div>
+              <hr />
+            </div>
+          ))
+        ) : (
+          <p>No conversation logs available for this user.</p>
+        )}
       </Modal.Body>
+      <Modal.Footer>
+        <Button variant="secondary" onClick={onHide}>
+          Close
+        </Button>
+      </Modal.Footer>
     </Modal>
   );
 }
@@ -84,7 +115,6 @@ function ConversationHistory() {
   const [sessionDates, setSessionDates] = useState([]);
   const [filterText, setFilterText] = useState("");
   const [modalShow, setModalShow] = useState(false);
-  const [sessionModalShow, setSessionModalShow] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
   const [sortOrder, setSortOrder] = useState("oldest");
   const [selectedLanguage, setSelectedLanguage] = useState("All");
@@ -95,12 +125,10 @@ function ConversationHistory() {
   const [selectedDate, setSelectedDate] = useState("");
   const [selectedUsername, setSelectedUsername] = useState("");
 
-  // Session response modal
-  const handleModalShow = () => setSessionModalShow(true);
-  const handleModalClose = () => setSessionModalShow(false);
-
   // Selected User Modal
   const [showSelectedUserModal, setShowSelectedUserModal] = useState(false);
+  const [selectedUserConversationLog, setSelectedUserConversationLog] =
+    useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -184,11 +212,14 @@ function ConversationHistory() {
   // Handle username selection
   const handleUsernameChange = (e) => {
     setSelectedUsername(e.target.value || "-"); // Set to "-" if empty
+    const key = e.target.value + selectedDate;
 
-    if (e.target.value) setShowSelectedUserModal(true);
+    if (e.target.value) {
+      const userLogs = sessionLogs[key];
+      setSelectedUserConversationLog(userLogs);
+      setShowSelectedUserModal(true);
+    }
   };
-
-  console.log("Session logs:", sessionLogs);
 
   // Filtered info data
   const filteredData = data.filter((info) => {
@@ -323,22 +354,6 @@ function ConversationHistory() {
                   ))}
                 </Form.Select>
               </Form.Group>
-              <Modal show={showSelectedUserModal} onHide={handleClose}>
-                <Modal.Header closeButton>
-                  <Modal.Title>User Details</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                  <p>
-                    <strong>Selected Username:</strong> {selectedUsername}
-                  </p>
-                  <p>You can display more details about the user here.</p>
-                </Modal.Body>
-                <Modal.Footer>
-                  <Button variant="secondary" onClick={handleClose}>
-                    Close
-                  </Button>
-                </Modal.Footer>
-              </Modal>
             </Offcanvas.Body>
           </Offcanvas>
         </>
@@ -367,11 +382,11 @@ function ConversationHistory() {
         onHide={() => setModalShow(false)}
         selectedItem={selectedItem}
       />
-      <SessionModal
-        show={sessionModalShow}
-        onHide={handleModalClose}
-        selectedDate={selectedDate}
+      <SelectedUserConversation
+        show={showSelectedUserModal}
+        onHide={() => setShowSelectedUserModal(false)}
         selectedUsername={selectedUsername}
+        selectedUserLog={selectedUserConversationLog}
       />
     </>
   );

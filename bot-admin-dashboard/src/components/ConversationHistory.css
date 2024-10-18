@@ -119,3 +119,14 @@
   font-weight: bold;
   display: block;         /* Ensures the span takes the full width */
 }
+
+.session-input {
+	max-width: 70%;
+	float: left;
+}
+
+.session-output {
+	max-width: 60%;
+	float: right;
+	color: #f9f9f9;
+}
