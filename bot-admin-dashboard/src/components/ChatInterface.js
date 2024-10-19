@@ -25,6 +25,7 @@ const ChatInterface = () => {
   const inputRef = useRef(null);
   const spanRef = useRef(null);
   const messagesEndRef = useRef(null);
+  const [showWelcome, setShowWelcome] = useState(false);
 
   const SpeechRecognition =
     window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -122,6 +123,9 @@ const ChatInterface = () => {
     e.preventDefault();
     if (!input.trim()) return;
 
+    // Hide the welcome message after the first message is sent
+    if (showWelcome) setShowWelcome(false);
+
     const userMessage = { text: input, user: true };
     setMessages((prevMessages) => [...prevMessages, userMessage]);
     setInput("");
@@ -138,6 +142,7 @@ const ChatInterface = () => {
     e.preventDefault();
     if (userInfo.name.trim() && userInfo.phone.trim()) {
       setUserSubmitted(true);
+      setShowWelcome(true);
     } else {
       alert("Please provide valid name and phone number");
     }
@@ -281,12 +286,24 @@ const ChatInterface = () => {
                     required
                   />
                 </div>
-
                 <button type="submit">Submit</button>
               </form>
             </div>
           ) : (
             <>
+              {/* {showWelcome && (
+                <div className="welcome-message d-flex align-items-center justify-content-center">
+                  <div className="alert alert-info text-center" role="alert">
+                    <h5 className="alert-heading">
+                      Welcome to UOB Digital Assistant!
+                    </h5>
+                    <p>
+                      Hello, {userInfo.name}! How can I assist you today? Feel
+                      free to ask your first question below.
+                    </p>
+                  </div>
+                </div>
+              )} */}
               <div className="chatbot-messages">
                 {messages.map((message, index) => (
                   <div
