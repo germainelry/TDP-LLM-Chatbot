@@ -291,8 +291,12 @@ const ChatInterface = () => {
                 {messages.map((message, index) => (
                   <div
                     key={index}
-                    className={`message ${message.user ? "user-message" : "ai-message"}`}
-                    onClick={!message.user ? () => handleMessageClick(message) : null}
+                    className={`message ${
+                      message.user ? "user-message" : "ai-message"
+                    }`}
+                    onClick={
+                      !message.user ? () => handleMessageClick(message) : null
+                    }
                     style={{ cursor: !message.user ? "pointer" : "default" }}
                   >
                     <div className="message-header">
@@ -304,8 +308,10 @@ const ChatInterface = () => {
                       {message.user ? " You" : " Bot"}
                     </div>
                     <div className="message-text">
-                      {message.text.split('\n').map((line, index) => (
-                        <p key={index} style={{ margin: 0 }}>{line}</p>
+                      {message.text.split("\n").map((line, index) => (
+                        <p key={index} style={{ margin: 0 }}>
+                          {line}
+                        </p>
                       ))}
                     </div>
                   </div>
