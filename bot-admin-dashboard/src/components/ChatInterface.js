@@ -34,6 +34,31 @@ const ChatInterface = () => {
   recognition.continuous = false;
   recognition.interimResults = false;
 
+  const suggestions = [
+    "Account Balance",
+    "Recent Transactions",
+    "Card Activation",
+    "Overseas Card Use",
+    "Rewards",
+    "Fee Waiver",
+    "Chat with us",
+  ]; // Add keyword suggestions here
+
+    const handleSuggestionClick = async (suggestion) => {
+    setInput(suggestion); // Set the input field with the clicked suggestion
+  
+    // Automatically send the suggestion to the backend
+    const userMessage = { text: suggestion, user: true };
+    setMessages((prevMessages) => [...prevMessages, userMessage]);
+  
+    setLoading(true);
+    const responseText = await sendDataToBackend(suggestion); // Send to backend
+    setLoading(false);
+  
+    const aiMessage = { text: responseText, user: false };
+    setMessages((prevMessages) => [...prevMessages, aiMessage]);
+  };
+
   recognition.onresult = (event) => {
     const speechResult = event.results[0][0].transcript;
     setInput(speechResult);
@@ -58,6 +83,20 @@ const ChatInterface = () => {
       messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }, [messages]);
+
+  // Add greeting message with a 10-second delay after the component mounts
+useEffect(() => {
+  const timeoutId = setTimeout(() => {
+    const greetingMessage = {
+      text: "Hi there! I am your UOB digital assistant. How can I assist you today? \nIf you need help in another language, just let me know!",
+      user: false, // This is a bot message
+    };
+    setMessages([greetingMessage]); // Initialize messages with the greeting message
+  }, 5000); // 5000ms = 5 seconds
+
+  // Cleanup the timeout if the component unmounts
+  return () => clearTimeout(timeoutId);
+}, []); // Empty dependency array ensures this runs only once
 
   useEffect(() => {
     if (inputRef.current && spanRef.current) {
@@ -334,6 +373,21 @@ const ChatInterface = () => {
                   </div>
                 ))}
                 <div ref={messagesEndRef} />
+              </div>
+              
+              {/* Interactive Keyword Suggestions */}
+              <div className="suggestions-container">
+                {suggestions.map((suggestion, index) => (
+                  <button
+                    key={index}
+                    className="suggestion-button"
+                    onClick={() => handleSuggestionClick(suggestion)}
+                    onMouseDown={(e) => e.target.classList.add("active")}
+                    onMouseUp={(e) => e.target.classList.remove("active")}
+                  >
+                    {suggestion}
+                  </button>
+                ))}
               </div>
 
               <form className="chatbot-input-form" onSubmit={handleSubmit}>
