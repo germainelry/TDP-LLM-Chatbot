@@ -57,6 +57,8 @@ const ChatInterface = () => {
   
     const aiMessage = { text: responseText, user: false };
     setMessages((prevMessages) => [...prevMessages, aiMessage]);
+
+    setInput(""); // Clear the input field after submission
   };
 
   recognition.onresult = (event) => {
