@@ -66,9 +66,18 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+<<<<<<< HEAD
   bottom: 0;
   width: 650px;
   height: 80vh; 
+=======
+  margin-top: -15px;
+  margin-right: -16px;
+  /* margin-bottom: 15px; */
+  bottom: 0;
+  width: 700px;
+  height: 82.5vh; 
+>>>>>>> 3190d4888e02080dbc2257ee75c7d92b08de249c
   background-color: #fcf9f9;
   box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.1);
   z-index: 1;
