@@ -86,20 +86,6 @@ const ChatInterface = () => {
     }
   }, [messages]);
 
-  // Add greeting message with a 10-second delay after the component mounts
-useEffect(() => {
-  const timeoutId = setTimeout(() => {
-    const greetingMessage = {
-      text: "Hi there! I am your UOB digital assistant. How can I assist you today? \nIf you need help in another language, just let me know!",
-      user: false, // This is a bot message
-    };
-    setMessages([greetingMessage]); // Initialize messages with the greeting message
-  }, 5000); // 5000ms = 5 seconds
-
-  // Cleanup the timeout if the component unmounts
-  return () => clearTimeout(timeoutId);
-}, []); // Empty dependency array ensures this runs only once
-
   useEffect(() => {
     if (inputRef.current && spanRef.current) {
       const spanWidth = spanRef.current.offsetWidth;
@@ -182,8 +168,16 @@ useEffect(() => {
   const handleUserInfoSubmit = (e) => {
     e.preventDefault();
     if (userInfo.name.trim() && userInfo.phone.trim()) {
-      setUserSubmitted(true);
-      setShowWelcome(true);
+      setUserSubmitted(true); // Mark form as submitted
+  
+      // Add greeting message with a 2-second delay
+      setTimeout(() => {
+        const greetingMessage = {
+          text: "Hi there! I am your UOB digital assistant. How can I assist you today?\nIf you need help in another language, just let me know!",
+          user: false, // This is a bot message
+        };
+        setMessages((prevMessages) => [...prevMessages, greetingMessage]); // Append the greeting message
+      }, 1000); // 1000ms = 1 second
     } else {
       alert("Please provide valid name and phone number");
     }
