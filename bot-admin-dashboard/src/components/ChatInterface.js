@@ -173,7 +173,7 @@ const ChatInterface = () => {
       // Add greeting message with a 2-second delay
       setTimeout(() => {
         const greetingMessage = {
-          text: "Hi there! I am your UOB digital assistant. How can I assist you today?\nIf you need help in another language, just let me know!",
+          text: "Hi there! I'm your UOB digital assistant. How can I assist you today? If you need help in another language, just let me know!",
           user: false, // This is a bot message
         };
         setMessages((prevMessages) => [...prevMessages, greetingMessage]); // Append the greeting message
