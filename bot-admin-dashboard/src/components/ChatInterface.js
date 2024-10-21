@@ -150,6 +150,8 @@ const ChatInterface = () => {
     e.preventDefault();
     if (!input.trim()) return;
 
+    if (showWelcome) setShowWelcome(false);
+
     const userMessage = { text: input, user: true };
     setMessages((prevMessages) => [...prevMessages, userMessage]);
     setInput("");
@@ -169,6 +171,7 @@ const ChatInterface = () => {
 
       // Add greeting message with a 2-second delay
       setTimeout(() => {
+        setShowWelcome(true);
         const greetingMessage = {
           text: "Hi there! I'm your UOB digital assistant. How can I assist you today? If you need help in another language, just let me know!",
           user: false, // This is a bot message
@@ -327,19 +330,6 @@ const ChatInterface = () => {
               </div>
             ) : (
               <>
-                {/* {showWelcome && (
-                <div className="welcome-message d-flex align-items-center justify-content-center">
-                  <div className="alert alert-info text-center" role="alert">
-                    <h5 className="alert-heading">
-                      Welcome to UOB Digital Assistant!
-                    </h5>
-                    <p>
-                      Hello, {userInfo.name}! How can I assist you today? Feel
-                      free to ask your first question below.
-                    </p>
-                  </div>
-                </div>
-              )} */}
                 <div className="chatbot-messages">
                   {messages.map((message, index) => (
                     <div
