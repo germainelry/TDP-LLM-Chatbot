@@ -101,7 +101,7 @@ function Navigation() {
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-blue">
         <h1 className="main-header navbar-brand">
-          LLM Chatbot Admin Dashboard
+          BOU Chatbot Admin Dashboard
           <i className="bi bi-telegram"></i>
           <i className="bi bi-robot"></i>
         </h1>
