@@ -44,17 +44,17 @@ const ChatInterface = () => {
     "Chat with us",
   ]; // Add keyword suggestions here
 
-    const handleSuggestionClick = async (suggestion) => {
+  const handleSuggestionClick = async (suggestion) => {
     setInput(suggestion); // Set the input field with the clicked suggestion
-  
+
     // Automatically send the suggestion to the backend
     const userMessage = { text: suggestion, user: true };
     setMessages((prevMessages) => [...prevMessages, userMessage]);
-  
+
     setLoading(true);
     const responseText = await sendDataToBackend(suggestion); // Send to backend
     setLoading(false);
-  
+
     const aiMessage = { text: responseText, user: false };
     setMessages((prevMessages) => [...prevMessages, aiMessage]);
 
@@ -150,9 +150,6 @@ const ChatInterface = () => {
     e.preventDefault();
     if (!input.trim()) return;
 
-    // Hide the welcome message after the first message is sent
-    if (showWelcome) setShowWelcome(false);
-
     const userMessage = { text: input, user: true };
     setMessages((prevMessages) => [...prevMessages, userMessage]);
     setInput("");
@@ -169,7 +166,7 @@ const ChatInterface = () => {
     e.preventDefault();
     if (userInfo.name.trim() && userInfo.phone.trim()) {
       setUserSubmitted(true); // Mark form as submitted
-  
+
       // Add greeting message with a 2-second delay
       setTimeout(() => {
         const greetingMessage = {
@@ -258,11 +255,7 @@ const ChatInterface = () => {
   const messageModalClass = `modal fade show ${isSliding ? "slide-left" : ""}`;
 
   return (
-    <div
-      className={`chatbot-interface-main ${
-        isModalOpen ? "blur-background" : ""
-      }`}
-    >
+    <>
       <div className="uob-main-header">
         <span className="uob-header">
           <img src={uobLogoWhite} alt="UOB Logo" className="uob-logo-header" />
@@ -273,60 +266,68 @@ const ChatInterface = () => {
           />
         </span>
       </div>
-      <div className="content-wrapper">
-        <div className="app-info-section">
-          <ApplicationInfo />
-        </div>
-        <div className="chatbot-container">
-          <div className="chatbot-header">
-            <h4 className="chatbot-title">
-              <img src={uobLogo} alt="UOB Logo" className="uob-logo" />
-              UOB Digital Assistant <i className="bi bi-robot"></i>
-            </h4>
-
-            <button
-              className="rate-bot-btn"
-              onClick={handleRatingsToggle}
-              aria-label="Rate Bot"
-            >
-              <i className="bi bi-star"></i> Rate the Bot!
-            </button>
+      <div
+        className={`chatbot-interface-main ${
+          isModalOpen ? "blur-background" : ""
+        }`}
+      >
+        <div className="content-wrapper">
+          <div className="app-info-section">
+            <ApplicationInfo />
           </div>
+          <div className="chatbot-container">
+            <div className="chatbot-header">
+              <h4 className="chatbot-title">
+                <img src={uobLogo} alt="UOB Logo" className="uob-logo" />
+                UOB Digital Assistant <i className="bi bi-robot"></i>
+              </h4>
 
-          {!userSubmitted ? (
-            <div class="container-form">
-              <form className="user-info-form" onSubmit={handleUserInfoSubmit}>
-                <h6>Please provide your details to continue:</h6>
-                <div className="input-group">
-                  <i className="bi bi-info-square"></i>
-                  <input
-                    type="text"
-                    value={userInfo.name}
-                    onChange={(e) =>
-                      setUserInfo({ ...userInfo, name: e.target.value })
-                    }
-                    placeholder="Enter your name"
-                    required
-                  />
-                </div>
-                <div className="input-group">
-                  <i className="bi bi-telephone-plus"></i>
-                  <input
-                    type="tel"
-                    value={userInfo.phone}
-                    onChange={(e) =>
-                      setUserInfo({ ...userInfo, phone: e.target.value })
-                    }
-                    placeholder="Enter your phone number"
-                    required
-                  />
-                </div>
-                <button type="submit">Submit</button>
-              </form>
+              <button
+                className="rate-bot-btn"
+                onClick={handleRatingsToggle}
+                aria-label="Rate Bot"
+              >
+                <i className="bi bi-star"></i> Rate the Bot!
+              </button>
             </div>
-          ) : (
-            <>
-              {/* {showWelcome && (
+
+            {!userSubmitted ? (
+              <div class="container-form">
+                <form
+                  className="user-info-form"
+                  onSubmit={handleUserInfoSubmit}
+                >
+                  <h6>Please provide your details to continue:</h6>
+                  <div className="input-group">
+                    <i className="bi bi-info-square"></i>
+                    <input
+                      type="text"
+                      value={userInfo.name}
+                      onChange={(e) =>
+                        setUserInfo({ ...userInfo, name: e.target.value })
+                      }
+                      placeholder="Enter your name"
+                      required
+                    />
+                  </div>
+                  <div className="input-group">
+                    <i className="bi bi-telephone-plus"></i>
+                    <input
+                      type="tel"
+                      value={userInfo.phone}
+                      onChange={(e) =>
+                        setUserInfo({ ...userInfo, phone: e.target.value })
+                      }
+                      placeholder="Enter your phone number"
+                      required
+                    />
+                  </div>
+                  <button type="submit">Submit</button>
+                </form>
+              </div>
+            ) : (
+              <>
+                {/* {showWelcome && (
                 <div className="welcome-message d-flex align-items-center justify-content-center">
                   <div className="alert alert-info text-center" role="alert">
                     <h5 className="alert-heading">
@@ -339,165 +340,170 @@ const ChatInterface = () => {
                   </div>
                 </div>
               )} */}
-              <div className="chatbot-messages">
-                {messages.map((message, index) => (
-                  <div
-                    key={index}
-                    className={`message ${
-                      message.user ? "user-message" : "ai-message"
-                    }`}
-                    onClick={
-                      !message.user ? () => handleMessageClick(message) : null
-                    }
-                    style={{ cursor: !message.user ? "pointer" : "default" }}
-                  >
-                    <div className="message-header">
-                      {message.user ? (
-                        <i className="bi bi-person-fill"></i>
-                      ) : (
-                        <i id="chatbox-bot" className="bi bi-robot"></i>
-                      )}
-                      {message.user ? " You" : " Bot"}
+                <div className="chatbot-messages">
+                  {messages.map((message, index) => (
+                    <div
+                      key={index}
+                      className={`message ${
+                        message.user ? "user-message" : "ai-message"
+                      }`}
+                      onClick={
+                        !message.user ? () => handleMessageClick(message) : null
+                      }
+                      style={{ cursor: !message.user ? "pointer" : "default" }}
+                    >
+                      <div className="message-header">
+                        {message.user ? (
+                          <i className="bi bi-person-fill"></i>
+                        ) : (
+                          <i id="chatbox-bot" className="bi bi-robot"></i>
+                        )}
+                        {message.user ? " You" : " Bot"}
+                      </div>
+                      <div className="message-text">
+                        {message.text.split("\n").map((line, index) => (
+                          <p key={index} style={{ margin: 0 }}>
+                            {line}
+                          </p>
+                        ))}
+                      </div>
                     </div>
-                    <div className="message-text">
-                      {message.text.split("\n").map((line, index) => (
-                        <p key={index} style={{ margin: 0 }}>
-                          {line}
-                        </p>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-                <div ref={messagesEndRef} />
-              </div>
-              
-              {/* Interactive Keyword Suggestions */}
-              <div className="suggestions-container">
-                {suggestions.map((suggestion, index) => (
-                  <button
-                    key={index}
-                    className="suggestion-button"
-                    onClick={() => handleSuggestionClick(suggestion)}
-                    onMouseDown={(e) => e.target.classList.add("active")}
-                    onMouseUp={(e) => e.target.classList.remove("active")}
-                  >
-                    {suggestion}
-                  </button>
-                ))}
-              </div>
+                  ))}
+                  <div ref={messagesEndRef} />
+                </div>
 
-              <form className="chatbot-input-form" onSubmit={handleSubmit}>
-                <input
-                  ref={inputRef}
-                  type="text"
-                  value={input}
-                  onChange={(e) => setInput(e.target.value)}
-                  placeholder="Type your message..."
-                  className="chat-input"
-                />
+                {/* Interactive Keyword Suggestions */}
+                <div className="suggestions-container">
+                  {suggestions.map((suggestion, index) => (
+                    <button
+                      key={index}
+                      className="suggestion-button"
+                      onClick={() => handleSuggestionClick(suggestion)}
+                      onMouseDown={(e) => e.target.classList.add("active")}
+                      onMouseUp={(e) => e.target.classList.remove("active")}
+                    >
+                      {suggestion}
+                    </button>
+                  ))}
+                </div>
+
+                <form className="chatbot-input-form" onSubmit={handleSubmit}>
+                  <input
+                    ref={inputRef}
+                    type="text"
+                    value={input}
+                    onChange={(e) => setInput(e.target.value)}
+                    placeholder="Type your message..."
+                    className="chat-input"
+                  />
+                  <button
+                    type="button"
+                    onClick={handleSpeechToText}
+                    className={`voice-btn ${isListening ? "listening" : ""}`}
+                  >
+                    {isListening ? (
+                      "Listening..."
+                    ) : (
+                      <i className="bi bi-mic"></i>
+                    )}
+                  </button>
+                  <button type="submit" disabled={loading}>
+                    {loading ? "Sending..." : "Send"}
+                  </button>
+                </form>
+              </>
+            )}
+          </div>
+        </div>
+
+        {isRatingsModalOpen && (
+          <div className="modal-user-feedback">
+            <div className="modal-content-feedback">
+              <UserRatings userData={userInfo} />
+              <button
+                onClick={handleRatingsToggle}
+                className="close-modal-btn-feedback"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        )}
+
+        {selectedMessage && (
+          <div
+            className={messageModalClass}
+            style={{ display: "block" }}
+            ref={messageModalRef}
+            tabIndex="-1"
+          >
+            <div className="modal-dialog modal-dialog-centered">
+              <div className="modal-content">
+                <div className="modal-header">
+                  <h5 className="modal-title">AI Response</h5>
+                  <button
+                    type="button"
+                    className="btn-close"
+                    onClick={handleCloseMessageModal}
+                  ></button>
+                </div>
+                <div className="modal-body">
+                  <p>{selectedMessage.text}</p>
+                </div>
+                <div className="modal-footer">
+                  <button
+                    type="button"
+                    className="btn btn-primary"
+                    onClick={handleEscalate}
+                  >
+                    <i className="bi bi-person-fill"></i> Escalate (Speak to
+                    Human Agent)
+                  </button>
+                  <button
+                    type="button"
+                    className="btn btn-warning"
+                    onClick={handleReport}
+                  >
+                    <i className="bi bi-exclamation-circle-fill"></i> Report
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {showReasonModal && (
+          <div className="reason-modal">
+            <div className="reason-modal-content">
+              <div className="modal-header">
+                <h5 className="reason-modal-title">
+                  Please provide your reason:
+                </h5>
                 <button
                   type="button"
-                  onClick={handleSpeechToText}
-                  className={`voice-btn ${isListening ? "listening" : ""}`}
+                  className="reason-modal-close"
+                  onClick={handleCloseReasonModal}
                 >
-                  {isListening ? "Listening..." : <i className="bi bi-mic"></i>}
+                  &times;
                 </button>
-                <button type="submit" disabled={loading}>
-                  {loading ? "Sending..." : "Send"}
+              </div>
+              <form onSubmit={handleReasonSubmit}>
+                <textarea
+                  value={reason}
+                  onChange={(e) => setReason(e.target.value)}
+                  placeholder="Enter your reason here..."
+                  required
+                  rows="4"
+                />
+                <button type="submit" className="reason-modal-submit">
+                  Submit Reason
                 </button>
               </form>
-            </>
-          )}
-        </div>
+            </div>
+          </div>
+        )}
       </div>
-
-      {isRatingsModalOpen && (
-        <div className="modal-user-feedback">
-          <div className="modal-content-feedback">
-            <UserRatings userData={userInfo} />
-            <button
-              onClick={handleRatingsToggle}
-              className="close-modal-btn-feedback"
-            >
-              Close
-            </button>
-          </div>
-        </div>
-      )}
-
-      {selectedMessage && (
-        <div
-          className={messageModalClass}
-          style={{ display: "block" }}
-          ref={messageModalRef}
-          tabIndex="-1"
-        >
-          <div className="modal-dialog modal-dialog-centered">
-            <div className="modal-content">
-              <div className="modal-header">
-                <h5 className="modal-title">AI Response</h5>
-                <button
-                  type="button"
-                  className="btn-close"
-                  onClick={handleCloseMessageModal}
-                ></button>
-              </div>
-              <div className="modal-body">
-                <p>{selectedMessage.text}</p>
-              </div>
-              <div className="modal-footer">
-                <button
-                  type="button"
-                  className="btn btn-primary"
-                  onClick={handleEscalate}
-                >
-                  <i className="bi bi-person-fill"></i> Escalate (Speak to Human
-                  Agent)
-                </button>
-                <button
-                  type="button"
-                  className="btn btn-warning"
-                  onClick={handleReport}
-                >
-                  <i className="bi bi-exclamation-circle-fill"></i> Report
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {showReasonModal && (
-        <div className="reason-modal">
-          <div className="reason-modal-content">
-            <div className="modal-header">
-              <h5 className="reason-modal-title">
-                Please provide your reason:
-              </h5>
-              <button
-                type="button"
-                className="reason-modal-close"
-                onClick={handleCloseReasonModal}
-              >
-                &times;
-              </button>
-            </div>
-            <form onSubmit={handleReasonSubmit}>
-              <textarea
-                value={reason}
-                onChange={(e) => setReason(e.target.value)}
-                placeholder="Enter your reason here..."
-                required
-                rows="4"
-              />
-              <button type="submit" className="reason-modal-submit">
-                Submit Reason
-              </button>
-            </form>
-          </div>
-        </div>
-      )}
-    </div>
+    </>
   );
 };
 
