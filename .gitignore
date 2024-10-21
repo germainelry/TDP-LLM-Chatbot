@@ -6,3 +6,5 @@ data/conversationResolution.json
 data/ratings.json
 chatbot/
 node_modules/
+package.json
+.gitignore
