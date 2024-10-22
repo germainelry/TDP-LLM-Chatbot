@@ -27,6 +27,8 @@ const ChatInterface = () => {
   const messagesEndRef = useRef(null);
   const [showWelcome, setShowWelcome] = useState(false);
 
+  const [text, setText] = useState(""); // State for TTS input
+
   const SpeechRecognition =
     window.SpeechRecognition || window.webkitSpeechRecognition;
 
@@ -161,6 +163,7 @@ const ChatInterface = () => {
     setLoading(false);
 
     const aiMessage = { text: responseText, user: false };
+    setText(aiMessage.text);
     setMessages((prevMessages) => [...prevMessages, aiMessage]);
   };
 
@@ -207,6 +210,15 @@ const ChatInterface = () => {
     setActionType("Report"); // Set action type as "Report"
     setIsSliding(true); // Start sliding the message modal
     setShowReasonModal(true); // Show the reason modal
+  };
+
+  const handleSpeak = () => {
+    if ("speechSynthesis" in window) {
+      const utterance = new SpeechSynthesisUtterance(text);
+      speechSynthesis.speak(utterance);
+    } else {
+      alert("Your browser does not support Text-to-Speech.");
+    }
   };
 
   const handleReasonSubmit = async (e) => {
@@ -396,6 +408,9 @@ const ChatInterface = () => {
                     ) : (
                       <i className="bi bi-mic"></i>
                     )}
+                  </button>
+                  <button onClick={handleSpeak} appearance="ghost">
+                    <i class="bi bi-megaphone"></i>
                   </button>
                   <button type="submit" disabled={loading}>
                     {loading ? "Sending..." : "Send"}

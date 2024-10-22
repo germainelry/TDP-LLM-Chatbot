@@ -127,6 +127,7 @@ function ConversationHistory() {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const [text, setText] = useState(""); // State for TTS input
 
   const [selectedDate, setSelectedDate] = useState("");
   const [selectedUsername, setSelectedUsername] = useState("");
@@ -135,6 +136,15 @@ function ConversationHistory() {
   const [showSelectedUserModal, setShowSelectedUserModal] = useState(false);
   const [selectedUserConversationLog, setSelectedUserConversationLog] =
     useState([]);
+
+  const handleSpeak = () => {
+    if ("speechSynthesis" in window) {
+      const utterance = new SpeechSynthesisUtterance(text);
+      speechSynthesis.speak(utterance);
+    } else {
+      alert("Your browser does not support Text-to-Speech.");
+    }
+  };
 
   useEffect(() => {
     const fetchData = async () => {
