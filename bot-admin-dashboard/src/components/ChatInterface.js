@@ -16,7 +16,7 @@ const ChatInterface = () => {
   const [isRatingsModalOpen, setIsRatingsModalOpen] = useState(false);
   const [selectedMessage, setSelectedMessage] = useState(null);
   const [showReasonModal, setShowReasonModal] = useState(false); // State to manage the reason modal
-
+  const [isSpeaking, setIsSpeaking] = useState(false);
   const [reason, setReason] = useState(""); // State to manage the reason text
   const [isSliding, setIsSliding] = useState(false); // State to manage slide effect
   const [actionType, setActionType] = useState("");
@@ -55,11 +55,12 @@ const ChatInterface = () => {
 
     setLoading(true);
     const responseText = await sendDataToBackend(suggestion); // Send to backend
+
     setLoading(false);
+    setText(responseText);
 
     const aiMessage = { text: responseText, user: false };
     setMessages((prevMessages) => [...prevMessages, aiMessage]);
-
     setInput(""); // Clear the input field after submission
   };
 
@@ -214,8 +215,16 @@ const ChatInterface = () => {
 
   const handleSpeak = () => {
     if ("speechSynthesis" in window) {
-      const utterance = new SpeechSynthesisUtterance(text);
-      speechSynthesis.speak(utterance);
+      if (isSpeaking) {
+        // Stop the speech if already speaking
+        window.speechSynthesis.cancel();
+        setIsSpeaking(false);
+      } else {
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.onend = () => setIsSpeaking(false); // Reset state when done
+        speechSynthesis.speak(utterance);
+        setIsSpeaking(true);
+      }
     } else {
       alert("Your browser does not support Text-to-Speech.");
     }
@@ -409,8 +418,8 @@ const ChatInterface = () => {
                       <i className="bi bi-mic"></i>
                     )}
                   </button>
-                  <button onClick={handleSpeak} appearance="ghost">
-                    <i class="bi bi-megaphone"></i>
+                  <button onClick={handleSpeak}>
+                    {isSpeaking ? "Stop" : "Speak"}
                   </button>
                   <button type="submit" disabled={loading}>
                     {loading ? "Sending..." : "Send"}
