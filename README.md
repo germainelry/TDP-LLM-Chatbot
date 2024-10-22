@@ -2,17 +2,17 @@
 
 # Cross-Regional Customer Service Chatbot
 
-A multilingual AI Chatbot that incorporates NLP to offer personalised customer service for banking clients across various regions. Once deployed, this chatbot will be able to operate 24/7 and service clients from anywhere around the globe. It is capable of handling matters ranging from routine inquiries to transaction assistance.
+A multilingual AI Chatbot that offers personalised customer service for banking clients across various regions. Once deployed, this chatbot will be able to operate 24/7 and service clients from anywhere around the globe. It is capable of handling matters ranging from routine inquiries to transaction assistance. 
 
 ## Problem Statement
 
-In today's globalized economy, banks face the challenge of providing consistent, high-quality customer service across multiple regions and languages, while managing the expectations of clients who demand instant, round-the-clock support. Traditional customer service models struggle to meet these demands due to limitations in human resources, operational hours, and language capabilities. This results in delays, communication barriers, and customer dissatisfaction. A multilingual AI chatbot addresses these issues by leveraging natural language processing (NLP) to deliver personalized, efficient, and scalable customer service, ensuring that clients receive timely assistance regardless of their location or language. This solution not only enhances customer experience but also reduces operational costs and improves service availability.
+In today's globalized economy, banks face the challenge of providing consistent, high-quality customer service across multiple regions and languages, while managing the expectations of clients who demand instant, round-the-clock support. Traditional customer service models struggle to meet these demands due to limitations in human resources, operational hours, and language capabilities. This results in delays, communication barriers, and customer dissatisfaction. A multilingual AI chatbot addresses these issues by leveraging neural networks to deliver personalized, efficient, and scalable customer service, ensuring that clients receive timely assistance regardless of their location or language. This solution not only enhances customer experience but also reduces operational costs and improves service availability.
 
 ## Project Description
 
-The Cross-Regional Customer Service Chatbot can be deployed and hosted on platforms such as UOB's TMRW mobile banking application and official website to provide personalized banking support to customers. Our chatbot incorporates an open-source large language model (LLM) that is capable of conversing in various languages. This enhances the overall user experience and opens up the possibility for more meaningful quality interactions.
+The Cross-Regional Customer Service Chatbot can be deployed and hosted on platforms such as UOB's TMRW mobile banking application and official website to provide personalized banking support to customers, with a focus on inclusivity, especially, for the diverse financial landscape of Singapore. Our chatbot incorporates an open-source large language model (LLM) that is capable of conversing in various languages. This enhances the overall user experience and opens up the possibility for more meaningful quality interactions.
 
-In addition to its core functionality, a comprehensive dashboard has been developed to monitor and log the chatbot's performance that shapes the customer experience. Developed for administrative users, this dashboard enables real-time insights into customer interactions, helping banks optimize service delivery and continuous developments to the chatbot's effectiveness in delivering quality customer service.
+In addition to its core functionality, a comprehensive interactive dashboard has been developed to monitor and log the chatbot's performance that shapes the customer experience. Developed for administrative users, this dashboard enables real-time insights into customer interactions, helping banks optimize service delivery and continuous developments to the chatbot's effectiveness in delivering quality customer service.
 
 ## Project Overview
 
@@ -111,7 +111,7 @@ The AI-powered chatbot is designed to provide seamless and efficient communicati
 
 | Feature                           | Description                                                                                              | Purpose                                                                                     |
 | --------------------------------- | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| **Conversation History**          | Provides access to past conversations between customers and the chatbot.                                 | Enables agents to review previous interactions for context and follow-up.                   |
+| **Conversation History**          | Provides access to past conversations between customers and the chatbot.                                 | Enables agents to review previous interactions for context and troubleshooting.                   |
 | **Multilingual Interaction Logs** | Logs and categorizes conversations based on the language used by the customer.                           | Facilitates analysis of language preferences and ensures multilingual support is effective. |
 | **Data Export**                   | Provides options to export conversation logs and performance data in various formats (CSV, Excel, etc.). | Facilitates external analysis and reporting.                                                |
 | **Alerts & Notifications**        | Sends real-time alerts for specific triggers (e.g., high-priority customers, unresolved issues).         | Ensures timely response to critical situations.                                             |
@@ -136,6 +136,7 @@ Ensure that you have Java, Python, Pip and Node installed in your machine or env
 - [Node](https://nodejs.org/en/download/package-manager) (Preferable version >= 22.0.0)
 - [Java](https://www.java.com/en/download/help/download_options.html) (Preferable version >= 17.0.0)
 - [Pip](https://pip.pypa.io/en/stable/installation/) (Preferable version >= 24.0)
+- [Ollama](https://ollama.com/download) (Preferable version >= 0.3.11)
 
 ### Setup Instructions
 
