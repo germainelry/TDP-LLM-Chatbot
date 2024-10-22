@@ -18,6 +18,12 @@ function CustomerSatisfaction() {
     };
 
     fetchData();
+
+    const interval = setInterval(() => {
+      fetchData(); // Fetch data every 15 seconds
+    }, 15000);
+
+    return () => clearInterval(interval); // Clean up interval
   }, []);
 
   const rating = data.ratings ? parseFloat(data.ratings.toFixed(2)) : 0;

@@ -18,6 +18,12 @@ function ChatDuration() {
     };
 
     fetchData();
+
+    const interval = setInterval(() => {
+      fetchData(); // Fetch data every 15 seconds
+    }, 15000);
+
+    return () => clearInterval(interval); // Clean up interval
   }, []);
 
   // Function to bin data in intervals of 5 minutes
