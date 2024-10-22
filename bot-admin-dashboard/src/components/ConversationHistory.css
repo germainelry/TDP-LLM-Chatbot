@@ -18,7 +18,7 @@
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-#conversation-history-title, #conversation-history-description {
+#conversation-history-title, #conversation-history-description, #conversation-history-dates {
   text-align: center;
   font-size: 20px;
   font-weight: bold;
@@ -27,10 +27,14 @@
 }
 
 #conversation-history-description {
-	margin-left: 335px;
+	margin-left: 245px;
 }
 
-.spreadsheet, .numbers {
+#conversation-history-dates {
+	margin-left: 15px;
+}
+
+.spreadsheet, .numbers, .calendar {
 	margin-left: 10px;
 	font-size: 20px;
 }
@@ -101,6 +105,19 @@
 	border-radius: 5px;
 	padding-bottom: 20px;
 	font-size: 12px;
+	width: 200px;
+}
+
+#reportrange {
+	margin-left: 20px;
+	height: 30px;
+	background-color: #233253;
+	border-color: #233253;
+	font-family: Helvetica, sans-serif;
+	text-align: center;
+	border-radius: 5px;
+	padding-bottom: 20px;
+	font-size: 15px;
 	width: 200px;
 }
 

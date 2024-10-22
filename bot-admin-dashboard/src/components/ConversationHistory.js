@@ -1,12 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Dropdown from "react-bootstrap/Dropdown";
 import { Offcanvas, Form } from "react-bootstrap";
-
+import moment from "moment";
 import "./ConversationHistory.css";
+import "daterangepicker/daterangepicker.css"; // Import daterangepicker CSS
+import $ from "jquery"; // Import jQuery
+import "daterangepicker";
 
 function UserInformation(props) {
   const { show, onHide, selectedItem } = props;
@@ -127,7 +130,6 @@ function ConversationHistory() {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  const [text, setText] = useState(""); // State for TTS input
 
   const [selectedDate, setSelectedDate] = useState("");
   const [selectedUsername, setSelectedUsername] = useState("");
@@ -137,14 +139,45 @@ function ConversationHistory() {
   const [selectedUserConversationLog, setSelectedUserConversationLog] =
     useState([]);
 
-  const handleSpeak = () => {
-    if ("speechSynthesis" in window) {
-      const utterance = new SpeechSynthesisUtterance(text);
-      speechSynthesis.speak(utterance);
-    } else {
-      alert("Your browser does not support Text-to-Speech.");
-    }
-  };
+  // Daterange for conversation history
+  const [dateRange, setDateRange] = useState({
+    startDate: moment().subtract(29, "days"),
+    endDate: moment(),
+  });
+
+  // Initialize date range picker
+  useEffect(() => {
+    const cb = (start, end) => {
+      setDateRange({ startDate: start, endDate: end });
+      $("#reportrange span").html(
+        `${start.format("MMMM D, YYYY")} - ${end.format("MMMM D, YYYY")}`
+      );
+    };
+
+    $("#reportrange").daterangepicker(
+      {
+        startDate: dateRange.startDate,
+        endDate: dateRange.endDate,
+        ranges: {
+          Today: [moment(), moment()],
+          Yesterday: [
+            moment().subtract(1, "days"),
+            moment().subtract(1, "days"),
+          ],
+          "Last 7 Days": [moment().subtract(6, "days"), moment()],
+          "Last 30 Days": [moment().subtract(29, "days"), moment()],
+          "This Month": [moment().startOf("month"), moment().endOf("month")],
+          "Last Month": [
+            moment().subtract(1, "month").startOf("month"),
+            moment().subtract(1, "month").endOf("month"),
+          ],
+        },
+      },
+      cb
+    );
+
+    cb(dateRange.startDate, dateRange.endDate);
+  }, [dateRange.startDate, dateRange.endDate]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -268,14 +301,22 @@ function ConversationHistory() {
     return 0;
   });
 
+  const showAlertWithSelectedDate = () => {
+    alert(
+      `Selected Date Range: ${dateRange.startDate.format(
+        "DD/MM/YY"
+      )} - ${dateRange.endDate.format("DD/MM/YY")}`
+    );
+  };
+
   return (
     <>
       <span id="conversation-history-title">Conversation Logs</span>
       <i className="bi bi-file-earmark-spreadsheet spreadsheet"></i>
-      <span id="conversation-history-description">
-        Session Response Logging
-      </span>
+      <span id="conversation-history-description">Session Logs</span>
       <i className="bi bi-body-text numbers"></i>
+      <span id="conversation-history-dates">Date Range Picker</span>
+      <i class="bi bi-calendar-date calendar"></i>
       <br />
       <div id="content-modification" className="d-flex align-items-center mb-3">
         <input
@@ -319,8 +360,33 @@ function ConversationHistory() {
         </Dropdown>
         <>
           <Button variant="primary" onClick={handleShow} id="session-basic-1">
-            Launch Session Response
+            View User Session
           </Button>
+
+          <div
+            id="reportrange"
+            style={{
+              background: "#fff",
+              cursor: "pointer",
+              padding: "5px 10px",
+              border: "1px solid #ccc",
+              width: "40%",
+            }}
+          >
+            <i className="fa fa-calendar"></i>&nbsp;
+            <span>{`${dateRange.startDate.format(
+              "DD/MM/YY"
+            )} - ${dateRange.endDate.format("DD/MM/YY")}`}</span>{" "}
+            <i className="fa fa-caret-down"></i>
+          </div>
+
+          <button
+            onClick={showAlertWithSelectedDate}
+            className="btn btn-primary"
+            id="session-basic-1"
+          >
+            Show Selected Date
+          </button>
 
           <Offcanvas show={show} onHide={handleClose}>
             <Offcanvas.Header closeButton>
@@ -387,7 +453,9 @@ function ConversationHistory() {
             className="conversation-box"
             onClick={() => handleConversationClick(item)}
           >
-            <p>{item.input}</p>
+            <h5>
+              <b>{item.input}</b>
+            </h5>
             <p>{item.output}</p>
           </div>
         ))}

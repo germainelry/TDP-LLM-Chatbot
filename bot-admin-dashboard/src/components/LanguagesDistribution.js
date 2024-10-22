@@ -53,7 +53,9 @@ function LanguagesDistribution() {
 
   return (
     <div className="language-distribution-container">
-      <span id="language-distribution-title">Top 8 Languages (by ID Code)</span>
+      <span id="language-distribution-title">
+        Top 10 Languages (by ID Code)
+      </span>
       <div id="language-distribution-chart-container">
         {series.length > 0 ? (
           <ReactApexChart

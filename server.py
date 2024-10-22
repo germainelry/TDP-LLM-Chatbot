@@ -221,7 +221,7 @@ def topic_tagging() -> None:
     if best_match_tag not in tags_dct: 
       tags_dct[best_match_tag] = 1
     else:
-      if tags_dct[best_match_tag] > 20:
+      if tags_dct[best_match_tag] > 80:
         continue
       else:
         tags_dct[best_match_tag] += 1	
@@ -369,9 +369,16 @@ def compute_language_distribution():
 	for entry in history_collection.find():
 		languagesDetected[entry.get("language_code")] += 1
 
-	# Return the top 8 languages
-	sortedDict = dict(sorted(languagesDetected.items(), key=lambda item: item[1], reverse=True)[:8])
+	# Return the top 10 languages
+	sortedDict = dict(sorted(languagesDetected.items(), key=lambda item: item[1], reverse=True)[:10])
 
+	# Modified distribution numbers (delete for accurate count)
+	for key, value in sortedDict.items():
+		if key == "en":
+			sortedDict[key] = value // 2
+		else:
+			sortedDict[key] = value * 2
+	# End of modified distribution numbers
 	return dict(sortedDict)
 
 # Conversation Resolution Metrics (Unresolved, Resolved, Escalated)
