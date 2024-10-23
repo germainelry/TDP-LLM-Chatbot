@@ -27,11 +27,11 @@
 }
 
 #conversation-history-description {
-	margin-left: 245px;
+	margin-left: 312px;
 }
 
 #conversation-history-dates {
-	margin-left: 15px;
+	margin-left: 10px;
 }
 
 .spreadsheet, .numbers, .calendar {
@@ -41,7 +41,7 @@
 
 #filter-input {
 	margin-left: 0px;
-	width: 20%;
+	width: 30%;
 }
 
 #content-modification {
