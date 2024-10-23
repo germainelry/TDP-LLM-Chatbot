@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import Button from "react-bootstrap/Button";
@@ -7,8 +7,8 @@ import Dropdown from "react-bootstrap/Dropdown";
 import { Offcanvas, Form } from "react-bootstrap";
 import moment from "moment";
 import "./ConversationHistory.css";
-import "daterangepicker/daterangepicker.css"; // Import daterangepicker CSS
-import $ from "jquery"; // Import jQuery
+import "daterangepicker/daterangepicker.css";
+import $ from "jquery";
 import "daterangepicker";
 
 function UserInformation(props) {
