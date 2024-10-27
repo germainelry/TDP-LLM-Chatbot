@@ -2,7 +2,7 @@
 
 # Cross-Regional Customer Service Chatbot
 
-A multilingual AI Chatbot that offers personalised customer service for banking clients across various regions. Once deployed, this chatbot will be able to operate 24/7 and service clients from anywhere around the globe. It is capable of handling matters ranging from routine inquiries to transaction assistance. 
+A multilingual AI Chatbot that offers personalised customer service for banking clients across various regions. Once deployed, this chatbot will be able to operate 24/7 and service clients from anywhere around the globe. It is capable of handling matters ranging from routine inquiries to transaction assistance.
 
 ## Problem Statement
 
@@ -111,7 +111,7 @@ The AI-powered chatbot is designed to provide seamless and efficient communicati
 
 | Feature                           | Description                                                                                              | Purpose                                                                                     |
 | --------------------------------- | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| **Conversation History**          | Provides access to past conversations between customers and the chatbot.                                 | Enables agents to review previous interactions for context and troubleshooting.                   |
+| **Conversation History**          | Provides access to past conversations between customers and the chatbot.                                 | Enables agents to review previous interactions for context and troubleshooting.             |
 | **Multilingual Interaction Logs** | Logs and categorizes conversations based on the language used by the customer.                           | Facilitates analysis of language preferences and ensures multilingual support is effective. |
 | **Data Export**                   | Provides options to export conversation logs and performance data in various formats (CSV, Excel, etc.). | Facilitates external analysis and reporting.                                                |
 | **Alerts & Notifications**        | Sends real-time alerts for specific triggers (e.g., high-priority customers, unresolved issues).         | Ensures timely response to critical situations.                                             |
@@ -189,10 +189,14 @@ python3 server.py
 
 - [@KevinTan1203](https://github.com/KevinTan1203)
 
+- [@germainelry](https://github.com/germainelry)
+
 - [@parv09092002](https://github.com/parv09092002)
 
 - [@gracierchua](https://github.com/gracierchua)
 
 - [@taufikhazri](https://github.com/taufikhazri)
 
-- [@germainelry](https://github.com/germainelry)
+## Poster
+
+![TDP AI Chatbot Poster](docs/TDP%20AI%20Chatbot%20Poster.png)
